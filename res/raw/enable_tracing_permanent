@@ -1,0 +1,30 @@
+#!/system/bin/sh
+
+if [ -f /system/bin/dumpstate_orig ]; then
+    echo "Already done"
+    exit
+fi
+
+if mount | grep /system | grep "[ ,]ro[ ,]" >/dev/null; then
+    echo "ERROR: /system not writable"
+    echo "Please run \`adb root; adb disable-verity; adb remount' first"
+    exit
+fi
+
+cat > /data/local/tmp/bugreport_replacement <<EOF
+#!/system/bin/sh
+su root dumpstate
+EOF
+
+echo -n 'Installing perfprofd replacement... '
+su root mv /system/bin/dumpstate /system/bin/dumpstate_orig && \
+su root sh -c 'umask 022; cp /data/local/tmp/enable_full_tracing /system/bin/dumpstate; chmod +rx /system/bin/dumpstate' && \
+su root sh -c 'chcon u:object_r:dumpstate_exec:s0 /system/bin/dumpstate' && \
+su root mv /system/bin/bugreport /system/bin/bugreport_orig && \
+su root sh -c 'umask 022; cp /data/local/tmp/bugreport_replacement /system/bin/bugreport; chmod +rx /system/bin/bugreport' && \
+echo DONE || { su root mv /system/bin/dumpstate_orig /system/bin/dumpstate; su root mv /system/bin/bugreport_orig /system/bin/bugreport; echo FAIL; echo 'Oops, please file a bug with roosa.'; exit; }
+
+su root rm -f /data/local/tmp/bugreport_replacement >/dev/null 2>/dev/null
+
+# Actually enable tracing
+/data/local/tmp/enable_full_tracing
