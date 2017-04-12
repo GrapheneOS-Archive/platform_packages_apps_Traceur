@@ -16,15 +16,15 @@ if [ "$dumpstate" = "false" ]; then
     echo -n 'Allow full tracing for shell user... '
     su root chmod -R g+w /sys/kernel/debug/tracing/events/ && \
     su root chgrp -R -P shell /sys/kernel/debug/tracing/events/ && \
-    echo DONE || { echo FAIL; echo 'Oops, please file a bug with roosa.'; exit; }
+    echo DONE || { echo FAIL; echo 'Oops, please file a bug on Traceur!'; exit; }
 
     echo -n 'Restart Traceur with new set of tags (if necessary)... '
-    su root am broadcast -a com.android.exp.roosa.traceur.FORCE_UPDATE -n com.android.exp.roosa.traceur/.Receiver >/dev/null && \
-    echo DONE || { echo FAIL; echo 'Oops, please file a bug with roosa.'; exit; }
+    su root am broadcast -a com.google.android.traceur.FORCE_UPDATE -n com.google.android.traceur/.Receiver >/dev/null && \
+    echo DONE || { echo FAIL; echo 'Oops, please file a bug on Traceur!'; exit; }
 
     echo -n 'Refresh available tags in Traceur UI... '
-    su root am broadcast -a com.android.exp.roosa.traceur.REFRESH_TAGS -p com.android.exp.roosa.traceur >/dev/null && \
-    echo DONE || { echo FAIL; echo 'Oops, please file a bug with roosa.'; exit; }
+    su root am broadcast -a com.google.android.traceur.REFRESH_TAGS -p com.google.android.traceur >/dev/null && \
+    echo DONE || { echo FAIL; echo 'Oops, please file a bug on Traceur!'; exit; }
 
     echo 'Successfully allowed full tracing. Wohoo!'
 
