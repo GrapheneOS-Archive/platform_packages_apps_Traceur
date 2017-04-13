@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.android.exp.roosa.traceur;
+package com.google.android.traceur;
 
 import android.app.AlertDialog;
 import android.content.ComponentName;

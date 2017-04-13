@@ -22,7 +22,7 @@ su root sh -c 'umask 022; cp /data/local/tmp/enable_full_tracing /system/bin/dum
 su root sh -c 'chcon u:object_r:dumpstate_exec:s0 /system/bin/dumpstate' && \
 su root mv /system/bin/bugreport /system/bin/bugreport_orig && \
 su root sh -c 'umask 022; cp /data/local/tmp/bugreport_replacement /system/bin/bugreport; chmod +rx /system/bin/bugreport' && \
-echo DONE || { su root mv /system/bin/dumpstate_orig /system/bin/dumpstate; su root mv /system/bin/bugreport_orig /system/bin/bugreport; echo FAIL; echo 'Oops, please file a bug with roosa.'; exit; }
+echo DONE || { su root mv /system/bin/dumpstate_orig /system/bin/dumpstate; su root mv /system/bin/bugreport_orig /system/bin/bugreport; echo FAIL; echo 'Oops, please file a bug on Traceur!'; exit; }
 
 su root rm -f /data/local/tmp/bugreport_replacement >/dev/null 2>/dev/null
 

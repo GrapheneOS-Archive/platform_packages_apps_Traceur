@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.android.exp.roosa.traceur;
+package com.google.android.traceur;
 
 import android.annotation.Nullable;
 import android.app.AlertDialog;
@@ -41,7 +41,7 @@ public class MainActivity extends PreferenceActivity
 
     static final String TAG = AtraceUtils.TAG;
 
-    public static final String ACTION_REFRESH_TAGS = "com.android.exp.roosa.traceur.REFRESH_TAGS";
+    public static final String ACTION_REFRESH_TAGS = "com.google.android.traceur.REFRESH_TAGS";
 
     private TwoStatePreference mTracingOn;
     private TwoStatePreference mQs;
