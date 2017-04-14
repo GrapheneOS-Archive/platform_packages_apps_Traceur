@@ -31,7 +31,6 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.TwoStatePreference;
 import android.util.ArrayMap;
-import android.util.ArraySet;
 
 import java.util.ArrayList;
 import java.util.Set;
