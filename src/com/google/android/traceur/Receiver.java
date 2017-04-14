@@ -119,7 +119,6 @@ public class Receiver extends BroadcastReceiver {
                 String activeAvailableTags = getActiveTags(prefs, true);
                 if (!TextUtils.equals(activeAvailableTags, getActiveTags(prefs, false))) {
                     postRootNotification(context, prefs);
-                    Trampoline.writeTrampoline(context);
                 } else {
                     cancelRootNotification(context);
                 }
@@ -137,9 +136,9 @@ public class Receiver extends BroadcastReceiver {
         NotificationManager nm = context.getSystemService(NotificationManager.class);
         Intent sendIntent = new Intent(context, MainActivity.class);
 
-        String title = "Tracing permissions required";
-        String msg = "Some tracing tags require root: " + getActiveUnavailableTags(prefs) + "\n"
-                + "Run: adb shell /data/local/tmp/enable_full_tracing\n";
+        String title = "Tracing permissions required.";
+        String msg = "Some tracing tags are not available: " + getActiveUnavailableTags(prefs)
+                + "\nThis should not happen! Please file a bug on Traceur.";
         final Notification.Builder builder = new Notification.Builder(context)
                 .setStyle(new Notification.BigTextStyle().bigText(
                         msg))
