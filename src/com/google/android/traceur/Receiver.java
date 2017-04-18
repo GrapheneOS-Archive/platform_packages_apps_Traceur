@@ -45,9 +45,9 @@ public class Receiver extends BroadcastReceiver {
     public static final String QS_TILE_SETTING = "sysui_qs_tiles";
 
     public static final Set<String> ATRACE_TAGS = Sets.newArraySet(
-            "gfx", "input", "view", "wm",
-            "am", "sm", "res", "dalvik", "power", "sched", "freq", "workq");
-    public static final int BUFFER_SIZE_KB = 8000;
+            "am", "binder_driver", "dalvik", "freq", "gfx", "hal", "idle", "input", "irq", "res",
+            "sched", "sync", "view", "wm", "workq");
+    public static final int BUFFER_SIZE_KB = 16384;
 
     private static final String TAG = "Traceur";
 
