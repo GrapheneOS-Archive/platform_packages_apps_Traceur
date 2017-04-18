@@ -166,25 +166,5 @@ public class MainActivity extends PreferenceActivity
             mTags.setValues(Receiver.ATRACE_TAGS);
         }
         mRefreshing = false;
-
-        if (!availableTags.containsKey("workq")) {
-            Trampoline.writeTrampoline(getApplicationContext());
-            if (mAlertDialog == null) {
-                mAlertDialog = new AlertDialog.Builder(this)
-                        .setTitle("Additional tracing permissions")
-                        .setMessage("Tracing some tags requires root permissions. "
-                                + "To allow tracing those tags using Traceur, run:\n\n"
-                                + "adb shell /data/local/tmp/enable_full_tracing\n\n"
-                                + "For a persistent fix (until next OTA):\n\n"
-                                + "adb shell /data/local/tmp/enable_tracing_permanent")
-                        .setNegativeButton("Ignore", null)
-                        .create();
-            }
-            mAlertDialog.show();
-        } else {
-            if (mAlertDialog != null) {
-                mAlertDialog.cancel();
-            }
-        }
     }
 }
