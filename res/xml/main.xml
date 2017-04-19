@@ -18,16 +18,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <SwitchPreference
             android:key="tracing_on"
-            android:title="Enable tracing"
-            android:summary="WARNING: This may significantly degrade device performance"
-            />
+            android:title="Start tracing" />
     <SwitchPreference
             android:key="show_qs"
             android:title="Show in Quick Settings" />
     <Preference
             android:key="dump"
             android:persistent="false"
-            android:title="Dump trace" />
+            android:title="Share trace" />
     <MultiSelectListPreference
             android:key="tags"
             android:title="Active Tags" />
