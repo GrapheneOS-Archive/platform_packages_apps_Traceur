@@ -70,9 +70,9 @@ public class MainActivity extends PreferenceActivity
 
         addPreferencesFromResource(R.xml.main);
 
-        mTracingOn = (TwoStatePreference) findPreference("tracing_on");
+        mTracingOn = (TwoStatePreference) findPreference(getString(R.string.pref_key_tracing_on));
         mTracingOn.setOnPreferenceChangeListener(this);
-        mQs = (TwoStatePreference) findPreference("show_qs");
+        mQs = (TwoStatePreference) findPreference(getString(R.string.pref_key_show_qs));
 
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M || "N".equals(Build.VERSION.CODENAME)) {
             getPreferenceScreen().removePreference(mQs);
@@ -80,7 +80,7 @@ public class MainActivity extends PreferenceActivity
             mQs.setOnPreferenceChangeListener(this);
         }
 
-        mTags = (MultiSelectListPreference) findPreference("tags");
+        mTags = (MultiSelectListPreference) findPreference(getString(R.string.pref_key_tags));
         mTags.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -107,7 +107,7 @@ public class MainActivity extends PreferenceActivity
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         AtraceUtils.atraceDumpAndSendInBackground(MainActivity.this,
-                                Receiver.getActiveTags(mPrefs, true));
+                                Receiver.getActiveTags(MainActivity.this, mPrefs, true));
                         return true;
                     }
                 });
@@ -161,7 +161,7 @@ public class MainActivity extends PreferenceActivity
         mRefreshing = true;
         mTags.setEntries(entries);
         mTags.setEntryValues(values);
-        if (!mPrefs.contains("tags")) {
+        if (!mPrefs.contains(getString(R.string.pref_key_tags))) {
             mTags.setValues(Receiver.ATRACE_TAGS);
         }
         mRefreshing = false;
