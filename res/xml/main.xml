@@ -17,16 +17,16 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <SwitchPreference
-            android:key="tracing_on"
+            android:key="@string/pref_key_tracing_on"
             android:title="Start tracing" />
     <SwitchPreference
-            android:key="show_qs"
+            android:key="@string/pref_key_show_qs"
             android:title="Show in Quick Settings" />
     <Preference
             android:key="dump"
             android:persistent="false"
             android:title="Share trace" />
     <MultiSelectListPreference
-            android:key="tags"
+            android:key="@string/pref_key_tags"
             android:title="Active Tags" />
 </PreferenceScreen>
