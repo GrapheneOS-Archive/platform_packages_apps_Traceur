@@ -31,6 +31,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.TwoStatePreference;
 import android.util.ArrayMap;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -112,6 +113,17 @@ public class MainActivity extends PreferenceActivity
                     }
                 });
 
+        findPreference("restore_default_tags").setOnPreferenceClickListener(
+                new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick(Preference preference) {
+                        refreshTags(/* restoreDefaultTags =*/ true);
+                        Toast.makeText(MainActivity.this, "Default tags restored",
+                                Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                });
+
         mReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -147,6 +159,10 @@ public class MainActivity extends PreferenceActivity
     }
 
     private void refreshTags() {
+        refreshTags(/* restoreDefaultTags =*/ false);
+    }
+
+    private void refreshTags(boolean restoreDefaultTags) {
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
 
@@ -161,7 +177,7 @@ public class MainActivity extends PreferenceActivity
         mRefreshing = true;
         mTags.setEntries(entries);
         mTags.setEntryValues(values);
-        if (!mPrefs.contains(getString(R.string.pref_key_tags))) {
+        if (restoreDefaultTags || !mPrefs.contains(getString(R.string.pref_key_tags))) {
             mTags.setValues(Receiver.ATRACE_TAGS);
         }
         mRefreshing = false;
