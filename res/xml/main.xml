@@ -29,4 +29,8 @@
     <MultiSelectListPreference
             android:key="@string/pref_key_tags"
             android:title="Active Tags" />
+    <Preference
+        android:key="restore_default_tags"
+        android:persistent="false"
+        android:title="Restore default tags" />
 </PreferenceScreen>
