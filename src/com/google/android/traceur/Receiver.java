@@ -29,10 +29,10 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.util.ArrayMap;
 import android.util.Log;
 
 import java.util.Set;
+import java.util.TreeMap;
 
 public class Receiver extends BroadcastReceiver {
 
@@ -45,8 +45,9 @@ public class Receiver extends BroadcastReceiver {
     public static final String QS_TILE_SETTING = "sysui_qs_tiles";
 
     public static final Set<String> ATRACE_TAGS = Sets.newArraySet(
-            "am", "dalvik", "freq", "gfx", "hal", "idle", "input", "irq", "res",
-            "sched", "sync", "view", "wm", "workq");
+            "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
+            "idle", "input", "irq", "res", "sched", "sync", "view", "wm",
+            "workq");
     public static final int BUFFER_SIZE_KB = 16384;
 
     private static final String TAG = "Traceur";
@@ -167,7 +168,7 @@ public class Receiver extends BroadcastReceiver {
         Set<String> tags = prefs.getStringSet(context.getString(R.string.pref_key_tags),
                 ATRACE_TAGS);
         StringBuilder sb = new StringBuilder(10 * tags.size());
-        ArrayMap<String, String> available =
+        TreeMap<String, String> available =
                 onlyAvailable ? AtraceUtils.atraceListCategories() : null;
 
         for (String s : tags) {
@@ -186,7 +187,7 @@ public class Receiver extends BroadcastReceiver {
         Set<String> tags = prefs.getStringSet(context.getString(R.string.pref_key_tags),
                 ATRACE_TAGS);
         StringBuilder sb = new StringBuilder(10 * tags.size());
-        ArrayMap<String, String> available = AtraceUtils.atraceListCategories();
+        TreeMap<String, String> available = AtraceUtils.atraceListCategories();
 
         for (String s : tags) {
             if (available.containsKey(s)) continue;

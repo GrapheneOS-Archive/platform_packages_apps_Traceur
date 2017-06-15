@@ -22,7 +22,6 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.SystemProperties;
-import android.util.ArrayMap;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -37,6 +36,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TreeMap;
 
 /**
  * Utility functions for calling atrace
@@ -102,7 +102,7 @@ public class AtraceUtils {
         }
     }
 
-    public static ArrayMap<String,String> atraceListCategories() {
+    public static TreeMap<String,String> atraceListCategories() {
         String cmd = "atrace --list_categories";
 
         Log.v(TAG, "Listing tags: " + cmd);
@@ -117,7 +117,7 @@ public class AtraceUtils {
                 Log.e(TAG, "atraceListCategories failed with: " + atrace.exitValue());
             }
 
-            ArrayMap<String, String> result = new ArrayMap<>();
+            TreeMap<String, String> result = new TreeMap<>();
             String line;
             while ((line = stdout.readLine()) != null) {
                 String[] fields = line.trim().split(" - ", 2);
