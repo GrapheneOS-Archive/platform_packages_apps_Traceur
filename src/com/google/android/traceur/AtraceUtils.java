@@ -20,6 +20,7 @@ import android.app.ActivityThread;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.SystemProperties;
 import android.provider.Settings;
 import android.util.ArrayMap;
@@ -146,7 +147,8 @@ public class AtraceUtils {
         String format = "yyyy-MM-dd-HH-mm-ss";
         String now = new SimpleDateFormat(format, Locale.US).format(new Date());
         ensureBugreportDirectory(context);
-        File file = new File(String.format("/bugreports/traceur-%s.txt", now));
+        File file = new File(String.format("/bugreports/traceur-%s-%s-%s.txt",
+                Build.BOARD, Build.ID, now));
         FileSender.postCaptureNotification(context, file);
         atraceDump(tags, bufferSizeKb, file);
         FileSender.postNotification(context, file);
