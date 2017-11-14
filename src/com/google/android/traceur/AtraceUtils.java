@@ -22,7 +22,6 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.SystemProperties;
-import android.provider.Settings;
 import android.util.ArrayMap;
 import android.util.Log;
 import android.widget.Toast;
@@ -38,7 +37,6 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Map;
 
 /**
  * Utility functions for calling atrace
@@ -165,7 +163,7 @@ public class AtraceUtils {
 
     public static void atraceDumpAndSendInBackground(final Context context,
             final String tags) {
-        Toast.makeText(context, "Dumping trace...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Saving trace...", Toast.LENGTH_SHORT).show();
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {

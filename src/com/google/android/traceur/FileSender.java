@@ -28,7 +28,6 @@ import android.os.SystemProperties;
 import android.util.Patterns;
 
 import java.io.File;
-import java.util.ArrayList;
 
 /**
  * Sends bugreport-y files, adapted from fw/base/packages/Shell's BugreportReceiver.
