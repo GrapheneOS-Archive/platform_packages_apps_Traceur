@@ -30,11 +30,12 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.TwoStatePreference;
-import android.util.ArrayMap;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class MainActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
@@ -89,7 +90,7 @@ public class MainActivity extends PreferenceActivity
                     return true;
                 }
                 Set<String> set = (Set<String>) newValue;
-                ArrayMap<String, String> available = AtraceUtils.atraceListCategories();
+                TreeMap<String, String> available = AtraceUtils.atraceListCategories();
                 ArrayList<String> clean = new ArrayList<>(set.size());
 
                 for (String s : set) {
@@ -166,17 +167,17 @@ public class MainActivity extends PreferenceActivity
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
 
-        ArrayMap<String, String> availableTags = AtraceUtils.atraceListCategories();
-        String[] entries = new String[availableTags.size()];
-        String[] values = new String[availableTags.size()];
-        for (int i = 0; i < availableTags.size(); i++) {
-            entries[i] = availableTags.keyAt(i) + ": " + availableTags.valueAt(i);
-            values[i] = availableTags.keyAt(i);
+        Set<Entry<String, String>> availableTags = AtraceUtils.atraceListCategories().entrySet();
+        ArrayList<String> entries = new ArrayList<String>(availableTags.size());
+        ArrayList<String> values = new ArrayList<String>(availableTags.size());
+        for (Entry<String, String> entry : availableTags) {
+            entries.add(entry.getKey() + ": " + entry.getValue());
+            values.add(entry.getKey());
         }
 
         mRefreshing = true;
-        mTags.setEntries(entries);
-        mTags.setEntryValues(values);
+        mTags.setEntries(entries.toArray(new String[0]));
+        mTags.setEntryValues(values.toArray(new String[0]));
         if (restoreDefaultTags || !mPrefs.contains(getString(R.string.pref_key_tags))) {
             mTags.setValues(Receiver.ATRACE_TAGS);
         }
