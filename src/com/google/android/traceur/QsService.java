@@ -68,12 +68,12 @@ public class QsService extends TileService {
         boolean tracingOn = AtraceUtils.isTracingOn();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        prefs.edit().putBoolean("tracing_on", !tracingOn).apply();
+        prefs.edit().putBoolean(getString(R.string.pref_key_tracing_on), !tracingOn).apply();
 
         if (tracingOn) {
             Toast.makeText(getApplicationContext(), "Stopping trace...", Toast.LENGTH_SHORT).show();
             AtraceUtils.atraceDumpAndSendInBackground(this,
-                    Receiver.getActiveTags(prefs, true));
+                    Receiver.getActiveTags(this, prefs, true));
         } else {
             Toast.makeText(getApplicationContext(), "Starting trace...", Toast.LENGTH_SHORT).show();
         }

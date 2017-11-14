@@ -45,7 +45,7 @@ public class Receiver extends BroadcastReceiver {
     public static final String QS_TILE_SETTING = "sysui_qs_tiles";
 
     public static final Set<String> ATRACE_TAGS = Sets.newArraySet(
-            "am", "binder_driver", "dalvik", "freq", "gfx", "hal", "idle", "input", "irq", "res",
+            "am", "dalvik", "freq", "gfx", "hal", "idle", "input", "irq", "res",
             "sched", "sync", "view", "wm", "workq");
     public static final int BUFFER_SIZE_KB = 16384;
 
@@ -63,7 +63,8 @@ public class Receiver extends BroadcastReceiver {
         } else if (DUMP_ACTION.equals(intent.getAction())) {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             if (AtraceUtils.isTracingOn()) {
-                AtraceUtils.atraceDumpAndSendInBackground(context, getActiveTags(prefs, true));
+                AtraceUtils.atraceDumpAndSendInBackground(context,
+                        getActiveTags(context, prefs, true));
             } else {
                 context.startActivity(new Intent(context, MainActivity.class)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
@@ -91,7 +92,7 @@ public class Receiver extends BroadcastReceiver {
 
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean visible = prefs.getBoolean("show_qs", false);
+        boolean visible = prefs.getBoolean(context.getString(R.string.pref_key_show_qs), false);
 
         PendingIntent onClick = PendingIntent.getBroadcast(context, 0,
                 new Intent(context, Receiver.class)
@@ -114,10 +115,10 @@ public class Receiver extends BroadcastReceiver {
 
     public static void updateTracing(Context context, boolean force) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        if (prefs.getBoolean("tracing_on", false) != AtraceUtils.isTracingOn() || force) {
-            if (prefs.getBoolean("tracing_on", false)) {
-                String activeAvailableTags = getActiveTags(prefs, true);
-                if (!TextUtils.equals(activeAvailableTags, getActiveTags(prefs, false))) {
+        if (prefs.getBoolean(context.getString(R.string.pref_key_tracing_on), false) != AtraceUtils.isTracingOn() || force) {
+            if (prefs.getBoolean(context.getString(R.string.pref_key_tracing_on), false)) {
+                String activeAvailableTags = getActiveTags(context, prefs, true);
+                if (!TextUtils.equals(activeAvailableTags, getActiveTags(context, prefs, false))) {
                     postRootNotification(context, prefs);
                 } else {
                     cancelRootNotification(context);
@@ -137,7 +138,7 @@ public class Receiver extends BroadcastReceiver {
         Intent sendIntent = new Intent(context, MainActivity.class);
 
         String title = "Tracing permissions required.";
-        String msg = "Some tracing tags are not available: " + getActiveUnavailableTags(prefs)
+        String msg = "Some tracing tags are not available: " + getActiveUnavailableTags(context, prefs)
                 + "\nThis should not happen! Please file a bug on Traceur.";
         final Notification.Builder builder = new Notification.Builder(context)
                 .setStyle(new Notification.BigTextStyle().bigText(
@@ -162,8 +163,9 @@ public class Receiver extends BroadcastReceiver {
         nm.cancel(Receiver.class.getName(), 0);
     }
 
-    public static String getActiveTags(SharedPreferences prefs, boolean onlyAvailable) {
-        Set<String> tags = prefs.getStringSet("tags", ATRACE_TAGS);
+    public static String getActiveTags(Context context, SharedPreferences prefs, boolean onlyAvailable) {
+        Set<String> tags = prefs.getStringSet(context.getString(R.string.pref_key_tags),
+                ATRACE_TAGS);
         StringBuilder sb = new StringBuilder(10 * tags.size());
         ArrayMap<String, String> available =
                 onlyAvailable ? AtraceUtils.atraceListCategories() : null;
@@ -180,8 +182,9 @@ public class Receiver extends BroadcastReceiver {
         return s;
     }
 
-    public static String getActiveUnavailableTags(SharedPreferences prefs) {
-        Set<String> tags = prefs.getStringSet("tags", ATRACE_TAGS);
+    public static String getActiveUnavailableTags(Context context, SharedPreferences prefs) {
+        Set<String> tags = prefs.getStringSet(context.getString(R.string.pref_key_tags),
+                ATRACE_TAGS);
         StringBuilder sb = new StringBuilder(10 * tags.size());
         ArrayMap<String, String> available = AtraceUtils.atraceListCategories();
 

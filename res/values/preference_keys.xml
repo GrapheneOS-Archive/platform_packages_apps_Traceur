@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="pref_key_tracing_on">tracing_on</string>
+    <string name="pref_key_show_qs">show_qs</string>
+    <string name="pref_key_tags">current_tags</string>
+</resources>
