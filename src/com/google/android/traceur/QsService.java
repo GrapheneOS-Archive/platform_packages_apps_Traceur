@@ -60,10 +60,7 @@ public class QsService extends TileService implements
 
     private void update() {
         boolean tracingOn = AtraceUtils.isTracingOn();
-        int resId = tracingOn
-                ? R.drawable.stat_sys_adb
-                : R.drawable.stat_sys_adb_disabled;
-        getQsTile().setIcon(Icon.createWithResource(this, resId));
+        getQsTile().setIcon(Icon.createWithResource(this, R.drawable.stat_sys_adb));
         getQsTile().setState(tracingOn ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         getQsTile().updateTile();
         setStatusIcon(tracingOn ? Icon.createWithResource(this, R.drawable.stat_sys_adb) : null,

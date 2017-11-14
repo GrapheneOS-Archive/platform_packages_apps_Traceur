@@ -108,9 +108,7 @@ public class Receiver extends BroadcastReceiver {
                 .putExtra("visible", visible)
                 .putExtra("onClick", onClick)
                 .putExtra("onLongClick", longClick)
-                .putExtra("iconId", AtraceUtils.isTracingOn()
-                        ? R.drawable.stat_sys_adb
-                        : R.drawable.stat_sys_adb_disabled)
+                .putExtra("iconId", R.drawable.stat_sys_adb)
                 .putExtra("iconPackage", context.getPackageName()));
     }
 
