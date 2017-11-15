@@ -16,21 +16,16 @@
 
 package com.google.android.traceur;
 
-import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Icon;
 import android.preference.PreferenceManager;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.Toast;
 
-public class QsService extends TileService implements
-        DialogInterface.OnClickListener {
+public class QsService extends TileService {
 
     private static QsService sListeningInstance;
 
@@ -60,75 +55,33 @@ public class QsService extends TileService implements
 
     private void update() {
         boolean tracingOn = AtraceUtils.isTracingOn();
-        int resId = tracingOn
-                ? R.drawable.stat_sys_adb
-                : R.drawable.stat_sys_adb_disabled;
-        getQsTile().setIcon(Icon.createWithResource(this, resId));
+        getQsTile().setIcon(Icon.createWithResource(this, R.drawable.stat_sys_adb));
         getQsTile().setState(tracingOn ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+        getQsTile().setLabel(tracingOn ? "Tracing" : "Start Tracing");
         getQsTile().updateTile();
-        setStatusIcon(tracingOn ? Icon.createWithResource(this, R.drawable.stat_sys_adb) : null,
-                "Traceur");
     }
 
+    /** When we click the tile, toggle tracing state.
+     *  If tracing is being turned off, dump and offer to share. */
     @Override
     public void onClick() {
         boolean tracingOn = AtraceUtils.isTracingOn();
-        AlertDialog dialog;
-        if (tracingOn) {
-            dialog = new AlertDialog.Builder(this)
-                    .setTitle("Traceur")
-                    .setMessage("Warning: Tracing can significantly impact device performance.")
-                    .setPositiveButton("Dump", this)
-                    .setNeutralButton("Stop", this)
-                    .setNegativeButton("Open App", this)
-                    .create();
-        } else {
-            dialog = new AlertDialog.Builder(this)
-                    .setTitle("Traceur")
-                    .setMessage("Warning: Tracing can significantly impact device performance.")
-                    .setPositiveButton("Start", this)
-                    .setNegativeButton("Open App", this)
-                    .create();
-        }
-        dialog.getWindow().setTitle("Traceur");
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        showDialog(dialog);
-    }
-
-
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
-        boolean tracingOn = AtraceUtils.isTracingOn();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean force = false;
+
+        prefs.edit().putBoolean(getString(R.string.pref_key_tracing_on), !tracingOn).apply();
 
         if (tracingOn) {
-            if (which == DialogInterface.BUTTON_POSITIVE) {
-                AtraceUtils.atraceDumpAndSendInBackground(this,
-                        Receiver.getActiveTags(prefs, true));
-            } else if (which == DialogInterface.BUTTON_NEUTRAL) {
-                prefs.edit().putBoolean("tracing_on", false).apply();
-                force = true;
-            } else if (which == DialogInterface.BUTTON_NEGATIVE) {
-                startActivity(new Intent(this, MainActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-            }
+            Toast.makeText(getApplicationContext(), "Stopping trace...", Toast.LENGTH_SHORT).show();
+            AtraceUtils.atraceDumpAndSendInBackground(this,
+                    Receiver.getActiveTags(this, prefs, true));
         } else {
-            if (which == DialogInterface.BUTTON_POSITIVE) {
-                prefs.edit().putBoolean("tracing_on", true).apply();
-                force = true;
-            } else if (which == DialogInterface.BUTTON_NEGATIVE) {
-                startActivity(new Intent(this, MainActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-            }
+            Toast.makeText(getApplicationContext(), "Starting trace...", Toast.LENGTH_SHORT).show();
         }
-        if (force) {
-            sendBroadcast(new Intent(MainActivity.ACTION_REFRESH_TAGS)
-                    .setPackage(getPackageName()));
-        }
-        Receiver.updateTracing(this, force);
+
+        Receiver.updateTracing(this, true);
         Receiver.updateQs(this);
         requestListeningState(this);
+        update();
     }
 
     public static void requestListeningState(Context context) {

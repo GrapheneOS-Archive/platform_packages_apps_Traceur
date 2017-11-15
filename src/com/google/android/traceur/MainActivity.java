@@ -30,11 +30,12 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.TwoStatePreference;
-import android.util.ArrayMap;
-import android.util.ArraySet;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class MainActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
@@ -71,9 +72,9 @@ public class MainActivity extends PreferenceActivity
 
         addPreferencesFromResource(R.xml.main);
 
-        mTracingOn = (TwoStatePreference) findPreference("tracing_on");
+        mTracingOn = (TwoStatePreference) findPreference(getString(R.string.pref_key_tracing_on));
         mTracingOn.setOnPreferenceChangeListener(this);
-        mQs = (TwoStatePreference) findPreference("show_qs");
+        mQs = (TwoStatePreference) findPreference(getString(R.string.pref_key_show_qs));
 
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M || "N".equals(Build.VERSION.CODENAME)) {
             getPreferenceScreen().removePreference(mQs);
@@ -81,7 +82,7 @@ public class MainActivity extends PreferenceActivity
             mQs.setOnPreferenceChangeListener(this);
         }
 
-        mTags = (MultiSelectListPreference) findPreference("tags");
+        mTags = (MultiSelectListPreference) findPreference(getString(R.string.pref_key_tags));
         mTags.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -89,7 +90,7 @@ public class MainActivity extends PreferenceActivity
                     return true;
                 }
                 Set<String> set = (Set<String>) newValue;
-                ArrayMap<String, String> available = AtraceUtils.atraceListCategories();
+                TreeMap<String, String> available = AtraceUtils.atraceListCategories();
                 ArrayList<String> clean = new ArrayList<>(set.size());
 
                 for (String s : set) {
@@ -108,7 +109,18 @@ public class MainActivity extends PreferenceActivity
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         AtraceUtils.atraceDumpAndSendInBackground(MainActivity.this,
-                                Receiver.getActiveTags(mPrefs, true));
+                                Receiver.getActiveTags(MainActivity.this, mPrefs, true));
+                        return true;
+                    }
+                });
+
+        findPreference("restore_default_tags").setOnPreferenceClickListener(
+                new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick(Preference preference) {
+                        refreshTags(/* restoreDefaultTags =*/ true);
+                        Toast.makeText(MainActivity.this, "Default tags restored",
+                                Toast.LENGTH_SHORT).show();
                         return true;
                     }
                 });
@@ -148,43 +160,27 @@ public class MainActivity extends PreferenceActivity
     }
 
     private void refreshTags() {
+        refreshTags(/* restoreDefaultTags =*/ false);
+    }
+
+    private void refreshTags(boolean restoreDefaultTags) {
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
 
-        ArrayMap<String, String> availableTags = AtraceUtils.atraceListCategories();
-        String[] entries = new String[availableTags.size()];
-        String[] values = new String[availableTags.size()];
-        for (int i = 0; i < availableTags.size(); i++) {
-            entries[i] = availableTags.keyAt(i) + ": " + availableTags.valueAt(i);
-            values[i] = availableTags.keyAt(i);
+        Set<Entry<String, String>> availableTags = AtraceUtils.atraceListCategories().entrySet();
+        ArrayList<String> entries = new ArrayList<String>(availableTags.size());
+        ArrayList<String> values = new ArrayList<String>(availableTags.size());
+        for (Entry<String, String> entry : availableTags) {
+            entries.add(entry.getKey() + ": " + entry.getValue());
+            values.add(entry.getKey());
         }
 
         mRefreshing = true;
-        mTags.setEntries(entries);
-        mTags.setEntryValues(values);
-        if (!mPrefs.contains("tags")) {
+        mTags.setEntries(entries.toArray(new String[0]));
+        mTags.setEntryValues(values.toArray(new String[0]));
+        if (restoreDefaultTags || !mPrefs.contains(getString(R.string.pref_key_tags))) {
             mTags.setValues(Receiver.ATRACE_TAGS);
         }
         mRefreshing = false;
-
-        if (!availableTags.containsKey("workq")) {
-            Trampoline.writeTrampoline(getApplicationContext());
-            if (mAlertDialog == null) {
-                mAlertDialog = new AlertDialog.Builder(this)
-                        .setTitle("Additional tracing permissions")
-                        .setMessage("Tracing some tags requires root permissions. "
-                                + "To allow tracing those tags using Traceur, run:\n\n"
-                                + "adb shell /data/local/tmp/enable_full_tracing\n\n"
-                                + "For a persistent fix (until next OTA):\n\n"
-                                + "adb shell /data/local/tmp/enable_tracing_permanent")
-                        .setNegativeButton("Ignore", null)
-                        .create();
-            }
-            mAlertDialog.show();
-        } else {
-            if (mAlertDialog != null) {
-                mAlertDialog.cancel();
-            }
-        }
     }
 }
