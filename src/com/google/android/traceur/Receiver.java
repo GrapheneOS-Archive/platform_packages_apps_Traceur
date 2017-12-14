@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.google.android.traceur;
+package com.android.traceur;
 
 import com.google.android.collect.Sets;
 
@@ -36,11 +36,11 @@ import java.util.TreeMap;
 
 public class Receiver extends BroadcastReceiver {
 
-    public static final String DUMP_ACTION = "com.google.android.traceur.DUMP";
-    public static final String OPEN_ACTION = "com.google.android.traceur.OPEN";
-    public static final String FORCE_UPDATE_ACTION = "com.google.android.traceur.FORCE_UPDATE";
+    public static final String DUMP_ACTION = "com.android.traceur.DUMP";
+    public static final String OPEN_ACTION = "com.android.traceur.OPEN";
+    public static final String FORCE_UPDATE_ACTION = "com.android.traceur.FORCE_UPDATE";
 
-    private static final String TILE_ACTION = "com.google.android.traceur.TILE";
+    private static final String TILE_ACTION = "com.android.traceur.TILE";
 
     public static final String QS_TILE_SETTING = "sysui_qs_tiles";
 
