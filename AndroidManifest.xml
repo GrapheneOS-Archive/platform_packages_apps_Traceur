@@ -16,7 +16,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.google.android.traceur"
+          package="com.android.traceur"
           android:sharedUserId="android.uid.shell"
           android:versionCode="2"
           android:versionName="1.0">
