@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.google.android.traceur;
+package com.android.traceur;
 
 import android.app.ActivityThread;
 import android.content.Context;
