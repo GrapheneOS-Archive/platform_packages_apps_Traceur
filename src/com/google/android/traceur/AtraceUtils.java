@@ -45,6 +45,8 @@ public class AtraceUtils {
 
     static final String TAG = "Traceur";
 
+    static final String TRACE_DIRECTORY = "/data/local/traces/";
+
     private static final Runtime RUNTIME = Runtime.getRuntime();
 
     public static void atraceStart(String tags, int bufferSizeKb) {
@@ -83,6 +85,9 @@ public class AtraceUtils {
             if (ps.waitFor() != 0) {
                 Log.v(TAG, "atraceDump:ps failed with: " + ps.exitValue());
             }
+
+            // Set the new file world readable to allow it to be adb pulled.
+            outFile.setReadable(true, false); // (readable, ownerOnly)
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -144,21 +149,12 @@ public class AtraceUtils {
     public static void atraceDumpAndSend(Context context, String tags, int bufferSizeKb) {
         String format = "yyyy-MM-dd-HH-mm-ss";
         String now = new SimpleDateFormat(format, Locale.US).format(new Date());
-        ensureBugreportDirectory(context);
-        File file = new File(String.format("/bugreports/traceur-%s-%s-%s.txt",
-                Build.BOARD, Build.ID, now));
+        File file = new File(TRACE_DIRECTORY,
+            String.format("traceur-%s-%s-%s.txt", Build.BOARD, Build.ID, now));
+
         FileSender.postCaptureNotification(context, file);
         atraceDump(tags, bufferSizeKb, file);
         FileSender.postNotification(context, file);
-    }
-
-    private static void ensureBugreportDirectory(Context context) {
-        try {
-            new File(context.createPackageContext(
-                    "com.android.shell", 0).getFilesDir(), "bugreports").mkdir();
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void atraceDumpAndSendInBackground(final Context context,
