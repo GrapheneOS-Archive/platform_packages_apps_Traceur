@@ -79,7 +79,6 @@ public class QsService extends TileService {
         }
 
         Receiver.updateTracing(this, true);
-        Receiver.updateQs(this);
         requestListeningState(this);
         update();
     }

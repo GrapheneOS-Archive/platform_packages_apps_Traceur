@@ -58,7 +58,7 @@ public class Receiver extends BroadcastReceiver {
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             updateTracing(context, false);
-            updateQs(context);
+            QsService.requestListeningState(context);
         } else if (FORCE_UPDATE_ACTION.equals(intent.getAction())) {
             updateTracing(context, true);
         } else if (DUMP_ACTION.equals(intent.getAction())) {
@@ -75,43 +75,6 @@ public class Receiver extends BroadcastReceiver {
             context.startActivity(new Intent(context, MainActivity.class)
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
-    }
-
-    public static void updateQs(Context context) {
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M || "N".equals(Build.VERSION.CODENAME)) {
-            QsService.requestListeningState(context);
-            return;
-        }
-        String qs_tiles = Settings.Secure.getString(context.getContentResolver(), QS_TILE_SETTING);
-        if (TextUtils.isEmpty(qs_tiles)) {
-            qs_tiles = "default";
-        }
-        if (!qs_tiles.contains(TILE_ACTION)) {
-            Settings.Secure.putString(context.getContentResolver(), QS_TILE_SETTING,
-                    qs_tiles + ",intent(" + TILE_ACTION + ")");
-        }
-
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean visible = prefs.getBoolean(context.getString(R.string.pref_key_show_qs), false);
-
-        PendingIntent onClick = PendingIntent.getBroadcast(context, 0,
-                new Intent(context, Receiver.class)
-                        .setAction(Receiver.DUMP_ACTION)
-                , 0);
-
-        PendingIntent longClick = PendingIntent.getBroadcast(context, 0,
-                new Intent(context, Receiver.class)
-                        .setAction(Receiver.OPEN_ACTION)
-                , 0);
-
-        context.sendBroadcast(new Intent(TILE_ACTION)
-                .putExtra("label", "Traceur")
-                .putExtra("visible", visible)
-                .putExtra("onClick", onClick)
-                .putExtra("onLongClick", longClick)
-                .putExtra("iconId", R.drawable.stat_sys_adb)
-                .putExtra("iconPackage", context.getPackageName()));
     }
 
     public static void updateTracing(Context context, boolean force) {

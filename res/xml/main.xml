@@ -19,9 +19,6 @@
     <SwitchPreference
             android:key="@string/pref_key_tracing_on"
             android:title="Start tracing" />
-    <SwitchPreference
-            android:key="@string/pref_key_show_qs"
-            android:title="Show in Quick Settings" />
     <Preference
             android:key="dump"
             android:persistent="false"
