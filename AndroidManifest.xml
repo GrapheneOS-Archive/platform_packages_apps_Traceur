@@ -20,7 +20,7 @@
           android:sharedUserId="android.uid.shell"
           android:versionCode="2"
           android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="23"/>
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="23"/>
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
