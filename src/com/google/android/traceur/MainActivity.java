@@ -45,7 +45,6 @@ public class MainActivity extends PreferenceActivity
     public static final String ACTION_REFRESH_TAGS = "com.android.traceur.REFRESH_TAGS";
 
     private TwoStatePreference mTracingOn;
-    private TwoStatePreference mQs;
 
     private AlertDialog mAlertDialog;
     private SharedPreferences mPrefs;
@@ -74,13 +73,6 @@ public class MainActivity extends PreferenceActivity
 
         mTracingOn = (TwoStatePreference) findPreference(getString(R.string.pref_key_tracing_on));
         mTracingOn.setOnPreferenceChangeListener(this);
-        mQs = (TwoStatePreference) findPreference(getString(R.string.pref_key_show_qs));
-
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M || "N".equals(Build.VERSION.CODENAME)) {
-            getPreferenceScreen().removePreference(mQs);
-        } else {
-            mQs.setOnPreferenceChangeListener(this);
-        }
 
         mTags = (MultiSelectListPreference) findPreference(getString(R.string.pref_key_tags));
         mTags.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -156,7 +148,6 @@ public class MainActivity extends PreferenceActivity
 
     private void refresh() {
         Receiver.updateTracing(this, false);
-        Receiver.updateQs(this);
     }
 
     private void refreshTags() {
