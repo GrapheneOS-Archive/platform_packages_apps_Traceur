@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="start_tracing">Start tracing</string>
+    <string name="share_trace">Share trace</string>
+    <string name="active_tags">Active tags</string>
+    <string name="restore_default_tags">Restore default tags</string>
+</resources>
