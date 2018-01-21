@@ -18,16 +18,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <SwitchPreference
             android:key="@string/pref_key_tracing_on"
-            android:title="Start tracing" />
+            android:title="@string/start_tracing" />
     <Preference
             android:key="dump"
             android:persistent="false"
-            android:title="Share trace" />
+            android:title="@string/share_trace" />
     <MultiSelectListPreference
             android:key="@string/pref_key_tags"
-            android:title="Active Tags" />
+            android:title="@string/active_tags" />
     <Preference
         android:key="restore_default_tags"
         android:persistent="false"
-        android:title="Restore default tags" />
+        android:title="@string/restore_default_tags" />
 </PreferenceScreen>
