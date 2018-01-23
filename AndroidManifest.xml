@@ -24,9 +24,10 @@
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <application android:label="Traceur">
+    <application android:label="Traceur"
+        android:theme="@style/Theme.Settings">
+
         <activity android:name=".MainActivity"
-                  android:theme="@android:style/Theme.Material.Light.DarkActionBar"
                   android:label="Traceur"
                   android:launchMode="singleTask">
             <intent-filter>
