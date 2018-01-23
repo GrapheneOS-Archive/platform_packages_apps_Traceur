@@ -25,11 +25,12 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.preference.MultiSelectListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.preference.TwoStatePreference;
+import android.support.v14.preference.MultiSelectListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v14.preference.PreferenceFragment;
+import android.support.v7.preference.PreferenceManager;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v14.preference.SwitchPreference;
 import android.view.View;
 import android.widget.Toast;
 
@@ -44,7 +45,7 @@ public class MainFragment extends PreferenceFragment {
 
     public static final String ACTION_REFRESH_TAGS = "com.android.traceur.REFRESH_TAGS";
 
-    private TwoStatePreference mTracingOn;
+    private SwitchPreference mTracingOn;
 
     private AlertDialog mAlertDialog;
     private SharedPreferences mPrefs;
@@ -59,12 +60,10 @@ public class MainFragment extends PreferenceFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.main);
-
         mPrefs = PreferenceManager.getDefaultSharedPreferences(
                 getActivity().getApplicationContext());
 
-        mTracingOn = (TwoStatePreference) findPreference(getActivity().getString(R.string.pref_key_tracing_on));
+        mTracingOn = (SwitchPreference) findPreference(getActivity().getString(R.string.pref_key_tracing_on));
         mTracingOn.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -148,6 +147,11 @@ public class MainFragment extends PreferenceFragment {
         }
 
         super.onPause();
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(R.xml.main);
     }
 
     private void refresh() {
