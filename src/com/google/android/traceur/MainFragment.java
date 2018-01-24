@@ -19,9 +19,11 @@ package com.android.traceur;
 import android.annotation.Nullable;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -114,6 +116,22 @@ public class MainFragment extends PreferenceFragment {
                         return true;
                     }
                 });
+
+        findPreference(getString(R.string.pref_key_quick_setting))
+            .setOnPreferenceChangeListener(
+                new Preference.OnPreferenceChangeListener() {
+                    @Override
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        ComponentName name = new ComponentName(getContext(), QsService.class);
+                        getContext().getPackageManager().setComponentEnabledSetting(name,
+                            (Boolean) newValue
+                                ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                                : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                            PackageManager.DONT_KILL_APP);
+                        return true;
+                    }
+                });
+
 
         refreshTags();
         mRefreshReceiver = new BroadcastReceiver() {
