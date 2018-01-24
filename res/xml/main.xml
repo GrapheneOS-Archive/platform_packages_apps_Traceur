@@ -30,4 +30,7 @@
         android:key="restore_default_tags"
         android:persistent="false"
         android:title="@string/restore_default_tags" />
+    <android.support.v14.preference.SwitchPreference
+        android:key="@string/pref_key_quick_setting"
+        android:title="@string/show_quick_settings_tile" />
 </android.support.v7.preference.PreferenceScreen>
