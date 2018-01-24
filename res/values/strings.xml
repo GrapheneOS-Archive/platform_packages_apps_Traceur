@@ -5,4 +5,5 @@
     <string name="share_trace">Share trace</string>
     <string name="active_tags">Active tags</string>
     <string name="restore_default_tags">Restore default tags</string>
+    <string name="show_quick_settings_tile">Show Quick Settings tile</string>
 </resources>
