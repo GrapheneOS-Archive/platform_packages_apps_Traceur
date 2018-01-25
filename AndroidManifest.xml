@@ -17,18 +17,17 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.android.traceur"
-          android:sharedUserId="android.uid.shell"
           android:versionCode="2"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="23"/>
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <application android:label="Traceur"
+    <application android:label="@string/system_tracing"
         android:theme="@style/Theme.Settings">
 
         <activity android:name=".MainActivity"
-                  android:label="Traceur"
+                  android:label="@string/system_tracing"
                   android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -37,7 +36,17 @@
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
+
+            <!-- Mark this activity as a dynamic setting in the development category. -->
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+              android:value="com.android.settings.category.ia.development" />
+            <meta-data android:name="com.android.settings.summary" android:value="" />
+            <meta-data android:name="com.android.settings.order" android:value="10" />
         </activity>
+
         <receiver android:name=".Receiver" android:permission="android.permission.DUMP">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -46,12 +55,22 @@
 
         <service
             android:name=".QsService"
-            android:label="Traceur"
+            android:label="@string/system_tracing"
             android:icon="@drawable/stat_sys_adb"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.android.traceur.files"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 </manifest>
