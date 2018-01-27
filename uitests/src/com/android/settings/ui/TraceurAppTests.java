@@ -21,6 +21,7 @@ import static org.junit.Assert.assertNotNull;
 import android.content.Context;
 import android.content.Intent;
 import android.os.RemoteException;
+import android.support.test.filters.MediumTest;
 import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
 import android.support.test.uiautomator.UiObject2;
@@ -68,6 +69,7 @@ public class TraceurAppTests {
     }
 
     @Test
+    @MediumTest
     public void testElementsOnMainScreen() throws Exception {
         assertNotNull("Start tracing switch not found.",
                 mDevice.wait(Until.findObject(By.text("Start tracing")),
@@ -93,6 +95,7 @@ public class TraceurAppTests {
      * and verify the share dialog appears.
      */
     @Test
+    @MediumTest
     public void testSuccessfulTracing() throws Exception {
         mDevice.wait(Until.findObject(By.text("Start tracing")), TIMEOUT);
 
