@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="start_tracing" msgid="4801253617978008078">"டிரேஸ் செய்யத் தொடங்கு"</string>
+    <string name="share_trace" msgid="5801019739087978595">"டிரேஸைப் பகிர்"</string>
+    <string name="active_tags" msgid="7440962492059900756">"செயல்பாட்டிலுள்ள குறிச்சொற்கள்"</string>
+    <string name="restore_default_tags" msgid="4188812334929801036">"இயல்புநிலைக் குறிச்சொற்களை மீட்டமை"</string>
+    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
+    <skip />
+</resources>

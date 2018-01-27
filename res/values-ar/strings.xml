@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="start_tracing" msgid="4801253617978008078">"بدء التتبّع"</string>
+    <string name="share_trace" msgid="5801019739087978595">"تتبّع المشاركات"</string>
+    <string name="active_tags" msgid="7440962492059900756">"العلامات النشطة"</string>
+    <string name="restore_default_tags" msgid="4188812334929801036">"استعادة العلامات التلقائية"</string>
+    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
+    <skip />
+</resources>
