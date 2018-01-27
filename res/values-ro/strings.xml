@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="start_tracing" msgid="4801253617978008078">"Începeți urmărirea"</string>
+    <string name="share_trace" msgid="5801019739087978595">"Distribuiți urma"</string>
+    <string name="active_tags" msgid="7440962492059900756">"Etichete active"</string>
+    <string name="restore_default_tags" msgid="4188812334929801036">"Restabiliți etichetele prestabilite"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Afișați caseta cu Setările rapide"</string>
+</resources>
