@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="start_tracing" msgid="4801253617978008078">"Bắt đầu theo dõi"</string>
+    <string name="share_trace" msgid="5801019739087978595">"Chia sẻ dấu vết"</string>
+    <string name="active_tags" msgid="7440962492059900756">"Các thẻ đang hoạt động"</string>
+    <string name="restore_default_tags" msgid="4188812334929801036">"Khôi phục các thẻ mặc định"</string>
+    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
+    <skip />
+</resources>
