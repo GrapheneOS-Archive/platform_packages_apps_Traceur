@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for system_tracing (4719188511746319848) -->
-    <skip />
+    <string name="system_tracing" msgid="4719188511746319848">"Captura del sistema"</string>
     <string name="start_tracing" msgid="4801253617978008078">"Iniciar captura"</string>
     <string name="share_trace" msgid="5801019739087978595">"Compartir captura"</string>
     <string name="active_tags" msgid="7440962492059900756">"Etiquetas activas"</string>
     <string name="restore_default_tags" msgid="4188812334929801036">"Restaurar etiquetas predeterminadas"</string>
-    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
-    <skip />
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Mostrar mosaico de Ajustes rápidos"</string>
 </resources>
