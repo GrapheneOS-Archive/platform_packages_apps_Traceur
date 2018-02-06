@@ -40,8 +40,8 @@ public class FileSender {
     public static void postCaptureNotification(Context context, File file) {
         final Notification.Builder builder = new Notification.Builder(context)
                 .setSmallIcon(R.drawable.stat_sys_adb)
-                .setContentTitle("Dumping systrace")
-                .setTicker("Dumping systrace")
+                .setContentTitle(context.getString(R.string.saving_trace))
+                .setTicker(context.getString(R.string.saving_trace))
                 .setLocalOnly(true)
                 .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setProgress(1, 0, true)
@@ -61,9 +61,9 @@ public class FileSender {
 
         final Notification.Builder builder = new Notification.Builder(context)
                 .setSmallIcon(R.drawable.stat_sys_adb)
-                .setContentTitle("Systrace captured")
-                .setTicker("Systrace captured")
-                .setContentText("Touch to share your systrace")
+                .setContentTitle(context.getString(R.string.trace_saved))
+                .setTicker(context.getString(R.string.trace_saved))
+                .setContentText(context.getString(R.string.tap_to_share))
                 .setContentIntent(PendingIntent.getActivity(
                         context, traceUri.hashCode(), sendIntent, PendingIntent.FLAG_ONE_SHOT
                                 | PendingIntent.FLAG_CANCEL_CURRENT))
