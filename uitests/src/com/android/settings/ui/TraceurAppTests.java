@@ -71,17 +71,17 @@ public class TraceurAppTests {
     @Test
     @MediumTest
     public void testElementsOnMainScreen() throws Exception {
-        assertNotNull("Start tracing switch not found.",
-                mDevice.wait(Until.findObject(By.text("Start tracing")),
+        assertNotNull("Record trace switch not found.",
+                mDevice.wait(Until.findObject(By.text("Record trace")),
                 TIMEOUT));
-        assertNotNull("Share trace element not found.",
-                mDevice.wait(Until.findObject(By.text("Share trace")),
+        assertNotNull("Save and share trace element not found.",
+                mDevice.wait(Until.findObject(By.text("Save and share trace")),
                 TIMEOUT));
-        assertNotNull("Active tags element not found.",
-                mDevice.wait(Until.findObject(By.text("Active tags")),
+        assertNotNull("Categories element not found.",
+                mDevice.wait(Until.findObject(By.text("Categories")),
                 TIMEOUT));
-        assertNotNull("Restore default tags element not found.",
-                mDevice.wait(Until.findObject(By.text("Restore default tags")),
+        assertNotNull("Restore default categories element not found.",
+                mDevice.wait(Until.findObject(By.text("Restore default categories")),
                 TIMEOUT));
         assertNotNull("Show Quick Settings tile switch not found.",
                 mDevice.wait(Until.findObject(By.text("Show Quick Settings tile")),
@@ -90,23 +90,22 @@ public class TraceurAppTests {
 
     /*
      * In this test:
-     * Take a trace by toggling 'Start tracing' and then tap 'Share trace'.
-     * Tap the 'Systrace Captured' notification once the trace is saved,
-     * and verify the share dialog appears.
+     * Take a trace by toggling 'Record trace' and then tap 'Save and share trace'.
+     * Tap the notification once the trace is saved, and verify the share dialog appears.
      */
     @Test
     @MediumTest
     public void testSuccessfulTracing() throws Exception {
-        mDevice.wait(Until.findObject(By.text("Start tracing")), TIMEOUT);
+        mDevice.wait(Until.findObject(By.text("Record trace")), TIMEOUT);
 
-        mDevice.findObject(By.text("Start tracing")).click();
-        mDevice.findObject(By.text("Start tracing")).click();
+        mDevice.findObject(By.text("Record trace")).click();
+        mDevice.findObject(By.text("Record trace")).click();
 
-        mDevice.findObject(By.text("Share trace")).click();
+        mDevice.findObject(By.text("Save and share trace")).click();
 
         mDevice.openNotification();
-        mDevice.wait(Until.hasObject(By.text("Touch to share your systrace")), TIMEOUT);
-        mDevice.findObject(By.text("Touch to share your systrace")).click();
+        mDevice.wait(Until.hasObject(By.text("Tap to share your trace")), TIMEOUT);
+        mDevice.findObject(By.text("Tap to share your trace")).click();
 
         mDevice.wait(Until.hasObject(By.text("Share with")), TIMEOUT);
     }
