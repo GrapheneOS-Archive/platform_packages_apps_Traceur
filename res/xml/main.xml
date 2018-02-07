@@ -33,5 +33,6 @@
         android:title="@string/restore_default_categories" />
     <android.support.v14.preference.SwitchPreference
         android:key="@string/pref_key_quick_setting"
-        android:title="@string/show_quick_settings_tile" />
+        android:title="@string/show_quick_settings_tile"
+        android:defaultValue="false" />
 </android.support.v7.preference.PreferenceScreen>
