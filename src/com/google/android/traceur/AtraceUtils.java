@@ -150,7 +150,7 @@ public class AtraceUtils {
         String format = "yyyy-MM-dd-HH-mm-ss";
         String now = new SimpleDateFormat(format, Locale.US).format(new Date());
         File file = new File(TRACE_DIRECTORY,
-            String.format("traceur-%s-%s-%s.txt", Build.BOARD, Build.ID, now));
+            String.format("trace-%s-%s-%s.ctrace", Build.BOARD, Build.ID, now));
 
         FileSender.postCaptureNotification(context, file);
         atraceDump(tags, bufferSizeKb, file);
