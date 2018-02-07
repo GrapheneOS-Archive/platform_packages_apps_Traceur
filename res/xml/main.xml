@@ -18,19 +18,21 @@
 <android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <android.support.v14.preference.SwitchPreference
         android:key="@string/pref_key_tracing_on"
-        android:title="@string/start_tracing" />
+        android:title="@string/record_trace"
+        android:summary="@string/record_trace_subtitle" />
     <Preference
         android:key="dump"
         android:persistent="false"
-        android:title="@string/share_trace" />
+        android:title="@string/save_and_share_trace" />
     <android.support.v14.preference.MultiSelectListPreference
         android:key="@string/pref_key_tags"
-        android:title="@string/active_tags" />
+        android:title="@string/categories" />
     <Preference
         android:key="restore_default_tags"
         android:persistent="false"
-        android:title="@string/restore_default_tags" />
+        android:title="@string/restore_default_categories" />
     <android.support.v14.preference.SwitchPreference
         android:key="@string/pref_key_quick_setting"
-        android:title="@string/show_quick_settings_tile" />
+        android:title="@string/show_quick_settings_tile"
+        android:defaultValue="false" />
 </android.support.v7.preference.PreferenceScreen>

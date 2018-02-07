@@ -159,7 +159,6 @@ public class AtraceUtils {
 
     public static void atraceDumpAndSendInBackground(final Context context,
             final String tags) {
-        Toast.makeText(context, "Saving trace...", Toast.LENGTH_SHORT).show();
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {

@@ -111,7 +111,8 @@ public class MainFragment extends PreferenceFragment {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         refreshTags(/* restoreDefaultTags =*/ true);
-                        Toast.makeText(getContext(), "Default tags restored",
+                        Toast.makeText(getContext(),
+                            getContext().getString(R.string.default_categories_restored),
                                 Toast.LENGTH_SHORT).show();
                         return true;
                     }

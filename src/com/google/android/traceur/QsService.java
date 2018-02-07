@@ -55,9 +55,11 @@ public class QsService extends TileService {
 
     private void update() {
         boolean tracingOn = AtraceUtils.isTracingOn();
+        String titleString = getString(tracingOn ? R.string.save_and_share_trace : R.string.record_trace);
+
         getQsTile().setIcon(Icon.createWithResource(this, R.drawable.stat_sys_adb));
         getQsTile().setState(tracingOn ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
-        getQsTile().setLabel(tracingOn ? "Tracing" : "Start Tracing");
+        getQsTile().setLabel(titleString);
         getQsTile().updateTile();
     }
 
@@ -71,11 +73,11 @@ public class QsService extends TileService {
         prefs.edit().putBoolean(getString(R.string.pref_key_tracing_on), !tracingOn).apply();
 
         if (tracingOn) {
-            Toast.makeText(getApplicationContext(), "Stopping trace...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.stopping_trace), Toast.LENGTH_SHORT).show();
             AtraceUtils.atraceDumpAndSendInBackground(this,
                     Receiver.getActiveTags(this, prefs, true));
         } else {
-            Toast.makeText(getApplicationContext(), "Starting trace...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.starting_trace), Toast.LENGTH_SHORT).show();
         }
 
         Receiver.updateTracing(this, true);
