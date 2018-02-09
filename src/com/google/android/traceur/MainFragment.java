@@ -198,7 +198,7 @@ public class MainFragment extends PreferenceFragment {
             mTags.setEntries(entries.toArray(new String[0]));
             mTags.setEntryValues(values.toArray(new String[0]));
             if (restoreDefaultTags || !mPrefs.contains(getContext().getString(R.string.pref_key_tags))) {
-                mTags.setValues(Receiver.ATRACE_TAGS);
+                mTags.setValues(Receiver.getDefaultTagList());
             }
         } finally {
             mRefreshing = false;
