@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for system_tracing (4719188511746319848) -->
+    <string name="system_tracing" msgid="4719188511746319848">"Tizim trassirovkasi"</string>
+    <!-- no translation found for record_trace (6416875085186661845) -->
     <skip />
-    <string name="start_tracing" msgid="4801253617978008078">"Trassirovkani boshlash"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Trassirovkani ulashish"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Faol teglar"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Birlamchi teglarni tiklash"</string>
-    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
+    <!-- no translation found for record_trace_subtitle (1577394223986451597) -->
+    <skip />
+    <!-- no translation found for save_and_share_trace (3585731664108492146) -->
+    <skip />
+    <!-- no translation found for categories (2280163673538611008) -->
+    <skip />
+    <!-- no translation found for restore_default_categories (5090536794637169521) -->
+    <skip />
+    <!-- no translation found for default_categories_restored (6861683793680564181) -->
+    <skip />
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Tezkor sozlamalar panelini ko‘rsatish"</string>
+    <!-- no translation found for saving_trace (1468692734770800541) -->
+    <skip />
+    <!-- no translation found for trace_saved (5869970594780992309) -->
+    <skip />
+    <!-- no translation found for tap_to_share (6766732404489536899) -->
+    <skip />
+    <!-- no translation found for starting_trace (3299700071981368910) -->
+    <skip />
+    <!-- no translation found for stopping_trace (2526600083991472407) -->
+    <skip />
+    <!-- no translation found for tracing_categories_unavailable (5609076391417077752) -->
     <skip />
 </resources>
