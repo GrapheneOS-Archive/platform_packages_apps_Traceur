@@ -67,8 +67,7 @@ public class Receiver extends BroadcastReceiver {
         } else if (DUMP_ACTION.equals(intent.getAction())) {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             if (AtraceUtils.isTracingOn()) {
-                AtraceUtils.atraceDumpAndSendInBackground(context,
-                        getActiveTags(context, prefs, true));
+                AtraceUtils.atraceDumpAndSend(context);
             } else {
                 context.startActivity(new Intent(context, MainActivity.class)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
