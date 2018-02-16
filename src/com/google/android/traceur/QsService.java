@@ -74,8 +74,7 @@ public class QsService extends TileService {
 
         if (tracingOn) {
             Toast.makeText(getApplicationContext(), getString(R.string.stopping_trace), Toast.LENGTH_SHORT).show();
-            AtraceUtils.atraceDumpAndSendInBackground(this,
-                    Receiver.getActiveTags(this, prefs, true));
+            AtraceUtils.atraceDumpAndSend(this);
         } else {
             Toast.makeText(getApplicationContext(), getString(R.string.starting_trace), Toast.LENGTH_SHORT).show();
         }

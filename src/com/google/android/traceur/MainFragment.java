@@ -100,8 +100,7 @@ public class MainFragment extends PreferenceFragment {
                 new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
-                        AtraceUtils.atraceDumpAndSendInBackground(getContext(),
-                                Receiver.getActiveTags(getContext(), mPrefs, true));
+                        AtraceUtils.atraceDumpAndSend(getContext());
                         return true;
                     }
                 });
