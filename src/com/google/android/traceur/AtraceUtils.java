@@ -63,15 +63,12 @@ public class AtraceUtils {
         }
     }
 
-    public static void atraceDump(String tags, int bufferSizeKb, File outFile) {
-        String cmd = "atrace --async_dump -z -c -b " + bufferSizeKb;
+    public static void atraceDump(File outFile) {
+        String cmd = "atrace --async_dump -z -c -o " + outFile;
 
         Log.v(TAG, "Dumping async atrace: " + cmd);
         try {
             Process atrace = exec(cmd);
-
-            new Streamer("atraceDump:stdout",
-                    atrace.getInputStream(), new FileOutputStream(outFile));
 
             if (atrace.waitFor() != 0) {
                 Log.e(TAG, "atraceDump failed with: " + atrace.exitValue());
@@ -146,23 +143,18 @@ public class AtraceUtils {
         return !"0".equals(SystemProperties.get("debug.atrace.tags.enableflags", "0"));
     }
 
-    public static void atraceDumpAndSend(Context context, String tags, int bufferSizeKb) {
-        String format = "yyyy-MM-dd-HH-mm-ss";
-        String now = new SimpleDateFormat(format, Locale.US).format(new Date());
-        File file = new File(TRACE_DIRECTORY,
-            String.format("trace-%s-%s-%s.ctrace", Build.BOARD, Build.ID, now));
-
-        FileSender.postCaptureNotification(context, file);
-        atraceDump(tags, bufferSizeKb, file);
-        FileSender.postNotification(context, file);
-    }
-
-    public static void atraceDumpAndSendInBackground(final Context context,
-            final String tags) {
+    public static void atraceDumpAndSend(final Context context) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
-                atraceDumpAndSend(context, tags, Receiver.BUFFER_SIZE_KB);
+                String format = "yyyy-MM-dd-HH-mm-ss";
+                String now = new SimpleDateFormat(format, Locale.US).format(new Date());
+                File file = new File(TRACE_DIRECTORY,
+                    String.format("trace-%s-%s-%s.ctrace", Build.BOARD, Build.ID, now));
+
+                FileSender.postCaptureNotification(context, file);
+                atraceDump(file);
+                FileSender.postNotification(context, file);
                 return null;
             }
         }.execute();
