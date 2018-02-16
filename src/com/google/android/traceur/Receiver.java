@@ -38,7 +38,6 @@ public class Receiver extends BroadcastReceiver {
 
     public static final String DUMP_ACTION = "com.android.traceur.DUMP";
     public static final String OPEN_ACTION = "com.android.traceur.OPEN";
-    public static final String FORCE_UPDATE_ACTION = "com.android.traceur.FORCE_UPDATE";
 
     private static final Set<String> ATRACE_TAGS = Sets.newArraySet(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
@@ -60,10 +59,7 @@ public class Receiver extends BroadcastReceiver {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-            updateTracing(context, false);
-            QsService.requestListeningState(context);
-        } else if (FORCE_UPDATE_ACTION.equals(intent.getAction())) {
-            updateTracing(context, true);
+            updateTracing(context);
         } else if (DUMP_ACTION.equals(intent.getAction())) {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             if (AtraceUtils.isTracingOn()) {
@@ -79,10 +75,17 @@ public class Receiver extends BroadcastReceiver {
         }
     }
 
-    public static void updateTracing(Context context, boolean force) {
+    /*
+     * Updates the current tracing state based on the current state of preferences.
+     */
+    public static void updateTracing(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        if (prefs.getBoolean(context.getString(R.string.pref_key_tracing_on), false) != AtraceUtils.isTracingOn() || force) {
-            if (prefs.getBoolean(context.getString(R.string.pref_key_tracing_on), false)) {
+        boolean prefsTracingOn =
+                prefs.getBoolean(context.getString(R.string.pref_key_tracing_on), false);
+
+        if (prefsTracingOn != AtraceUtils.isTracingOn()) {
+            if (prefsTracingOn) {
+                // Show notification if the tags in preferences are not all actually available.
                 String activeAvailableTags = getActiveTags(context, prefs, true);
                 if (!TextUtils.equals(activeAvailableTags, getActiveTags(context, prefs, false))) {
                     postRootNotification(context, prefs);
@@ -92,11 +95,14 @@ public class Receiver extends BroadcastReceiver {
 
                 AtraceUtils.atraceStart(activeAvailableTags, BUFFER_SIZE_KB);
             } else {
-                AtraceUtils.atraceStop();
+                AtraceUtils.atraceDumpAndSend(context);
                 cancelRootNotification(context);
             }
         }
 
+        // Update the main UI and the QS tile.
+        context.sendBroadcast(new Intent(MainFragment.ACTION_REFRESH_TAGS));
+        QsService.requestListeningState(context);
     }
 
     private static void postRootNotification(Context context, SharedPreferences prefs) {

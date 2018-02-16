@@ -5,11 +5,7 @@
     <string name="system_tracing">System Tracing</string>
     <!-- This is the label for a toggle button. When the toggle is enabled, we will begin recording a "Trace" of activity on the user's phone. This is also used as a Quick Settings tile label. -->
     <string name="record_trace">Record trace</string>
-    <!-- This is the subtitle for a toggle button that has the title "Record trace". A trace is a recording of activity on the user's phone. -->
-    <string name="record_trace_subtitle">This will overwrite any unsaved traces</string>
 
-    <!-- Tapping on this button will save a trace to a directory the user can access. After the trace is saved, a notification will appear that allows the user to share the trace (for example, via email. This is also used for the Quick Settings tile label, so it should be short. -->
-    <string name="save_and_share_trace">Save and share trace</string>
     <!-- This is the title for a list of trace categories. The user will be able to select as many categories as they want to from this list (that list will not be translated). Categories are explained here: https://developer.android.com/studio/command-line/systrace.html -->
     <string name="categories">Categories</string>
     <!-- When the user taps this button, the default list of categories to trace will be restored. -->
@@ -31,6 +27,9 @@
     <string name="starting_trace">Starting trace\u2026</string>
     <!-- This is a Toast message that briefly appears when a trace recording ends. -->
     <string name="stopping_trace">Stopping trace\u2026</string>
+
+    <!-- This is a message prompting the user to stop tracing. -->
+    <string name="stop_tracing">Stop tracing</string>
 
     <!-- This is the title for a notification that appears when a trace begins but for some reason a desired tracing category is not available. This ends in a colon because the subtitle for this notification is a list of the unavailable tracing categories. That list could contain one or more categories. (This should rarely happen) -->
     <string name="tracing_categories_unavailable">Some tracing categories are unavailable:</string>
