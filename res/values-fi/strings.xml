@@ -2,9 +2,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Järjestelmän seuranta"</string>
-    <string name="start_tracing" msgid="4801253617978008078">"Aloita jäljitys"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Jaa jäljitys"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Aktiiviset tagit"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Palauta oletustagit"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Tallenna jälkiä"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Tämä korvaa jäljet, joita ei ole tallennettu"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"Tallenna ja jaa jälki"</string>
+    <string name="categories" msgid="2280163673538611008">"Luokat"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Palauta oletusluokat"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Oletusluokat palautettu"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Näytä pika-asetusruutu"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"Tallennetaan jälkeä"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"Jälki tallennettu"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"Jaa jälki napauttamalla"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"Aloitetaan jäljen tallennus…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"Lopetetaan jäljen tallennus…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Osa jälkiluokista ei ole käytettävissä:"</string>
 </resources>

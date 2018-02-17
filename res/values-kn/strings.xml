@@ -2,9 +2,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"ಸಿಸ್ಟಂ ಟ್ರೇಸಿಂಗ್"</string>
-    <string name="start_tracing" msgid="4801253617978008078">"ಟ್ರೇಸಿಂಗ್ ಆರಂಭಿಸಿ"</string>
-    <string name="share_trace" msgid="5801019739087978595">"ಟ್ರೇಸ್ ಹಂಚಿಕೊಳ್ಳಿ"</string>
-    <string name="active_tags" msgid="7440962492059900756">"ಸಕ್ರಿಯ ಟ್ಯಾಗ್‌ಗಳು"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"ಡಿಫಾಲ್ಟ್ ಟ್ಯಾಗ್‌ಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಿ"</string>
+    <string name="record_trace" msgid="6416875085186661845">"ಟ್ರೇಸ್ ರೆಕಾರ್ಡ್ ಮಾಡಿ"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"ಯಾವುದೇ ಉಳಿಸದೇ ಇರುವ ಟ್ರೇಸ್‌ಗಳನ್ನು ಇದು ಮೇಲ್ಬರಹ ಮಾಡುತ್ತದೆ"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"ಟ್ರೇಸ್ ಉಳಿಸಿ ಮತ್ತು ಹಂಚಿಕೊಳ್ಳಿ"</string>
+    <string name="categories" msgid="2280163673538611008">"ವಿಭಾಗಗಳು"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"ಡಿಫಾಲ್ಟ್ ವಿಭಾಗಗಳನ್ನು ಮರುಸಂಗ್ರಹಿಸಿ"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"ಡಿಫಾಲ್ಟ್ ವಿಭಾಗಗಳನ್ನು ಮರುಸಂಗ್ರಹಿಸಲಾಗಿದೆ"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"ತ್ವರಿತ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಟೈಲ್ ತೋರಿಸು"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"ಟ್ರೇಸ್ ಅನ್ನು ಉಳಿಸಲಾಗುತ್ತಿದೆ"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"ಟ್ರೇಸ್ ಅನ್ನು ಉಳಿಸಲಾಗಿದೆ"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"ನಿಮ್ಮ ಟ್ರೇಸ್ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ಟ್ಯಾಪ್ ಮಾಡಿ"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"ಟ್ರೇಸ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"ಟ್ರೇಸ್ ಅನ್ನು ನಿಲ್ಲಿಸಲಾಗುತ್ತಿದೆ…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"ಕೆಲವು ಟ್ರೇಸಿಂಗ್ ವಿಭಾಗಗಳು ಲಭ್ಯವಿಲ್ಲ:"</string>
 </resources>

@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="start_tracing" msgid="4801253617978008078">"Έναρξη ανίχνευσης"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Κοινοποίηση ίχνους"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Ενεργές ετικέτες"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Επαναφορά προεπιλεγμένων ετικετών"</string>
-    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
-    <skip />
+    <string name="system_tracing" msgid="4719188511746319848">"Ανίχνευση συστήματος"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Εγγραφή ίχνους"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Με αυτήν την ενέργεια, τυχόν μη αποθηκευμένα ίχνη θα αντικατασταθούν"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"Αποθήκευση και κοινοποίηση ίχνους"</string>
+    <string name="categories" msgid="2280163673538611008">"Κατηγορίες"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Επαναφορά προεπιλεγμένων κατηγοριών"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Έγινε επαναφορά των προεπιλεγμένων κατηγοριών"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Εμφάνιση πλακιδίου Γρήγορων ρυθμίσεων"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"Αποθήκευση ίχνους"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"Το ίχνος αποθηκεύτηκε"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"Πατήστε για κοινοποίηση του ίχνους σας"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"Έναρξη εντοπισμού…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"Διακοπή εντοπισμού…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Ορισμένες κατηγορίες εντοπισμού δεν είναι διαθέσιμες:"</string>
 </resources>

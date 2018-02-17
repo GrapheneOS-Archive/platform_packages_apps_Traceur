@@ -2,9 +2,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Kufuatilia Mfumo"</string>
-    <string name="start_tracing" msgid="4801253617978008078">"Anza kufuatilia"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Shiriki unachofuatilia"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Lebo zinazotumika"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Rejesha lebo chaguo-msingi"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Rekodi nyayo"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Hatua hii itafuta nyayo ambazo hujahifadhi"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"Hifadhi na ushiriki nyayo"</string>
+    <string name="categories" msgid="2280163673538611008">"Aina"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Rejesha aina chaguo-msingi"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Imerejesha aina chaguo-msingi"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Onyesha kigae cha Mipangilio ya Haraka"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"Inahifadhi nyayo"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"Imehifadhi nyayo"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"Gusa ili ushiriki nyayo ulizorekodi"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"Inaanza kurekodi nyayo…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"Inaacha kurekodi nyayo…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Baadhi ya aina za nyayo hazipatikani:"</string>
 </resources>
