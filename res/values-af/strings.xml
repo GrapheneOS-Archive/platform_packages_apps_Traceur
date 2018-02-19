@@ -2,9 +2,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Stelselnasporing"</string>
-    <string name="start_tracing" msgid="4801253617978008078">"Begin naspoor"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Deel spoor"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Aktiewe merkers"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Laai verstekmerkers terug"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Neem spoor op"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Dit sal oor enige ongestoorde spore skryf"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"Stoor en deel spoor"</string>
+    <string name="categories" msgid="2280163673538611008">"Kategorieë"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Stel verstekkategorieë terug"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Verstekkategorieë is teruggestel"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Wys Kitsinstellings-teël"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"Stoor tans spoor"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"Spoor is gestoor"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"Tik om jou spoor te deel"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"Begin tans spoor …"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"Stop tans spoor …"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Sommige sporingkategorieë is onbeskikbaar"</string>
 </resources>

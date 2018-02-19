@@ -2,9 +2,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Urmărirea sistemului"</string>
-    <string name="start_tracing" msgid="4801253617978008078">"Începeți urmărirea"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Distribuiți urma"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Etichete active"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Restabiliți etichetele prestabilite"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Înregistrați urmărirea"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Astfel veți suprascrie orice urmăriri nesalvate"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"Salvați și trimiteți urmărirea"</string>
+    <string name="categories" msgid="2280163673538611008">"Categorii"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Restabiliți categoriile prestabilite"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Categoriile prestabilite au fost restabilite"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Afișați caseta cu Setările rapide"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"Se salvează urmărirea"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"Urmărire salvată"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"Apăsați pentru a vă distribui urmărirea"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"Se începe urmărirea…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"Se oprește urmărirea…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Unele categorii de urmărire nu sunt disponibile:"</string>
 </resources>

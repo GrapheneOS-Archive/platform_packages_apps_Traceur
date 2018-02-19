@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="start_tracing" msgid="4801253617978008078">"Mula menyurih"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Kongsi surih"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Teg aktif"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Pulihkan teg lalai"</string>
-    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
-    <skip />
+    <string name="system_tracing" msgid="4719188511746319848">"Penyurihan Sistem"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Rekodkan surih"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Tindakan ini akan menulis ganti sebarang surih yang tidak disimpan"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"Simpan dan kongsi surih"</string>
+    <string name="categories" msgid="2280163673538611008">"Kategori"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Pulihkan kategori lalai"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Kategori lalai dipulihkan"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Tunjukkan jubin Tetapan Pantas"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"Menyimpan surih"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"Surih disimpan"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"Ketik untuk berkongsi surih anda"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"Memulakan surih…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"Menghentikan surih…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Sesetengah kategori surihan tidak tersedia"</string>
 </resources>

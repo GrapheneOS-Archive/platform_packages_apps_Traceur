@@ -2,9 +2,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"సిస్టమ్ స్థితిగతి కనుగొనుట"</string>
-    <string name="start_tracing" msgid="4801253617978008078">"స్థితిగతిని ప్రారంభించండి"</string>
-    <string name="share_trace" msgid="5801019739087978595">"స్థితిగతిని షేర్ చేయండి"</string>
-    <string name="active_tags" msgid="7440962492059900756">"క్రియాశీల ట్యాగ్‌లు"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"డిఫాల్ట్ ట్యాగ్‌లను పునరుద్ధరించండి"</string>
+    <string name="record_trace" msgid="6416875085186661845">"స్థితిగతిని రికార్డ్ చేయండి"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"ఇది సేవ్ చేయని స్థితిగతులను భర్తీ చేస్తుంది"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"స్థితిగతిని సేవ్ మరియు షేర్ చేయి"</string>
+    <string name="categories" msgid="2280163673538611008">"వర్గాలు"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"డిఫాల్ట్ వర్గాలను పునరుద్ధరించండి"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"డిఫాల్ట్ వర్గాలు పునరుద్ధరించబడ్డాయి"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"త్వరిత సెట్టింగ్‌ల టైల్‌ను చూపు"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"స్థితిగతిని సేవ్ చేస్తోంది"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"స్థితిగతి సేవ్ చేయబడింది"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"మీ స్థితిగతిని షేర్ చేయడానికి నొక్కండి"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"స్థితిగతిని ప్రారంభిస్తోంది…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"స్థితిగతిని ప్రారంభిస్తోంది…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"కొన్ని స్థితిగతి వర్గాలు అందుబాటులో లేవు:"</string>
 </resources>

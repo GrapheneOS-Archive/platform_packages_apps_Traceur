@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="start_tracing" msgid="4801253617978008078">"Sākt izsekošanu"</string>
-    <string name="share_trace" msgid="5801019739087978595">"Kopīgot izsekošanu"</string>
-    <string name="active_tags" msgid="7440962492059900756">"Aktīvie tagi"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"Atjaunot noklusējuma tagus"</string>
-    <!-- no translation found for show_quick_settings_tile (4971147332635291585) -->
-    <skip />
+    <string name="system_tracing" msgid="4719188511746319848">"Sistēmas izsekošana"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Reģistrēt izsekošanas datus"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Šādi tiks pārrakstīti visi nesaglabātie izsekošanas dati"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"Saglabāt un kopīgot izsekošanas datus"</string>
+    <string name="categories" msgid="2280163673538611008">"Kategorijas"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Atjaunot noklusējuma kategorijas"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Noklusējuma kategorijas atjaunotas"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Ātro iestatījumu elementa rādīšana"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"Izsekošanas datu saglabāšana"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"Izsekošanas dati saglabāti"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"Pieskarieties, lai kopīgotu izsekošanas datus"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"Tiek sāka izsekošana…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"Tiek pārtraukta izsekošana…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Noteiktas izsekošanas kategorijas nav pieejamas:"</string>
 </resources>

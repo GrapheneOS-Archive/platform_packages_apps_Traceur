@@ -2,9 +2,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"સિસ્ટમ ટ્રેસ કરી રહ્યાં છીએ"</string>
-    <string name="start_tracing" msgid="4801253617978008078">"ટ્રેસ કરવાનું શરૂ કરો"</string>
-    <string name="share_trace" msgid="5801019739087978595">"ટ્રેસ શેર કરો"</string>
-    <string name="active_tags" msgid="7440962492059900756">"સક્રિય ટૅગ"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"ડિફૉલ્ટ ટૅગ પાછા મેળવો"</string>
+    <string name="record_trace" msgid="6416875085186661845">"ટ્રેસને રેકોર્ડ કરો"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"આ કોઈપણ ન સચવાયેલા ટ્રેસને ઓવરરાઇટ કરશે"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"ટ્રેસને સાચવો અને શેર કરો"</string>
+    <string name="categories" msgid="2280163673538611008">"કૅટેગરીઓ"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"ડિફૉલ્ટ કૅટેગરીઓની પુનઃસ્થાપના કરો"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"ડિફૉલ્ટ કૅટેગરીઓની પુનઃસ્થાપના કરી"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"ઝડપી સેટિંગ ટાઇલ બતાવો"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"ટ્રેસને સાચવી રહ્યાં છીએ"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"ટ્રેસ સાચવ્યો"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"તમારા ટ્રેસને શેર કરવા માટે ટૅપ કરો"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"ટ્રેસ શરૂ કરી રહ્યાં છીએ…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"ટ્રેસ બંધ કરી રહ્યાં છીએ…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"ટ્રેસ કરવાની અમુક કૅટેગરીઓ અનુપલબ્ધ છે:"</string>
 </resources>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for system_tracing (4719188511746319848) -->
-    <skip />
-    <string name="start_tracing" msgid="4801253617978008078">"ចាប់ផ្តើមតាម​ដាន"</string>
-    <string name="share_trace" msgid="5801019739087978595">"​ដានចែករំលែក"</string>
-    <string name="active_tags" msgid="7440962492059900756">"ស្លាក​សកម្ម"</string>
-    <string name="restore_default_tags" msgid="4188812334929801036">"ស្តារ​ស្លាក​លំនាំដើម"</string>
+    <string name="system_tracing" msgid="4719188511746319848">"ការ​តាមដាន​ប្រព័ន្ធ"</string>
+    <string name="record_trace" msgid="6416875085186661845">"ថតដាន​"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"វា​នឹង​ចម្លង​ជាន់ពី​លើ​ដាន​ដែល​មិន​បាន​រក្សាទុក"</string>
+    <string name="save_and_share_trace" msgid="3585731664108492146">"រក្សាទុក និង​ចែក​រំលែក​ដាន"</string>
+    <string name="categories" msgid="2280163673538611008">"ប្រភេទ"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"ស្តារ​ប្រភេទ​លំនាំ​ដើម"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"បាន​ស្តារ​ប្រភេទ​លំនាំ​ដើម"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"បង្ហាញ​ប្រអប់​ការ​កំណត់​រហ័ស"</string>
+    <string name="saving_trace" msgid="1468692734770800541">"កំពុង​រក្សាទុក​ដាន"</string>
+    <string name="trace_saved" msgid="5869970594780992309">"បាន​រក្សា​ទុក​ដាន"</string>
+    <string name="tap_to_share" msgid="6766732404489536899">"ចុច​ដើម្បី​ចែក​រំលែក​ដាន​របស់​អ្នក"</string>
+    <string name="starting_trace" msgid="3299700071981368910">"កំពុង​ចាប់​ផ្តើម​ដាន…"</string>
+    <string name="stopping_trace" msgid="2526600083991472407">"កំពុង​បញ្ឈប់​ដាន…"</string>
+    <string name="tracing_categories_unavailable" msgid="5609076391417077752">"មិនមាន​ប្រភេទ​ដាន​មួយ​ចំនួន​ទេ៖"</string>
 </resources>
