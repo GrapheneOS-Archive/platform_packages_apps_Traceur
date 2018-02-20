@@ -119,6 +119,21 @@ public class AtraceUtils {
         }
     }
 
+    public static void clearSavedTraces() {
+        String cmd = "rm -f " + TRACE_DIRECTORY + "trace-*.ctrace";
+
+        Log.v(TAG, "Clearing trace directory: " + cmd);
+        try {
+            Process rm = exec(cmd);
+
+            if (rm.waitFor() != 0) {
+                Log.e(TAG, "clearSavedTraces failed with: " + rm.exitValue());
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private static Process exec(String cmd) throws IOException {
         String[] cmdarray = {"sh", "-c", cmd};
         Log.v(TAG, "exec: " + Arrays.toString(cmdarray));

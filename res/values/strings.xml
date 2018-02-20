@@ -33,4 +33,9 @@
     <string name="trace_is_being_recorded">Trace is being recorded</string>
     <!-- This is the subtitle for a notification that appears while a trace is being recorded. Tapping the notification will stop the recording. -->
     <string name="tap_to_stop_tracing">Tap to stop tracing</string>
+
+    <!-- This is the label for a button that will clear all of the saved traces, removing them all from the directory they are saved to. There will be a confirmation dialog after this button is tapped, but clearing the traces after confirming is not reversible. -->
+    <string name="clear_saved_traces">Clear saved traces</string>
+    <!-- This is the confirmation dialog for deleting all of the saved traces. Don't translate "/data/local/traces". After confirming, this decision is not reversible. -->
+    <string name="clear_saved_traces_confirm">Are you sure you want to delete all saved traces from /data/local/traces?</string>
 </resources>
