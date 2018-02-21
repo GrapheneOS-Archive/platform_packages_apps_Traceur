@@ -23,15 +23,14 @@
     <!-- This is the subtitle for a notification that appears after a trace was saved. Tapping it will open the 'share sheet' that will appear at the bottom of the screen and will allow the user to share the trace, for example to email. -->
     <string name="tap_to_share">Tap to share your trace</string>
 
-    <!-- This is a Toast message that briefly appears when a trace recording begins. -->
-    <string name="starting_trace">Starting trace\u2026</string>
-    <!-- This is a Toast message that briefly appears when a trace recording ends. -->
-    <string name="stopping_trace">Stopping trace\u2026</string>
-
     <!-- This is a message prompting the user to stop tracing. -->
     <string name="stop_tracing">Stop tracing</string>
 
     <!-- This is the title for a notification that appears when a trace begins but for some reason a desired tracing category is not available. This ends in a colon because the subtitle for this notification is a list of the unavailable tracing categories. That list could contain one or more categories. (This should rarely happen) -->
     <string name="tracing_categories_unavailable">Some tracing categories are unavailable:</string>
 
+    <!-- This is the title for a notification that appears while a trace is being recorded. -->
+    <string name="trace_is_being_recorded">Trace is being recorded</string>
+    <!-- This is the subtitle for a notification that appears while a trace is being recorded. Tapping the notification will stop the recording. -->
+    <string name="tap_to_stop_tracing">Tap to stop tracing</string>
 </resources>
