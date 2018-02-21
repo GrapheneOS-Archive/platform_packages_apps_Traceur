@@ -80,6 +80,9 @@ public class TraceurAppTests {
         assertNotNull("Restore default categories element not found.",
                 mDevice.wait(Until.findObject(By.text("Restore default categories")),
                 TIMEOUT));
+        assertNotNull("Clear saved traces element not found.",
+                mDevice.wait(Until.findObject(By.text("Clear saved traces")),
+                TIMEOUT));
         assertNotNull("Show Quick Settings tile switch not found.",
                 mDevice.wait(Until.findObject(By.text("Show Quick Settings tile")),
                 TIMEOUT));
