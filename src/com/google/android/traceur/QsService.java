@@ -23,7 +23,6 @@ import android.graphics.drawable.Icon;
 import android.preference.PreferenceManager;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
-import android.widget.Toast;
 
 public class QsService extends TileService {
 
@@ -72,12 +71,6 @@ public class QsService extends TileService {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         boolean newTracingState = !prefs.getBoolean(getString(R.string.pref_key_tracing_on), false);
         prefs.edit().putBoolean(getString(R.string.pref_key_tracing_on), newTracingState).apply();
-
-        if (newTracingState) {
-            Toast.makeText(getApplicationContext(), getString(R.string.starting_trace), Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(getApplicationContext(), getString(R.string.stopping_trace), Toast.LENGTH_SHORT).show();
-        }
 
         Receiver.updateTracing(this);
     }
