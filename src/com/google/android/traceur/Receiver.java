@@ -36,7 +36,7 @@ import java.util.TreeMap;
 
 public class Receiver extends BroadcastReceiver {
 
-    public static final String DUMP_ACTION = "com.android.traceur.DUMP";
+    public static final String STOP_ACTION = "com.android.traceur.STOP";
     public static final String OPEN_ACTION = "com.android.traceur.OPEN";
 
     private static final Set<String> ATRACE_TAGS = Sets.newArraySet(
@@ -54,20 +54,18 @@ public class Receiver extends BroadcastReceiver {
 
     private static final String TAG = "Traceur";
 
+    private static final int CATEGORY_NOTIFICATION = 0;
+    private static final int TRACE_NOTIFICATION = 1;
+
     @Override
     public void onReceive(Context context, Intent intent) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             updateTracing(context);
-        } else if (DUMP_ACTION.equals(intent.getAction())) {
-            context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
-            if (AtraceUtils.isTracingOn()) {
-                AtraceUtils.atraceDumpAndSend(context);
-            } else {
-                context.startActivity(new Intent(context, MainActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-            }
+        } else if (STOP_ACTION.equals(intent.getAction())) {
+            prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).apply();
+            updateTracing(context);
         } else if (OPEN_ACTION.equals(intent.getAction())) {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             context.startActivity(new Intent(context, MainActivity.class)
@@ -87,16 +85,16 @@ public class Receiver extends BroadcastReceiver {
             if (prefsTracingOn) {
                 // Show notification if the tags in preferences are not all actually available.
                 String activeAvailableTags = getActiveTags(context, prefs, true);
-                if (!TextUtils.equals(activeAvailableTags, getActiveTags(context, prefs, false))) {
-                    postRootNotification(context, prefs);
-                } else {
-                    cancelRootNotification(context);
+                String activeTags = getActiveTags(context, prefs, false);
+                if (!TextUtils.equals(activeAvailableTags, activeTags)) {
+                    postCategoryNotification(context, prefs);
                 }
 
                 AtraceUtils.atraceStart(activeAvailableTags, BUFFER_SIZE_KB);
+                postTracingNotification(context, prefs);
             } else {
                 AtraceUtils.atraceDumpAndSend(context);
-                cancelRootNotification(context);
+                cancelNotifications(context);
             }
         }
 
@@ -105,8 +103,29 @@ public class Receiver extends BroadcastReceiver {
         QsService.requestListeningState(context);
     }
 
-    private static void postRootNotification(Context context, SharedPreferences prefs) {
-        NotificationManager nm = context.getSystemService(NotificationManager.class);
+    private static void postTracingNotification(Context context, SharedPreferences prefs) {
+        Intent stopIntent = new Intent(STOP_ACTION, null, context, Receiver.class);
+
+        String title = context.getString(R.string.trace_is_being_recorded);
+        String msg = context.getString(R.string.tap_to_stop_tracing);
+
+        final Notification.Builder builder = new Notification.Builder(context)
+                .setStyle(new Notification.BigTextStyle().bigText(msg))
+                .setSmallIcon(R.drawable.stat_sys_adb)
+                .setContentTitle(title)
+                .setTicker(title)
+                .setContentText(msg)
+                .setContentIntent(PendingIntent.getBroadcast(context, 0, stopIntent, 0))
+                .setOngoing(true)
+                .setLocalOnly(true)
+                .setColor(context.getColor(
+                        com.android.internal.R.color.system_notification_accent_color));
+
+        context.getSystemService(NotificationManager.class)
+            .notify(Receiver.class.getName(), TRACE_NOTIFICATION, builder.build());
+    }
+
+    private static void postCategoryNotification(Context context, SharedPreferences prefs) {
         Intent sendIntent = new Intent(context, MainActivity.class);
 
         String title = context.getString(R.string.tracing_categories_unavailable);
@@ -126,12 +145,16 @@ public class Receiver extends BroadcastReceiver {
                 .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setColor(context.getColor(
                         com.android.internal.R.color.system_notification_accent_color));
-        nm.notify(Receiver.class.getName(), 0, builder.build());
+
+        context.getSystemService(NotificationManager.class)
+            .notify(Receiver.class.getName(), CATEGORY_NOTIFICATION, builder.build());
     }
 
-    private static void cancelRootNotification(Context context) {
-        NotificationManager nm = context.getSystemService(NotificationManager.class);
-        nm.cancel(Receiver.class.getName(), 0);
+    private static void cancelNotifications(Context context) {
+        NotificationManager notificationManager =
+            context.getSystemService(NotificationManager.class);
+        notificationManager.cancel(Receiver.class.getName(), TRACE_NOTIFICATION);
+        notificationManager.cancel(Receiver.class.getName(), CATEGORY_NOTIFICATION);
     }
 
     public static String getActiveTags(Context context, SharedPreferences prefs, boolean onlyAvailable) {
