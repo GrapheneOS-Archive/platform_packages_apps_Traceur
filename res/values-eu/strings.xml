@@ -2,8 +2,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Sistemaren jarraipena"</string>
-    <string name="record_trace" msgid="6416875085186661845">"Erregistratu arrastoa"</string>
-    <string name="record_trace_subtitle" msgid="1577394223986451597">"Gorde gabeko arrastoak gainidatziko ditu"</string>
+    <string name="record_trace" msgid="6416875085186661845">"Erregistroaren jarraipena"</string>
+    <string name="record_trace_subtitle" msgid="1577394223986451597">"Gorde gabeko jarraipenak gainidatziko ditu"</string>
     <string name="save_and_share_trace" msgid="3585731664108492146">"Gorde eta partekatu arrastoa"</string>
     <string name="categories" msgid="2280163673538611008">"Kategoriak"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Leheneratu kategoria lehenetsiak"</string>
