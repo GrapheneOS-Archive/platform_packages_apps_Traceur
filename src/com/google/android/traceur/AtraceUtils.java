@@ -64,7 +64,7 @@ public class AtraceUtils {
     }
 
     public static void atraceDump(File outFile) {
-        String cmd = "atrace --async_dump -z -c -o " + outFile;
+        String cmd = "atrace --async_stop -z -c -o " + outFile;
 
         Log.v(TAG, "Dumping async atrace: " + cmd);
         try {
@@ -85,20 +85,6 @@ public class AtraceUtils {
 
             // Set the new file world readable to allow it to be adb pulled.
             outFile.setReadable(true, false); // (readable, ownerOnly)
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static void atraceStop() {
-        String cmd = "echo 0 > /d/tracing/tracing_on";
-
-        Log.v(TAG, "Stopping async atrace: " + cmd);
-        try {
-            Process atrace = exec(cmd);
-            if (atrace.waitFor() != 0) {
-                Log.e(TAG, "atraceStop failed with: " + atrace.exitValue());
-            }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
