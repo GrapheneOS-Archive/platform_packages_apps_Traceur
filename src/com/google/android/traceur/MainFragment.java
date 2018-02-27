@@ -32,8 +32,14 @@ import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.PreferenceManager;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.Toast;
+
+import com.android.settingslib.HelpUtils;
 
 import java.util.ArrayList;
 import java.util.Map.Entry;
@@ -151,6 +157,12 @@ public class MainFragment extends PreferenceFragment {
     }
 
     @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         getActivity().registerReceiver(mRefreshReceiver, new IntentFilter(ACTION_REFRESH_TAGS));
@@ -172,6 +184,12 @@ public class MainFragment extends PreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.main);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        HelpUtils.prepareHelpMenuItem(getActivity(), menu, R.string.help_url,
+            this.getClass().getName());
     }
 
     private void refresh() {
