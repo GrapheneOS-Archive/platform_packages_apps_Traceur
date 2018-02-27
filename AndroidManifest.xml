@@ -54,9 +54,10 @@
         </receiver>
 
         <service
-            android:name=".QsService"
-            android:label="@string/system_tracing"
+            android:enabled="false"
             android:icon="@drawable/stat_sys_adb"
+            android:label="@string/system_tracing"
+            android:name=".QsService"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
