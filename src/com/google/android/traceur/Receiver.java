@@ -22,10 +22,15 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -62,7 +67,9 @@ public class Receiver extends BroadcastReceiver {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
+            setupDeveloperOptionsWatcher(context);
             updateTracing(context);
+            updateQuickswitch(context);
         } else if (STOP_ACTION.equals(intent.getAction())) {
             prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).apply();
             updateTracing(context);
@@ -101,6 +108,51 @@ public class Receiver extends BroadcastReceiver {
         // Update the main UI and the QS tile.
         context.sendBroadcast(new Intent(MainFragment.ACTION_REFRESH_TAGS));
         QsService.requestListeningState(context);
+    }
+
+    /*
+     * Updates the current Quickswitch tile state based on the current state of
+     * preferences.
+     * Note that the Quickswitch tile should also be unavailable if
+     * DEVELOPMENT_SETTINGS_ENABLED is false, since System Tracing is only
+     * available inside Developer Options.
+     */
+    public static void updateQuickswitch(Context context) {
+        boolean quickswitchPreferenceEnabled =
+            PreferenceManager.getDefaultSharedPreferences(context)
+              .getBoolean(context.getString(R.string.pref_key_quick_setting), false);
+
+        boolean quickswitchAllowed = (1 ==
+            Settings.Secure.getInt(context.getContentResolver(),
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0));
+
+        ComponentName name = new ComponentName(context, QsService.class);
+        context.getPackageManager().setComponentEnabledSetting(name,
+            quickswitchPreferenceEnabled && quickswitchAllowed
+                ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP);
+
+        QsService.requestListeningState(context);
+    }
+
+    private static void setupDeveloperOptionsWatcher(Context context) {
+        Uri settingUri = Settings.Global.getUriFor(
+            Settings.Global.DEVELOPMENT_SETTINGS_ENABLED);
+
+        context.getContentResolver().registerContentObserver(settingUri, false,
+            new ContentObserver(new Handler()) {
+                @Override
+                public void onChange(boolean selfChange) {
+                    super.onChange(selfChange);
+                    updateQuickswitch(context);
+                }
+
+                @Override
+                public boolean deliverSelfNotifications() {
+                    return true;
+                }
+            });
     }
 
     private static void postTracingNotification(Context context, SharedPreferences prefs) {
