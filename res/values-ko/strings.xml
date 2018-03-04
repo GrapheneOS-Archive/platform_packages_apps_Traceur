@@ -10,15 +10,10 @@
     <string name="saving_trace" msgid="1468692734770800541">"추적 저장 중"</string>
     <string name="trace_saved" msgid="5869970594780992309">"추적 저장됨"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"추적을 공유하려면 탭하세요."</string>
-    <!-- no translation found for stop_tracing (8916938308534164152) -->
-    <skip />
+    <string name="stop_tracing" msgid="8916938308534164152">"추적 중지"</string>
     <string name="tracing_categories_unavailable" msgid="5609076391417077752">"일부 추적 카테고리를 사용할 수 없습니다"</string>
-    <!-- no translation found for trace_is_being_recorded (5947378146009337469) -->
-    <skip />
-    <!-- no translation found for tap_to_stop_tracing (6533282719573871806) -->
-    <skip />
-    <!-- no translation found for clear_saved_traces (4809195654452260944) -->
-    <skip />
-    <!-- no translation found for clear_saved_traces_confirm (7146599350128726240) -->
-    <skip />
+    <string name="trace_is_being_recorded" msgid="5947378146009337469">"추적 기록 중"</string>
+    <string name="tap_to_stop_tracing" msgid="6533282719573871806">"추적을 중지하려면 탭하세요."</string>
+    <string name="clear_saved_traces" msgid="4809195654452260944">"저장된 추적 삭제"</string>
+    <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"/data/local/traces에서 저장된 추적을 모두 삭제하시겠습니까?"</string>
 </resources>

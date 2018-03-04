@@ -10,15 +10,10 @@
     <string name="saving_trace" msgid="1468692734770800541">"Salvando rastros"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Rastros salvos"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Toque para compartilhar seus rastros"</string>
-    <!-- no translation found for stop_tracing (8916938308534164152) -->
-    <skip />
+    <string name="stop_tracing" msgid="8916938308534164152">"Parar de rastrear"</string>
     <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Algumas categorias de rastro estão indisponíveis:"</string>
-    <!-- no translation found for trace_is_being_recorded (5947378146009337469) -->
-    <skip />
-    <!-- no translation found for tap_to_stop_tracing (6533282719573871806) -->
-    <skip />
-    <!-- no translation found for clear_saved_traces (4809195654452260944) -->
-    <skip />
-    <!-- no translation found for clear_saved_traces_confirm (7146599350128726240) -->
-    <skip />
+    <string name="trace_is_being_recorded" msgid="5947378146009337469">"O rastreamento está sendo gravado"</string>
+    <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Toque para parar o rastreamento"</string>
+    <string name="clear_saved_traces" msgid="4809195654452260944">"Limpar rastros salvos"</string>
+    <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"Tem certeza de que você quer excluir todos os rastros salvos de /data/local/traces?"</string>
 </resources>
