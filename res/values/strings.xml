@@ -13,6 +13,9 @@
     <!-- This is the label for a toast that appears when the user taps the "Restore default categories" button.-->
     <string name="default_categories_restored">Default categories restored</string>
 
+    <!-- This is the label for a picker that will let the user select the buffer size to use for their trace. -->
+    <string name="buffer_size">Buffer size</string>
+
     <!-- This setting is the label for a toggle button. When enabled, a Quick Settings tile will be available in the Quick Settings bar (available when you swipe down from the top of the screen). -->
     <string name="show_quick_settings_tile">Show Quick Settings tile</string>
 
