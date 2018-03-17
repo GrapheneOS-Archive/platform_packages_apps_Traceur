@@ -3,6 +3,10 @@
 <resources>
     <!-- This is the user visible name of the app and title. The purpose of the app is to allow the user to take a "Trace" of the activity on their system, recording it for later review. Here's a description of the process, but we'd like to refer to it using the general term "tracing": https://developer.android.com/studio/command-line/systrace.html -->
     <string name="system_tracing">System Tracing</string>
+
+    <!-- This string is a description of what "System Tracing" is. It is used as a subtitle or summary text to describe this System Tracing app. -->
+    <string name="record_system_activity">Record system activity and analyze it later to improve performance</string>
+
     <!-- This is the label for a toggle button. When the toggle is enabled, we will begin recording a "Trace" of activity on the user's phone. This is also used as a Quick Settings tile label. -->
     <string name="record_trace">Record trace</string>
 
@@ -41,4 +45,6 @@
     <string name="clear_saved_traces">Clear saved traces</string>
     <!-- This is the confirmation dialog for deleting all of the saved traces. Don't translate "/data/local/traces". After confirming, this decision is not reversible. -->
     <string name="clear_saved_traces_confirm">Are you sure you want to delete all saved traces from /data/local/traces?</string>
+
+    <string name="keywords">systrace, trace, performance</string>
 </resources>
