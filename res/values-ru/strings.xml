@@ -10,10 +10,10 @@
     <string name="saving_trace" msgid="1468692734770800541">"Сохранение…"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Запись действий сохранена"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Нажмите здесь, чтобы поделиться записью действий"</string>
-    <string name="stop_tracing" msgid="8916938308534164152">"Остановить трассировку"</string>
+    <string name="stop_tracing" msgid="8916938308534164152">"Остановить запись"</string>
     <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Некоторые категории недоступны:"</string>
-    <string name="trace_is_being_recorded" msgid="5947378146009337469">"Идет запись трассировки"</string>
-    <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Нажмите, чтобы остановить трассировку."</string>
-    <string name="clear_saved_traces" msgid="4809195654452260944">"Удалить сохраненные трассировки"</string>
-    <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"Удалить все сохраненные трассировки из папки /data/local/traces?"</string>
+    <string name="trace_is_being_recorded" msgid="5947378146009337469">"Идет запись действий"</string>
+    <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Нажмите, чтобы остановить запись действий."</string>
+    <string name="clear_saved_traces" msgid="4809195654452260944">"Удалить сохраненные записи действий"</string>
+    <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"Удалить все записи действий из папки /data/local/traces?"</string>
 </resources>
