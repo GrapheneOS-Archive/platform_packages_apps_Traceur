@@ -14,7 +14,10 @@
      limitations under the License.
 -->
 <configuration description="Run Traceur Functional UI Tests.">
-    <target_preparer class="com.android.tradefed.targetprep.TestAppInstallSetup">
+    <option name="test-suite-tag" value="apct" />
+    <option name="test-suite-tag" value="apct-instrumentation" />
+    <target_preparer class="com.android.tradefed.targetprep.suiteApkInstaller">
+        <option name="cleanup-apks" value="true" />
         <option name="test-file-name" value="TraceurUiTests.apk" />
     </target_preparer>
 
