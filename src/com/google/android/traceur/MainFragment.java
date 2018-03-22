@@ -27,6 +27,7 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v14.preference.MultiSelectListPreference;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.PreferenceManager;
@@ -58,6 +59,8 @@ public class MainFragment extends PreferenceFragment {
     private SharedPreferences mPrefs;
 
     private MultiSelectListPreference mTags;
+
+    private ListPreference mBufferSize;
 
     private boolean mRefreshing;
 
@@ -100,6 +103,10 @@ public class MainFragment extends PreferenceFragment {
                 return true;
             }
         });
+
+        mBufferSize = (ListPreference) findPreference(getContext().getString(R.string.pref_key_buffer_size));
+        mBufferSize.setValue(mPrefs.getString(getContext().getString(R.string.pref_key_buffer_size),
+              getContext().getString(R.string.default_buffer_size)));
 
         findPreference("restore_default_tags").setOnPreferenceClickListener(
                 new Preference.OnPreferenceClickListener() {
