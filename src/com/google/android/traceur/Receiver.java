@@ -55,8 +55,6 @@ public class Receiver extends BroadcastReceiver {
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
             "idle", "input", "res", "sched", "view", "wm");
 
-    public static final int BUFFER_SIZE_KB = 16384;
-
     private static final String TAG = "Traceur";
 
     private static final int CATEGORY_NOTIFICATION = 0;
@@ -97,7 +95,11 @@ public class Receiver extends BroadcastReceiver {
                     postCategoryNotification(context, prefs);
                 }
 
-                AtraceUtils.atraceStart(activeAvailableTags, BUFFER_SIZE_KB);
+                int bufferSize = Integer.parseInt(
+                    prefs.getString(context.getString(R.string.pref_key_buffer_size),
+                        context.getString(R.string.default_buffer_size)));
+
+                AtraceUtils.atraceStart(activeAvailableTags, bufferSize);
                 postTracingNotification(context, prefs);
             } else {
                 AtraceUtils.atraceDumpAndSend(context);
