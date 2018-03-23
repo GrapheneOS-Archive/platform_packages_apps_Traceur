@@ -27,6 +27,7 @@
         android:theme="@style/Theme.Settings">
 
         <activity android:name=".MainActivity"
+                  android:description="@string/record_system_activity"
                   android:label="@string/system_tracing"
                   android:launchMode="singleTask">
             <intent-filter>
@@ -43,7 +44,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
               android:value="com.android.settings.category.ia.development" />
-            <meta-data android:name="com.android.settings.summary" android:value="" />
+            <meta-data android:name="com.android.settings.summary" android:value="@string/record_system_activity" />
             <meta-data android:name="com.android.settings.order" android:value="10" />
         </activity>
 
@@ -72,6 +73,18 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
+        </provider>
+
+        <provider
+            android:name=".SearchProvider"
+            android:authorities="com.android.traceur"
+            android:multiprocess="false"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
+            </intent-filter>
         </provider>
     </application>
 </manifest>
