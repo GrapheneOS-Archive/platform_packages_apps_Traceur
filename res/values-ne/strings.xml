@@ -2,10 +2,14 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"प्रणाली पत्ता लगाउने कार्य"</string>
+    <!-- no translation found for record_system_activity (4339462312915377825) -->
+    <skip />
     <string name="record_trace" msgid="6416875085186661845">"ट्रेस रेकर्ड गर्नुहोस्‌"</string>
     <string name="categories" msgid="2280163673538611008">"कोटिहरू"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"पूर्वनिर्धारित कोटिहरू पुनर्स्थापना गर्नुहोस्"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"पूर्वनिर्धारित कोटिहरू पुनर्स्थापना गरियो"</string>
+    <!-- no translation found for buffer_size (3370134227980578569) -->
+    <skip />
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"द्रुत सेटिङहरू नामक टाइल देखाउनुहोस्"</string>
     <string name="saving_trace" msgid="1468692734770800541">"ट्रेस सुरक्षित गर्दै"</string>
     <string name="trace_saved" msgid="5869970594780992309">"ट्रेस सुरक्षित गरियो"</string>
@@ -16,4 +20,6 @@
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"ट्रेस गर्न छोड्नका लागि ट्याप गर्नुहोस्‌"</string>
     <string name="clear_saved_traces" msgid="4809195654452260944">"सुरक्षित गरिएका ट्रेसहरू खाली गर्नुहोस्"</string>
     <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"तपाईं /data/local/traces बाट सुरक्षित गरिएका सबै ट्रेसहरू हटाउने कुरामा निश्चित हुनुहुन्छ?"</string>
+    <!-- no translation found for keywords (736547007949049535) -->
+    <skip />
 </resources>
