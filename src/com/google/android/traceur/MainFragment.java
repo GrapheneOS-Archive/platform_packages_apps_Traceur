@@ -144,8 +144,9 @@ public class MainFragment extends PreferenceFragment {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
                         new AlertDialog.Builder(getContext())
-                            .setMessage(R.string.clear_saved_traces_confirm)
-                            .setPositiveButton(android.R.string.yes,
+                            .setTitle(R.string.clear_saved_traces_question)
+                            .setMessage(R.string.all_traces_will_be_deleted)
+                            .setPositiveButton(R.string.clear,
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         AtraceUtils.clearSavedTraces();
