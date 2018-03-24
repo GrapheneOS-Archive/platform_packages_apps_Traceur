@@ -48,8 +48,13 @@
 
     <!-- This is the label for a button that will clear all of the saved traces, removing them all from the directory they are saved to. There will be a confirmation dialog after this button is tapped, but clearing the traces after confirming is not reversible. -->
     <string name="clear_saved_traces">Clear saved traces</string>
+    <!-- This is the title for a confirmation dialog asking the user to confirm that they want to clear, or delete, all of the traces t hey have saved. -->
+    <string name="clear_saved_traces_question">Clear saved traces?</string>
     <!-- This is the confirmation dialog for deleting all of the saved traces. Don't translate "/data/local/traces". After confirming, this decision is not reversible. -->
-    <string name="clear_saved_traces_confirm">Are you sure you want to delete all saved traces from /data/local/traces?</string>
+    <string name="all_traces_will_be_deleted">All traces will be deleted from /data/local/traces</string>
+    <!-- This is the confirmation button indicating that the user does want to clear, or delete, all of the saved traces from their device. -->
+    <string name="clear">Clear</string>
 
+    <!-- These are keywords that the user can use to search for this app. 'systrace' should not be translated, as it is an app name. -->
     <string name="keywords">systrace, trace, performance</string>
 </resources>
