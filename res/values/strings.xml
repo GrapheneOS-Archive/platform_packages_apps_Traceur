@@ -17,6 +17,11 @@
     <!-- This is the label for a toast that appears when the user taps the "Restore default categories" button.-->
     <string name="default_categories_restored">Default categories restored</string>
 
+    <!-- This is the label for a list of applications on the device that the user can add to their trace. The user will be able to select one or more applications from this list (that list will not be translated). -->
+    <string name="applications">Applications</string>
+    <!-- This is an optional subtitle under the Applications label, indicating that there are no applications available to be traced because the device doesn't have any applications in debug mode. -->
+    <string name="no_debuggable_apps">No debuggable applications are available</string>
+
     <!-- This is the label for a picker that will let the user select the buffer size to use for their trace. -->
     <string name="buffer_size">Buffer size</string>
 

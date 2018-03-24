@@ -20,6 +20,9 @@
         android:key="@string/pref_key_tracing_on"
         android:title="@string/record_trace" />
     <android.support.v14.preference.MultiSelectListPreference
+        android:key="@string/pref_key_apps"
+        android:title="@string/applications" />
+    <android.support.v14.preference.MultiSelectListPreference
         android:key="@string/pref_key_tags"
         android:title="@string/categories" />
     <Preference

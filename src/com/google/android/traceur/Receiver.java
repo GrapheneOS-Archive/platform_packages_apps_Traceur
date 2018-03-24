@@ -36,6 +36,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.util.Collections;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -99,7 +100,10 @@ public class Receiver extends BroadcastReceiver {
                     prefs.getString(context.getString(R.string.pref_key_buffer_size),
                         context.getString(R.string.default_buffer_size)));
 
-                AtraceUtils.atraceStart(activeAvailableTags, bufferSize);
+                Set<String> apps = prefs.getStringSet(context.getString(R.string.pref_key_apps),
+                    Collections.EMPTY_SET);
+
+                AtraceUtils.atraceStart(activeAvailableTags, bufferSize, apps);
                 postTracingNotification(context, prefs);
             } else {
                 AtraceUtils.atraceDumpAndSend(context);

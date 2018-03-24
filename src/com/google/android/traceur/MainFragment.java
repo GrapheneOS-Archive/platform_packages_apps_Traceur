@@ -23,6 +23,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -43,6 +45,10 @@ import android.widget.Toast;
 import com.android.settingslib.HelpUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
@@ -59,6 +65,7 @@ public class MainFragment extends PreferenceFragment {
     private SharedPreferences mPrefs;
 
     private MultiSelectListPreference mTags;
+    private MultiSelectListPreference mApps;
 
     private ListPreference mBufferSize;
 
@@ -104,6 +111,8 @@ public class MainFragment extends PreferenceFragment {
             }
         });
 
+        mApps = (MultiSelectListPreference) findPreference(getContext().getString(R.string.pref_key_apps));
+
         mBufferSize = (ListPreference) findPreference(getContext().getString(R.string.pref_key_buffer_size));
         mBufferSize.setValue(mPrefs.getString(getContext().getString(R.string.pref_key_buffer_size),
               getContext().getString(R.string.default_buffer_size)));
@@ -112,7 +121,7 @@ public class MainFragment extends PreferenceFragment {
                 new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
-                        refresh(/* restoreDefaultTags =*/ true);
+                        refreshTags(/* restoreDefaultTags =*/ true);
                         Toast.makeText(getContext(),
                             getContext().getString(R.string.default_categories_restored),
                                 Toast.LENGTH_SHORT).show();
@@ -154,13 +163,17 @@ public class MainFragment extends PreferenceFragment {
                     }
                 });
 
+        refreshTags();
+        refreshApps();
+
         mRefreshReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                refresh();
-
+                refreshTags();
+                refreshApps();
             }
         };
+
     }
 
     @Override
@@ -199,15 +212,15 @@ public class MainFragment extends PreferenceFragment {
             this.getClass().getName());
     }
 
-    private void refresh() {
-        refresh(/* restoreDefaultTags =*/ false);
+    private void refreshTags() {
+        refreshTags(/* restoreDefaultTags =*/ false);
     }
 
     /*
      * Refresh the preferences UI to make sure it reflects the current state of the preferences and
      * system.
      */
-    private void refresh(boolean restoreDefaultTags) {
+    private void refreshTags(boolean restoreDefaultTags) {
         // Make sure the Record Trace toggle matches the preference value.
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
@@ -227,6 +240,53 @@ public class MainFragment extends PreferenceFragment {
             mTags.setEntryValues(values.toArray(new String[0]));
             if (restoreDefaultTags || !mPrefs.contains(getContext().getString(R.string.pref_key_tags))) {
                 mTags.setValues(Receiver.getDefaultTagList());
+            }
+        } finally {
+            mRefreshing = false;
+        }
+    }
+
+    private void refreshApps() {
+        PackageManager packageManager = getContext().getPackageManager();
+        List<ApplicationInfo> availableApps = packageManager.getInstalledApplications(0);
+
+        // If the system build type is not debuggable, application-level tracing is
+        // only available to debuggable apps.
+        if (!Build.IS_DEBUGGABLE) {
+            for (Iterator<ApplicationInfo> appIterator = availableApps.iterator();
+                    appIterator.hasNext(); ) {
+                ApplicationInfo app = appIterator.next();
+                if (0 == (app.flags & ApplicationInfo.FLAG_DEBUGGABLE)) {
+                    appIterator.remove();
+                }
+            }
+        }
+
+        Collections.sort(availableApps,
+            new Comparator<ApplicationInfo>() {
+                @Override
+                public int compare(ApplicationInfo one, ApplicationInfo two) {
+                    return one.packageName.compareToIgnoreCase(two.packageName);
+                }
+            });
+
+        String[] entries = new String[availableApps.size()];
+
+        for (int x = 0; x < entries.length; x++) {
+            entries[x] = availableApps.get(x).packageName;
+        }
+
+        mRefreshing = true;
+        try {
+            mApps.setEntries(entries);
+            mApps.setEntryValues(entries);
+
+            if (entries.length == 0) {
+                mApps.setSummary(R.string.no_debuggable_apps);
+                mApps.setEnabled(false);
+            } else {
+                mApps.setSummary(null);
+                mApps.setEnabled(true);
             }
         } finally {
             mRefreshing = false;
