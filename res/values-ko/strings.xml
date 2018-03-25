@@ -2,10 +2,14 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"시스템 추적"</string>
+    <!-- no translation found for record_system_activity (4339462312915377825) -->
+    <skip />
     <string name="record_trace" msgid="6416875085186661845">"추적 기록"</string>
     <string name="categories" msgid="2280163673538611008">"카테고리"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"기본 카테고리 복원"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"기본 카테고리 복원됨"</string>
+    <!-- no translation found for buffer_size (3370134227980578569) -->
+    <skip />
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"빠른 설정 타일 표시"</string>
     <string name="saving_trace" msgid="1468692734770800541">"추적 저장 중"</string>
     <string name="trace_saved" msgid="5869970594780992309">"추적 저장됨"</string>
@@ -16,4 +20,6 @@
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"추적을 중지하려면 탭하세요."</string>
     <string name="clear_saved_traces" msgid="4809195654452260944">"저장된 추적 삭제"</string>
     <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"/data/local/traces에서 저장된 추적을 모두 삭제하시겠습니까?"</string>
+    <!-- no translation found for keywords (736547007949049535) -->
+    <skip />
 </resources>

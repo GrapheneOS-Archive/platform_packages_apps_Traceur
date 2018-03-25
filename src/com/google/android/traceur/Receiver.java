@@ -36,6 +36,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.util.Collections;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -54,8 +55,6 @@ public class Receiver extends BroadcastReceiver {
     private static final Set<String> ATRACE_TAGS_USER = Sets.newArraySet(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
             "idle", "input", "res", "sched", "view", "wm");
-
-    public static final int BUFFER_SIZE_KB = 16384;
 
     private static final String TAG = "Traceur";
 
@@ -97,7 +96,14 @@ public class Receiver extends BroadcastReceiver {
                     postCategoryNotification(context, prefs);
                 }
 
-                AtraceUtils.atraceStart(activeAvailableTags, BUFFER_SIZE_KB);
+                int bufferSize = Integer.parseInt(
+                    prefs.getString(context.getString(R.string.pref_key_buffer_size),
+                        context.getString(R.string.default_buffer_size)));
+
+                Set<String> apps = prefs.getStringSet(context.getString(R.string.pref_key_apps),
+                    Collections.EMPTY_SET);
+
+                AtraceUtils.atraceStart(activeAvailableTags, bufferSize, apps);
                 postTracingNotification(context, prefs);
             } else {
                 AtraceUtils.atraceDumpAndSend(context);

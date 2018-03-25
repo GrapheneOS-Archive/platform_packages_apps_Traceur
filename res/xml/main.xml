@@ -20,12 +20,20 @@
         android:key="@string/pref_key_tracing_on"
         android:title="@string/record_trace" />
     <android.support.v14.preference.MultiSelectListPreference
+        android:key="@string/pref_key_apps"
+        android:title="@string/applications" />
+    <android.support.v14.preference.MultiSelectListPreference
         android:key="@string/pref_key_tags"
         android:title="@string/categories" />
     <Preference
         android:key="restore_default_tags"
         android:persistent="false"
         android:title="@string/restore_default_categories" />
+    <android.support.v7.preference.ListPreference
+        android:key="@string/pref_key_buffer_size"
+        android:title="@string/buffer_size"
+        android:entries="@array/buffer_size_values"
+        android:entryValues="@array/buffer_size_values"/>
     <Preference
         android:key="clear_saved_traces"
         android:persistent="false"
