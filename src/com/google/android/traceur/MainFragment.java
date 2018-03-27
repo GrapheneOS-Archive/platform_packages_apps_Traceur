@@ -134,7 +134,7 @@ public class MainFragment extends PreferenceFragment {
                 new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
-                        Receiver.updateQuickswitch(getContext());
+                        Receiver.updateQuickSettings(getContext());
                         return true;
                     }
                 });
