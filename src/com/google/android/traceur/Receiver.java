@@ -31,10 +31,14 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.android.internal.statusbar.IStatusBarService;
 
 import java.util.Collections;
 import java.util.Set;
@@ -68,7 +72,7 @@ public class Receiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             setupDeveloperOptionsWatcher(context);
             updateTracing(context);
-            updateQuickswitch(context);
+            updateQuickSettings(context);
         } else if (STOP_ACTION.equals(intent.getAction())) {
             prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).apply();
             updateTracing(context);
@@ -117,27 +121,45 @@ public class Receiver extends BroadcastReceiver {
     }
 
     /*
-     * Updates the current Quickswitch tile state based on the current state of
-     * preferences.
-     * Note that the Quickswitch tile should also be unavailable if
+     * Updates the current Quick Settings tile state based on the current state
+     * of preferences.
+     * Note that the Quick Settings tile should also be unavailable if
      * DEVELOPMENT_SETTINGS_ENABLED is false, since System Tracing is only
      * available inside Developer Options.
      */
-    public static void updateQuickswitch(Context context) {
-        boolean quickswitchPreferenceEnabled =
+    public static void updateQuickSettings(Context context) {
+        boolean quickSettingsPreferenceEnabled =
             PreferenceManager.getDefaultSharedPreferences(context)
               .getBoolean(context.getString(R.string.pref_key_quick_setting), false);
 
-        boolean quickswitchAllowed = (1 ==
+        boolean quickSettingsAllowed = (1 ==
             Settings.Secure.getInt(context.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0));
 
+        boolean quickSettingsEnabled = quickSettingsPreferenceEnabled && quickSettingsAllowed;
+
         ComponentName name = new ComponentName(context, QsService.class);
         context.getPackageManager().setComponentEnabledSetting(name,
-            quickswitchPreferenceEnabled && quickswitchAllowed
+            quickSettingsEnabled
                 ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
                 : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
             PackageManager.DONT_KILL_APP);
+
+        IStatusBarService statusBarService = IStatusBarService.Stub.asInterface(
+            ServiceManager.checkService(Context.STATUS_BAR_SERVICE));
+
+        try {
+            if (statusBarService != null) {
+                if (quickSettingsEnabled) {
+                    statusBarService.addTile(name);
+                } else {
+                    statusBarService.remTile(name);
+                }
+                throw new RemoteException("test exception");
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Failed to modify QS tile for Traceur.", e);
+        }
 
         QsService.requestListeningState(context);
     }
@@ -151,7 +173,7 @@ public class Receiver extends BroadcastReceiver {
                 @Override
                 public void onChange(boolean selfChange) {
                     super.onChange(selfChange);
-                    updateQuickswitch(context);
+                    updateQuickSettings(context);
                 }
 
                 @Override
