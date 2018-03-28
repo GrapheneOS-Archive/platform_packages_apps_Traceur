@@ -23,6 +23,9 @@
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
+    <!-- Used for adding the Quick Settings tile to the status bar. -->
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+
     <application android:label="@string/system_tracing"
         android:theme="@style/Theme.Settings">
 
