@@ -15,21 +15,21 @@
   ~ limitations under the License
   -->
 
-<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v14.preference.SwitchPreference
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.SwitchPreference
         android:key="@string/pref_key_tracing_on"
         android:title="@string/record_trace" />
-    <android.support.v14.preference.MultiSelectListPreference
+    <androidx.preference.MultiSelectListPreference
         android:key="@string/pref_key_apps"
         android:title="@string/applications" />
-    <android.support.v14.preference.MultiSelectListPreference
+    <androidx.preference.MultiSelectListPreference
         android:key="@string/pref_key_tags"
         android:title="@string/categories" />
     <Preference
         android:key="restore_default_tags"
         android:persistent="false"
         android:title="@string/restore_default_categories" />
-    <android.support.v7.preference.ListPreference
+    <androidx.preference.ListPreference
         android:key="@string/pref_key_buffer_size"
         android:title="@string/buffer_size"
         android:entries="@array/buffer_size_values"
@@ -38,8 +38,8 @@
         android:key="clear_saved_traces"
         android:persistent="false"
         android:title="@string/clear_saved_traces" />
-    <android.support.v14.preference.SwitchPreference
+    <androidx.preference.SwitchPreference
         android:key="@string/pref_key_quick_setting"
         android:title="@string/show_quick_settings_tile"
         android:defaultValue="false" />
-</android.support.v7.preference.PreferenceScreen>
+</androidx.preference.PreferenceScreen>
