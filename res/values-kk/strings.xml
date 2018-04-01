@@ -2,14 +2,18 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Жүйені трассирлеу"</string>
-    <!-- no translation found for record_system_activity (4339462312915377825) -->
-    <skip />
+    <string name="record_system_activity" msgid="4339462312915377825">"Жүйенің жұмысын жазып алып, өнімділігін арттыру үшін оны кейінірек талдау"</string>
     <string name="record_trace" msgid="6416875085186661845">"Трассаны жазып алу"</string>
+    <!-- no translation found for trace_debuggable_applications (7957069895298887899) -->
+    <skip />
     <string name="categories" msgid="2280163673538611008">"Санаттар"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Әдепкі санаттарды қалпына келтіру"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Әдепкі санаттар қалпына келтірілді"</string>
-    <!-- no translation found for buffer_size (3370134227980578569) -->
+    <!-- no translation found for applications (521776761270770549) -->
     <skip />
+    <!-- no translation found for no_debuggable_apps (4386209254520471208) -->
+    <skip />
+    <string name="buffer_size" msgid="3370134227980578569">"Буфер өлшемі"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"\"Жылдам параметрлер\" бөлшегін көрсету"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Трасса сақталуда"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Трасса сақталды"</string>
@@ -19,7 +23,11 @@
     <string name="trace_is_being_recorded" msgid="5947378146009337469">"Трасса сақталды"</string>
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Трассалауды тоқтату үшін түртіңіз"</string>
     <string name="clear_saved_traces" msgid="4809195654452260944">"Сақталған трассаларды өшіру"</string>
-    <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"/data/local/traces қалтасында сақталған барлық трассалар шынымен жойылсын ба?"</string>
-    <!-- no translation found for keywords (736547007949049535) -->
+    <!-- no translation found for clear_saved_traces_question (2184026613055303818) -->
     <skip />
+    <!-- no translation found for all_traces_will_be_deleted (6646545462206955920) -->
+    <skip />
+    <!-- no translation found for clear (5484761795406948056) -->
+    <skip />
+    <string name="keywords" msgid="736547007949049535">"systrace, трасса, жұмыс өнімділігі"</string>
 </resources>
