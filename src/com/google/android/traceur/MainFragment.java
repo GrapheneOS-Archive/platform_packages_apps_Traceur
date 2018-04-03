@@ -65,7 +65,6 @@ public class MainFragment extends PreferenceFragment {
     private SharedPreferences mPrefs;
 
     private MultiSelectListPreference mTags;
-    private MultiSelectListPreference mApps;
 
     private ListPreference mBufferSize;
 
@@ -110,8 +109,6 @@ public class MainFragment extends PreferenceFragment {
                 return true;
             }
         });
-
-        mApps = (MultiSelectListPreference) findPreference(getContext().getString(R.string.pref_key_apps));
 
         mBufferSize = (ListPreference) findPreference(getContext().getString(R.string.pref_key_buffer_size));
         mBufferSize.setValue(mPrefs.getString(getContext().getString(R.string.pref_key_buffer_size),
@@ -165,13 +162,11 @@ public class MainFragment extends PreferenceFragment {
                 });
 
         refreshTags();
-        refreshApps();
 
         mRefreshReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 refreshTags();
-                refreshApps();
             }
         };
 
@@ -241,53 +236,6 @@ public class MainFragment extends PreferenceFragment {
             mTags.setEntryValues(values.toArray(new String[0]));
             if (restoreDefaultTags || !mPrefs.contains(getContext().getString(R.string.pref_key_tags))) {
                 mTags.setValues(Receiver.getDefaultTagList());
-            }
-        } finally {
-            mRefreshing = false;
-        }
-    }
-
-    private void refreshApps() {
-        PackageManager packageManager = getContext().getPackageManager();
-        List<ApplicationInfo> availableApps = packageManager.getInstalledApplications(0);
-
-        // If the system build type is not debuggable, application-level tracing is
-        // only available to debuggable apps.
-        if (!Build.IS_DEBUGGABLE) {
-            for (Iterator<ApplicationInfo> appIterator = availableApps.iterator();
-                    appIterator.hasNext(); ) {
-                ApplicationInfo app = appIterator.next();
-                if (0 == (app.flags & ApplicationInfo.FLAG_DEBUGGABLE)) {
-                    appIterator.remove();
-                }
-            }
-        }
-
-        Collections.sort(availableApps,
-            new Comparator<ApplicationInfo>() {
-                @Override
-                public int compare(ApplicationInfo one, ApplicationInfo two) {
-                    return one.packageName.compareToIgnoreCase(two.packageName);
-                }
-            });
-
-        String[] entries = new String[availableApps.size()];
-
-        for (int x = 0; x < entries.length; x++) {
-            entries[x] = availableApps.get(x).packageName;
-        }
-
-        mRefreshing = true;
-        try {
-            mApps.setEntries(entries);
-            mApps.setEntryValues(entries);
-
-            if (entries.length == 0) {
-                mApps.setSummary(R.string.no_debuggable_apps);
-                mApps.setEnabled(false);
-            } else {
-                mApps.setSummary(null);
-                mApps.setEnabled(true);
             }
         } finally {
             mRefreshing = false;
