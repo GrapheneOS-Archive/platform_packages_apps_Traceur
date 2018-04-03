@@ -104,10 +104,9 @@ public class Receiver extends BroadcastReceiver {
                     prefs.getString(context.getString(R.string.pref_key_buffer_size),
                         context.getString(R.string.default_buffer_size)));
 
-                Set<String> apps = prefs.getStringSet(context.getString(R.string.pref_key_apps),
-                    Collections.EMPTY_SET);
+                boolean appTracing = prefs.getBoolean(context.getString(R.string.pref_key_apps), true);
 
-                AtraceUtils.atraceStart(activeAvailableTags, bufferSize, apps);
+                AtraceUtils.atraceStart(activeAvailableTags, bufferSize, appTracing);
                 postTracingNotification(context, prefs);
             } else {
                 AtraceUtils.atraceDumpAndSend(context);
