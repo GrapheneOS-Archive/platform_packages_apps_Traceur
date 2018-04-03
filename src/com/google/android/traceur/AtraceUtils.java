@@ -52,12 +52,9 @@ public class AtraceUtils {
 
     private static final Runtime RUNTIME = Runtime.getRuntime();
 
-    public static void atraceStart(String tags, int bufferSizeKb, Set<String> apps) {
-        Set<String> verifiedPackageNames = verifyPackageNames(apps);
-
-        String appParameter = verifiedPackageNames.isEmpty() ? ""
-            : " -a " + TextUtils.join(",", verifiedPackageNames);
-        String cmd = "atrace --async_start -c -b " + bufferSizeKb + " " + tags + appParameter;
+    public static void atraceStart(String tags, int bufferSizeKb, boolean apps) {
+        String appParameter = apps ? "-a '*' " : "";
+        String cmd = "atrace --async_start -c -b " + bufferSizeKb + " " + appParameter + tags;
 
         Log.v(TAG, "Starting async atrace: " + cmd);
         try {
@@ -176,25 +173,6 @@ public class AtraceUtils {
                 FileSender.postNotification(context, mFile);
             }
         }.execute();
-    }
-
-    /**
-     * Ensure that all package names in the passed list contain only the
-     * characters they are allowed from the Android documentation:
-     * https://developer.android.com/guide/topics/manifest/manifest-element.html#package
-     * "The name may contain uppercase or lowercase letters ('A' through 'Z'), numbers,
-     * and underscores ('_')".
-     * Additionally allow dots.
-     */
-    private static Set<String> verifyPackageNames(Set<String> apps) {
-        for (Iterator<String> appIterator = apps.iterator(); appIterator.hasNext(); ) {
-            String app = appIterator.next();
-            if (!app.matches("^[A-Za-z_\\.]*$")) {
-                Log.e(TAG, "Badly formatted package name: " + app);
-                appIterator.remove();
-            }
-        }
-        return apps;
     }
 
     /**

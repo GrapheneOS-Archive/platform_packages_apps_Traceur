@@ -75,7 +75,7 @@ public class TraceurAppTests {
                 mDevice.wait(Until.findObject(By.text("Record trace")),
                 TIMEOUT));
         assertNotNull("Applications element not found.",
-                mDevice.wait(Until.findObject(By.text("Applications")),
+                mDevice.wait(Until.findObject(By.text("Trace debuggable applications")),
                 TIMEOUT));
         assertNotNull("Categories element not found.",
                 mDevice.wait(Until.findObject(By.text("Categories")),
