@@ -4,7 +4,7 @@
     <string name="system_tracing" msgid="4719188511746319848">"Системийн шинжлэл"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Системийн үйл ажиллагааг бүртгэж гүйцэтгэлээ сайжруулахын тулд үүнийг дараа шинжилнэ үү"</string>
     <string name="record_trace" msgid="6416875085186661845">"Мөрийг бичих"</string>
-    <string name="trace_debuggable_applications" msgid="7957069895298887899">"Дебаг хийх боломжтой аппуудын ул мөр"</string>
+    <string name="trace_debuggable_applications" msgid="7957069895298887899">"Дебаг хийх боломжтой аппуудын ул мөрийг дагах"</string>
     <string name="categories" msgid="2280163673538611008">"Ангилал"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Өгөгдмөл ангиллыг сэргээх"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Өгөгдмөл ангиллыг сэргээсэн"</string>
@@ -22,6 +22,6 @@
     <string name="clear_saved_traces" msgid="4809195654452260944">"Хадгалсан ул мөрийг устгах"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Хадгалсан ул мөрийг устгах уу?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Бүх ул мөрийг /өгөгдөл/дотоод/ул мөрөөс устгана"</string>
-    <string name="clear" msgid="5484761795406948056">"Хасах"</string>
+    <string name="clear" msgid="5484761795406948056">"Устгах"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, ул мөр, гүйцэтгэл"</string>
 </resources>
