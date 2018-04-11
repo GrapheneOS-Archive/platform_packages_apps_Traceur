@@ -4,7 +4,7 @@
     <string name="system_tracing" msgid="4719188511746319848">"System-Tracing"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Systemaktivitäten erfassen und später analysieren, um die Leistung zu verbessern"</string>
     <string name="record_trace" msgid="6416875085186661845">"Trace aufzeichnen"</string>
-    <string name="trace_debuggable_applications" msgid="7957069895298887899">"Debug-fähige Anwendungen aufzeichnen"</string>
+    <string name="trace_debuggable_applications" msgid="7957069895298887899">"Debug-fähige Anwendungen in Trace aufnehmen"</string>
     <string name="categories" msgid="2280163673538611008">"Kategorien"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Standardkategorien wiederherstellen"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Standardkategorien wiederhergestellt"</string>
