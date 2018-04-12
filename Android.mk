@@ -7,6 +7,9 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform
 LOCAL_USE_AAPT2 := true
 
+LOCAL_PROGUARD_ENABLED := custom
+LOCAL_PROGUARD_FLAG_FILES += proguard.flags
+
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v14-preference \
     android-support-v7-appcompat \
