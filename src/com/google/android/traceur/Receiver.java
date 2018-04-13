@@ -116,7 +116,7 @@ public class Receiver extends BroadcastReceiver {
 
         // Update the main UI and the QS tile.
         context.sendBroadcast(new Intent(MainFragment.ACTION_REFRESH_TAGS));
-        QsService.requestListeningState(context);
+        QsService.updateTile();
     }
 
     /*
@@ -132,7 +132,7 @@ public class Receiver extends BroadcastReceiver {
               .getBoolean(context.getString(R.string.pref_key_quick_setting), false);
 
         boolean quickSettingsAllowed = (1 ==
-            Settings.Secure.getInt(context.getContentResolver(),
+            Settings.Global.getInt(context.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0));
 
         boolean quickSettingsEnabled = quickSettingsPreferenceEnabled && quickSettingsAllowed;
@@ -154,13 +154,12 @@ public class Receiver extends BroadcastReceiver {
                 } else {
                     statusBarService.remTile(name);
                 }
-                throw new RemoteException("test exception");
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Failed to modify QS tile for Traceur.", e);
         }
 
-        QsService.requestListeningState(context);
+        QsService.updateTile();
     }
 
     private static void setupDeveloperOptionsWatcher(Context context) {
