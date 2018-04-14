@@ -11,7 +11,7 @@
     <string name="applications" msgid="521776761270770549">"Aplikácie"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Nie sú k dispozícii žiadne aplikácie na ladenie"</string>
     <string name="buffer_size" msgid="3370134227980578569">"Veľkosť vyrovnávacej pamäte"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Zobraziť dlaždicu Rýchle nastavenia"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Zobraziť dlaždicu rýchlych nastavení"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Stopa sa ukladá"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Stopa bola uložená"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Klepnutím môžete stopu zdieľať"</string>
