@@ -47,7 +47,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
               android:value="com.android.settings.category.ia.development" />
-            <meta-data android:name="com.android.settings.summary" android:value="@string/record_system_activity" />
+            <meta-data android:name="com.android.settings.summary" android:resource="@string/record_system_activity" />
             <meta-data android:name="com.android.settings.order" android:value="10" />
         </activity>
 
