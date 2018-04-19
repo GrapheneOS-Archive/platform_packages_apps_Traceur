@@ -28,15 +28,10 @@ public class QsService extends TileService {
 
     private static QsService sListeningInstance;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        setTheme(android.R.style.Theme_DeviceDefault_Light);
-    }
-
-    @Override
-    public void onTileAdded() {
-        update();
+    public static void updateTile() {
+        if (sListeningInstance != null) {
+            sListeningInstance.update();
+        }
     }
 
     @Override
@@ -73,13 +68,5 @@ public class QsService extends TileService {
         prefs.edit().putBoolean(getString(R.string.pref_key_tracing_on), newTracingState).apply();
 
         Receiver.updateTracing(this);
-    }
-
-    public static void requestListeningState(Context context) {
-        if (sListeningInstance != null) {
-            sListeningInstance.update();
-        } else {
-            requestListeningState(context, new ComponentName(context, QsService.class));
-        }
     }
 }
