@@ -10,11 +10,11 @@ LOCAL_USE_AAPT2 := true
 LOCAL_PROGUARD_FLAG_FILES += proguard.flags
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-v14-preference \
-    android-support-v7-appcompat \
-    android-support-v7-preference \
-    android-support-v7-recyclerview \
-    android-support-v4
+    androidx.legacy_legacy-preference-v14 \
+    androidx.appcompat_appcompat \
+    androidx.preference_preference \
+    androidx.recyclerview_recyclerview \
+    androidx.legacy_legacy-support-v4
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
