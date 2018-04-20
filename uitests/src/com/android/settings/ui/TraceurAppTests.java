@@ -28,6 +28,7 @@ import android.support.test.uiautomator.UiObject2;
 import android.support.test.uiautomator.Until;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
+import android.platform.test.annotations.Presubmit;
 
 import org.junit.After;
 import org.junit.Before;
@@ -68,6 +69,7 @@ public class TraceurAppTests {
         mDevice.pressHome();
     }
 
+    @Presubmit
     @Test
     @MediumTest
     public void testElementsOnMainScreen() throws Exception {
