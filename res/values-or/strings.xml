@@ -2,8 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"ସିଷ୍ଟମ୍ ଟ୍ରେସିଙ୍ଗ"</string>
-    <!-- no translation found for record_system_activity (4339462312915377825) -->
-    <skip />
+    <string name="record_system_activity" msgid="4339462312915377825">"ଏହା ସିଷ୍ଟମ୍‌ର କାର୍ଯ୍ୟକଳାପକୁ ରେକର୍ଡ କରିଥାଏ ଏବଂ କାର୍ଯ୍ୟଦକ୍ଷତାକୁ ଉନ୍ନତ କରିବା ପାଇଁ ପରେ ଏହାକୁ ବିଶ୍ଳେଷଣ କରିଥାଏ"</string>
     <string name="record_trace" msgid="6416875085186661845">"ଟ୍ରେସ୍‌କୁ ରେକର୍ଡ କରନ୍ତୁ"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"ଡିବଗ୍‌ଯୋଗ୍ୟ ଆପ୍‌ଗୁଡ଼ିକୁ ଟ୍ରେସ୍ କରନ୍ତୁ"</string>
     <string name="categories" msgid="2280163673538611008">"ବର୍ଗ"</string>
@@ -11,8 +10,7 @@
     <string name="default_categories_restored" msgid="6861683793680564181">"ଡିଫଲ୍ଟ ବର୍ଗଗୁଡ଼ିକ ରିଷ୍ଟୋର୍ ହୋଇଛି"</string>
     <string name="applications" msgid="521776761270770549">"ଆପ୍ଲିକେଶନ୍‌"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"କୌଣସି ଡିବଗ୍‌ଯୋଗ୍ୟ ଆପ୍‌ ଉପଲବ୍ଧ ନାହିଁ"</string>
-    <!-- no translation found for buffer_size (3370134227980578569) -->
-    <skip />
+    <string name="buffer_size" msgid="3370134227980578569">"ବଫର୍‌ର ଆକାର"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"କ୍ଵିକ୍ ସେଟିଙ୍ଗ ଟାଇଲ୍‌ ଦେଖାନ୍ତୁ"</string>
     <string name="saving_trace" msgid="1468692734770800541">"ଟ୍ରେସ୍‌କୁ ସେଭ୍ କରନ୍ତୁ"</string>
     <string name="trace_saved" msgid="5869970594780992309">"ଟ୍ରେସ୍ ସେଭ୍ ହୋଇଛି"</string>
@@ -25,6 +23,5 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"ସେଭ୍ ହୋଇଥିବା ଟ୍ରେସ୍‌ଗୁଡ଼ିକୁ ଖାଲି କରିବେ?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ଡାଟା/ସ୍ଥାନୀୟ/ଟ୍ରେସ୍‍ରୁ ସମସ୍ତ ଟ୍ରେସ୍‌କୁ ଡିଲିଟ୍ କରିଦିଆଯିବ"</string>
     <string name="clear" msgid="5484761795406948056">"ଖାଲି କରନ୍ତୁ"</string>
-    <!-- no translation found for keywords (736547007949049535) -->
-    <skip />
+    <string name="keywords" msgid="736547007949049535">"ସିଷ୍ଟ୍ରେସ୍, ଏସ୍, ପରଫର୍ମାନ୍ସ"</string>
 </resources>
