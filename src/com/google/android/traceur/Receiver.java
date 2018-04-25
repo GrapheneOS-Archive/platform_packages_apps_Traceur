@@ -40,7 +40,6 @@ import android.util.Log;
 
 import com.android.internal.statusbar.IStatusBarService;
 
-import java.util.Collections;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -61,9 +60,6 @@ public class Receiver extends BroadcastReceiver {
             "idle", "input", "res", "sched", "view", "wm");
 
     private static final String TAG = "Traceur";
-
-    private static final int CATEGORY_NOTIFICATION = 0;
-    private static final int TRACE_NOTIFICATION = 1;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -106,11 +102,9 @@ public class Receiver extends BroadcastReceiver {
 
                 boolean appTracing = prefs.getBoolean(context.getString(R.string.pref_key_apps), true);
 
-                AtraceUtils.atraceStart(activeAvailableTags, bufferSize, appTracing);
-                postTracingNotification(context, prefs);
+                AtraceService.startTracing(context, activeAvailableTags, bufferSize, appTracing);
             } else {
-                AtraceUtils.atraceDumpAndSend(context);
-                cancelNotifications(context);
+                AtraceService.stopTracing(context);
             }
         }
 
@@ -181,36 +175,12 @@ public class Receiver extends BroadcastReceiver {
             });
     }
 
-    private static void postTracingNotification(Context context, SharedPreferences prefs) {
-        Intent stopIntent = new Intent(STOP_ACTION, null, context, Receiver.class);
-
-        String title = context.getString(R.string.trace_is_being_recorded);
-        String msg = context.getString(R.string.tap_to_stop_tracing);
-
-        final Notification.Builder builder = new Notification.Builder(context)
-                .setStyle(new Notification.BigTextStyle().bigText(msg))
-                .setSmallIcon(R.drawable.stat_sys_adb)
-                .setContentTitle(title)
-                .setTicker(title)
-                .setContentText(msg)
-                .setContentIntent(PendingIntent.getBroadcast(context, 0, stopIntent, 0))
-                .setOngoing(true)
-                .setLocalOnly(true)
-                .setColor(context.getColor(
-                        com.android.internal.R.color.system_notification_accent_color));
-
-        context.getSystemService(NotificationManager.class)
-            .notify(Receiver.class.getName(), TRACE_NOTIFICATION, builder.build());
-    }
-
     private static void postCategoryNotification(Context context, SharedPreferences prefs) {
         Intent sendIntent = new Intent(context, MainActivity.class);
 
         String title = context.getString(R.string.tracing_categories_unavailable);
         String msg = getActiveUnavailableTags(context, prefs);
         final Notification.Builder builder = new Notification.Builder(context)
-                .setStyle(new Notification.BigTextStyle().bigText(
-                        msg))
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(title)
                 .setTicker(title)
@@ -225,14 +195,7 @@ public class Receiver extends BroadcastReceiver {
                         com.android.internal.R.color.system_notification_accent_color));
 
         context.getSystemService(NotificationManager.class)
-            .notify(Receiver.class.getName(), CATEGORY_NOTIFICATION, builder.build());
-    }
-
-    private static void cancelNotifications(Context context) {
-        NotificationManager notificationManager =
-            context.getSystemService(NotificationManager.class);
-        notificationManager.cancel(Receiver.class.getName(), TRACE_NOTIFICATION);
-        notificationManager.cancel(Receiver.class.getName(), CATEGORY_NOTIFICATION);
+            .notify(Receiver.class.getName(), 0, builder.build());
     }
 
     public static String getActiveTags(Context context, SharedPreferences prefs, boolean onlyAvailable) {
