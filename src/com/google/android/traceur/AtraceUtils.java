@@ -44,7 +44,7 @@ public class AtraceUtils {
 
     private static final Runtime RUNTIME = Runtime.getRuntime();
 
-    public static void atraceStart(String tags, int bufferSizeKb, boolean apps) {
+    public static boolean atraceStart(String tags, int bufferSizeKb, boolean apps) {
         String appParameter = apps ? "-a '*' " : "";
         String cmd = "atrace --async_start -c -b " + bufferSizeKb + " " + appParameter + tags;
 
@@ -53,13 +53,29 @@ public class AtraceUtils {
             Process atrace = exec(cmd);
             if (atrace.waitFor() != 0) {
                 Log.e(TAG, "atraceStart failed with: " + atrace.exitValue());
+                return false;
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return true;
+    }
+
+    public static void atraceStop() {
+        String cmd = "atrace --async_stop > /dev/null";
+
+        Log.v(TAG, "Stopping async atrace: " + cmd);
+        try {
+            Process atrace = exec(cmd);
+
+            if (atrace.waitFor() != 0) {
+                Log.e(TAG, "atraceStop failed with: " + atrace.exitValue());
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-
-    public static void atraceDump(File outFile) {
+    public static boolean atraceDump(File outFile) {
         String cmd = "atrace --async_stop -z -c -o " + outFile;
 
         Log.v(TAG, "Dumping async atrace: " + cmd);
@@ -68,6 +84,7 @@ public class AtraceUtils {
 
             if (atrace.waitFor() != 0) {
                 Log.e(TAG, "atraceDump failed with: " + atrace.exitValue());
+                return false;
             }
 
             Process ps = exec("ps -AT");
@@ -76,7 +93,8 @@ public class AtraceUtils {
                     ps.getInputStream(), new FileOutputStream(outFile, true /* append */));
 
             if (ps.waitFor() != 0) {
-                Log.v(TAG, "atraceDump:ps failed with: " + ps.exitValue());
+                Log.e(TAG, "atraceDump:ps failed with: " + ps.exitValue());
+                return false;
             }
 
             // Set the new file world readable to allow it to be adb pulled.
@@ -84,6 +102,7 @@ public class AtraceUtils {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        return true;
     }
 
     public static TreeMap<String,String> atraceListCategories() {
