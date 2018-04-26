@@ -68,7 +68,6 @@ public class Receiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             setupDeveloperOptionsWatcher(context);
             updateTracing(context);
-            updateQuickSettings(context);
         } else if (STOP_ACTION.equals(intent.getAction())) {
             prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).apply();
             updateTracing(context);
