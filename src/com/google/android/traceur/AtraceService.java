@@ -85,7 +85,8 @@ public class AtraceService extends IntentService {
         String title = context.getString(R.string.trace_is_being_recorded);
         String msg = context.getString(R.string.tap_to_stop_tracing);
 
-        Notification notification = new Notification.Builder(context)
+        Notification notification =
+            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(title)
                 .setTicker(title)
@@ -94,7 +95,6 @@ public class AtraceService extends IntentService {
                     PendingIntent.getBroadcast(context, 0, stopIntent, 0))
                 .setOngoing(true)
                 .setLocalOnly(true)
-                .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setColor(getColor(
                     com.android.internal.R.color.system_notification_accent_color))
                 .build();
@@ -119,13 +119,13 @@ public class AtraceService extends IntentService {
         NotificationManager notificationManager =
             getSystemService(NotificationManager.class);
 
-        Notification notification = new Notification.Builder(this)
+        Notification notification =
+            new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(getString(R.string.saving_trace))
                 .setTicker(getString(R.string.saving_trace))
                 .setLocalOnly(true)
                 .setProgress(1, 0, true)
-                .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setColor(getColor(
                     com.android.internal.R.color.system_notification_accent_color))
                 .build();
