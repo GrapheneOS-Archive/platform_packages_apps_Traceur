@@ -61,12 +61,15 @@ public class Receiver extends BroadcastReceiver {
 
     private static final String TAG = "Traceur";
 
+    private static ContentObserver mDeveloperOptionsObserver;
+
     @Override
     public void onReceive(Context context, Intent intent) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-            setupDeveloperOptionsWatcher(context);
+            updateDeveloperOptionsWatcher(context,
+                prefs.getBoolean(context.getString(R.string.pref_key_quick_setting), false));
             updateTracing(context);
         } else if (STOP_ACTION.equals(intent.getAction())) {
             prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).apply();
@@ -115,20 +118,11 @@ public class Receiver extends BroadcastReceiver {
     /*
      * Updates the current Quick Settings tile state based on the current state
      * of preferences.
-     * Note that the Quick Settings tile should also be unavailable if
-     * DEVELOPMENT_SETTINGS_ENABLED is false, since System Tracing is only
-     * available inside Developer Options.
      */
     public static void updateQuickSettings(Context context) {
-        boolean quickSettingsPreferenceEnabled =
+        boolean quickSettingsEnabled =
             PreferenceManager.getDefaultSharedPreferences(context)
               .getBoolean(context.getString(R.string.pref_key_quick_setting), false);
-
-        boolean quickSettingsAllowed = (1 ==
-            Settings.Global.getInt(context.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0));
-
-        boolean quickSettingsEnabled = quickSettingsPreferenceEnabled && quickSettingsAllowed;
 
         ComponentName name = new ComponentName(context, QsService.class);
         context.getPackageManager().setComponentEnabledSetting(name,
@@ -153,25 +147,51 @@ public class Receiver extends BroadcastReceiver {
         }
 
         QsService.updateTile();
+
+        updateDeveloperOptionsWatcher(context, quickSettingsEnabled);
     }
 
-    private static void setupDeveloperOptionsWatcher(Context context) {
+    /*
+     * When Developer Options are turned off, reset the Show Quick Settings Tile
+     * preference to false to hide the tile. The user will need to re-enable the
+     * preference if they decide to turn Developer Options back on again.
+     */
+    private static void updateDeveloperOptionsWatcher(Context context,
+            boolean quickSettingsEnabled) {
+
         Uri settingUri = Settings.Global.getUriFor(
             Settings.Global.DEVELOPMENT_SETTINGS_ENABLED);
 
-        context.getContentResolver().registerContentObserver(settingUri, false,
-            new ContentObserver(new Handler()) {
-                @Override
-                public void onChange(boolean selfChange) {
-                    super.onChange(selfChange);
-                    updateQuickSettings(context);
-                }
+        if (quickSettingsEnabled) {
+            mDeveloperOptionsObserver =
+                new ContentObserver(new Handler()) {
+                    @Override
+                    public void onChange(boolean selfChange) {
+                        super.onChange(selfChange);
 
-                @Override
-                public boolean deliverSelfNotifications() {
-                    return true;
-                }
-            });
+                        boolean developerOptionsEnabled = (1 ==
+                            Settings.Global.getInt(context.getContentResolver(),
+                                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0));
+
+                        if (!developerOptionsEnabled) {
+                            SharedPreferences prefs =
+                                PreferenceManager.getDefaultSharedPreferences(context);
+                            prefs.edit().putBoolean(
+                                context.getString(R.string.pref_key_quick_setting), false)
+                                .apply();
+                            updateQuickSettings(context);
+                        }
+                    }
+                };
+
+            context.getContentResolver().registerContentObserver(settingUri,
+                false, mDeveloperOptionsObserver);
+
+        } else if (mDeveloperOptionsObserver != null) {
+            context.getContentResolver().unregisterContentObserver(
+                mDeveloperOptionsObserver);
+            mDeveloperOptionsObserver = null;
+        }
     }
 
     private static void postCategoryNotification(Context context, SharedPreferences prefs) {
