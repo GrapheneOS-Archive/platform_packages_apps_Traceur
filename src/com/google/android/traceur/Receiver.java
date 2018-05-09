@@ -19,6 +19,7 @@ package com.android.traceur;
 import com.google.android.collect.Sets;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -48,6 +49,8 @@ public class Receiver extends BroadcastReceiver {
     public static final String STOP_ACTION = "com.android.traceur.STOP";
     public static final String OPEN_ACTION = "com.android.traceur.OPEN";
 
+    public static final String NOTIFICATION_CHANNEL = "system-tracing";
+
     private static final Set<String> ATRACE_TAGS = Sets.newArraySet(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
             "idle", "input", "irq", "res", "sched", "sync", "view", "wm",
@@ -68,6 +71,7 @@ public class Receiver extends BroadcastReceiver {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
+            createNotificationChannel(context);
             updateDeveloperOptionsWatcher(context,
                 prefs.getBoolean(context.getString(R.string.pref_key_quick_setting), false));
             updateTracing(context);
@@ -199,7 +203,8 @@ public class Receiver extends BroadcastReceiver {
 
         String title = context.getString(R.string.tracing_categories_unavailable);
         String msg = getActiveUnavailableTags(context, prefs);
-        final Notification.Builder builder = new Notification.Builder(context)
+        final Notification.Builder builder =
+            new Notification.Builder(context, NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(title)
                 .setTicker(title)
@@ -209,12 +214,24 @@ public class Receiver extends BroadcastReceiver {
                                 | PendingIntent.FLAG_CANCEL_CURRENT))
                 .setAutoCancel(true)
                 .setLocalOnly(true)
-                .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setColor(context.getColor(
                         com.android.internal.R.color.system_notification_accent_color));
 
         context.getSystemService(NotificationManager.class)
             .notify(Receiver.class.getName(), 0, builder.build());
+    }
+
+    private static void createNotificationChannel(Context context) {
+        NotificationChannel channel = new NotificationChannel(
+            NOTIFICATION_CHANNEL, context.getString(R.string.system_tracing),
+            NotificationManager.IMPORTANCE_HIGH);
+        channel.setBypassDnd(true);
+        channel.enableVibration(true);
+        channel.setSound(null, null);
+
+        NotificationManager notificationManager =
+            context.getSystemService(NotificationManager.class);
+        notificationManager.createNotificationChannel(channel);
     }
 
     public static String getActiveTags(Context context, SharedPreferences prefs, boolean onlyAvailable) {
