@@ -45,7 +45,8 @@ public class FileSender {
         Intent sendIntent = buildSendIntent(context, traceUri);
         sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        final Notification.Builder builder = new Notification.Builder(context)
+        final Notification.Builder builder =
+            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(context.getString(R.string.trace_saved))
                 .setTicker(context.getString(R.string.trace_saved))
@@ -55,7 +56,6 @@ public class FileSender {
                                 | PendingIntent.FLAG_CANCEL_CURRENT))
                 .setAutoCancel(true)
                 .setLocalOnly(true)
-                .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setColor(context.getColor(
                         com.android.internal.R.color.system_notification_accent_color));
 
