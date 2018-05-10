@@ -21,7 +21,6 @@ import static org.junit.Assert.assertNotNull;
 import android.content.Context;
 import android.content.Intent;
 import android.os.RemoteException;
-import android.support.test.filters.MediumTest;
 import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
 import android.support.test.uiautomator.UiObject2;
@@ -71,7 +70,6 @@ public class TraceurAppTests {
 
     @Presubmit
     @Test
-    @MediumTest
     public void testElementsOnMainScreen() throws Exception {
         assertNotNull("Record trace switch not found.",
                 mDevice.wait(Until.findObject(By.text("Record trace")),
@@ -101,8 +99,8 @@ public class TraceurAppTests {
      * Take a trace by toggling 'Record trace' and then tap 'Save and share trace'.
      * Tap the notification once the trace is saved, and verify the share dialog appears.
      */
+    @Presubmit
     @Test
-    @MediumTest
     public void testSuccessfulTracing() throws Exception {
         mDevice.wait(Until.findObject(By.text("Record trace")), TIMEOUT);
 
