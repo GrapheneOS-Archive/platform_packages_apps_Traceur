@@ -26,6 +26,12 @@
     <!-- Used for adding the Quick Settings tile to the status bar. -->
     <uses-permission android:name="android.permission.STATUS_BAR" />
 
+    <!-- Declare Android TV support. -->
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+
+    <!-- touch screen is not required for TV -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
     <application android:label="@string/system_tracing"
         android:theme="@style/Theme.Settings">
 
@@ -35,6 +41,7 @@
                   android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
                 <category android:name="android.intent.category.INFO"/>
             </intent-filter>
             <intent-filter>
