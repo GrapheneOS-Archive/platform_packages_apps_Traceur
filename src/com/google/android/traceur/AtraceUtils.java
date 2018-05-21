@@ -27,9 +27,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.TreeMap;
 
@@ -41,6 +45,9 @@ public class AtraceUtils {
     static final String TAG = "Traceur";
 
     public static final String TRACE_DIRECTORY = "/data/local/traces/";
+
+    private static final String DEBUG_TRACING_FILE = "/sys/kernel/debug/tracing/tracing_on";
+    private static final String TRACING_FILE = "/sys/kernel/tracing/tracing_on";
 
     private static final Runtime RUNTIME = Runtime.getRuntime();
 
@@ -156,7 +163,35 @@ public class AtraceUtils {
     }
 
     public static boolean isTracingOn() {
-        return !"0".equals(SystemProperties.get("debug.atrace.tags.enableflags", "0"));
+        boolean userInitiatedTracingFlag =
+            "1".equals(SystemProperties.get("debug.atrace.user_initiated", ""));
+
+        if (!userInitiatedTracingFlag) {
+            return false;
+        }
+
+        boolean tracingOnFlag = false;
+
+        try {
+            List<String> tracingOnContents;
+
+            Path debugTracingOnPath = Paths.get(DEBUG_TRACING_FILE);
+            Path tracingOnPath = Paths.get(TRACING_FILE);
+
+            if (Files.isReadable(debugTracingOnPath)) {
+                tracingOnContents = Files.readAllLines(debugTracingOnPath);
+            } else if (Files.isReadable(tracingOnPath)) {
+                tracingOnContents = Files.readAllLines(tracingOnPath);
+            } else {
+                return false;
+            }
+
+            tracingOnFlag = !tracingOnContents.get(0).equals("0");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return userInitiatedTracingFlag && tracingOnFlag;
     }
 
     public static String getOutputFilename() {
