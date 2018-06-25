@@ -56,6 +56,7 @@
               android:value="com.android.settings.category.ia.development" />
             <meta-data android:name="com.android.settings.summary" android:resource="@string/record_system_activity" />
             <meta-data android:name="com.android.settings.order" android:value="10" />
+            <meta-data android:name="com.android.settings.profile" android:value="primary_profile_only" />
         </activity>
 
         <receiver android:name=".Receiver" android:permission="android.permission.DUMP">
