@@ -6,8 +6,8 @@
     <string name="record_trace" msgid="6416875085186661845">"Rekodi nyayo"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Tafuta programu zinazoweza kutatuliwa"</string>
     <string name="categories" msgid="2280163673538611008">"Aina"</string>
-    <string name="restore_default_categories" msgid="5090536794637169521">"Rejesha aina chaguo msingi"</string>
-    <string name="default_categories_restored" msgid="6861683793680564181">"Imerejesha aina chaguo msingi"</string>
+    <string name="restore_default_categories" msgid="5090536794637169521">"Rejesha aina chaguomsingi"</string>
+    <string name="default_categories_restored" msgid="6861683793680564181">"Imerejesha aina chaguomsingi"</string>
     <string name="applications" msgid="521776761270770549">"Maombi"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Haikupata programu zozote ambazo zinaweza kutatuliwa"</string>
     <string name="buffer_size" msgid="3370134227980578569">"Ukubwa wa hifadhi ya akiba"</string>
