@@ -24,6 +24,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.support.v4.content.FileProvider;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.SystemProperties;
 import android.util.Patterns;
@@ -58,6 +59,10 @@ public class FileSender {
                 .setLocalOnly(true)
                 .setColor(context.getColor(
                         com.android.internal.R.color.system_notification_accent_color));
+
+        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_LEANBACK)) {
+            builder.extend(new Notification.TvExtender());
+        }
 
         NotificationManager.from(context).notify(file.getName(), 0, builder.build());
     }
