@@ -217,6 +217,10 @@ public class Receiver extends BroadcastReceiver {
                 .setColor(context.getColor(
                         com.android.internal.R.color.system_notification_accent_color));
 
+        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_LEANBACK)) {
+            builder.extend(new Notification.TvExtender());
+        }
+
         context.getSystemService(NotificationManager.class)
             .notify(Receiver.class.getName(), 0, builder.build());
     }

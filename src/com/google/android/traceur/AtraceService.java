@@ -25,6 +25,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
 
 import java.io.File;
@@ -85,7 +86,7 @@ public class AtraceService extends IntentService {
         String title = context.getString(R.string.trace_is_being_recorded);
         String msg = context.getString(R.string.tap_to_stop_tracing);
 
-        Notification notification =
+        Notification.Builder notification =
             new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(title)
@@ -96,10 +97,13 @@ public class AtraceService extends IntentService {
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setColor(getColor(
-                    com.android.internal.R.color.system_notification_accent_color))
-                .build();
+                    com.android.internal.R.color.system_notification_accent_color));
 
-        startForeground(TRACE_NOTIFICATION, notification);
+        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_LEANBACK)) {
+            notification.extend(new Notification.TvExtender());
+        }
+
+        startForeground(TRACE_NOTIFICATION, notification.build());
 
         if (AtraceUtils.atraceStart(tags, bufferSizeKb, appTracing)) {
             stopForeground(Service.STOP_FOREGROUND_DETACH);
@@ -116,10 +120,11 @@ public class AtraceService extends IntentService {
     }
 
     private void stopTracingInternal(String outputFilename) {
+        Context context = getApplicationContext();
         NotificationManager notificationManager =
             getSystemService(NotificationManager.class);
 
-        Notification notification =
+        Notification.Builder notification =
             new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(getString(R.string.saving_trace))
@@ -127,10 +132,13 @@ public class AtraceService extends IntentService {
                 .setLocalOnly(true)
                 .setProgress(1, 0, true)
                 .setColor(getColor(
-                    com.android.internal.R.color.system_notification_accent_color))
-                .build();
+                    com.android.internal.R.color.system_notification_accent_color));
 
-        startForeground(SAVING_TRACE_NOTIFICATION, notification);
+        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_LEANBACK)) {
+            notification.extend(new Notification.TvExtender());
+        }
+
+        startForeground(SAVING_TRACE_NOTIFICATION, notification.build());
 
         notificationManager.cancel(TRACE_NOTIFICATION);
 
