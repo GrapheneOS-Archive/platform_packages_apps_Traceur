@@ -44,7 +44,7 @@ public class FileSender {
         final Uri traceUri = getUriForFile(context, file);
 
         Intent sendIntent = buildSendIntent(context, traceUri);
-        sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_RECEIVER_FOREGROUND);
 
         final Notification.Builder builder =
             new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL)
