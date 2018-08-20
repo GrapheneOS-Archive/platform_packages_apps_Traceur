@@ -81,6 +81,7 @@ public class AtraceService extends IntentService {
         Context context = getApplicationContext();
         Intent stopIntent = new Intent(Receiver.STOP_ACTION,
             null, context, Receiver.class);
+        stopIntent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
 
         String title = context.getString(R.string.trace_is_being_recorded);
         String msg = context.getString(R.string.tap_to_stop_tracing);
