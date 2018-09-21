@@ -29,6 +29,8 @@ import android.support.test.uiautomator.Until;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import java.util.regex.Pattern;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -110,6 +112,10 @@ public class TraceurAppTests {
         mDevice.openNotification();
         mDevice.wait(Until.hasObject(By.text("Tap to share your trace")), TIMEOUT);
         mDevice.findObject(By.text("Tap to share your trace")).click();
+
+        mDevice.wait(Until.hasObject(By.text("Only share system traces with people and apps you trust.")), TIMEOUT);
+        // The buttons on dialogs sometimes have their capitalization manipulated by themes.
+        mDevice.findObject(By.text(Pattern.compile("share", Pattern.CASE_INSENSITIVE))).click();
 
         mDevice.wait(Until.hasObject(By.text("Share with")), TIMEOUT);
     }
