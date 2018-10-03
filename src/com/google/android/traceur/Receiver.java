@@ -16,8 +16,6 @@
 
 package com.android.traceur;
 
-import com.google.android.collect.Sets;
-
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -37,10 +35,13 @@ import android.os.ServiceManager;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.internal.statusbar.IStatusBarService;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -51,19 +52,20 @@ public class Receiver extends BroadcastReceiver {
 
     public static final String NOTIFICATION_CHANNEL = "system-tracing";
 
-    private static final Set<String> ATRACE_TAGS = Sets.newArraySet(
+    private static final List<String> ATRACE_TAGS = Arrays.asList(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
             "idle", "input", "irq", "res", "sched", "sync", "view", "wm",
             "workq");
 
     /* The user list doesn't include workq, irq, or sync, because the user builds don't have
      * permissions for them. */
-    private static final Set<String> ATRACE_TAGS_USER = Sets.newArraySet(
+    private static final List<String> ATRACE_TAGS_USER = Arrays.asList(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
             "idle", "input", "res", "sched", "view", "wm");
 
     private static final String TAG = "Traceur";
 
+    private static Set<String> mDefaultTagList = null;
     private static ContentObserver mDeveloperOptionsObserver;
 
     @Override
@@ -276,6 +278,11 @@ public class Receiver extends BroadcastReceiver {
     }
 
     public static Set<String> getDefaultTagList() {
-        return Build.TYPE.equals("user") ? ATRACE_TAGS_USER : ATRACE_TAGS;
+        if (mDefaultTagList == null) {
+            mDefaultTagList = new ArraySet<String>(Build.TYPE.equals("user")
+                ? ATRACE_TAGS_USER : ATRACE_TAGS);
+        }
+
+        return mDefaultTagList;
     }
 }
