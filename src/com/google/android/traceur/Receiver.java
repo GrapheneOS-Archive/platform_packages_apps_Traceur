@@ -95,7 +95,7 @@ public class Receiver extends BroadcastReceiver {
         boolean prefsTracingOn =
                 prefs.getBoolean(context.getString(R.string.pref_key_tracing_on), false);
 
-        if (prefsTracingOn != AtraceUtils.isTracingOn()) {
+        if (prefsTracingOn != TraceUtils.isTracingOn()) {
             if (prefsTracingOn) {
                 // Show notification if the tags in preferences are not all actually available.
                 String activeAvailableTags = getActiveTags(context, prefs, true);
@@ -245,7 +245,7 @@ public class Receiver extends BroadcastReceiver {
                 getDefaultTagList());
         StringBuilder sb = new StringBuilder(10 * tags.size());
         TreeMap<String, String> available =
-                onlyAvailable ? AtraceUtils.atraceListCategories() : null;
+                onlyAvailable ? TraceUtils.listCategories() : null;
 
         for (String s : tags) {
             if (onlyAvailable && !available.containsKey(s)) continue;
@@ -263,7 +263,7 @@ public class Receiver extends BroadcastReceiver {
         Set<String> tags = prefs.getStringSet(context.getString(R.string.pref_key_tags),
                 getDefaultTagList());
         StringBuilder sb = new StringBuilder(10 * tags.size());
-        TreeMap<String, String> available = AtraceUtils.atraceListCategories();
+        TreeMap<String, String> available = TraceUtils.listCategories();
 
         for (String s : tags) {
             if (available.containsKey(s)) continue;
