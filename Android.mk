@@ -11,6 +11,7 @@ LOCAL_PROGUARD_FLAG_FILES += proguard.flags
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.leanback_leanback \
+    androidx.leanback_leanback-preference \
     androidx.legacy_legacy-preference-v14 \
     androidx.appcompat_appcompat \
     androidx.preference_preference \
