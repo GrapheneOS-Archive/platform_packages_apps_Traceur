@@ -76,7 +76,7 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".AtraceService" />
+        <service android:name=".TraceService" />
 
         <service
             android:name=".QsService"
