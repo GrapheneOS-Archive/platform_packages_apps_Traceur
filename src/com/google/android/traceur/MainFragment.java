@@ -55,7 +55,7 @@ import java.util.TreeMap;
 
 public class MainFragment extends PreferenceFragment {
 
-    static final String TAG = AtraceUtils.TAG;
+    static final String TAG = TraceUtils.TAG;
 
     public static final String ACTION_REFRESH_TAGS = "com.android.traceur.REFRESH_TAGS";
 
@@ -96,7 +96,7 @@ public class MainFragment extends PreferenceFragment {
                     return true;
                 }
                 Set<String> set = (Set<String>) newValue;
-                TreeMap<String, String> available = AtraceUtils.atraceListCategories();
+                TreeMap<String, String> available = TraceUtils.listCategories();
                 ArrayList<String> clean = new ArrayList<>(set.size());
 
                 for (String s : set) {
@@ -146,7 +146,7 @@ public class MainFragment extends PreferenceFragment {
                             .setPositiveButton(R.string.clear,
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        AtraceUtils.clearSavedTraces();
+                                        TraceUtils.clearSavedTraces();
                                     }
                                 })
                             .setNegativeButton(android.R.string.no,
@@ -221,8 +221,8 @@ public class MainFragment extends PreferenceFragment {
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
 
-        // Update category list to match the categories available on the system from atrace.
-        Set<Entry<String, String>> availableTags = AtraceUtils.atraceListCategories().entrySet();
+        // Update category list to match the categories available on the system.
+        Set<Entry<String, String>> availableTags = TraceUtils.listCategories().entrySet();
         ArrayList<String> entries = new ArrayList<String>(availableTags.size());
         ArrayList<String> values = new ArrayList<String>(availableTags.size());
         for (Entry<String, String> entry : availableTags) {
