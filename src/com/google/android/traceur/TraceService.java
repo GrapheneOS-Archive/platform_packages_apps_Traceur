@@ -30,7 +30,7 @@ import android.preference.PreferenceManager;
 
 import java.io.File;
 
-public class AtraceService extends IntentService {
+public class TraceService extends IntentService {
 
     private static String INTENT_ACTION_START_TRACING = "com.android.traceur.START_TRACING";
     private static String INTENT_ACTION_STOP_TRACING = "com.android.traceur.STOP_TRACING";
@@ -45,7 +45,7 @@ public class AtraceService extends IntentService {
 
     public static void startTracing(final Context context,
             String tags, int bufferSizeKb, boolean apps) {
-        Intent intent = new Intent(context, AtraceService.class);
+        Intent intent = new Intent(context, TraceService.class);
         intent.setAction(INTENT_ACTION_START_TRACING);
         intent.putExtra(INTENT_EXTRA_TAGS, tags);
         intent.putExtra(INTENT_EXTRA_BUFFER, bufferSizeKb);
@@ -54,14 +54,14 @@ public class AtraceService extends IntentService {
     }
 
     public static void stopTracing(final Context context) {
-        Intent intent = new Intent(context, AtraceService.class);
+        Intent intent = new Intent(context, TraceService.class);
         intent.setAction(INTENT_ACTION_STOP_TRACING);
         intent.putExtra(INTENT_EXTRA_FILENAME, AtraceUtils.getOutputFilename());
         context.startService(intent);
     }
 
-    public AtraceService() {
-        super("AtraceService");
+    public TraceService() {
+        super("TraceService");
         setIntentRedelivery(true);
     }
 
