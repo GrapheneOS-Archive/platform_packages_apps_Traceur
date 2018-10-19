@@ -56,7 +56,7 @@ public class TraceService extends IntentService {
     public static void stopTracing(final Context context) {
         Intent intent = new Intent(context, TraceService.class);
         intent.setAction(INTENT_ACTION_STOP_TRACING);
-        intent.putExtra(INTENT_EXTRA_FILENAME, AtraceUtils.getOutputFilename());
+        intent.putExtra(INTENT_EXTRA_FILENAME, TraceUtils.getOutputFilename());
         context.startService(intent);
     }
 
@@ -106,12 +106,12 @@ public class TraceService extends IntentService {
 
         startForeground(TRACE_NOTIFICATION, notification.build());
 
-        if (AtraceUtils.atraceStart(tags, bufferSizeKb, appTracing)) {
+        if (TraceUtils.traceStart(tags, bufferSizeKb, appTracing)) {
             stopForeground(Service.STOP_FOREGROUND_DETACH);
         } else {
             // Starting the trace was unsuccessful, so ensure that tracing
             // is stopped and the preference is reset.
-            AtraceUtils.atraceStop();
+            TraceUtils.traceStop();
             PreferenceManager.getDefaultSharedPreferences(context)
                 .edit().putBoolean(context.getString(R.string.pref_key_tracing_on),
                         false).apply();
@@ -143,9 +143,9 @@ public class TraceService extends IntentService {
 
         notificationManager.cancel(TRACE_NOTIFICATION);
 
-        File file = AtraceUtils.getOutputFile(outputFilename);
+        File file = TraceUtils.getOutputFile(outputFilename);
 
-        if (AtraceUtils.atraceDump(file)) {
+        if (TraceUtils.traceDump(file)) {
             FileSender.postNotification(getApplicationContext(), file);
         }
 
