@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Se borrarán todos los datos de /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Borrar"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, seguimiento, rendimiento"</string>
+    <string name="share_trace" msgid="4528525067822044385">"¿Quieres compartir el registro?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Los archivos de Registro del sistema podrían incluir datos sensibles del sistema y de la app (como información sobre el uso de la app). Comparte los registros del sistema únicamente con personas y apps de confianza."</string>
+    <string name="share" msgid="8443979083706282338">"Compartir"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"No volver a mostrar"</string>
 </resources>

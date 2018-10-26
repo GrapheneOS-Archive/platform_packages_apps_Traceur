@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Усі журнали трасування буде видалено з папки /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Очистити"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, відстеження, продуктивність"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Поділитися трасуванням?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Файли трасування можуть містити конфіденційні дані про систему й додатки (як-от використання додатка). Діліться ними лише з людьми та в додатках, яким довіряєте."</string>
+    <string name="share" msgid="8443979083706282338">"Поділитися"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Більше не показувати"</string>
 </resources>
