@@ -24,4 +24,12 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ഡാറ്റ/ലോക്കൽ/ട്രെയ്‌സുകൾ എന്നിവയിൽ നിന്ന്, എല്ലാ ട്രെയ്‌സുകളും ഇല്ലാതാക്കപ്പെടും"</string>
     <string name="clear" msgid="5484761795406948056">"മായ്ക്കുക"</string>
     <string name="keywords" msgid="736547007949049535">"സിസ്ട്രേസ്, ട്രേസ്, പ്രകടനം"</string>
+    <!-- no translation found for share_trace (4528525067822044385) -->
+    <skip />
+    <!-- no translation found for system_trace_sensitive_data (3069389866696009549) -->
+    <skip />
+    <!-- no translation found for share (8443979083706282338) -->
+    <skip />
+    <!-- no translation found for dont_show_again (6662492041164390600) -->
+    <skip />
 </resources>

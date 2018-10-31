@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Vse sledi v imeniku /data/local/traces bodo izbrisane"</string>
     <string name="clear" msgid="5484761795406948056">"Izbriši"</string>
     <string name="keywords" msgid="736547007949049535">"sled sistema, sled, učinkovitost delovanja"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Želite deliti sled?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Datoteke za sledenje sistema morda vključujejo občutljive podatke o sistemu in aplikacijah (na primer o uporabi aplikacij). Sistemske sledi delite samo z ljudmi in aplikacijami, ki jim zaupate."</string>
+    <string name="share" msgid="8443979083706282338">"Deli"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Tega ne prikaži več"</string>
 </resources>

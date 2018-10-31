@@ -24,4 +24,12 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ਸਾਰੇ ਟ੍ਰੇਸਾਂ ਨੂੰ /ਡਾਟਾ/ਸਥਾਨਕ/ਟ੍ਰੇਸਾਂ ਵਿੱਚੋਂ ਮਿਟਾਇਆ ਜਾਵੇਗਾ"</string>
     <string name="clear" msgid="5484761795406948056">"ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="keywords" msgid="736547007949049535">"ਸਿਸਟ੍ਰੇਸ, ਟ੍ਰੇਸ, ਪ੍ਰਦਰਸ਼ਨ"</string>
+    <!-- no translation found for share_trace (4528525067822044385) -->
+    <skip />
+    <!-- no translation found for system_trace_sensitive_data (3069389866696009549) -->
+    <skip />
+    <!-- no translation found for share (8443979083706282338) -->
+    <skip />
+    <!-- no translation found for dont_show_again (6662492041164390600) -->
+    <skip />
 </resources>
