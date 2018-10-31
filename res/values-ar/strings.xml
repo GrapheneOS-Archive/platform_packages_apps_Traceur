@@ -24,7 +24,7 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"‏سيتم حذف جميع آثار الأنشطة من /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"محو"</string>
     <string name="keywords" msgid="736547007949049535">"‏systrace، التتبّع، الأداء"</string>
-    <string name="share_trace" msgid="4528525067822044385">"تتبُّع المشاركات؟"</string>
+    <string name="share_trace" msgid="4528525067822044385">"مشاركة ملف التتبّع؟"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"قد تشتمل ملفات \"تتبُّع النظام\" على بيانات حساسة عن النظام والتطبيقات (مثل إحصاءات استخدام التطبيقات). يُرجى عدم مشاركة ملفات تتبُّع النظام إلا مع الأشخاص والتطبيقات التي تثق فيها."</string>
     <string name="share" msgid="8443979083706282338">"مشاركة"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"عدم الإظهار مرة أخرى"</string>

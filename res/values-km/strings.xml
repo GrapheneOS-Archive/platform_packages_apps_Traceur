@@ -24,12 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ដាន​ទាំងអស់​ត្រូវ​បាន​លុប​ពី /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"សម្អាត"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, ដាន, ប្រតិបត្តិការ"</string>
-    <!-- no translation found for share_trace (4528525067822044385) -->
-    <skip />
-    <!-- no translation found for system_trace_sensitive_data (3069389866696009549) -->
-    <skip />
-    <!-- no translation found for share (8443979083706282338) -->
-    <skip />
-    <!-- no translation found for dont_show_again (6662492041164390600) -->
-    <skip />
+    <string name="share_trace" msgid="4528525067822044385">"ចែករំលែក​ដាន?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ឯកសារ​តាមដាន​ប្រព័ន្ធ​អាច​រួមមាន ទិន្នន័យ​កម្មវិធី និង​ប្រព័ន្ធ​រសើប (ដូចជា​ការប្រើប្រាស់​កម្មវិធី)។ ចែករំលែក​ដាន​ប្រព័ន្ធ​ជាមួយ​មនុស្ស ​និង​កម្មវិធី​ដែលអ្នកជឿ​ទុកចិត្ត​តែ​ប៉ុណ្ណោះ។"</string>
+    <string name="share" msgid="8443979083706282338">"ចែករំលែក"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"កុំបង្ហាញម្ដងទៀត"</string>
 </resources>

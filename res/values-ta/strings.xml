@@ -24,12 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces இலிருந்து எல்லா டிரேஸ்களும் நீக்கப்படும்"</string>
     <string name="clear" msgid="5484761795406948056">"அழி"</string>
     <string name="keywords" msgid="736547007949049535">"சிஸ்டிரேஸ், டிரேஸ், செயல்திறன்"</string>
-    <!-- no translation found for share_trace (4528525067822044385) -->
-    <skip />
-    <!-- no translation found for system_trace_sensitive_data (3069389866696009549) -->
-    <skip />
-    <!-- no translation found for share (8443979083706282338) -->
-    <skip />
-    <!-- no translation found for dont_show_again (6662492041164390600) -->
-    <skip />
+    <string name="share_trace" msgid="4528525067822044385">"டிரேஸைப் பகிரவா?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"சிஸ்டம் டிரேஸிங் ஃபைல்களில் பாதுகாக்கவேண்டிய சிஸ்டம் மற்றும் ஆப்ஸ் தரவு (ஆப்ஸ் உபயோக விவரம் போன்றவை) இருக்கலாம். உங்களுக்கு நம்பகமானவர்களுடனும் ஆப்ஸுடனும் மட்டுமே பகிரவும்."</string>
+    <string name="share" msgid="8443979083706282338">"பகிர்"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"மீண்டும் காட்டாதே"</string>
 </resources>
