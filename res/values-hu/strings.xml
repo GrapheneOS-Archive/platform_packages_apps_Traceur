@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Az összes nyom törlődik a /data/local/traces mappából"</string>
     <string name="clear" msgid="5484761795406948056">"Törlés"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, követés, teljesítmény"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Megosztja a rendszerkövetési fájlokat?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"A rendszerkövetési fájlok bizalmas rendszer- és alkalmazásadatokat tartalmazhatnak (például az alkalmazáshasználatról). Csak megbízható személyekkel és alkalmazásokkal osszon meg rendszerkövetési információkat."</string>
+    <string name="share" msgid="8443979083706282338">"Megosztás"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Ne jelenjen meg többé"</string>
 </resources>
