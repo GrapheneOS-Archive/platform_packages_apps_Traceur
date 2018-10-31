@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ການຕິດຕາມທັງໝົດຈະຖືກລຶບອອກຈາກ /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"ລຶບ"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, ຕິດຕາມ, ປະສິດທິພາບ"</string>
+    <string name="share_trace" msgid="4528525067822044385">"ແບ່ງປັນການຕິດຕາມບໍ?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ໄຟລ໌ການຕິດຕາມລະບົບອາດມີຂໍ້ມູນແອັບ ແລະ ຂໍ້ມູນລະບົບທີ່ອ່ອນໄຫວ (ເຊັ່ນ: ການນຳໃຊ້ແອັບ). ທ່ານຄວນແບ່ງປັນການຕິດຕາມລະບົບໃຫ້ກັບຄົນ ແລະ ແອັບທີ່ທ່ານເຊື່ອຖືເທົ່ານັ້ນ."</string>
+    <string name="share" msgid="8443979083706282338">"ແບ່ງປັນ"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"ບໍ່ຕ້ອງສະແດງອີກ"</string>
 </resources>

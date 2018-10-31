@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ଡାଟା/ସ୍ଥାନୀୟ/ଟ୍ରେସ୍‍ରୁ ସମସ୍ତ ଟ୍ରେସ୍‌କୁ ଡିଲିଟ୍ କରିଦିଆଯିବ"</string>
     <string name="clear" msgid="5484761795406948056">"ଖାଲି କରନ୍ତୁ"</string>
     <string name="keywords" msgid="736547007949049535">"ସିଷ୍ଟ୍ରେସ୍, ଏସ୍, ପରଫର୍ମାନ୍ସ"</string>
+    <string name="share_trace" msgid="4528525067822044385">"ସେୟାର୍‍ ଟ୍ରେସ୍‍ କରିବେ?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ସିଷ୍ଟମ୍‍ ଟ୍ରେସିଂ ଫାଇଲ୍‍ଗୁଡିକ ହୁଏତ ସମ୍ବେଦନଶୀଳ ସିଷ୍ଟମ୍‍ ଏବଂ ଆପ୍‍ ଡାଟା (ଯେପରି କି ଆପ୍‍ ବ୍ୟବହାର) ଅନ୍ତର୍ଭୁକ୍ତ କରିପାରେ। ସିଷ୍ଟମ୍‍ ଟ୍ରେସ୍‍ କେବଳ ଆପଣ ବିଶ୍ବାସ କରୁଥିବା ଲୋକ ଏବଂ ଆପ୍ସ ସହ ସେୟାର୍‍ କରନ୍ତୁ।"</string>
+    <string name="share" msgid="8443979083706282338">"ସେୟାର୍‍ କରନ୍ତୁ"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"ପୁଣି ଦେଖାନ୍ତୁ ନାହିଁ"</string>
 </resources>

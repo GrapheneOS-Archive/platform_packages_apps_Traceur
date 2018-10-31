@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"系统将删除 /data/local/traces 中的所有跟踪记录"</string>
     <string name="clear" msgid="5484761795406948056">"清除"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, 跟踪, 性能"</string>
+    <string name="share_trace" msgid="4528525067822044385">"分享跟踪记录"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"系统跟踪文件可能包含敏感的系统数据和应用数据（例如应用使用情况信息）。请务必只与您信任的人和应用分享系统跟踪文件。"</string>
+    <string name="share" msgid="8443979083706282338">"分享"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"不再显示"</string>
 </resources>
