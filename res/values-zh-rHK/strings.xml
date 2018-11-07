@@ -24,12 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"系統將刪除 /data/local/traces 中的所有追蹤記錄"</string>
     <string name="clear" msgid="5484761795406948056">"清除"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, 追蹤, 效能"</string>
-    <!-- no translation found for share_trace (4528525067822044385) -->
-    <skip />
-    <!-- no translation found for system_trace_sensitive_data (3069389866696009549) -->
-    <skip />
-    <!-- no translation found for share (8443979083706282338) -->
-    <skip />
-    <!-- no translation found for dont_show_again (6662492041164390600) -->
-    <skip />
+    <string name="share_trace" msgid="4528525067822044385">"要分享追蹤記錄嗎？"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"「系統追蹤」檔案可能包含敏感的系統和應用程式資料 (例如應用程式使用情況)。因此，請只與您信任的人和應用程式分享系統追蹤記錄。"</string>
+    <string name="share" msgid="8443979083706282338">"分享"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"不要再顯示"</string>
 </resources>

@@ -24,12 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces मा रहेका सबै ट्रेसहरू मेटाइने छन्"</string>
     <string name="clear" msgid="5484761795406948056">"खाली गर्नुहोस्"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, ट्रेस, कार्यसम्पादन"</string>
-    <!-- no translation found for share_trace (4528525067822044385) -->
-    <skip />
-    <!-- no translation found for system_trace_sensitive_data (3069389866696009549) -->
-    <skip />
-    <!-- no translation found for share (8443979083706282338) -->
-    <skip />
-    <!-- no translation found for dont_show_again (6662492041164390600) -->
-    <skip />
+    <string name="share_trace" msgid="4528525067822044385">"पत्ता लागेको कुरा आदान प्रदान गर्ने हो?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"प्रणालीले पत्ता लगाएको फाइलहरूमा संवेदनशील प्रणाली र अनुप्रयोग डेटा (जस्तै अनुप्रयोगको उपयोग) समावेश हुन सक्छ। तपाईंले विश्वास गर्ने मान्छेहरूलाई मात्र प्रणालीले पत्ता लगाएको फाइलहरू आदान प्रदान गर्नुहोस्‌।"</string>
+    <string name="share" msgid="8443979083706282338">"आदान प्रदान गर्नुहोस्"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"फेरि नदेखाउनुहोस्"</string>
 </resources>

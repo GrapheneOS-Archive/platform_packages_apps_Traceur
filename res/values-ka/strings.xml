@@ -24,12 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ყველა კვალი წაიშლება აქედან: /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"გასუფთავება"</string>
     <string name="keywords" msgid="736547007949049535">"სისტემის კვალი, კვალი, შესრულება"</string>
-    <!-- no translation found for share_trace (4528525067822044385) -->
-    <skip />
-    <!-- no translation found for system_trace_sensitive_data (3069389866696009549) -->
-    <skip />
-    <!-- no translation found for share (8443979083706282338) -->
-    <skip />
-    <!-- no translation found for dont_show_again (6662492041164390600) -->
-    <skip />
+    <string name="share_trace" msgid="4528525067822044385">"გსურთ ტრასირების გაზიარება?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"სისტემის ტრასირების ფაილები შეიძლება შეიცავდეს სისტემისა და აპების სენსიტიურ მონაცემებს (როგორიცაა აპების გამოყენება). გირჩევთ, სისტემის ტრასირებები გაუზიაროთ მხოლო იმ ადამიანებსა და აპებს, რომლებსაც ენდობით."</string>
+    <string name="share" msgid="8443979083706282338">"გაზიარება"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"აღარ გამოჩნდეს"</string>
 </resources>
