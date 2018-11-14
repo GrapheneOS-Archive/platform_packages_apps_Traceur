@@ -40,7 +40,7 @@ import java.util.regex.Pattern;
 public class TraceurAppTests {
 
     private static final String TRACEUR_PACKAGE = "com.android.traceur";
-    private static final int TIMEOUT = 5000;   // milliseconds
+    private static final int TIMEOUT = 7000;   // milliseconds
 
     private UiDevice mDevice;
 
@@ -110,7 +110,7 @@ public class TraceurAppTests {
 
     /*
      * In this test:
-     * Take a trace by toggling 'Record trace' and then tap 'Save and share trace'.
+     * Take a trace by toggling 'Record trace' in the UI
      * Tap the notification once the trace is saved, and verify the share dialog appears.
      */
     @Presubmit
@@ -119,6 +119,7 @@ public class TraceurAppTests {
         mDevice.wait(Until.findObject(By.text("Record trace")), TIMEOUT);
 
         mDevice.findObject(By.text("Record trace")).click();
+        mDevice.wait(Until.hasObject(By.text("Trace is being recorded")), TIMEOUT);
         mDevice.findObject(By.text("Record trace")).click();
 
         // Wait for the popover notification to appear and then disappear,
