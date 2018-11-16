@@ -106,6 +106,18 @@
         </provider>
 
         <provider
+            android:name=".StorageProvider"
+            android:enabled="false"
+            android:authorities="com.android.traceur.documents"
+            android:grantUriPermissions="true"
+            android:exported="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+              <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+
+        <provider
             android:name=".SearchProvider"
             android:authorities="com.android.traceur"
             android:multiprocess="false"
