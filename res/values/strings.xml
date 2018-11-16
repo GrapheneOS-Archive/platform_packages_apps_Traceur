@@ -58,6 +58,9 @@
     <!-- This is the confirmation button indicating that the user does want to clear, or delete, all of the saved traces from their device. -->
     <string name="clear">Clear</string>
 
+    <!-- This is the title for the directory holding the system traces. The user sees this when using a directory browsing app like the Files app. -->
+    <string name="system_traces_storage_title">System traces</string>
+
     <!-- These are keywords that the user can use to search for this app. 'systrace' should not be translated, as it is an app name. -->
     <string name="keywords">systrace, trace, performance</string>
 
