@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Хадгалсан ул мөрийг устгах уу?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Бүх ул мөрийг /өгөгдөл/дотоод/ул мөрөөс устгана"</string>
     <string name="clear" msgid="5484761795406948056">"Устгах"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Системийн ул мөр"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, ул мөр, гүйцэтгэл"</string>
     <string name="share_trace" msgid="4528525067822044385">"Ул мөрийг хуваалцах уу?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Системийн мөрдлөгийн файлд систем болон аппын мэдрэг өгөгдлийг (апп ашиглалт зэрэг) агуулж болзошгүй. Та системийн ул мөрийг зөвхөн итгэдэг хүмүүс болон аппуудтайгаа хуваалцана уу."</string>

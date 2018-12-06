@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Sula ukulandela okulondoloziwe?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Konke ukulandela kuzosuswa kusuka ku-/data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Sula"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Ukulandela kwesistimu"</string>
     <string name="keywords" msgid="736547007949049535">"i-systrace, ukulandelela, ukusebenza"</string>
     <string name="share_trace" msgid="4528525067822044385">"Yabelana ngokulandelela?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Amafayela okulandelela isistimu angafaka idatha ezwelayo yesistimu neyohlelo lokusebenza (efana nokusetshenziswa kohlelo lokusebenza). Yabelana kuphela ngokulandelela kwesistimu nabantu nezinhlelo zokusebenza ozithembayo."</string>

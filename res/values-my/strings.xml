@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"သိမ်းထားသည့် လုပ်ဆောင်ချက်မှတ်တမ်းများကို ရှင်းလင်းလိုပါသလား။"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"လုပ်ဆောင်ချက်မှတ်တမ်းများ အာလုံးကို /data/local/traces မှ ဖျက်လိုက်ပါမည်"</string>
     <string name="clear" msgid="5484761795406948056">"ရှင်းလင်းရန်"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"စနစ် လုပ်ဆောင်ချက်မှတ်တမ်းများ"</string>
     <string name="keywords" msgid="736547007949049535">"systrace၊ လုပ်ဆောင်ချက်မှတ်တမ်း၊ စွမ်းဆောင်ရည်"</string>
     <string name="share_trace" msgid="4528525067822044385">"လုပ်ဆောင်ချက်မှတ်တမ်းကို မျှဝေမလား။"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"စနစ် \'လုပ်ဆောင်ချက်မှတ်တမ်း\' ဖိုင်များတွင် အရေးကြီးသောစနစ်နှင့် အက်ပ်ဒေတာများ (အက်ပ်အသုံးပြုမှုကဲ့သို့) ပါဝင်နိုင်သည်။ စနစ်လုပ်ဆောင်ချက်မှတ်တမ်းများကို သင်ယုံကြည့်သည့် လူများ၊ အက်ပ်များနှင့်သာ မျှဝေပါ။"</string>

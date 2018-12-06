@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"I-clear ang mga naka-save na trace?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Made-delete ang lahat ng trace sa /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"I-clear"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Mga trace ng system"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, trace, performance"</string>
     <string name="share_trace" msgid="4528525067822044385">"Ibahagi ang trace?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Ang mga file ng Pag-trace ng System ay maaaring may sensitibong data ng system at app (gaya ng paggamit ng app). Ibahagi lang ang mga trace ng system sa mga tao at app na pinakakatiwalaan mo."</string>

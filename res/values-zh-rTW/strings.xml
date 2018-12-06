@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"要清除已儲存的追蹤記錄嗎？"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"系統將刪除 /data/local/traces 中的所有追蹤記錄"</string>
     <string name="clear" msgid="5484761795406948056">"清除"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"系統追蹤記錄"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, 追蹤, 效能"</string>
     <string name="share_trace" msgid="4528525067822044385">"是否分享追蹤檔？"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"系統追蹤檔可能包含敏感的系統和應用程式資料 (例如應用程式使用情形)。請務必只與你信任的使用者和應用程式分享系統追蹤檔。"</string>

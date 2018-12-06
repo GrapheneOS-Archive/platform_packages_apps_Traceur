@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Сакталган дайындар тазалансынбы?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces бөлүмүндөгү бардык дайындар жок кылынат"</string>
     <string name="clear" msgid="5484761795406948056">"Тазалоо"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Тутумдагы аракеттерди жаздыруу"</string>
     <string name="keywords" msgid="736547007949049535">"тутумга көз салуу, аракеттерди жаздыруу, иштин майнаптуулугу"</string>
     <string name="share_trace" msgid="4528525067822044385">"Тутумга көз салуу аракеттери бөлүшүлсүнбү?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Тутумга көз салуу файлдары тутумдагы жана колдонмодогу купуя дайындарды (мисалы, колдонмонун пайдаланылышы) камтышы мүмкүн. Тутумга көз салуудан алынган маалыматты ишенимдүү байланыштар жана колдонмолор менен гана бөлүшүңүз."</string>

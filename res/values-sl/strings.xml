@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Želite izbrisati shranjene sledi?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Vse sledi v imeniku /data/local/traces bodo izbrisane"</string>
     <string name="clear" msgid="5484761795406948056">"Izbriši"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Sledi sistema"</string>
     <string name="keywords" msgid="736547007949049535">"sled sistema, sled, učinkovitost delovanja"</string>
     <string name="share_trace" msgid="4528525067822044385">"Želite deliti sled?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Datoteke za sledenje sistema morda vključujejo občutljive podatke o sistemu in aplikacijah (na primer o uporabi aplikacij). Sistemske sledi delite samo z ljudmi in aplikacijami, ki jim zaupate."</string>

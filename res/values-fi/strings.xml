@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Poistetaanko tallennetut jäljet?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Kaikki jäljet poistetaan paikasta /data/local/traces."</string>
     <string name="clear" msgid="5484761795406948056">"Poista"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Järjestelmän jäljitystiedostot"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, jälki, suorituskyky"</string>
     <string name="share_trace" msgid="4528525067822044385">"Jaetaanko jälki?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Järjestelmän jäljitystiedostoissa voi olla arkaluontoista järjestelmä- ja sovellusdataa (esim. sovellusten käytöstä). Jaa jäljitystiedostoja vain luotettavien ihmisten ja sovellusten kanssa."</string>

@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Vil du fjerne lagrede spor?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Alle spor slettes fra /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Fjern"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Systemspor"</string>
     <string name="keywords" msgid="736547007949049535">"sysspor, spor, ytelse"</string>
     <string name="share_trace" msgid="4528525067822044385">"Vil du dele sporet?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Systemsporingsfiler kan inneholde sensitive system- og appdata (for eksempel appbruk). Du bør bare dele systemsporingsfiler med personer og apper du stoler på."</string>

@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Удалить сохраненные записи действий?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Все записи из папки /data/local/traces будут удалены."</string>
     <string name="clear" msgid="5484761795406948056">"Удалить"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Системные записи действий"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, отслеживание, производительность"</string>
     <string name="share_trace" msgid="4528525067822044385">"Поделиться трассировкой?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"В файлах трассировки может содержаться конфиденциальная информация о системе и приложении (например, данные о его использовании). Открывайте доступ к ним только надежным пользователям и приложениям."</string>

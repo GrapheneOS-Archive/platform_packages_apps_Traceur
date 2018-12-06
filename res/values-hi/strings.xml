@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"सेव किए गए सभी ट्रेस मिटाएं?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces से सभी ट्रेस मिटा दिए जाएंगे"</string>
     <string name="clear" msgid="5484761795406948056">"मिटाएं"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"सिस्टम ट्रेस"</string>
     <string name="keywords" msgid="736547007949049535">"सिसट्रेस, ट्रेस, परफ़ॉर्मेंस"</string>
     <string name="share_trace" msgid="4528525067822044385">"ट्रेस शेयर करें?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"सिस्टम ट्रेसिंग फ़ाइलों में संवेदनशील सिस्टम और ऐप्लिकेशन डेटा (जैसे कि ऐप्लिकेशन का इस्तेमाल) शामिल हो सकता है. सिस्टम ट्रेस उन्हीं लोगों और ऐप्लिकेशन से शेयर करें जिन पर आपको भरोसा है."</string>

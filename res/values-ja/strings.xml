@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"保存したトレースを消去"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces からすべてのトレースを削除します"</string>
     <string name="clear" msgid="5484761795406948056">"消去"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"システム トレース"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, トレース, パフォーマンス"</string>
     <string name="share_trace" msgid="4528525067822044385">"トレースを共有しますか？"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"システム トレース ファイルには、他人に知られたくないシステムやアプリのデータ（アプリの使用状況など）が含まれている場合があります。システム トレースの共有は、信頼できる人やアプリとのみ行ってください。"</string>

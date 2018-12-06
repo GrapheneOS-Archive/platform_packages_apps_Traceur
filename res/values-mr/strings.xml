@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"सेव्ह केलेले ट्रेस साफ करायचे का?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces मधून सर्व ट्रेस हटवले जातील"</string>
     <string name="clear" msgid="5484761795406948056">"साफ करा"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"सिस्टम माग"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, माग काढणे, कामगिरी"</string>
     <string name="share_trace" msgid="4528525067822044385">"काढलेला माग शेअर करायचा का?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"सिस्टमचा माग काढणे फायलींमध्ये संवेदनशील सिस्टम आणि अॅप डेटा (जसे की अॅप वापर) यांचा समावेश असू शकतो. ज्या लोकांवर आणि अॅपवर तुमचा विश्वास आहे केवळ त्यांच्यासह हा सिस्टमचा माग शेअर करा."</string>

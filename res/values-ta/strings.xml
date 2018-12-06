@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"சேமிக்கப்பட்ட டிரேஸ்களை அழிக்கவா?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces இலிருந்து எல்லா டிரேஸ்களும் நீக்கப்படும்"</string>
     <string name="clear" msgid="5484761795406948056">"அழி"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"சிஸ்டம் டிரேஸ்கள்"</string>
     <string name="keywords" msgid="736547007949049535">"சிஸ்டிரேஸ், டிரேஸ், செயல்திறன்"</string>
     <string name="share_trace" msgid="4528525067822044385">"டிரேஸைப் பகிரவா?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"சிஸ்டம் டிரேஸிங் ஃபைல்களில் பாதுகாக்கவேண்டிய சிஸ்டம் மற்றும் ஆப்ஸ் தரவு (ஆப்ஸ் உபயோக விவரம் போன்றவை) இருக்கலாம். உங்களுக்கு நம்பகமானவர்களுடனும் ஆப்ஸுடனும் மட்டுமே பகிரவும்."</string>

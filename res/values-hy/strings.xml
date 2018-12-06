@@ -23,6 +23,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Հեռացնե՞լ պահված հետագծումները"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Բոլոր հետագծումները կջնջվեն /data/local/traces պանակից"</string>
     <string name="clear" msgid="5484761795406948056">"Ջնջել"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Համակարգի հետագծման ֆայլեր"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, հետագծում, արդյունավետություն"</string>
     <string name="share_trace" msgid="4528525067822044385">"Ուղարկե՞լ հետագծման ֆայլերը"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Հետագծման ֆայլերը տրամադրեք միայն վստահելի մարդկանց և հավելվածներին, քանի որ դրանք կարող են պարունակել համակարգի և հավելվածի մասին գաղտնի տեղեկություններ (օրինակ՝ տվյալներ հավելվածի օգտագործման մասին):"</string>
