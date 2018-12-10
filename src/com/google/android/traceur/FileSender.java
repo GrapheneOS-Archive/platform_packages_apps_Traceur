@@ -45,7 +45,7 @@ public class FileSender {
 
         // Intent to send the file
         Intent sendIntent = buildSendIntent(context, traceUri);
-        sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_RECEIVER_FOREGROUND);
 
         // This dialog will show to warn the user about sharing traces, then will execute
         // the above file-sharing intent.
