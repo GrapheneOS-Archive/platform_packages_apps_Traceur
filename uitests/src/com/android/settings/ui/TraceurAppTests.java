@@ -21,20 +21,20 @@ import static org.junit.Assert.assertNotNull;
 import android.content.Context;
 import android.content.Intent;
 import android.os.RemoteException;
+import android.platform.test.annotations.Presubmit;
 import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
-import android.support.test.uiautomator.UiObject2;
 import android.support.test.uiautomator.Until;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
-import android.platform.test.annotations.Presubmit;
 
-import java.util.regex.Pattern;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.util.regex.Pattern;
 
 @RunWith(AndroidJUnit4.class)
 public class TraceurAppTests {
