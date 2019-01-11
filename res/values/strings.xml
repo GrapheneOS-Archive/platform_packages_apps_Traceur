@@ -77,4 +77,9 @@
     <string name="dont_show_again">Don\'t show again</string>
     <!-- Checkbox that indicates that we should use Perfetto to take traces. This feature is in beta. -->
     <string name="use_perfetto_beta">Use Perfetto (beta)</string>
+
+    <string name="long_traces">Long traces</string>
+    <string name="long_traces_summary">Long traces are saved continuously to device storage.</string>
+    <string name="max_long_trace_size">Maximum long trace size</string>
+    <string name="max_long_trace_duration">Maximum long trace duration</string>
 </resources>

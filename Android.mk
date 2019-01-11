@@ -21,6 +21,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+LOCAL_INIT_RC := traceur.rc
+
 include frameworks/base/packages/SettingsLib/common.mk
 
 include $(BUILD_PACKAGE)
