@@ -17,24 +17,18 @@
 package com.android.traceur;
 
 import android.os.Build;
-import android.os.SystemProperties;
 import android.util.Log;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
+import java.util.Collection;
 import java.util.TreeMap;
 
 /**
@@ -47,21 +41,33 @@ public class TraceUtils {
 
     public static final String TRACE_DIRECTORY = "/data/local/traces/";
 
-    private static final String DEBUG_TRACING_FILE = "/sys/kernel/debug/tracing/tracing_on";
-    private static final String TRACING_FILE = "/sys/kernel/tracing/tracing_on";
+    private static TraceEngine mTraceEngine = new AtraceUtils();
 
     private static final Runtime RUNTIME = Runtime.getRuntime();
 
-    public static boolean traceStart(String tags, int bufferSizeKb, boolean apps) {
-        return AtraceUtils.atraceStart(tags, bufferSizeKb, apps);
+    public interface TraceEngine {
+        public String NAME = "DEFAULT";
+        public String getOutputExtension();
+        public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps);
+        public void traceStop();
+        public boolean traceDump(File outFile);
+        public boolean isTracingOn();
+    }
+
+    public static boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps) {
+        return mTraceEngine.traceStart(tags, bufferSizeKb, apps);
     }
 
     public static void traceStop() {
-        AtraceUtils.atraceStop();
+        mTraceEngine.traceStop();
     }
 
     public static boolean traceDump(File outFile) {
-        return AtraceUtils.atraceDump(outFile);
+        return mTraceEngine.traceDump(outFile);
+    }
+
+    public static boolean isTracingOn() {
+        return mTraceEngine.isTracingOn();
     }
 
     public static TreeMap<String, String> listCategories() {
@@ -69,7 +75,7 @@ public class TraceUtils {
     }
 
     public static void clearSavedTraces() {
-        String cmd = "rm -f " + TRACE_DIRECTORY + "trace-*.ctrace";
+        String cmd = "rm -f " + TRACE_DIRECTORY + "trace-*.*trace";
 
         Log.v(TAG, "Clearing trace directory: " + cmd);
         try {
@@ -84,47 +90,24 @@ public class TraceUtils {
     }
 
     public static Process exec(String cmd) throws IOException {
-        String[] cmdarray = {"sh", "-c", cmd};
-        Log.v(TAG, "exec: " + Arrays.toString(cmdarray));
-        return RUNTIME.exec(cmdarray);
+        return exec(cmd, null);
     }
 
-    public static boolean isTracingOn() {
-        boolean userInitiatedTracingFlag =
-            "1".equals(SystemProperties.get("debug.atrace.user_initiated", ""));
+    public static Process exec(String cmd, String tmpdir) throws IOException {
+        String[] cmdarray = {"sh", "-c", cmd};
+        String[] envp = {"TMPDIR=" + tmpdir};
+        envp = tmpdir == null ? null : envp;
 
-        if (!userInitiatedTracingFlag) {
-            return false;
-        }
+        Log.v(TAG, "exec: " + Arrays.toString(envp) + " " + Arrays.toString(cmdarray));
 
-        boolean tracingOnFlag = false;
-
-        try {
-            List<String> tracingOnContents;
-
-            Path debugTracingOnPath = Paths.get(DEBUG_TRACING_FILE);
-            Path tracingOnPath = Paths.get(TRACING_FILE);
-
-            if (Files.isReadable(debugTracingOnPath)) {
-                tracingOnContents = Files.readAllLines(debugTracingOnPath);
-            } else if (Files.isReadable(tracingOnPath)) {
-                tracingOnContents = Files.readAllLines(tracingOnPath);
-            } else {
-                return false;
-            }
-
-            tracingOnFlag = !tracingOnContents.get(0).equals("0");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        return userInitiatedTracingFlag && tracingOnFlag;
+        return RUNTIME.exec(cmdarray, envp);
     }
 
     public static String getOutputFilename() {
         String format = "yyyy-MM-dd-HH-mm-ss";
         String now = new SimpleDateFormat(format, Locale.US).format(new Date());
-        return String.format("trace-%s-%s-%s.ctrace", Build.BOARD, Build.ID, now);
+        return String.format("trace-%s-%s-%s.%s", Build.BOARD, Build.ID, now,
+            mTraceEngine.getOutputExtension());
     }
 
     public static File getOutputFile(String filename) {

@@ -43,7 +43,6 @@ import com.android.internal.statusbar.IStatusBarService;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
-import java.util.TreeMap;
 
 public class Receiver extends BroadcastReceiver {
 
@@ -97,9 +96,10 @@ public class Receiver extends BroadcastReceiver {
         if (prefsTracingOn != TraceUtils.isTracingOn()) {
             if (prefsTracingOn) {
                 // Show notification if the tags in preferences are not all actually available.
-                String activeAvailableTags = getActiveTags(context, prefs, true);
-                String activeTags = getActiveTags(context, prefs, false);
-                if (!TextUtils.equals(activeAvailableTags, activeTags)) {
+                Set<String> activeAvailableTags = getActiveTags(context, prefs, true);
+                Set<String> activeTags = getActiveTags(context, prefs, false);
+
+                if (!activeAvailableTags.equals(activeTags)) {
                     postCategoryNotification(context, prefs);
                 }
 
@@ -203,7 +203,7 @@ public class Receiver extends BroadcastReceiver {
         Intent sendIntent = new Intent(context, MainActivity.class);
 
         String title = context.getString(R.string.tracing_categories_unavailable);
-        String msg = getActiveUnavailableTags(context, prefs);
+        String msg = TextUtils.join(", ", getActiveUnavailableTags(context, prefs));
         final Notification.Builder builder =
             new Notification.Builder(context, NOTIFICATION_CHANNEL)
                 .setSmallIcon(R.drawable.stat_sys_adb)
@@ -239,41 +239,28 @@ public class Receiver extends BroadcastReceiver {
         notificationManager.createNotificationChannel(channel);
     }
 
-    public static String getActiveTags(Context context, SharedPreferences prefs, boolean onlyAvailable) {
+    public static Set<String> getActiveTags(Context context, SharedPreferences prefs, boolean onlyAvailable) {
         Set<String> tags = prefs.getStringSet(context.getString(R.string.pref_key_tags),
                 getDefaultTagList());
-        StringBuilder sb = new StringBuilder(10 * tags.size());
-        TreeMap<String, String> available =
-                onlyAvailable ? TraceUtils.listCategories() : null;
+        Set<String> available = TraceUtils.listCategories().keySet();
 
-        for (String s : tags) {
-            if (onlyAvailable && !available.containsKey(s)) continue;
-            if (sb.length() > 0) {
-                sb.append(' ');
-            }
-            sb.append(s);
+        if (onlyAvailable) {
+            tags.retainAll(available);
         }
-        String s = sb.toString();
-        Log.v(TAG, "getActiveTags(onlyAvailable=" + onlyAvailable + ") = \"" + s + "\"");
-        return s;
+
+        Log.v(TAG, "getActiveTags(onlyAvailable=" + onlyAvailable + ") = \"" + tags.toString() + "\"");
+        return tags;
     }
 
-    public static String getActiveUnavailableTags(Context context, SharedPreferences prefs) {
+    public static Set<String> getActiveUnavailableTags(Context context, SharedPreferences prefs) {
         Set<String> tags = prefs.getStringSet(context.getString(R.string.pref_key_tags),
                 getDefaultTagList());
-        StringBuilder sb = new StringBuilder(10 * tags.size());
-        TreeMap<String, String> available = TraceUtils.listCategories();
+        Set<String> available = TraceUtils.listCategories().keySet();
 
-        for (String s : tags) {
-            if (available.containsKey(s)) continue;
-            if (sb.length() > 0) {
-                sb.append(' ');
-            }
-            sb.append(s);
-        }
-        String s = sb.toString();
-        Log.v(TAG, "getActiveUnavailableTags() = \"" + s + "\"");
-        return s;
+        tags.removeAll(available);
+
+        Log.v(TAG, "getActiveUnavailableTags() = \"" + tags.toString() + "\"");
+        return tags;
     }
 
     public static Set<String> getDefaultTagList() {
