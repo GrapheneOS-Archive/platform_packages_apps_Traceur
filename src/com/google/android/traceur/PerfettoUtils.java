@@ -43,6 +43,10 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final String MARKER = "PERFETTO_ARGUMENTS";
     private static final int STARTUP_TIMEOUT_MS = 300;
 
+    public String getName() {
+        return NAME;
+    }
+
     public String getOutputExtension() {
         return OUTPUT_EXTENSION;
     }
