@@ -46,12 +46,36 @@ public class TraceUtils {
     private static final Runtime RUNTIME = Runtime.getRuntime();
 
     public interface TraceEngine {
-        public String NAME = "DEFAULT";
+        public String getName();
         public String getOutputExtension();
         public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps);
         public void traceStop();
         public boolean traceDump(File outFile);
         public boolean isTracingOn();
+    }
+
+    public static boolean switchTraceEngine(String newTraceEngine) {
+        if (mTraceEngine.getName().equals(newTraceEngine)) {
+            Log.e(TAG, "Tried to switch to use " + newTraceEngine
+                + " for tracing, but you already were!");
+            return true;
+        }
+
+        if (PerfettoUtils.NAME.equals(newTraceEngine)) {
+            mTraceEngine = new PerfettoUtils();
+        } else if (AtraceUtils.NAME.equals(newTraceEngine)) {
+            mTraceEngine = new AtraceUtils();
+        } else {
+            throw new AssertionError("Tried to switch to use " + newTraceEngine
+                + " for tracing, but I don't know what that is!");
+        }
+
+        Log.v(TAG, "Switched to using " + newTraceEngine + " for tracing!");
+        return true;
+    }
+
+    public static String currentTraceEngine() {
+        return mTraceEngine.getName();
     }
 
     public static boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps) {

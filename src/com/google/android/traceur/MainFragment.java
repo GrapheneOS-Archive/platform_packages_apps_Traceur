@@ -68,6 +68,8 @@ public class MainFragment extends PreferenceFragment {
 
     private ListPreference mBufferSize;
 
+    private SwitchPreference mUsePerfetto;
+
     private boolean mRefreshing;
 
     private BroadcastReceiver mRefreshReceiver;
@@ -161,6 +163,21 @@ public class MainFragment extends PreferenceFragment {
                     }
                 });
 
+        mUsePerfetto = (SwitchPreference) findPreference(getActivity().getString(R.string.pref_key_use_perfetto));
+        mUsePerfetto.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                boolean shouldUsePerfetto = (boolean)newValue;
+                boolean success = TraceUtils.switchTraceEngine(
+                    shouldUsePerfetto ? PerfettoUtils.NAME : AtraceUtils.NAME);
+
+                if (success) {
+                    mUsePerfetto.setChecked(shouldUsePerfetto);
+                }
+                return false;
+            }
+        });
+
         refreshTags();
 
         mRefreshReceiver = new BroadcastReceiver() {
@@ -220,6 +237,9 @@ public class MainFragment extends PreferenceFragment {
         // Make sure the Record Trace toggle matches the preference value.
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
+
+        // Grey out the toggle to change the trace engine if a trace is in progress.
+        mUsePerfetto.setEnabled(!mTracingOn.isChecked());
 
         // Update category list to match the categories available on the system.
         Set<Entry<String, String>> availableTags = TraceUtils.listCategories().entrySet();

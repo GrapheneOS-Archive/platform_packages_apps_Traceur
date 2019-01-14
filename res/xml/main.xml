@@ -43,4 +43,8 @@
         android:key="@string/pref_key_quick_setting"
         android:title="@string/show_quick_settings_tile"
         android:defaultValue="false" />
+    <androidx.preference.SwitchPreference
+        android:key="@string/pref_key_use_perfetto"
+        android:title="@string/use_perfetto_beta"
+        android:defaultValue="false" />
 </androidx.preference.PreferenceScreen>
