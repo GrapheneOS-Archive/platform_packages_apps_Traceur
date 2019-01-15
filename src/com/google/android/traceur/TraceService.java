@@ -16,7 +16,6 @@
 
 package com.android.traceur;
 
-import com.google.android.collect.Sets;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -27,8 +26,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class TraceService extends IntentService {
 
@@ -44,10 +46,10 @@ public class TraceService extends IntentService {
     private static int SAVING_TRACE_NOTIFICATION = 2;
 
     public static void startTracing(final Context context,
-            String tags, int bufferSizeKb, boolean apps) {
+            Collection<String> tags, int bufferSizeKb, boolean apps) {
         Intent intent = new Intent(context, TraceService.class);
         intent.setAction(INTENT_ACTION_START_TRACING);
-        intent.putExtra(INTENT_EXTRA_TAGS, tags);
+        intent.putExtra(INTENT_EXTRA_TAGS, new ArrayList(tags));
         intent.putExtra(INTENT_EXTRA_BUFFER, bufferSizeKb);
         intent.putExtra(INTENT_EXTRA_APPS, apps);
         context.startService(intent);
@@ -68,7 +70,7 @@ public class TraceService extends IntentService {
     @Override
     public void onHandleIntent(Intent intent) {
         if (intent.getAction().equals(INTENT_ACTION_START_TRACING)) {
-            startTracingInternal(intent.getStringExtra(INTENT_EXTRA_TAGS),
+            startTracingInternal(intent.getStringArrayListExtra(INTENT_EXTRA_TAGS),
                 intent.getIntExtra(INTENT_EXTRA_BUFFER,
                     Integer.parseInt(getApplicationContext()
                         .getString(R.string.default_buffer_size))),
@@ -78,7 +80,7 @@ public class TraceService extends IntentService {
         }
     }
 
-    private void startTracingInternal(String tags, int bufferSizeKb, boolean appTracing) {
+    private void startTracingInternal(Collection<String> tags, int bufferSizeKb, boolean appTracing) {
         Context context = getApplicationContext();
         Intent stopIntent = new Intent(Receiver.STOP_ACTION,
             null, context, Receiver.class);

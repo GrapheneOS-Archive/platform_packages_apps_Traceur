@@ -16,8 +16,8 @@
 
 package com.android.traceur;
 
-import android.os.Build;
 import android.os.SystemProperties;
+import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -30,23 +30,31 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.Collection;
 import java.util.List;
-import java.util.Locale;
 import java.util.TreeMap;
 
 /**
  * Utility functions for calling atrace
  */
-public class AtraceUtils {
+public class AtraceUtils implements TraceUtils.TraceEngine {
 
     static final String TAG = "Traceur";
 
-    public static boolean atraceStart(String tags, int bufferSizeKb, boolean apps) {
+    private static final String DEBUG_TRACING_FILE = "/sys/kernel/debug/tracing/tracing_on";
+    private static final String TRACING_FILE = "/sys/kernel/tracing/tracing_on";
+
+    public static String NAME = "ATRACE";
+    private static String OUTPUT_EXTENSION = "ctrace";
+
+    public String getOutputExtension() {
+        return OUTPUT_EXTENSION;
+    }
+
+    public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps) {
         String appParameter = apps ? "-a '*' " : "";
-        String cmd = "atrace --async_start -c -b " + bufferSizeKb + " " + appParameter + tags;
+        String cmd = "atrace --async_start -c -b " + bufferSizeKb + " "
+            + appParameter + TextUtils.join(" ", tags);
 
         Log.v(TAG, "Starting async atrace: " + cmd);
         try {
@@ -61,7 +69,7 @@ public class AtraceUtils {
         return true;
     }
 
-    public static void atraceStop() {
+    public void traceStop() {
         String cmd = "atrace --async_stop > /dev/null";
 
         Log.v(TAG, "Stopping async atrace: " + cmd);
@@ -76,7 +84,7 @@ public class AtraceUtils {
         }
     }
 
-    public static boolean atraceDump(File outFile) {
+    public boolean traceDump(File outFile) {
         String cmd = "atrace --async_stop -z -c -o " + outFile;
 
         Log.v(TAG, "Dumping async atrace: " + cmd);
@@ -104,6 +112,38 @@ public class AtraceUtils {
             throw new RuntimeException(e);
         }
         return true;
+    }
+
+    public boolean isTracingOn() {
+        boolean userInitiatedTracingFlag =
+            "1".equals(SystemProperties.get("debug.atrace.user_initiated", ""));
+
+        if (!userInitiatedTracingFlag) {
+            return false;
+        }
+
+        boolean tracingOnFlag = false;
+
+        try {
+            List<String> tracingOnContents;
+
+            Path debugTracingOnPath = Paths.get(DEBUG_TRACING_FILE);
+            Path tracingOnPath = Paths.get(TRACING_FILE);
+
+            if (Files.isReadable(debugTracingOnPath)) {
+                tracingOnContents = Files.readAllLines(debugTracingOnPath);
+            } else if (Files.isReadable(tracingOnPath)) {
+                tracingOnContents = Files.readAllLines(tracingOnPath);
+            } else {
+                return false;
+            }
+
+            tracingOnFlag = !tracingOnContents.get(0).equals("0");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return userInitiatedTracingFlag && tracingOnFlag;
     }
 
     public static TreeMap<String,String> atraceListCategories() {
