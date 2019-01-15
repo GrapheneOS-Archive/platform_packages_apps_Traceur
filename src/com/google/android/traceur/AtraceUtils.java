@@ -47,6 +47,10 @@ public class AtraceUtils implements TraceUtils.TraceEngine {
     public static String NAME = "ATRACE";
     private static String OUTPUT_EXTENSION = "ctrace";
 
+    public String getName() {
+        return NAME;
+    }
+
     public String getOutputExtension() {
         return OUTPUT_EXTENSION;
     }
