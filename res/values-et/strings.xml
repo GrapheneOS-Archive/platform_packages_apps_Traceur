@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Süsteemi jälgimise failid võivad hõlmata tundlikke süsteemi- ja rakenduseandmeid (nt rakenduse kasutust). Jagage süsteemijälgi ainult usaldusväärsete inimeste ja rakendustega."</string>
     <string name="share" msgid="8443979083706282338">"Jaga"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Ära enam kuva"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

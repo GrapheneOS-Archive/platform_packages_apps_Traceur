@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Les fichiers de traçage système peuvent inclure des données sensibles sur le système et les applications (telles que la consommation par application). Nous vous recommandons de ne partager des traces système qu\'avec des personnes et des applications que vous estimez fiables."</string>
     <string name="share" msgid="8443979083706282338">"Partager"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Ne plus afficher"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

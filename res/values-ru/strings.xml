@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"В файлах трассировки может содержаться конфиденциальная информация о системе и приложении (например, данные о его использовании). Открывайте доступ к ним только надежным пользователям и приложениям."</string>
     <string name="share" msgid="8443979083706282338">"Поделиться"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Больше не показывать"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ಸಿಸ್ಟಂ ಟ್ರೇಸಿಂಗ್ ಫೈಲ್‌ಗಳು (ಆ್ಯಪ್ ಬಳಕೆಯಂತಹ) ಸೂಕ್ಷ್ಮವಾದ ಸಿಸ್ಟಂ ಅನ್ನು ಮತ್ತು ಆ್ಯಪ್ ಡೇಟಾವನ್ನು ಒಳಗೊಂಡಿರಬಹುದು. ನೀವು ನಂಬುವ ಜನರು ಮತ್ತು ಆ್ಯಪ್‌ಗಳೊಂದಿಗೆ ಮಾತ್ರ ಸಿಸ್ಟಂ ಟ್ರೇಸ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ."</string>
     <string name="share" msgid="8443979083706282338">"ಹಂಚಿಕೊಳ್ಳಿ"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"ಮತ್ತೊಮ್ಮೆ ತೋರಿಸಬೇಡಿ"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

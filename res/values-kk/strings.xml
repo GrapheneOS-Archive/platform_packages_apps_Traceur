@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Жүйе трассасы файлдарына маңызды жүйе және қолданба деректері (мысалы, қолданбаны пайдалану туралы) жатуы мүмкін. Оларды тек сенімді адамдармен ғана бөлісіңіз."</string>
     <string name="share" msgid="8443979083706282338">"Бөлісу"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Қайта көрсетпеу"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

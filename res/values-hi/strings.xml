@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"सिस्टम ट्रेसिंग फ़ाइलों में संवेदनशील सिस्टम और ऐप्लिकेशन डेटा (जैसे कि ऐप्लिकेशन का इस्तेमाल) शामिल हो सकता है. सिस्टम ट्रेस उन्हीं लोगों और ऐप्लिकेशन से शेयर करें जिन पर आपको भरोसा है."</string>
     <string name="share" msgid="8443979083706282338">"शेयर करें"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"फिर से न दिखाएं"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

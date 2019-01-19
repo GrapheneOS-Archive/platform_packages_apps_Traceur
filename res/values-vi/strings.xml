@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Các tệp Theo dõi hệ thống có thể bao gồm dữ liệu ứng dụng và dữ liệu hệ thống nhạy cảm (chẳng hạn như mức sử dụng ứng dụng). Chỉ chia sẻ dấu vết hệ thống với những người và ứng dụng mà bạn tin tưởng."</string>
     <string name="share" msgid="8443979083706282338">"Chia sẻ"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Không hiển thị lại"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

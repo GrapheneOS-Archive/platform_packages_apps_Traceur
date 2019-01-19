@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Es posible que los archivos de Captura del sistema incluyan datos sensibles del sistema y de aplicaciones (como (como información sobre el uso de las aplicaciones). Comparte las trazas del sistema únicamente con usuarios y aplicaciones en los que confíes."</string>
     <string name="share" msgid="8443979083706282338">"Compartir"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"No volver a mostrar"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"I file di Tracciamento del sistema potrebbero includere dati sensibili sul sistema e sulle app (ad esempio sull\'utilizzo delle app). Condividi le tracce di sistema soltanto con persone e app attendibili."</string>
     <string name="share" msgid="8443979083706282338">"Condividi"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Non mostrare più"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>
