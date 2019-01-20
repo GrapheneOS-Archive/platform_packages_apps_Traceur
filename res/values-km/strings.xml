@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ឯកសារ​តាមដាន​ប្រព័ន្ធ​អាច​រួមមាន ទិន្នន័យ​កម្មវិធី និង​ប្រព័ន្ធ​រសើប (ដូចជា​ការប្រើប្រាស់​កម្មវិធី)។ ចែករំលែក​ដាន​ប្រព័ន្ធ​ជាមួយ​មនុស្ស ​និង​កម្មវិធី​ដែលអ្នកជឿ​ទុកចិត្ត​តែ​ប៉ុណ្ណោះ។"</string>
     <string name="share" msgid="8443979083706282338">"ចែករំលែក"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"កុំបង្ហាញម្ដងទៀត"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ໄຟລ໌ການຕິດຕາມລະບົບອາດມີຂໍ້ມູນແອັບ ແລະ ຂໍ້ມູນລະບົບທີ່ອ່ອນໄຫວ (ເຊັ່ນ: ການນຳໃຊ້ແອັບ). ທ່ານຄວນແບ່ງປັນການຕິດຕາມລະບົບໃຫ້ກັບຄົນ ແລະ ແອັບທີ່ທ່ານເຊື່ອຖືເທົ່ານັ້ນ."</string>
     <string name="share" msgid="8443979083706282338">"ແບ່ງປັນ"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"ບໍ່ຕ້ອງສະແດງອີກ"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

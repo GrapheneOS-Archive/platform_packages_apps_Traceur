@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"システム トレース ファイルには、他人に知られたくないシステムやアプリのデータ（アプリの使用状況など）が含まれている場合があります。システム トレースの共有は、信頼できる人やアプリとのみ行ってください。"</string>
     <string name="share" msgid="8443979083706282338">"共有"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"次回から表示しない"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

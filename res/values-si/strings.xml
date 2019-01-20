@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"පද්ධති හඹා යාම් ගොනුවලට සංවේදී පද්ධති සහ යෙදුම් දත්ත ඇතුළත් විය හැකිය (යෙදුම් භාවිතය වැනි). ඔබ විශ්වාස කරන පුද්ගලයන් සහ යෙදුම් සමඟ පමණක් පද්ධති හඹා යාම් බෙදා ගන්න."</string>
     <string name="share" msgid="8443979083706282338">"බෙදා ගන්න"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"නැවත නොපෙන්වන්න"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

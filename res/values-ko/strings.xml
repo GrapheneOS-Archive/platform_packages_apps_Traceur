@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"시스템 추적 파일에는 민감한 시스템 및 앱 데이터(예: 앱 사용)가 포함되어 있을 수 있습니다. 신뢰할 수 있는 앱 및 사용자에게만 공유하세요."</string>
     <string name="share" msgid="8443979083706282338">"공유"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"다시 표시 안함"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

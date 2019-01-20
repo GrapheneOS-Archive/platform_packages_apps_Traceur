@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Kerfisrakningarskrár kunna að innihalda viðkvæm kerfis- og forritagögn (t.d. forritanotkun). Deildu aðeins kerfisrakningum með fólki og forritum sem þú treystir."</string>
     <string name="share" msgid="8443979083706282338">"Deila"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Ekki sýna þetta aftur"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

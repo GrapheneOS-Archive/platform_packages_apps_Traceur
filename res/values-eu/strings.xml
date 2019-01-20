@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Sistemaren jarraipena direktorioko fitxategiek sistemaren eta aplikazioen kontuzko datuak izan ditzakete (adibidez, aplikazioen erabilera). Partekatu sistemaren arrastoak fidagarritzat jotzen dituzun pertsona eta aplikazioekin soilik."</string>
     <string name="share" msgid="8443979083706282338">"Partekatu"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Ez erakutsi berriro"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

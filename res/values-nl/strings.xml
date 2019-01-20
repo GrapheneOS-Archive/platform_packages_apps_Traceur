@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Bestanden voor systeemtracering kunnen gevoelige systeem- en app-gegevens bevatten (bijvoorbeeld over app-gebruik). Deel alleen systeemtraceringen met mensen en apps die je vertrouwt."</string>
     <string name="share" msgid="8443979083706282338">"Delen"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Niet meer tonen"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>

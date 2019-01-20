@@ -29,4 +29,6 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Os arquivos de rastreamento do sistema podem incluir dados confidenciais do sistema e do app (como o uso). Compartilhe rastros do sistema apenas com pessoas e apps confiáveis."</string>
     <string name="share" msgid="8443979083706282338">"Compartilhar"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Não mostrar novamente"</string>
+    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
+    <skip />
 </resources>
