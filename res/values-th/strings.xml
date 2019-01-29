@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ไฟล์การติดตามระบบอาจมีข้อมูลระบบและแอปที่ละเอียดอ่อน (เช่น การใช้งานแอป) โปรดแชร์ไฟล์การติดตามระบบกับแอปและบุคคลที่คุณเชื่อถือเท่านั้น"</string>
     <string name="share" msgid="8443979083706282338">"แชร์"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"ไม่ต้องแสดงอีก"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"ใช้ Perfetto (เบต้า)"</string>
 </resources>

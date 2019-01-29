@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Datoteke praćenja sistema mogu da sadrže osetljive podatke o sistemu i aplikacijama (na primer, o korišćenju aplikacije). Delite praćenja sistema samo sa pouzdanim ljudima i aplikacijama."</string>
     <string name="share" msgid="8443979083706282338">"Deli"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Ne prikazuj ponovo"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Koristi Perfetto (beta)"</string>
 </resources>

@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ممکن است فایل‌های «ردیابی سیستم» حاوی داده‌های حساس سیستم و برنامه (مثل میزان مصرف برنامه) باشد. ردیابی‌های سیستم را فقط با افراد و برنامه‌هایی هم‌رسانی کنید که به آن‌ها اعتماد دارید."</string>
     <string name="share" msgid="8443979083706282338">"هم‌رسانی"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"دیگر نشان داده نشود"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"‏استفاده از Perfetto (بتا)"</string>
 </resources>

@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"სისტემის ტრასირების ფაილები შეიძლება შეიცავდეს სისტემისა და აპების სენსიტიურ მონაცემებს (როგორიცაა აპების გამოყენება). გირჩევთ, სისტემის ტრასირებები გაუზიაროთ მხოლო იმ ადამიანებსა და აპებს, რომლებსაც ენდობით."</string>
     <string name="share" msgid="8443979083706282338">"გაზიარება"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"აღარ გამოჩნდეს"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto-ს გამოყენება (ბეტა)"</string>
 </resources>

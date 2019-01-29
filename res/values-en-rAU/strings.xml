@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"System tracing files may include sensitive system and app data (such as app usage). Only share system traces with people and apps that you trust."</string>
     <string name="share" msgid="8443979083706282338">"Share"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Don\'t show again"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Use Perfetto (beta)"</string>
 </resources>

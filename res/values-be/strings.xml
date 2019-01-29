@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Файлы трасіроўкі сістэмы могуць утрымліваць канфідэнцыяльныя даныя пра сістэму і праграмы (напрыклад, пра выкарыстанне праграм). Абагульвайце іх толькі з тымі карыстальнікамі і праграмамі, якім давяраеце."</string>
     <string name="share" msgid="8443979083706282338">"Абагуліць"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Больш не паказваць"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Выкарыстоўваць Perfetto (бэта-версія)"</string>
 </resources>

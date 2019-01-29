@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Os ficheiros de rastreio do sistema podem incluir dados confidenciais do sistema e de aplicações (por exemplo, a utilização de aplicações). Partilhe os rastreios do sistema apenas com pessoas e aplicações de confiança."</string>
     <string name="share" msgid="8443979083706282338">"Partilhar"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Não mostrar de novo"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Utilizar o Perfetto (beta)"</string>
 </resources>

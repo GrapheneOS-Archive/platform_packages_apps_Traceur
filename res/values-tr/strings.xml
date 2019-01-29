@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Sistem İzleme dosyaları hassas sistem ve uygulama verileri (uygulama kullanımı gibi) içerebilir. Sistem izlemeyi sadece güvendiğiniz kişilerle ve uygulamalarla paylaşın."</string>
     <string name="share" msgid="8443979083706282338">"Paylaş"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Bir daha gösterme"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto\'yu (beta) kullan"</string>
 </resources>

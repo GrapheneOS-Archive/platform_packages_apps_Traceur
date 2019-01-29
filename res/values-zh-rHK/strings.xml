@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"「系統追蹤」檔案可能包含敏感的系統和應用程式資料 (例如應用程式使用情況)。因此，請只與您信任的人和應用程式分享系統追蹤記錄。"</string>
     <string name="share" msgid="8443979083706282338">"分享"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"不要再顯示"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"使用 Perfetto (Beta 版本)"</string>
 </resources>

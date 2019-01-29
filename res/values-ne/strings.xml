@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"प्रणालीले पत्ता लगाएको फाइलहरूमा संवेदनशील प्रणाली र अनुप्रयोग डेटा (जस्तै अनुप्रयोगको उपयोग) समावेश हुन सक्छ। तपाईंले विश्वास गर्ने मान्छेहरूलाई मात्र प्रणालीले पत्ता लगाएको फाइलहरू आदान प्रदान गर्नुहोस्‌।"</string>
     <string name="share" msgid="8443979083706282338">"आदान प्रदान गर्नुहोस्"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"फेरि नदेखाउनुहोस्"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto (बिटा) प्रयोग गर्नुहोस्‌"</string>
 </resources>

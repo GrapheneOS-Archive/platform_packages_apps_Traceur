@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"సిస్టమ్ స్థితిగతిని కనుగొనే ఫైల్‌లు- గోప్యమైన సిస్టమ్, యాప్ డేటాను (యాప్ వినియోగం వంటివి) కలిగి ఉండవచ్చు. కేవలం మీకు నమ్మకం ఉన్న వ్యక్తుల‌కు, యాప్‌లకు మాత్రమే సిస్టమ్ స్థితిగతులను షేర్ చేయండి."</string>
     <string name="share" msgid="8443979083706282338">"షేర్ చేయి"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"మళ్లీ చూపవద్దు"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto (బీటా)ని ఉపయోగించండి"</string>
 </resources>
