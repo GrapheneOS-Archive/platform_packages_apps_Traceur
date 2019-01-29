@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Järjestelmän jäljitystiedostoissa voi olla arkaluontoista järjestelmä- ja sovellusdataa (esim. sovellusten käytöstä). Jaa jäljitystiedostoja vain luotettavien ihmisten ja sovellusten kanssa."</string>
     <string name="share" msgid="8443979083706282338">"Jaa"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Älä näytä uudelleen"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Käytä Perfettoa (beta)"</string>
 </resources>

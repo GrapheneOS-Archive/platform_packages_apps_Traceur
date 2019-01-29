@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Sistemos pėdsakų failuose gali būti neskelbtinų sistemos ir programų duomenų (pvz., programų naudojimo duomenų). Sistemos pėdsakų failus bendrinkite tik su patikimomis programomis ir žmonėmis."</string>
     <string name="share" msgid="8443979083706282338">"Bendrinti"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Daugiau neberodyti"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Naudoti „Perfetto“ (beta versija)"</string>
 </resources>

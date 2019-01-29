@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Файли трасування можуть містити конфіденційні дані про систему й додатки (як-от використання додатка). Діліться ними лише з людьми та в додатках, яким довіряєте."</string>
     <string name="share" msgid="8443979083706282338">"Поділитися"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Більше не показувати"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Використовувати Perfetto (бета)"</string>
 </resources>

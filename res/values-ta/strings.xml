@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"சிஸ்டம் டிரேஸிங் ஃபைல்களில் பாதுகாக்கவேண்டிய சிஸ்டம் மற்றும் ஆப்ஸ் தரவு (ஆப்ஸ் உபயோக விவரம் போன்றவை) இருக்கலாம். உங்களுக்கு நம்பகமானவர்களுடனும் ஆப்ஸுடனும் மட்டுமே பகிரவும்."</string>
     <string name="share" msgid="8443979083706282338">"பகிர்"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"மீண்டும் காட்டாதே"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"பெர்ஃபெட்டோ (பீட்டா) பதிப்பைப் பயன்படுத்தவும்"</string>
 </resources>

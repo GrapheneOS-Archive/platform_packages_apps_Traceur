@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"ਸਿਸਟਮ ਟ੍ਰੇਸਿੰਗ ਫ਼ਾਈਲਾਂ ਵਿੱਚ ਸੰਵੇਦਨਸ਼ੀਲ ਸਿਸਟਮ ਅਤੇ ਐਪ ਡਾਟਾ (ਜਿਵੇਂ ਕਿ ਐਪ ਵਰਤੋਂ) ਸ਼ਾਮਲ ਹੋ ਸਕਦਾ ਹੈ। ਸਿਸਟਮ ਟ੍ਰੇਸਾਂ ਨੂੰ ਸਿਰਫ਼ ਆਪਣੇ ਭਰੋਸੇਯੋਗ ਲੋਕਾਂ ਅਤੇ ਐਪਾਂ ਨਾਲ ਸਾਂਝਾ ਕਰੋ।"</string>
     <string name="share" msgid="8443979083706282338">"ਸਾਂਝਾ ਕਰੋ"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto (ਬੀਟਾ) ਵਰਤੋ"</string>
 </resources>

@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"સિસ્ટમ ટ્રેસ કરવાની ફાઇલોમાં સંવેદનશીલ સિસ્ટમ અને ઍપ ડેટા (જેમ કે ઍપ વપરાશ) શામેલ હોઈ શકે છે. તમે વિશ્વાસ કરો છો માત્ર તે લોકો અને ઍપ સાથે જ સિસ્ટમ ટ્રેસ શેર કરો."</string>
     <string name="share" msgid="8443979083706282338">"શેર કરો"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"ફરી બતાવશો નહીં"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfettoનો ઉપયોગ કરો (બીટા)"</string>
 </resources>

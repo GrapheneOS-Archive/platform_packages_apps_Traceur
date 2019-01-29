@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Faili za Kufuatilia Mfumo zinaweza kujumuisha data nyeti ya mfumo na programu (kama vile matumizi ya programu). Shiriki historia ya shughuli za mfumo na watu na programu unazoamini pekee."</string>
     <string name="share" msgid="8443979083706282338">"Shiriki"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Usionyeshe tena"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Tumia Perfetto (beta)"</string>
 </resources>

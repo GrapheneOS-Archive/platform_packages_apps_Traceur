@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Файловете за системно трасиране може да включват поверителни данни за системата и приложенията (като например за използването на приложенията). Споделяйте системните трасирания само с хора и приложения, на които имате доверие."</string>
     <string name="share" msgid="8443979083706282338">"Споделяне"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Да не се показва отново"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Използване на Perfetto (бета)"</string>
 </resources>

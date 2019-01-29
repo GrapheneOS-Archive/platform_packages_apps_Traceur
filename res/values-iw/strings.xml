@@ -29,6 +29,5 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"קבצים של נתוני המעקב מהמערכת עשויים לכלול נתונים רגישים של המערכת ושל האפליקציה (למשל, נתוני שימוש באפליקציה). יש לשתף את נתוני המעקב של המערכת רק עם אנשים ואפליקציות שיש לך אמון בהם."</string>
     <string name="share" msgid="8443979083706282338">"שיתוף"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"אל תציג שוב"</string>
-    <!-- no translation found for use_perfetto_beta (2725630143916520160) -->
-    <skip />
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"‏שימוש ב-Perfetto (בטא)"</string>
 </resources>
