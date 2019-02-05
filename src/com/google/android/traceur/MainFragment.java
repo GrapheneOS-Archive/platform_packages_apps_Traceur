@@ -112,10 +112,6 @@ public class MainFragment extends PreferenceFragment {
             }
         });
 
-        mBufferSize = (ListPreference) findPreference(getContext().getString(R.string.pref_key_buffer_size));
-        mBufferSize.setValue(mPrefs.getString(getContext().getString(R.string.pref_key_buffer_size),
-              getContext().getString(R.string.default_buffer_size)));
-
         findPreference("restore_default_tags").setOnPreferenceClickListener(
                 new Preference.OnPreferenceClickListener() {
                     @Override
