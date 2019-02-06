@@ -39,12 +39,36 @@
         android:key="clear_saved_traces"
         android:persistent="false"
         android:title="@string/clear_saved_traces" />
-    <androidx.preference.SwitchPreference
-        android:key="@string/pref_key_quick_setting"
-        android:title="@string/show_quick_settings_tile"
-        android:defaultValue="false" />
-    <androidx.preference.SwitchPreference
-        android:key="@string/pref_key_use_perfetto"
-        android:title="@string/use_perfetto_beta"
-        android:defaultValue="false" />
+    <androidx.preference.PreferenceCategory
+        android:orderingFromXml="true" >
+        <androidx.preference.SwitchPreference
+            android:key="@string/pref_key_long_traces"
+            android:title="@string/long_traces"
+            android:summary="@string/long_traces_summary"
+            android:dependency="@string/pref_key_use_perfetto"
+            android:defaultValue="false" />
+        <androidx.preference.ListPreference
+            android:key="@string/pref_key_max_long_trace_size"
+            android:title="@string/max_long_trace_size"
+            android:dependency="@string/pref_key_long_traces"
+            android:entries="@array/long_trace_size_values"
+            android:entryValues="@array/long_trace_size_values"/>
+        <androidx.preference.ListPreference
+            android:key="@string/pref_key_max_long_trace_duration"
+            android:title="@string/max_long_trace_duration"
+            android:dependency="@string/pref_key_long_traces"
+            android:entries="@array/long_trace_duration_values"
+            android:entryValues="@array/long_trace_duration_values"/>
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        android:orderingFromXml="true" >
+        <androidx.preference.SwitchPreference
+            android:key="@string/pref_key_quick_setting"
+            android:title="@string/show_quick_settings_tile"
+            android:defaultValue="false" />
+        <androidx.preference.SwitchPreference
+            android:key="@string/pref_key_use_perfetto"
+            android:title="@string/use_perfetto_beta"
+            android:defaultValue="false" />
+    </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>

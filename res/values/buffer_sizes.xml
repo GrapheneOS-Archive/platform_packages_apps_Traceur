@@ -12,4 +12,25 @@
     <item>65536</item>
 </string-array>
 
+<!-- Sizes are in MB. -->
+<string name="default_long_trace_size">16384</string>
+
+<string-array name="long_trace_size_values">
+    <item>4096</item>
+    <item>8192</item>
+    <item>@string/default_long_trace_size</item>
+    <item>32768</item>
+    <item>65536</item>
+</string-array>
+
+<!-- Durations are in minutes. -->
+<string name="default_long_trace_duration">30</string>
+
+<string-array name="long_trace_duration_values">
+    <item>10</item>
+    <item>@string/default_long_trace_duration</item>
+    <item>60</item>
+    <item>480</item>
+    <item>720</item>
+</string-array>
 </resources>

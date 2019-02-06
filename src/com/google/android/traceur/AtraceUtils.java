@@ -55,7 +55,10 @@ public class AtraceUtils implements TraceUtils.TraceEngine {
         return OUTPUT_EXTENSION;
     }
 
-    public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps) {
+    /* Note: longTrace and maxLongTrace* parameters are ignored in atrace mode. */
+    public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps,
+            boolean longTrace, int maxLongTraceSizeMb, int maxLongTraceDurationMinutes) {
+
         String appParameter = apps ? "-a '*' " : "";
         String cmd = "atrace --async_start -c -b " + bufferSizeKb + " "
             + appParameter + TextUtils.join(" ", tags);
