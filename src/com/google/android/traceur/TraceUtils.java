@@ -48,7 +48,8 @@ public class TraceUtils {
     public interface TraceEngine {
         public String getName();
         public String getOutputExtension();
-        public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps);
+        public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps,
+            boolean longTrace, int maxLongTraceSizeMb, int maxLongTraceDurationMinutes);
         public void traceStop();
         public boolean traceDump(File outFile);
         public boolean isTracingOn();
@@ -78,8 +79,10 @@ public class TraceUtils {
         return mTraceEngine.getName();
     }
 
-    public static boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps) {
-        return mTraceEngine.traceStart(tags, bufferSizeKb, apps);
+    public static boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps,
+            boolean longTrace, int maxLongTraceSizeMb, int maxLongTraceDurationMinutes) {
+        return mTraceEngine.traceStart(tags, bufferSizeKb, apps,
+            longTrace, maxLongTraceSizeMb, maxLongTraceDurationMinutes);
     }
 
     public static void traceStop() {

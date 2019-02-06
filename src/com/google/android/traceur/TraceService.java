@@ -34,55 +34,74 @@ import java.util.Collection;
 
 public class TraceService extends IntentService {
 
-    private static String INTENT_ACTION_START_TRACING = "com.android.traceur.START_TRACING";
+    protected static String INTENT_ACTION_FORCE_STOP_TRACING = "com.android.traceur.FORCE_STOP_TRACING";
     private static String INTENT_ACTION_STOP_TRACING = "com.android.traceur.STOP_TRACING";
+    private static String INTENT_ACTION_START_TRACING = "com.android.traceur.START_TRACING";
 
-    private static String INTENT_EXTRA_FILENAME = "filename";
     private static String INTENT_EXTRA_TAGS= "tags";
     private static String INTENT_EXTRA_BUFFER = "buffer";
     private static String INTENT_EXTRA_APPS = "apps";
+    private static String INTENT_EXTRA_LONG_TRACE = "long_trace";
+    private static String INTENT_EXTRA_LONG_TRACE_SIZE = "long_trace_size";
+    private static String INTENT_EXTRA_LONG_TRACE_DURATION = "long_trace_duration";
 
     private static int TRACE_NOTIFICATION = 1;
     private static int SAVING_TRACE_NOTIFICATION = 2;
+    private static int FORCE_STOP_SAVING_TRACE_NOTIFICATION = 3;
 
     public static void startTracing(final Context context,
-            Collection<String> tags, int bufferSizeKb, boolean apps) {
+            Collection<String> tags, int bufferSizeKb, boolean apps,
+            boolean longTrace, int maxLongTraceSizeMb, int maxLongTraceDurationMinutes) {
         Intent intent = new Intent(context, TraceService.class);
         intent.setAction(INTENT_ACTION_START_TRACING);
         intent.putExtra(INTENT_EXTRA_TAGS, new ArrayList(tags));
         intent.putExtra(INTENT_EXTRA_BUFFER, bufferSizeKb);
         intent.putExtra(INTENT_EXTRA_APPS, apps);
+        intent.putExtra(INTENT_EXTRA_LONG_TRACE, longTrace);
+        intent.putExtra(INTENT_EXTRA_LONG_TRACE_SIZE, maxLongTraceSizeMb);
+        intent.putExtra(INTENT_EXTRA_LONG_TRACE_DURATION, maxLongTraceDurationMinutes);
         context.startService(intent);
     }
 
     public static void stopTracing(final Context context) {
         Intent intent = new Intent(context, TraceService.class);
         intent.setAction(INTENT_ACTION_STOP_TRACING);
-        intent.putExtra(INTENT_EXTRA_FILENAME, TraceUtils.getOutputFilename());
         context.startService(intent);
     }
 
     public TraceService() {
-        super("TraceService");
+        this("TraceService");
+    }
+
+    protected TraceService(String name) {
+        super(name);
         setIntentRedelivery(true);
     }
 
     @Override
     public void onHandleIntent(Intent intent) {
         setupTraceEngine();
+        Context context = getApplicationContext();
 
         if (intent.getAction().equals(INTENT_ACTION_START_TRACING)) {
             startTracingInternal(intent.getStringArrayListExtra(INTENT_EXTRA_TAGS),
                 intent.getIntExtra(INTENT_EXTRA_BUFFER,
-                    Integer.parseInt(getApplicationContext()
-                        .getString(R.string.default_buffer_size))),
-                intent.getBooleanExtra(INTENT_EXTRA_APPS, false));
+                    Integer.parseInt(context.getString(R.string.default_buffer_size))),
+                intent.getBooleanExtra(INTENT_EXTRA_APPS, false),
+                intent.getBooleanExtra(INTENT_EXTRA_LONG_TRACE, false),
+                intent.getIntExtra(INTENT_EXTRA_LONG_TRACE_SIZE,
+                    Integer.parseInt(context.getString(R.string.default_long_trace_size))),
+                intent.getIntExtra(INTENT_EXTRA_LONG_TRACE_DURATION,
+                    Integer.parseInt(context.getString(R.string.default_long_trace_duration))));
         } else if (intent.getAction().equals(INTENT_ACTION_STOP_TRACING)) {
-            stopTracingInternal(intent.getStringExtra(INTENT_EXTRA_FILENAME));
+            stopTracingInternal(TraceUtils.getOutputFilename(), false);
+        } else if (intent.getAction().equals(INTENT_ACTION_FORCE_STOP_TRACING)) {
+            stopTracingInternal(TraceUtils.getOutputFilename(), true);
         }
     }
 
-    private void startTracingInternal(Collection<String> tags, int bufferSizeKb, boolean appTracing) {
+    private void startTracingInternal(Collection<String> tags, int bufferSizeKb, boolean appTracing,
+            boolean longTrace, int maxLongTraceSizeMb, int maxLongTraceDurationMinutes) {
         Context context = getApplicationContext();
         Intent stopIntent = new Intent(Receiver.STOP_ACTION,
             null, context, Receiver.class);
@@ -110,7 +129,8 @@ public class TraceService extends IntentService {
 
         startForeground(TRACE_NOTIFICATION, notification.build());
 
-        if (TraceUtils.traceStart(tags, bufferSizeKb, appTracing)) {
+        if (TraceUtils.traceStart(tags, bufferSizeKb, appTracing,
+                longTrace, maxLongTraceSizeMb, maxLongTraceDurationMinutes)) {
             stopForeground(Service.STOP_FOREGROUND_DETACH);
         } else {
             // Starting the trace was unsuccessful, so ensure that tracing
@@ -124,7 +144,7 @@ public class TraceService extends IntentService {
         }
     }
 
-    private void stopTracingInternal(String outputFilename) {
+    private void stopTracingInternal(String outputFilename, boolean forceStop) {
         Context context = getApplicationContext();
         NotificationManager notificationManager =
             getSystemService(NotificationManager.class);
@@ -143,7 +163,15 @@ public class TraceService extends IntentService {
             notification.extend(new Notification.TvExtender());
         }
 
-        startForeground(SAVING_TRACE_NOTIFICATION, notification.build());
+        // We want to do the same thing regardless of whether the trace was
+        // stopped via the external signal or within Traceur. However, these
+        // two stopping mechanisms must use different notification IDs so that
+        // one doesn't accidentally remove or override notifications from the
+        // other.
+        int notificationId = forceStop
+                ? FORCE_STOP_SAVING_TRACE_NOTIFICATION : SAVING_TRACE_NOTIFICATION;
+
+        startForeground(notificationId, notification.build());
 
         notificationManager.cancel(TRACE_NOTIFICATION);
 
@@ -156,7 +184,7 @@ public class TraceService extends IntentService {
         stopForeground(Service.STOP_FOREGROUND_REMOVE);
     }
 
-    private void setupTraceEngine() {
+    protected void setupTraceEngine() {
         Context context = getApplicationContext();
         boolean usePerfetto =
             PreferenceManager.getDefaultSharedPreferences(context)
