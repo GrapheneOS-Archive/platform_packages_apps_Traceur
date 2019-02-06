@@ -108,8 +108,18 @@ public class Receiver extends BroadcastReceiver {
                         context.getString(R.string.default_buffer_size)));
 
                 boolean appTracing = prefs.getBoolean(context.getString(R.string.pref_key_apps), true);
+                boolean longTrace = prefs.getBoolean(context.getString(R.string.pref_key_long_traces), true);
 
-                TraceService.startTracing(context, activeAvailableTags, bufferSize, appTracing);
+                int maxLongTraceSize = Integer.parseInt(
+                    prefs.getString(context.getString(R.string.pref_key_max_long_trace_size),
+                        context.getString(R.string.default_long_trace_size)));
+
+                int maxLongTraceDuration = Integer.parseInt(
+                    prefs.getString(context.getString(R.string.pref_key_max_long_trace_duration),
+                        context.getString(R.string.default_long_trace_duration)));
+
+                TraceService.startTracing(context, activeAvailableTags, bufferSize,
+                    appTracing, longTrace, maxLongTraceSize, maxLongTraceDuration);
             } else {
                 TraceService.stopTracing(context);
             }
