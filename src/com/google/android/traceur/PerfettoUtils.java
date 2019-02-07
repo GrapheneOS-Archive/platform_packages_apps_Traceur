@@ -42,6 +42,8 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final String PERFETTO_TAG = "traceur";
     private static final String MARKER = "PERFETTO_ARGUMENTS";
     private static final int STARTUP_TIMEOUT_MS = 300;
+    private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
+    private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
 
     public String getName() {
         return NAME;
@@ -78,12 +80,13 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
 
                 if (maxLongTraceSizeMb != 0) {
                     config.append("max_file_size_bytes: "
-                        + (maxLongTraceSizeMb * 1024 * 1024) + "\n");
+                        + (maxLongTraceSizeMb * MEGABYTES_TO_BYTES) + "\n");
                 }
 
                 if (maxLongTraceDurationMinutes != 0) {
                     config.append("duration_ms: "
-                        + (maxLongTraceDurationMinutes * (long)60000) + "\n");
+                        + (maxLongTraceDurationMinutes * MINUTES_TO_MILLISECONDS)
+                        + "\n");
                 }
 
                 // Default value for long traces to write to file.
