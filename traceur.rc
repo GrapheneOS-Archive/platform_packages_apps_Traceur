@@ -1,4 +1,6 @@
 ## To allow communication with Traceur that a trace has ended.
 
+# Use exec_background to ensure that we run notify_traceur a separate
+# time for each property change (tracing stop) we see.
 on property:sys.trace.trace_end_signal=*
-    exec_background u:r:shell:s0 system shell -- /system/bin/sh -c "/system/bin/am start-foreground-service -n com.android.traceur/.StopTraceService"
+    exec_background - system shell -- /system/bin/notify_traceur.sh
