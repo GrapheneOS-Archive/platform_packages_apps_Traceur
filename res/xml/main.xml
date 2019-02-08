@@ -72,6 +72,6 @@
         <androidx.preference.SwitchPreference
             android:key="@string/pref_key_use_perfetto"
             android:title="@string/use_perfetto_beta"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
     </androidx.preference.PreferenceCategory>
 </androidx.preference.PreferenceScreen>
