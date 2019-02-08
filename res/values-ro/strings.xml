@@ -30,4 +30,12 @@
     <string name="share" msgid="8443979083706282338">"Permiteți accesul"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Nu mai afișați"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Folosiți Perfetto (beta)"</string>
+    <!-- no translation found for long_traces (5110949471775966329) -->
+    <skip />
+    <!-- no translation found for long_traces_summary (6878611738621557360) -->
+    <skip />
+    <!-- no translation found for max_long_trace_size (1943788179787181241) -->
+    <skip />
+    <!-- no translation found for max_long_trace_duration (8009837944364246785) -->
+    <skip />
 </resources>
