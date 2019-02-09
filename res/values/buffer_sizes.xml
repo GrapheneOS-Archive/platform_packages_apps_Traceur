@@ -13,18 +13,37 @@
 </string-array>
 
 <!-- Sizes are in MB. -->
-<string name="default_long_trace_size">16384</string>
+<string name="default_long_trace_size">10240</string>
+
+<!-- Keep the following two arrays in sync or you will regret it! -->
+<string-array name="long_trace_size_names">
+    <item>@string/two_hundred_mb</item>
+    <item>@string/one_gb</item>
+    <item>@string/five_gb</item>
+    <item>@string/ten_gb</item>
+    <item>@string/twenty_gb</item>
+</string-array>
 
 <string-array name="long_trace_size_values">
-    <item>4096</item>
-    <item>8192</item>
+    <item>200</item>
+    <item>1024</item>
+    <item>5120</item>
     <item>@string/default_long_trace_size</item>
-    <item>32768</item>
-    <item>65536</item>
+    <item>20480</item>
 </string-array>
 
 <!-- Durations are in minutes. -->
 <string name="default_long_trace_duration">30</string>
+
+<!-- Keep the following two arrays in sync or you will regret it! -->
+<string-array name="long_trace_duration_names">
+    <item>@string/ten_minutes</item>
+    <item>@string/thirty_minutes</item>
+    <item>@string/one_hour</item>
+    <item>@string/eight_hours</item>
+    <item>@string/twelve_hours</item>
+    <item>@string/twentyfour_hours</item>
+</string-array>
 
 <string-array name="long_trace_duration_values">
     <item>10</item>
@@ -32,5 +51,6 @@
     <item>60</item>
     <item>480</item>
     <item>720</item>
+    <item>1440</item>
 </string-array>
 </resources>
