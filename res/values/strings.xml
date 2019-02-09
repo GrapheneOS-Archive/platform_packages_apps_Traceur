@@ -60,4 +60,16 @@
 
     <!-- These are keywords that the user can use to search for this app. 'systrace' should not be translated, as it is an app name. -->
     <string name="keywords">systrace, trace, performance</string>
+
+    <!-- Title of a dialog asking the user to confirm whether they want to share the trace. -->
+    <string name="share_trace">Share trace?</string>
+
+    <!-- Text informing user about contents of a trace file. This string appears when users share a trace file or reveal the System Traces directory in a directory browsing app like Files. -->
+    <string name="system_trace_sensitive_data">System Tracing files may include sensitive system and app data (such as app usage). Only share system traces with people and apps you trust.</string>
+
+    <!-- Button on a dialog asking the user to confirm whether they want to share the trace. Clicking this button confirms that the user does want to share the trace. -->
+    <string name="share">Share</string>
+
+    <!-- Checkbox that indicates this dialog should not be shown again when the next trace is taken. -->
+    <string name="dont_show_again">Don\'t show again</string>
 </resources>

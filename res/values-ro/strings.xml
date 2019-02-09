@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Toate urmele vor fi șterse din /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Ștergeți"</string>
     <string name="keywords" msgid="736547007949049535">"urmă de sistem, urmă, performanță"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Permiteți accesul la urmărire?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Fișierele de urmărire a sistemului pot include date sensibile ale sistemului și ale aplicațiilor (cum ar fi utilizarea aplicațiilor). Permiteți accesul la fișierele de urmărire a sistemului numai persoanelor și aplicațiilor în care aveți încredere."</string>
+    <string name="share" msgid="8443979083706282338">"Permiteți accesul"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Nu mai afișați"</string>
 </resources>

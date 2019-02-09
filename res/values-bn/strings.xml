@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"সব ট্রেসকে /data/local/traces থেকে মুছে ফেলা হবে"</string>
     <string name="clear" msgid="5484761795406948056">"মুছুন"</string>
     <string name="keywords" msgid="736547007949049535">"সিস্ট্রেস, ট্রেস, পারফরম্যান্স"</string>
+    <string name="share_trace" msgid="4528525067822044385">"ট্রেস শেয়ার করতে চান?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"সিস্টেম ট্রেসিং ফাইলে অতি গোপনীয় সিস্টেম এবং অ্যাপ ডেটা থাকতে পারে (যেমন অ্যাপের জন্য ডেটার ব্যবহার)। কেবলমাত্র আপনার বিশ্বস্ত লোকজন এবং অ্যাপের সঙ্গে সিস্টেম ট্রেস শেয়ার করুন।"</string>
+    <string name="share" msgid="8443979083706282338">"শেয়ার করুন"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"আর দেখাবেন না"</string>
 </resources>

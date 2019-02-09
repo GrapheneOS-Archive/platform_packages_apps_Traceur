@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Všetky stopy v umiestnení /data/local/traces sa odstránia"</string>
     <string name="clear" msgid="5484761795406948056">"Vymazať"</string>
     <string name="keywords" msgid="736547007949049535">"systémové trasovanie, trasovanie, výkonnosť"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Chcete zdieľať stopu?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Záznamy migrácie systému môžu obsahovať citlivé údaje o systéme a aplikáciách (napríklad využívanie aplikácií). Záznamy migrácie systému zdieľajte len s dôveryhodnými osobami a aplikáciami."</string>
+    <string name="share" msgid="8443979083706282338">"Zdieľať"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Nabudúce nezobrazovať"</string>
 </resources>

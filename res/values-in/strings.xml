@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Semua jejak akan dihapus dari /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Hapus"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, jejak, performa"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Bagikan rekaman aktivitas?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"File System Tracing dapat mencakup data sistem dan aplikasi yang sensitif (seperti penggunaan aplikasi). Bagikan rekaman aktivitas sistem hanya kepada orang dan aplikasi yang Anda percayai."</string>
+    <string name="share" msgid="8443979083706282338">"Bagikan"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Jangan tampilkan lagi"</string>
 </resources>

@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"ሁሉም ዱካ ክትትሎች ከ /ውሂብ/ከባቢያዊ/ዱካ ክትትሎች ላይ ይሰረዛሉ"</string>
     <string name="clear" msgid="5484761795406948056">"አጽዳ"</string>
     <string name="keywords" msgid="736547007949049535">"የሥርዓት ክትትል፣ ክትትል፣ አፈጻጸም"</string>
+    <string name="share_trace" msgid="4528525067822044385">"መከታተያ ይጋራ?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"የሥርዓት ዱካ መከታተያ ፋይሎች አደጋን ሊያስከትሉ የሚችሉ የሥርዓት እና የመተግበሪያ ውሂብ (እንደ የመተግበሪያ አጠቃቀም) ያለ ሊያካትት ይችላል። ከሚያምኗቸው ሰዎች ጋር ብቻ የሥርዓት ዱካ መከታተያዎችን ያጋሩ።"</string>
+    <string name="share" msgid="8443979083706282338">"አጋራ"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"ዳግም አታሳይ"</string>
 </resources>
