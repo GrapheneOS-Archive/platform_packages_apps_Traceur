@@ -34,7 +34,8 @@
         android:key="@string/pref_key_buffer_size"
         android:title="@string/buffer_size"
         android:entries="@array/buffer_size_values"
-        android:entryValues="@array/buffer_size_values"/>
+        android:entryValues="@array/buffer_size_values"
+        android:defaultValue="@string/default_buffer_size"/>
     <Preference
         android:key="clear_saved_traces"
         android:persistent="false"
@@ -51,14 +52,16 @@
             android:key="@string/pref_key_max_long_trace_size"
             android:title="@string/max_long_trace_size"
             android:dependency="@string/pref_key_long_traces"
-            android:entries="@array/long_trace_size_values"
-            android:entryValues="@array/long_trace_size_values"/>
+            android:entries="@array/long_trace_size_names"
+            android:entryValues="@array/long_trace_size_values"
+            android:defaultValue="@string/default_long_trace_size"/>
         <androidx.preference.ListPreference
             android:key="@string/pref_key_max_long_trace_duration"
             android:title="@string/max_long_trace_duration"
             android:dependency="@string/pref_key_long_traces"
-            android:entries="@array/long_trace_duration_values"
-            android:entryValues="@array/long_trace_duration_values"/>
+            android:entries="@array/long_trace_duration_names"
+            android:entryValues="@array/long_trace_duration_values"
+            android:defaultValue="@string/default_long_trace_duration"/>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         android:orderingFromXml="true" >
