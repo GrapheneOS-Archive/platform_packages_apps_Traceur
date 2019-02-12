@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Svi tragovi će biti izbrisani sa /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Obriši"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, praćenje, učinak"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Želite li da delite praćenje?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Datoteke praćenja sistema mogu da sadrže osetljive podatke o sistemu i aplikacijama (na primer, o korišćenju aplikacije). Delite praćenja sistema samo sa pouzdanim ljudima i aplikacijama."</string>
+    <string name="share" msgid="8443979083706282338">"Deli"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Ne prikazuj ponovo"</string>
 </resources>

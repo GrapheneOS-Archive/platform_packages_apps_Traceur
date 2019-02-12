@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Alle spore in /data/local/traces sal uitgevee word"</string>
     <string name="clear" msgid="5484761795406948056">"Vee uit"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, spoor na, werkverrigting"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Deel spoor?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Stelselnasporinglêers kan sensitiewe stelsel- en programdata (soos programgebruik) insluit. Deel stelselspore net met mense en programme wat jy vertrou."</string>
+    <string name="share" msgid="8443979083706282338">"Deel"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Moenie weer wys nie"</string>
 </resources>
