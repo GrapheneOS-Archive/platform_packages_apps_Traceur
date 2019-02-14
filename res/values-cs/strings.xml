@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Všechna trasování v umístění /data/local/traces budou smazána"</string>
     <string name="clear" msgid="5484761795406948056">"Zrušit"</string>
     <string name="keywords" msgid="736547007949049535">"systémové trasování, trasování, výkon"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Sdílet trasování?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Soubory Trasování systému mohou obsahovat citlivá data o systému a aplikacích (například využití aplikací). Tyto soubory sdílejte jen s lidmi a aplikacemi, kterým důvěřujete."</string>
+    <string name="share" msgid="8443979083706282338">"Sdílet"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Tuto zprávu již nezobrazovat"</string>
 </resources>

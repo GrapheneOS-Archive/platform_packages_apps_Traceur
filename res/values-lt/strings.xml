@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Visi pėdsakai bus ištrinti iš /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Išvalyti"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, pėdsakas, našumas"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Bendrinti pėdsako failą?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Sistemos pėdsakų failuose gali būti neskelbtinų sistemos ir programų duomenų (pvz., programų naudojimo duomenų). Sistemos pėdsakų failus bendrinkite tik su patikimomis programomis ir žmonėmis."</string>
+    <string name="share" msgid="8443979083706282338">"Bendrinti"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Daugiau neberodyti"</string>
 </resources>
