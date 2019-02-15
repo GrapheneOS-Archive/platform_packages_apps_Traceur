@@ -188,7 +188,7 @@ public class TraceService extends IntentService {
         Context context = getApplicationContext();
         boolean usePerfetto =
             PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(context.getString(R.string.pref_key_use_perfetto), true);
+                .getBoolean(context.getString(R.string.pref_key_use_perfetto), false);
         TraceUtils.switchTraceEngine(
             usePerfetto ? PerfettoUtils.NAME : AtraceUtils.NAME);
     }
