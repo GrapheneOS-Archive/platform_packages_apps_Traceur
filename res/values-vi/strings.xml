@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Tất cả dấu vết sẽ bị xóa khỏi /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Xóa"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, nhật ký hoạt động, hiệu suất"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Bạn có muốn chia sẻ dấu vết không?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Các tệp Theo dõi hệ thống có thể bao gồm dữ liệu ứng dụng và dữ liệu hệ thống nhạy cảm (chẳng hạn như mức sử dụng ứng dụng). Chỉ chia sẻ dấu vết hệ thống với những người và ứng dụng mà bạn tin tưởng."</string>
+    <string name="share" msgid="8443979083706282338">"Chia sẻ"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Không hiển thị lại"</string>
 </resources>

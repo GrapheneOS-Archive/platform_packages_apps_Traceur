@@ -24,4 +24,8 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Все записи из папки /data/local/traces будут удалены."</string>
     <string name="clear" msgid="5484761795406948056">"Удалить"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, отслеживание, производительность"</string>
+    <string name="share_trace" msgid="4528525067822044385">"Поделиться трассировкой?"</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"В файлах трассировки может содержаться конфиденциальная информация о системе и приложении (например, данные о его использовании). Открывайте доступ к ним только надежным пользователям и приложениям."</string>
+    <string name="share" msgid="8443979083706282338">"Поделиться"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Больше не показывать"</string>
 </resources>
