@@ -2,15 +2,10 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Системийн шинжлэл"</string>
-    <string name="record_system_activity" msgid="4339462312915377825">"Системийн үйл ажиллагааг бүртгэж гүйцэтгэлээ сайжруулахын тулд үүнийг дараа шинжилнэ үү"</string>
     <string name="record_trace" msgid="6416875085186661845">"Мөрийг бичих"</string>
-    <string name="trace_debuggable_applications" msgid="7957069895298887899">"Дебаг хийх боломжтой аппуудын ул мөрийг дагах"</string>
     <string name="categories" msgid="2280163673538611008">"Ангилал"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Өгөгдмөл ангиллыг сэргээх"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Өгөгдмөл ангиллыг сэргээсэн"</string>
-    <string name="applications" msgid="521776761270770549">"Аппууд"</string>
-    <string name="no_debuggable_apps" msgid="4386209254520471208">"Дебаг хийх боломжтой аппууд алга"</string>
-    <string name="buffer_size" msgid="3370134227980578569">"Буферийн хэмжээ"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Түргэн тохиргооны хэсгийг харуулах"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Мөрийг хадгалж байна"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Мөрийг хадгалсан"</string>
@@ -20,12 +15,5 @@
     <string name="trace_is_being_recorded" msgid="5947378146009337469">"Ул мөрийг бүртгэж байна"</string>
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Мөрдөхийг зогсоох бол товшино уу"</string>
     <string name="clear_saved_traces" msgid="4809195654452260944">"Хадгалсан ул мөрийг устгах"</string>
-    <string name="clear_saved_traces_question" msgid="2184026613055303818">"Хадгалсан ул мөрийг устгах уу?"</string>
-    <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Бүх ул мөрийг /өгөгдөл/дотоод/ул мөрөөс устгана"</string>
-    <string name="clear" msgid="5484761795406948056">"Устгах"</string>
-    <string name="keywords" msgid="736547007949049535">"systrace, ул мөр, гүйцэтгэл"</string>
-    <string name="share_trace" msgid="4528525067822044385">"Ул мөрийг хуваалцах уу?"</string>
-    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Системийн мөрдлөгийн файлд систем болон аппын мэдрэг өгөгдлийг (апп ашиглалт зэрэг) агуулж болзошгүй. Та системийн ул мөрийг зөвхөн итгэдэг хүмүүс болон аппуудтайгаа хуваалцана уу."</string>
-    <string name="share" msgid="8443979083706282338">"Хуваалцах"</string>
-    <string name="dont_show_again" msgid="6662492041164390600">"Дахиж бүү харуул"</string>
+    <string name="clear_saved_traces_confirm" msgid="7146599350128726240">"Та өгөгдөл/дотоод/ул мөрөөс бүх хадгалсан мөрийг устгах уу?"</string>
 </resources>

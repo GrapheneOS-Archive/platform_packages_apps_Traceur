@@ -29,8 +29,6 @@ import android.support.test.uiautomator.Until;
 import androidx.test.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
-import java.util.regex.Pattern;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
