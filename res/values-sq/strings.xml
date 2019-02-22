@@ -30,12 +30,19 @@
     <string name="share" msgid="8443979083706282338">"Ndaj"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Mos e shfaq përsëri"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Përdor Perfetto (beta)"</string>
-    <!-- no translation found for long_traces (5110949471775966329) -->
-    <skip />
-    <!-- no translation found for long_traces_summary (6878611738621557360) -->
-    <skip />
-    <!-- no translation found for max_long_trace_size (1943788179787181241) -->
-    <skip />
-    <!-- no translation found for max_long_trace_duration (8009837944364246785) -->
-    <skip />
+    <string name="long_traces" msgid="5110949471775966329">"Gjurmët e gjata"</string>
+    <string name="long_traces_summary" msgid="6878611738621557360">"Gjurmët e gjata ruhen në vazhdimësi në hapësirën ruajtëse të pajisjes."</string>
+    <string name="max_long_trace_size" msgid="1943788179787181241">"Madhësia maksimale e gjurmës së gjatë"</string>
+    <string name="max_long_trace_duration" msgid="8009837944364246785">"Kohëzgjatja maksimale e gjurmës së gjatë"</string>
+    <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
+    <string name="one_gb" msgid="590396985168692037">"1 GB"</string>
+    <string name="five_gb" msgid="7883941043220621649">"5 GB"</string>
+    <string name="ten_gb" msgid="4150452462544299276">"10 GB"</string>
+    <string name="twenty_gb" msgid="5717308686812140465">"20 GB"</string>
+    <string name="ten_minutes" msgid="7039181194343961324">"10 minuta"</string>
+    <string name="thirty_minutes" msgid="2575810799813531395">"30 minuta"</string>
+    <string name="one_hour" msgid="5219232935307966891">"1 orë"</string>
+    <string name="eight_hours" msgid="3207620892104451552">"8 orë"</string>
+    <string name="twelve_hours" msgid="4647143276394563496">"12 orë"</string>
+    <string name="twentyfour_hours" msgid="2789663313550030791">"24 orë"</string>
 </resources>
