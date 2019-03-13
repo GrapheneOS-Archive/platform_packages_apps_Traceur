@@ -16,7 +16,7 @@
 
 package com.android.traceur;
 
-import android.os.SystemProperties;
+import android.sysprop.TraceProperties;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -123,7 +123,7 @@ public class AtraceUtils implements TraceUtils.TraceEngine {
 
     public boolean isTracingOn() {
         boolean userInitiatedTracingFlag =
-            "1".equals(SystemProperties.get("debug.atrace.user_initiated", ""));
+            TraceProperties.user_initiated().orElse(false);
 
         if (!userInitiatedTracingFlag) {
             return false;
