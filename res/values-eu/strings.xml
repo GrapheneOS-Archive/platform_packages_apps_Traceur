@@ -8,9 +8,13 @@
     <string name="categories" msgid="2280163673538611008">"Kategoriak"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Leheneratu kategoria lehenetsiak"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Leheneratu dira kategoria lehenetsiak"</string>
+    <!-- no translation found for default_categories (2117679794687799407) -->
+    <skip />
+    <!-- no translation found for num_categories_selected (963928263524652497) -->
     <string name="applications" msgid="521776761270770549">"Aplikazioak"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Ez dago aratz daitekeen aplikaziorik erabilgarri"</string>
-    <string name="buffer_size" msgid="3370134227980578569">"Bufferraren tamaina"</string>
+    <!-- no translation found for buffer_size (3944311026715111454) -->
+    <skip />
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Erakutsi ezarpen bizkorren lauza"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Arrastoa gordetzen"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Gorde da arrastoa"</string>
@@ -31,7 +35,8 @@
     <string name="dont_show_again" msgid="6662492041164390600">"Ez erakutsi berriro"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Erabili Perfetto (beta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Arrasto luzeak"</string>
-    <string name="long_traces_summary" msgid="6878611738621557360">"Arrasto luzeak etengabe gordetzen dira gailuaren biltegian."</string>
+    <!-- no translation found for long_traces_summary (419034282946761469) -->
+    <skip />
     <string name="max_long_trace_size" msgid="1943788179787181241">"Arrasto luzearen gehieneko tamaina"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Arrasto luzearen gehieneko iraupena"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
@@ -45,4 +50,14 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 ordu"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 ordu"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 ordu"</string>
+    <!-- no translation found for four_thousand_kb (5156346740862105703) -->
+    <skip />
+    <!-- no translation found for eight_thousand_kb (8815334985638334081) -->
+    <skip />
+    <!-- no translation found for sixteen_thousand_kb (7342517169232459259) -->
+    <skip />
+    <!-- no translation found for thirtytwo_thousand_kb (654328198799196150) -->
+    <skip />
+    <!-- no translation found for sixtyfive_thousand_kb (8168144138598305306) -->
+    <skip />
 </resources>
