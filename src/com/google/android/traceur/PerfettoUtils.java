@@ -44,6 +44,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final int STARTUP_TIMEOUT_MS = 600;
     private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
     private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
+    private static final String POWER_TAG = "power";
 
     public String getName() {
         return NAME;
@@ -136,6 +137,21 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
             .append("    target_buffer: 0\n")
             .append("  }\n")
             .append("} \n");
+
+        if (tags.contains(POWER_TAG)) {
+            config.append("data_sources: {\n")
+                    .append("  config { \n")
+                    .append("    name: \"android.power\"\n")
+                    .append("    android_power_config {\n")
+                    .append("      battery_poll_ms: 1000\n")
+                    .append("      collect_power_rails: true\n")
+                    .append("      battery_counters: BATTERY_COUNTER_CAPACITY_PERCENT\n")
+                    .append("      battery_counters: BATTERY_COUNTER_CHARGE\n")
+                    .append("      battery_counters: BATTERY_COUNTER_CURRENT\n")
+                    .append("    }\n")
+                    .append("  }\n")
+                    .append("}\n");
+        }
 
         String configString = config.toString();
 
