@@ -8,13 +8,14 @@
     <string name="categories" msgid="2280163673538611008">"زمرے"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ڈیفالٹ زمروں کو بحال کریں"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"ڈیفالٹ زمرے بحال ہو گئے"</string>
-    <!-- no translation found for default_categories (2117679794687799407) -->
-    <skip />
-    <!-- no translation found for num_categories_selected (963928263524652497) -->
+    <string name="default_categories" msgid="2117679794687799407">"ڈیفالٹ"</string>
+    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
+      <item quantity="other">‏‎%d منتخب ہو گئے</item>
+      <item quantity="one">‏‎%d منتخب ہو گئے</item>
+    </plurals>
     <string name="applications" msgid="521776761270770549">"ایپلیکیشنز"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"ڈیبگ کے لائق کوئی ایپلیکیشن دستیاب نہیں ہے"</string>
-    <!-- no translation found for buffer_size (3944311026715111454) -->
-    <skip />
+    <string name="buffer_size" msgid="3944311026715111454">"‏فی CPU بفر سائز"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"فوری ترتیبات والی ٹائل دکھائیں"</string>
     <string name="saving_trace" msgid="1468692734770800541">"ٹریس محفوظ کیا جا رہا ہے"</string>
     <string name="trace_saved" msgid="5869970594780992309">"ٹریس محفوظ ہو گیا"</string>
@@ -35,8 +36,7 @@
     <string name="dont_show_again" msgid="6662492041164390600">"دوبارہ نہ دکھائیں"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"‏Perfetto کا استعمال کریں (بی ٹا)"</string>
     <string name="long_traces" msgid="5110949471775966329">"لمبے ٹریسز"</string>
-    <!-- no translation found for long_traces_summary (419034282946761469) -->
-    <skip />
+    <string name="long_traces_summary" msgid="419034282946761469">"آلہ کے اسٹوریج میں مسلسل محفوظ ہو رہا ہے"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"زیادہ سے زیادہ لمبا ٹریس سائز"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"زیادہ سے زیادہ لمبے ٹریس کی مدت"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
@@ -50,14 +50,9 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 گھنٹے"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 گھنٹے"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 گھنٹے"</string>
-    <!-- no translation found for four_thousand_kb (5156346740862105703) -->
-    <skip />
-    <!-- no translation found for eight_thousand_kb (8815334985638334081) -->
-    <skip />
-    <!-- no translation found for sixteen_thousand_kb (7342517169232459259) -->
-    <skip />
-    <!-- no translation found for thirtytwo_thousand_kb (654328198799196150) -->
-    <skip />
-    <!-- no translation found for sixtyfive_thousand_kb (8168144138598305306) -->
-    <skip />
+    <string name="four_thousand_kb" msgid="5156346740862105703">"‎4096 KB"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"‎8192 KB"</string>
+    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"‎16384 KB"</string>
+    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"‎32768 KB"</string>
+    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"‎65536 KB"</string>
 </resources>
