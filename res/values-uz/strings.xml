@@ -10,11 +10,11 @@
     <string name="default_categories_restored" msgid="6861683793680564181">"Asosiy turkumlar tiklandi"</string>
     <string name="default_categories" msgid="2117679794687799407">"Asosiy"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="other">%d ta tanlandi</item>
-      <item quantity="one">%d ta tanlandi</item>
+      <item quantity="other">Belgilandi: %d</item>
+      <item quantity="one">Belgilandi: %d</item>
     </plurals>
     <string name="applications" msgid="521776761270770549">"Ilovalar"</string>
-    <string name="no_debuggable_apps" msgid="4386209254520471208">"Hech qaysi ilovada tuzatishga ruxsati yo‘q"</string>
+    <string name="no_debuggable_apps" msgid="4386209254520471208">"Hech qanday ilovada tuzatishga ruxsati yo‘q"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Har bir protsessor bufer hajmi"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Tezkor sozlamalar panelini ko‘rsatish"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Trassirovka saqlanmoqda"</string>
