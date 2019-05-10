@@ -10,8 +10,8 @@
     <string name="default_categories_restored" msgid="6861683793680564181">"डिफॉल्ट वर्गवार्‍या रिस्‍‍‍‍‍टोअर केल्या"</string>
     <string name="default_categories" msgid="2117679794687799407">"डीफॉल्ट"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">%d निवडली</item>
       <item quantity="other">%d निवडली</item>
+      <item quantity="one">%d निवडली</item>
     </plurals>
     <string name="applications" msgid="521776761270770549">"अॅप्लिकेशन"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"डीबग करण्यायोग्य अॅप्लिकेशन उपलब्ध नाहीत"</string>
