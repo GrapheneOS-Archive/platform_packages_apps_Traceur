@@ -80,7 +80,6 @@ public class TraceService extends IntentService {
 
     @Override
     public void onHandleIntent(Intent intent) {
-        setupTraceEngine();
         Context context = getApplicationContext();
 
         if (intent.getAction().equals(INTENT_ACTION_START_TRACING)) {
@@ -184,12 +183,4 @@ public class TraceService extends IntentService {
         stopForeground(Service.STOP_FOREGROUND_REMOVE);
     }
 
-    protected void setupTraceEngine() {
-        Context context = getApplicationContext();
-        boolean usePerfetto =
-            PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(context.getString(R.string.pref_key_use_perfetto), true);
-        TraceUtils.switchTraceEngine(
-            usePerfetto ? PerfettoUtils.NAME : AtraceUtils.NAME);
-    }
 }
