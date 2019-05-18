@@ -10,7 +10,7 @@
     <string name="default_categories_restored" msgid="6861683793680564181">"Categoriile prestabilite au fost restabilite"</string>
     <string name="applications" msgid="521776761270770549">"Aplicații"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Nu sunt disponibile aplicații care pot fi depanate"</string>
-    <string name="buffer_size" msgid="3370134227980578569">"Dimensiunea memoriei tampon"</string>
+    <string name="buffer_size" msgid="3370134227980578569">"Dimensiunea memoriei temporare"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Afișați caseta cu Setările rapide"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Se salvează urmărirea"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Urmărire salvată"</string>
