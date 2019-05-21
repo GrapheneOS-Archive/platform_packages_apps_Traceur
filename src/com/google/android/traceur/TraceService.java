@@ -60,13 +60,13 @@ public class TraceService extends IntentService {
         intent.putExtra(INTENT_EXTRA_LONG_TRACE, longTrace);
         intent.putExtra(INTENT_EXTRA_LONG_TRACE_SIZE, maxLongTraceSizeMb);
         intent.putExtra(INTENT_EXTRA_LONG_TRACE_DURATION, maxLongTraceDurationMinutes);
-        context.startService(intent);
+        context.startForegroundService(intent);
     }
 
     public static void stopTracing(final Context context) {
         Intent intent = new Intent(context, TraceService.class);
         intent.setAction(INTENT_ACTION_STOP_TRACING);
-        context.startService(intent);
+        context.startForegroundService(intent);
     }
 
     public TraceService() {
