@@ -7,7 +7,6 @@
 
 <!-- Keep the following two arrays in sync or you will regret it! -->
 <string-array name="buffer_size_names">
-    <item>@string/four_thousand_kb</item>
     <item>@string/eight_thousand_kb</item>
     <item>@string/sixteen_thousand_kb</item>
     <item>@string/thirtytwo_thousand_kb</item>
@@ -15,7 +14,6 @@
   </string-array>
 
 <string-array name="buffer_size_values">
-    <item>4096</item>
     <item>8192</item>
     <item>@string/default_buffer_size</item>
     <item>32768</item>
