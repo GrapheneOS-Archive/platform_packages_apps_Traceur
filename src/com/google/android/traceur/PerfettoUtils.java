@@ -120,8 +120,8 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
             .append("    ftrace_config {\n");
 
         for (String tag : tags) {
-            // Tags are expected to be all lowercase letters and underscores.
-            String cleanTag = tag.replaceAll("[^a-z_]", "");
+            // Tags are expected to be only letters, numbers, and underscores.
+            String cleanTag = tag.replaceAll("[^a-zA-Z0-9_]", "");
             if (!cleanTag.equals(tag)) {
                 Log.w(TAG, "Attempting to use an invalid tag: " + tag);
             }
