@@ -138,7 +138,7 @@ public class TraceService extends IntentService {
             TraceUtils.traceStop();
             PreferenceManager.getDefaultSharedPreferences(context)
                 .edit().putBoolean(context.getString(R.string.pref_key_tracing_on),
-                        false).apply();
+                        false).commit();
             QsService.updateTile();
             stopForeground(Service.STOP_FOREGROUND_REMOVE);
         }
