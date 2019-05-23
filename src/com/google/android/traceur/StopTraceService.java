@@ -51,7 +51,7 @@ public class StopTraceService extends TraceService {
 
         PreferenceManager.getDefaultSharedPreferences(context)
                 .edit().putBoolean(context.getString(R.string.pref_key_tracing_on),
-                        false).apply();
+                        false).commit();
         context.sendBroadcast(new Intent(MainFragment.ACTION_REFRESH_TAGS));
         QsService.updateTile();
 
