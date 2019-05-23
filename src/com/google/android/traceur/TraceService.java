@@ -111,7 +111,7 @@ public class TraceService extends IntentService {
         String msg = context.getString(R.string.tap_to_stop_tracing);
 
         Notification.Builder notification =
-            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL)
+            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL_TRACING)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(title)
                 .setTicker(title)
@@ -150,7 +150,7 @@ public class TraceService extends IntentService {
             getSystemService(NotificationManager.class);
 
         Notification.Builder notification =
-            new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL)
+            new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL_OTHER)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(getString(R.string.saving_trace))
                 .setTicker(getString(R.string.saving_trace))
