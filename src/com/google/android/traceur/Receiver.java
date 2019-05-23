@@ -49,7 +49,8 @@ public class Receiver extends BroadcastReceiver {
     public static final String STOP_ACTION = "com.android.traceur.STOP";
     public static final String OPEN_ACTION = "com.android.traceur.OPEN";
 
-    public static final String NOTIFICATION_CHANNEL = "system-tracing";
+    public static final String NOTIFICATION_CHANNEL_TRACING = "trace-is-being-recorded";
+    public static final String NOTIFICATION_CHANNEL_OTHER = "system-tracing";
 
     private static final List<String> TRACE_TAGS = Arrays.asList(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
@@ -72,11 +73,11 @@ public class Receiver extends BroadcastReceiver {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
-            createNotificationChannel(context);
+            createNotificationChannels(context);
             updateDeveloperOptionsWatcher(context);
             updateTracing(context);
         } else if (STOP_ACTION.equals(intent.getAction())) {
-            prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).apply();
+            prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).commit();
             updateTracing(context);
         } else if (OPEN_ACTION.equals(intent.getAction())) {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
@@ -198,7 +199,7 @@ public class Receiver extends BroadcastReceiver {
                             PreferenceManager.getDefaultSharedPreferences(context);
                         prefs.edit().putBoolean(
                             context.getString(R.string.pref_key_quick_setting), false)
-                            .apply();
+                            .commit();
                         updateQuickSettings(context);
                     }
                 }
@@ -215,7 +216,7 @@ public class Receiver extends BroadcastReceiver {
         String title = context.getString(R.string.tracing_categories_unavailable);
         String msg = TextUtils.join(", ", getActiveUnavailableTags(context, prefs));
         final Notification.Builder builder =
-            new Notification.Builder(context, NOTIFICATION_CHANNEL)
+            new Notification.Builder(context, NOTIFICATION_CHANNEL_OTHER)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(title)
                 .setTicker(title)
@@ -236,17 +237,27 @@ public class Receiver extends BroadcastReceiver {
             .notify(Receiver.class.getName(), 0, builder.build());
     }
 
-    private static void createNotificationChannel(Context context) {
-        NotificationChannel channel = new NotificationChannel(
-            NOTIFICATION_CHANNEL, context.getString(R.string.system_tracing),
+    private static void createNotificationChannels(Context context) {
+        NotificationChannel tracingChannel = new NotificationChannel(
+            NOTIFICATION_CHANNEL_TRACING,
+            context.getString(R.string.trace_is_being_recorded),
             NotificationManager.IMPORTANCE_HIGH);
-        channel.setBypassDnd(true);
-        channel.enableVibration(true);
-        channel.setSound(null, null);
+        tracingChannel.setBypassDnd(true);
+        tracingChannel.enableVibration(true);
+        tracingChannel.setSound(null, null);
+
+        NotificationChannel saveTraceChannel = new NotificationChannel(
+            NOTIFICATION_CHANNEL_OTHER,
+            context.getString(R.string.saving_trace),
+            NotificationManager.IMPORTANCE_HIGH);
+        saveTraceChannel.setBypassDnd(true);
+        saveTraceChannel.enableVibration(true);
+        saveTraceChannel.setSound(null, null);
 
         NotificationManager notificationManager =
             context.getSystemService(NotificationManager.class);
-        notificationManager.createNotificationChannel(channel);
+        notificationManager.createNotificationChannel(tracingChannel);
+        notificationManager.createNotificationChannel(saveTraceChannel);
     }
 
     public static Set<String> getActiveTags(Context context, SharedPreferences prefs, boolean onlyAvailable) {
