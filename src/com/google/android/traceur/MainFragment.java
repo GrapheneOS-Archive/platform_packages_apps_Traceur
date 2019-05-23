@@ -181,9 +181,6 @@ public class MainFragment extends PreferenceFragment {
             }
         });
 
-        getPreferenceScreen().getSharedPreferences()
-            .registerOnSharedPreferenceChangeListener(mSharedPreferenceChangeListener);
-
         refreshUi();
 
         mRefreshReceiver = new BroadcastReceiver() {
@@ -202,14 +199,18 @@ public class MainFragment extends PreferenceFragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onStart() {
+        super.onStart();
+        getPreferenceScreen().getSharedPreferences()
+            .registerOnSharedPreferenceChangeListener(mSharedPreferenceChangeListener);
         getActivity().registerReceiver(mRefreshReceiver, new IntentFilter(ACTION_REFRESH_TAGS));
         Receiver.updateTracing(getContext());
     }
 
     @Override
-    public void onPause() {
+    public void onStop() {
+        getPreferenceScreen().getSharedPreferences()
+            .unregisterOnSharedPreferenceChangeListener(mSharedPreferenceChangeListener);
         getActivity().unregisterReceiver(mRefreshReceiver);
 
         if (mAlertDialog != null) {
@@ -217,7 +218,7 @@ public class MainFragment extends PreferenceFragment {
             mAlertDialog = null;
         }
 
-        super.onPause();
+        super.onStop();
     }
 
     @Override
