@@ -76,7 +76,7 @@ public class Receiver extends BroadcastReceiver {
             updateDeveloperOptionsWatcher(context);
             updateTracing(context);
         } else if (STOP_ACTION.equals(intent.getAction())) {
-            prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).apply();
+            prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).commit();
             updateTracing(context);
         } else if (OPEN_ACTION.equals(intent.getAction())) {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
@@ -198,7 +198,7 @@ public class Receiver extends BroadcastReceiver {
                             PreferenceManager.getDefaultSharedPreferences(context);
                         prefs.edit().putBoolean(
                             context.getString(R.string.pref_key_quick_setting), false)
-                            .apply();
+                            .commit();
                         updateQuickSettings(context);
                     }
                 }
