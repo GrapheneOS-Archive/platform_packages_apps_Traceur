@@ -37,7 +37,6 @@ public class StopTraceService extends TraceService {
     */
     @Override
     public void onHandleIntent(Intent intent) {
-        setupTraceEngine();
         Context context = getApplicationContext();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean prefsTracingOn =
