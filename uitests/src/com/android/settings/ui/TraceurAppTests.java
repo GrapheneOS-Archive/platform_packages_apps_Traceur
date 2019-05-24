@@ -103,6 +103,15 @@ public class TraceurAppTests {
         assertNotNull("Clear saved traces element not found.",
                 mDevice.wait(Until.findObject(By.text("Clear saved traces")),
                 TIMEOUT));
+        assertNotNull("Long traces element not found.",
+                mDevice.wait(Until.findObject(By.text("Long traces")),
+                TIMEOUT));
+        assertNotNull("Maximum long trace size element not found.",
+                mDevice.wait(Until.findObject(By.text("Maximum long trace size")),
+                TIMEOUT));
+        assertNotNull("Maximum long trace duration element not found.",
+                mDevice.wait(Until.findObject(By.text("Maximum long trace duration")),
+                TIMEOUT));
         assertNotNull("Show Quick Settings tile switch not found.",
                 mDevice.wait(Until.findObject(By.text("Show Quick Settings tile")),
                 TIMEOUT));

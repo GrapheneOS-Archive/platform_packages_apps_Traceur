@@ -41,7 +41,9 @@ public class TraceUtils {
 
     public static final String TRACE_DIRECTORY = "/data/local/traces/";
 
-    private static TraceEngine mTraceEngine = new AtraceUtils();
+    // To change Traceur to use atrace to collect traces,
+    // change mTraceEngine to point to AtraceUtils().
+    private static TraceEngine mTraceEngine = new PerfettoUtils();
 
     private static final Runtime RUNTIME = Runtime.getRuntime();
 
@@ -53,26 +55,6 @@ public class TraceUtils {
         public void traceStop();
         public boolean traceDump(File outFile);
         public boolean isTracingOn();
-    }
-
-    public static boolean switchTraceEngine(String newTraceEngine) {
-        if (mTraceEngine.getName().equals(newTraceEngine)) {
-            Log.e(TAG, "Tried to switch to use " + newTraceEngine
-                + " for tracing, but you already were!");
-            return true;
-        }
-
-        if (PerfettoUtils.NAME.equals(newTraceEngine)) {
-            mTraceEngine = new PerfettoUtils();
-        } else if (AtraceUtils.NAME.equals(newTraceEngine)) {
-            mTraceEngine = new AtraceUtils();
-        } else {
-            throw new AssertionError("Tried to switch to use " + newTraceEngine
-                + " for tracing, but I don't know what that is!");
-        }
-
-        Log.v(TAG, "Switched to using " + newTraceEngine + " for tracing!");
-        return true;
     }
 
     public static String currentTraceEngine() {
