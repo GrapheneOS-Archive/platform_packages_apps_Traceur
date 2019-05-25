@@ -67,8 +67,6 @@ public class MainFragment extends PreferenceFragment {
 
     private MultiSelectListPreference mTags;
 
-    private SwitchPreference mUsePerfetto;
-
     private boolean mRefreshing;
 
     private BroadcastReceiver mRefreshReceiver;
@@ -166,24 +164,6 @@ public class MainFragment extends PreferenceFragment {
                     }
                 });
 
-        mUsePerfetto = (SwitchPreference) findPreference(getActivity().getString(R.string.pref_key_use_perfetto));
-        mUsePerfetto.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                boolean shouldUsePerfetto = (boolean)newValue;
-                boolean success = TraceUtils.switchTraceEngine(
-                    shouldUsePerfetto ? PerfettoUtils.NAME : AtraceUtils.NAME);
-
-                if (success) {
-                    mUsePerfetto.setChecked(shouldUsePerfetto);
-                }
-                return false;
-            }
-        });
-
-        getPreferenceScreen().getSharedPreferences()
-            .registerOnSharedPreferenceChangeListener(mSharedPreferenceChangeListener);
-
         refreshUi();
 
         mRefreshReceiver = new BroadcastReceiver() {
@@ -202,14 +182,18 @@ public class MainFragment extends PreferenceFragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onStart() {
+        super.onStart();
+        getPreferenceScreen().getSharedPreferences()
+            .registerOnSharedPreferenceChangeListener(mSharedPreferenceChangeListener);
         getActivity().registerReceiver(mRefreshReceiver, new IntentFilter(ACTION_REFRESH_TAGS));
         Receiver.updateTracing(getContext());
     }
 
     @Override
-    public void onPause() {
+    public void onStop() {
+        getPreferenceScreen().getSharedPreferences()
+            .unregisterOnSharedPreferenceChangeListener(mSharedPreferenceChangeListener);
         getActivity().unregisterReceiver(mRefreshReceiver);
 
         if (mAlertDialog != null) {
@@ -217,7 +201,7 @@ public class MainFragment extends PreferenceFragment {
             mAlertDialog = null;
         }
 
-        super.onPause();
+        super.onStop();
     }
 
     @Override
@@ -245,9 +229,6 @@ public class MainFragment extends PreferenceFragment {
         // Make sure the Record Trace toggle matches the preference value.
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
-
-        // Grey out the toggle to change the trace engine if a trace is in progress.
-        mUsePerfetto.setEnabled(!mTracingOn.isChecked());
 
         // Update category list to match the categories available on the system.
         Set<Entry<String, String>> availableTags = TraceUtils.listCategories().entrySet();
@@ -280,12 +261,21 @@ public class MainFragment extends PreferenceFragment {
                 context.getString(R.string.pref_key_buffer_size));
         bufferSize.setSummary(bufferSize.getEntry());
 
-        ListPreference maxLongTraceSize = (ListPreference)findPreference(
-                context.getString(R.string.pref_key_max_long_trace_size));
-        maxLongTraceSize.setSummary(maxLongTraceSize.getEntry());
+        // If we are not using the Perfetto trace backend,
+        // hide the unsupported preferences.
+        if (TraceUtils.currentTraceEngine().equals(PerfettoUtils.NAME)) {
+            ListPreference maxLongTraceSize = (ListPreference)findPreference(
+                    context.getString(R.string.pref_key_max_long_trace_size));
+            maxLongTraceSize.setSummary(maxLongTraceSize.getEntry());
 
-        ListPreference maxLongTraceDuration = (ListPreference)findPreference(
-                context.getString(R.string.pref_key_max_long_trace_duration));
-        maxLongTraceDuration.setSummary(maxLongTraceDuration.getEntry());
+            ListPreference maxLongTraceDuration = (ListPreference)findPreference(
+                    context.getString(R.string.pref_key_max_long_trace_duration));
+            maxLongTraceDuration.setSummary(maxLongTraceDuration.getEntry());
+        } else {
+            Preference longTraceCategory = findPreference("long_trace_category");
+            if (longTraceCategory != null) {
+                getPreferenceScreen().removePreference(longTraceCategory);
+            }
+        }
     }
 }

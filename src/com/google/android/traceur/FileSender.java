@@ -56,7 +56,7 @@ public class FileSender {
         intent.putExtra(Intent.EXTRA_INTENT, sendIntent);
 
         final Notification.Builder builder =
-            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL)
+            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL_OTHER)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(context.getString(R.string.trace_saved))
                 .setTicker(context.getString(R.string.trace_saved))

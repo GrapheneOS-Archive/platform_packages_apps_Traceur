@@ -37,7 +37,6 @@ public class StopTraceService extends TraceService {
     */
     @Override
     public void onHandleIntent(Intent intent) {
-        setupTraceEngine();
         Context context = getApplicationContext();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean prefsTracingOn =
@@ -51,7 +50,7 @@ public class StopTraceService extends TraceService {
 
         PreferenceManager.getDefaultSharedPreferences(context)
                 .edit().putBoolean(context.getString(R.string.pref_key_tracing_on),
-                        false).apply();
+                        false).commit();
         context.sendBroadcast(new Intent(MainFragment.ACTION_REFRESH_TAGS));
         QsService.updateTile();
 

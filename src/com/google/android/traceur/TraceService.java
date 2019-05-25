@@ -80,7 +80,6 @@ public class TraceService extends IntentService {
 
     @Override
     public void onHandleIntent(Intent intent) {
-        setupTraceEngine();
         Context context = getApplicationContext();
 
         if (intent.getAction().equals(INTENT_ACTION_START_TRACING)) {
@@ -111,7 +110,7 @@ public class TraceService extends IntentService {
         String msg = context.getString(R.string.tap_to_stop_tracing);
 
         Notification.Builder notification =
-            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL)
+            new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL_TRACING)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(title)
                 .setTicker(title)
@@ -138,7 +137,7 @@ public class TraceService extends IntentService {
             TraceUtils.traceStop();
             PreferenceManager.getDefaultSharedPreferences(context)
                 .edit().putBoolean(context.getString(R.string.pref_key_tracing_on),
-                        false).apply();
+                        false).commit();
             QsService.updateTile();
             stopForeground(Service.STOP_FOREGROUND_REMOVE);
         }
@@ -150,7 +149,7 @@ public class TraceService extends IntentService {
             getSystemService(NotificationManager.class);
 
         Notification.Builder notification =
-            new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL)
+            new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL_OTHER)
                 .setSmallIcon(R.drawable.stat_sys_adb)
                 .setContentTitle(getString(R.string.saving_trace))
                 .setTicker(getString(R.string.saving_trace))
@@ -184,12 +183,4 @@ public class TraceService extends IntentService {
         stopForeground(Service.STOP_FOREGROUND_REMOVE);
     }
 
-    protected void setupTraceEngine() {
-        Context context = getApplicationContext();
-        boolean usePerfetto =
-            PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(context.getString(R.string.pref_key_use_perfetto), true);
-        TraceUtils.switchTraceEngine(
-            usePerfetto ? PerfettoUtils.NAME : AtraceUtils.NAME);
-    }
 }
