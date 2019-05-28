@@ -42,7 +42,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
 
     private static final String PERFETTO_TAG = "traceur";
     private static final String MARKER = "PERFETTO_ARGUMENTS";
-    private static final int STARTUP_TIMEOUT_MS = 600;
+    private static final int STARTUP_TIMEOUT_MS = 10000;
     private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
     private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
     private static final String POWER_TAG = "power";
