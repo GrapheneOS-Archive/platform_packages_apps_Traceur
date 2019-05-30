@@ -45,7 +45,9 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final int STARTUP_TIMEOUT_MS = 10000;
     private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
     private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
+
     private static final String POWER_TAG = "power";
+    private static final String MEMORY_TAG = "memory";
 
     public String getName() {
         return NAME;
@@ -102,15 +104,24 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
                 }
 
                 // Default value for long traces to write to file.
-                config.append("file_write_period_ms: 2500\n");
+                config.append("file_write_period_ms: 1000\n");
             } else {
                 // For short traces, we don't write to the file.
                 // So, always use the maximum value here: 7 days.
                 config.append("file_write_period_ms: 604800000\n");
             }
 
-            config.append("buffers {\n")
+        config.append("incremental_state_config {\n")
+            .append("  clear_period_ms: 15000\n")
+            .append("} \n")
+            // This is target_buffer: 0, which is used for ftrace.
+            .append("buffers {\n")
             .append("  size_kb: " + bufferSizeKb + "\n")
+            .append("  fill_policy: RING_BUFFER\n")
+            .append("} \n")
+            // This is target_buffer: 1, which is used for additional data sources.
+            .append("buffers {\n")
+            .append("  size_kb: 2048\n")
             .append("  fill_policy: RING_BUFFER\n")
             .append("} \n")
             .append("data_sources {\n")
@@ -134,34 +145,45 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
 
         // These parameters affect only the kernel trace buffer size and how
         // frequently it gets moved into the userspace buffer defined above.
-        config.append("      buffer_size_kb: 4096\n")
-            .append("      drain_period_ms: 250\n")
+        config.append("      buffer_size_kb: 8192\n")
+            .append("      drain_period_ms: 1000\n")
             .append("    }\n")
             .append("  }\n")
             .append("}\n")
-            .append(" \n")
+            .append(" \n");
 
-            // For process association
-            .append("data_sources {\n")
+        // For process association. If the memory tag is enabled,
+        // poll periodically instead of just once at the beginning.
+        config.append("data_sources {\n")
             .append("  config {\n")
             .append("    name: \"linux.process_stats\"\n")
-            .append("    target_buffer: 0\n")
-            .append("  }\n")
+            .append("    target_buffer: 1\n");
+        if (tags.contains(MEMORY_TAG)) {
+            config.append("    process_stats_config {\n")
+                .append("      proc_stats_poll_ms: 60000\n")
+                .append("    }\n");
+        }
+        config.append("  }\n")
             .append("} \n");
 
         if (tags.contains(POWER_TAG)) {
             config.append("data_sources: {\n")
-                    .append("  config { \n")
-                    .append("    name: \"android.power\"\n")
-                    .append("    android_power_config {\n")
-                    .append("      battery_poll_ms: 1000\n")
-                    .append("      collect_power_rails: true\n")
-                    .append("      battery_counters: BATTERY_COUNTER_CAPACITY_PERCENT\n")
-                    .append("      battery_counters: BATTERY_COUNTER_CHARGE\n")
-                    .append("      battery_counters: BATTERY_COUNTER_CURRENT\n")
-                    .append("    }\n")
-                    .append("  }\n")
-                    .append("}\n");
+                .append("  config { \n")
+                .append("    name: \"android.power\"\n")
+                .append("    target_buffer: 1\n")
+                .append("    android_power_config {\n");
+            if (longTrace) {
+                config.append("      battery_poll_ms: 5000\n");
+            } else {
+                config.append("      battery_poll_ms: 1000\n");
+            }
+            config.append("      collect_power_rails: true\n")
+                .append("      battery_counters: BATTERY_COUNTER_CAPACITY_PERCENT\n")
+                .append("      battery_counters: BATTERY_COUNTER_CHARGE\n")
+                .append("      battery_counters: BATTERY_COUNTER_CURRENT\n")
+                .append("    }\n")
+                .append("  }\n")
+                .append("}\n");
         }
 
         String configString = config.toString();
