@@ -81,6 +81,10 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
             }
         }
 
+        // The user chooses a per-CPU buffer size due to atrace limitations.
+        // So we use this to ensure that we reserve the correctly-sized buffer.
+        int numCpus = Runtime.getRuntime().availableProcessors();
+
         // Build the perfetto config that will be passed on the command line.
         StringBuilder config = new StringBuilder()
             .append("write_into_file: true\n")
@@ -116,7 +120,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
             .append("} \n")
             // This is target_buffer: 0, which is used for ftrace.
             .append("buffers {\n")
-            .append("  size_kb: " + bufferSizeKb + "\n")
+            .append("  size_kb: " + bufferSizeKb * numCpus + "\n")
             .append("  fill_policy: RING_BUFFER\n")
             .append("} \n")
             // This is target_buffer: 1, which is used for additional data sources.
