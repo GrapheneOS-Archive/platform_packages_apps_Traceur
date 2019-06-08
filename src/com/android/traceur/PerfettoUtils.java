@@ -190,6 +190,18 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
                 .append("}\n");
         }
 
+        if (tags.contains(MEMORY_TAG)) {
+            config.append("data_sources: {\n")
+                .append("  config { \n")
+                .append("    name: \"android.sys_stats\"\n")
+                .append("    target_buffer: 1\n")
+                .append("    sys_stats_config {\n")
+                .append("      vmstat_period_ms: 1000\n")
+                .append("    }\n")
+                .append("  }\n")
+                .append("}\n");
+        }
+
         String configString = config.toString();
 
         // If the here-doc ends early, within the config string, exit immediately.
