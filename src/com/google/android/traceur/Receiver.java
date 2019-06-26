@@ -75,7 +75,10 @@ public class Receiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             createNotificationChannels(context);
             updateDeveloperOptionsWatcher(context);
-            updateTracing(context);
+
+            // We know that Perfetto won't be tracing already at boot, so pass the
+            // tracingIsOff argument to avoid the Perfetto check.
+            updateTracing(context, /* assumeTracingIsOff= */ true);
         } else if (STOP_ACTION.equals(intent.getAction())) {
             prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).commit();
             updateTracing(context);
@@ -90,11 +93,16 @@ public class Receiver extends BroadcastReceiver {
      * Updates the current tracing state based on the current state of preferences.
      */
     public static void updateTracing(Context context) {
+        updateTracing(context, false);
+    }
+    public static void updateTracing(Context context, boolean assumeTracingIsOff) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean prefsTracingOn =
                 prefs.getBoolean(context.getString(R.string.pref_key_tracing_on), false);
 
-        if (prefsTracingOn != TraceUtils.isTracingOn()) {
+        boolean traceUtilsTracingOn = assumeTracingIsOff ? false : TraceUtils.isTracingOn();
+
+        if (prefsTracingOn != traceUtilsTracingOn) {
             if (prefsTracingOn) {
                 // Show notification if the tags in preferences are not all actually available.
                 Set<String> activeAvailableTags = getActiveTags(context, prefs, true);
