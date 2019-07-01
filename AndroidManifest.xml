@@ -71,7 +71,7 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
                 <category android:name="android.intent.category.INFO"/>
             </intent-filter>
-        </activity>
+	</activity>
 
         <activity android:name=".UserConsentActivityDialog"
                   android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.Alert"
