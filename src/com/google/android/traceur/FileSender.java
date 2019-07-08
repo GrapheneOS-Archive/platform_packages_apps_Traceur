@@ -21,6 +21,7 @@ import android.accounts.AccountManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ClipData;
 import android.content.Context;
 import android.support.v4.content.FileProvider;
 import android.content.Intent;
@@ -36,6 +37,7 @@ import java.io.File;
 public class FileSender {
 
     private static final String AUTHORITY = "com.android.traceur.files";
+    private static final String MIME_TYPE = "application/vnd.android.systrace";
 
     public static void postNotification(Context context, File file) {
         // Files are kept on private storage, so turn into Uris that we can
@@ -88,14 +90,20 @@ public class FileSender {
      * Build {@link Intent} that can be used to share the given bugreport.
      */
     private static Intent buildSendIntent(Context context, Uri traceUri) {
+        final CharSequence description = SystemProperties.get("ro.build.description");
+
         final Intent intent = new Intent(Intent.ACTION_SEND);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.addCategory(Intent.CATEGORY_DEFAULT);
-        intent.setType("application/vnd.android.systrace");
+        intent.setType(MIME_TYPE);
 
         intent.putExtra(Intent.EXTRA_SUBJECT, traceUri.getLastPathSegment());
-        intent.putExtra(Intent.EXTRA_TEXT, SystemProperties.get("ro.build.description"));
+        intent.putExtra(Intent.EXTRA_TEXT, description);
         intent.putExtra(Intent.EXTRA_STREAM, traceUri);
+
+        // Explicitly set the clip data; see b/119399115
+        intent.setClipData(new ClipData(null, new String[] { MIME_TYPE },
+            new ClipData.Item(description, null, traceUri)));
 
         final Account sendToAccount = findSendToAccount(context);
         if (sendToAccount != null) {
