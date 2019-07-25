@@ -35,7 +35,8 @@
     <!-- touch screen is not required for TV -->
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
-    <application android:label="@string/system_tracing">
+    <application android:label="@string/system_tracing"
+                 android:banner="@drawable/banner">
 
         <activity android:name=".MainActivity"
                   android:description="@string/record_system_activity"
