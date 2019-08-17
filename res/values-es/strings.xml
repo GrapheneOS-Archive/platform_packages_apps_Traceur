@@ -16,7 +16,7 @@
     <string name="applications" msgid="521776761270770549">"Aplicaciones"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"No hay ninguna aplicación que se pueda depurar"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Tamaño de búfer por CPU"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Mostrar icono de Ajustes rápidos"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Mostrar icono de ajustes rápidos"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Guardando captura"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Captura guardada"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Toca para compartir tu captura"</string>
