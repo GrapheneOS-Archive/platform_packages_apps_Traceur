@@ -8,9 +8,14 @@
     <string name="categories" msgid="2280163673538611008">"Categorie"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Ripristina categorie predefinite"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Categorie predefinite ripristinate"</string>
+    <string name="default_categories" msgid="2117679794687799407">"Predefinite"</string>
+    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
+      <item quantity="other">%d selezionate</item>
+      <item quantity="one">%d selezionata</item>
+    </plurals>
     <string name="applications" msgid="521776761270770549">"App"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Nessuna app disponibile di cui è possibile eseguire il debug"</string>
-    <string name="buffer_size" msgid="3370134227980578569">"Dimensioni buffer"</string>
+    <string name="buffer_size" msgid="3944311026715111454">"Dimensione del buffer per CPU"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Mostra il riquadro Impostazioni rapide"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Salvataggio della traccia"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Traccia salvata"</string>
@@ -31,7 +36,7 @@
     <string name="dont_show_again" msgid="6662492041164390600">"Non mostrare più"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Usa Perfetto (beta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Tracce lunghe"</string>
-    <string name="long_traces_summary" msgid="6878611738621557360">"Le tracce lunghe vengono salvate continuamente nello spazio di archiviazione del dispositivo."</string>
+    <string name="long_traces_summary" msgid="419034282946761469">"Salvataggio continuo nello spazio di archiviazione del dispositivo"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Dimensione massima della traccia lunga"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Durata massima della traccia lunga"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
@@ -45,4 +50,9 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 ore"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 ore"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 ore"</string>
+    <string name="four_thousand_kb" msgid="5156346740862105703">"4096 kB"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"8192 kB"</string>
+    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16.384 kB"</string>
+    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32.768 kB"</string>
+    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65.536 kB"</string>
 </resources>

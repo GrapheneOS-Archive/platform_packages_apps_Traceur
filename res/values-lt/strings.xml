@@ -8,9 +8,16 @@
     <string name="categories" msgid="2280163673538611008">"Kategorijos"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Atkurti numatytąsias kategorijas"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Numatytosios kategorijos atkurtos"</string>
+    <string name="default_categories" msgid="2117679794687799407">"Numatytoji"</string>
+    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
+      <item quantity="one">Pasirinkta %d</item>
+      <item quantity="few">Pasirinktos %d</item>
+      <item quantity="many">Pasirinkta %d</item>
+      <item quantity="other">Pasirinkta %d</item>
+    </plurals>
     <string name="applications" msgid="521776761270770549">"Programos"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Derinamų programų nėra"</string>
-    <string name="buffer_size" msgid="3370134227980578569">"Buferio dydis"</string>
+    <string name="buffer_size" msgid="3944311026715111454">"Centrinio procesoriaus buferio dydis"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Rodyti Sparčiųjų nustatymų išklotinę"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Išsaugomas pėdsakas"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Pėdsakas išsaugotas"</string>
@@ -31,7 +38,7 @@
     <string name="dont_show_again" msgid="6662492041164390600">"Daugiau neberodyti"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Naudoti „Perfetto“ (beta versija)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Ilgalaikio stebėjimo duomenys"</string>
-    <string name="long_traces_summary" msgid="6878611738621557360">"Ilgalaikio stebėjimo duomenys nuolat saugomi įrenginio saugykloje."</string>
+    <string name="long_traces_summary" msgid="419034282946761469">"Visam laikui išsaugota įrenginio saugykloje"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Maksimalus ilgalaikio stebėjimo duomenų dydis"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Maksimali ilgalaikio stebėjimo trukmė"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
@@ -45,4 +52,9 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 val."</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 val."</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 val."</string>
+    <string name="four_thousand_kb" msgid="5156346740862105703">"4 096 KB"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"8 192 KB"</string>
+    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16 384 KB"</string>
+    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32 768 KB"</string>
+    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65 536 KB"</string>
 </resources>
