@@ -8,9 +8,14 @@
     <string name="categories" msgid="2280163673538611008">"Санаттар"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Әдепкі санаттарды қалпына келтіру"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Әдепкі санаттар қалпына келтірілді"</string>
+    <string name="default_categories" msgid="2117679794687799407">"Әдепкі"</string>
+    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
+      <item quantity="other">%d таңдалды.</item>
+      <item quantity="one">%d таңдалды.</item>
+    </plurals>
     <string name="applications" msgid="521776761270770549">"Қолданбалар"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Түзетуге болатын қолданбалар жоқ"</string>
-    <string name="buffer_size" msgid="3370134227980578569">"Буфер өлшемі"</string>
+    <string name="buffer_size" msgid="3944311026715111454">"Әр CPU үшін буфер өлшемі"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"\"Жылдам параметрлер\" бөлшегін көрсету"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Трасса сақталуда"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Трасса сақталды"</string>
@@ -31,7 +36,7 @@
     <string name="dont_show_again" msgid="6662492041164390600">"Қайта көрсетпеу"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto (бета нұсқасы) қолдану"</string>
     <string name="long_traces" msgid="5110949471775966329">"Ұзын трассалар"</string>
-    <string name="long_traces_summary" msgid="6878611738621557360">"Ұзын трассалар құрылғының жадына үздіксіз сақталады."</string>
+    <string name="long_traces_summary" msgid="419034282946761469">"Құрылғы жадына үздіксіз сақталады."</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Ең ұзын трасса өлшемі"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Ең ұзын трасса ұзақтығы"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 МБ"</string>
@@ -45,4 +50,9 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 сағат"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 сағат"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 сағат"</string>
+    <string name="four_thousand_kb" msgid="5156346740862105703">"4096 КБ"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"8192 КБ"</string>
+    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 КБ"</string>
+    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 КБ"</string>
+    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 КБ"</string>
 </resources>
