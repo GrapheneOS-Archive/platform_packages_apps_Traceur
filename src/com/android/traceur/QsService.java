@@ -53,7 +53,7 @@ public class QsService extends TileService {
 
         String titleString = getString(tracingOn ? R.string.stop_tracing: R.string.record_trace);
 
-        getQsTile().setIcon(Icon.createWithResource(this, R.drawable.stat_sys_adb));
+        getQsTile().setIcon(Icon.createWithResource(this, R.drawable.bugfood_icon));
         getQsTile().setState(tracingOn ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         getQsTile().setLabel(titleString);
         getQsTile().updateTile();
