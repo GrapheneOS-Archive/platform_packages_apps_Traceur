@@ -111,7 +111,7 @@ public class TraceService extends IntentService {
 
         Notification.Builder notification =
             new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL_TRACING)
-                .setSmallIcon(R.drawable.stat_sys_adb)
+                .setSmallIcon(R.drawable.bugfood_icon)
                 .setContentTitle(title)
                 .setTicker(title)
                 .setContentText(msg)
@@ -150,7 +150,7 @@ public class TraceService extends IntentService {
 
         Notification.Builder notification =
             new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL_OTHER)
-                .setSmallIcon(R.drawable.stat_sys_adb)
+                .setSmallIcon(R.drawable.bugfood_icon)
                 .setContentTitle(getString(R.string.saving_trace))
                 .setTicker(getString(R.string.saving_trace))
                 .setLocalOnly(true)
