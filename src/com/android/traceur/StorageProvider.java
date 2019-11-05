@@ -89,7 +89,7 @@ public class StorageProvider extends FileSystemProvider{
         row.add(Root.COLUMN_ROOT_ID, DOC_ID_ROOT);
         row.add(Root.COLUMN_FLAGS, Root.FLAG_LOCAL_ONLY);
         row.add(Root.COLUMN_MIME_TYPES, MIME_TYPE);
-        row.add(Root.COLUMN_ICON, R.drawable.stat_sys_adb_green);
+        row.add(Root.COLUMN_ICON, R.drawable.bugfood_icon_green);
         row.add(Root.COLUMN_TITLE,
             getContext().getString(R.string.system_traces_storage_title));
         row.add(Root.COLUMN_DOCUMENT_ID, DOC_ID_ROOT);
