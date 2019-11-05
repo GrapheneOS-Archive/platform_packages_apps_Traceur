@@ -57,7 +57,7 @@ public class FileSender {
 
         final Notification.Builder builder =
             new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL_OTHER)
-                .setSmallIcon(R.drawable.stat_sys_adb)
+                .setSmallIcon(R.drawable.bugfood_icon)
                 .setContentTitle(context.getString(R.string.trace_saved))
                 .setTicker(context.getString(R.string.trace_saved))
                 .setContentText(context.getString(R.string.tap_to_share))

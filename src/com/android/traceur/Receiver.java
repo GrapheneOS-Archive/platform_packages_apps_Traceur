@@ -225,7 +225,7 @@ public class Receiver extends BroadcastReceiver {
         String msg = TextUtils.join(", ", getActiveUnavailableTags(context, prefs));
         final Notification.Builder builder =
             new Notification.Builder(context, NOTIFICATION_CHANNEL_OTHER)
-                .setSmallIcon(R.drawable.stat_sys_adb)
+                .setSmallIcon(R.drawable.bugfood_icon)
                 .setContentTitle(title)
                 .setTicker(title)
                 .setContentText(msg)
