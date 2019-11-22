@@ -55,13 +55,13 @@ public class Receiver extends BroadcastReceiver {
     private static final List<String> TRACE_TAGS = Arrays.asList(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
             "idle", "input", "res", "sched", "sync", "view", "wm",
-            "workq", "memory");
+            "workq", "memory", "memreclaim");
 
     /* The user list doesn't include workq, irq, or sync, because the user builds don't have
      * permissions for them. */
     private static final List<String> TRACE_TAGS_USER = Arrays.asList(
             "am", "binder_driver", "camera", "dalvik", "freq", "gfx", "hal",
-            "idle", "input", "res", "sched", "view", "wm", "memory");
+            "idle", "input", "res", "sched", "view", "wm", "memory", "memreclaim");
 
     private static final String TAG = "Traceur";
 
