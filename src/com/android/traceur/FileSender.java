@@ -27,6 +27,7 @@ import androidx.core.content.FileProvider;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.SystemProperties;
 import android.util.Patterns;
 
@@ -95,7 +96,7 @@ public class FileSender {
      * Build {@link Intent} that can be used to share the given bugreport.
      */
     private static Intent buildSendIntent(Context context, Uri traceUri) {
-        final CharSequence description = SystemProperties.get("ro.build.description");
+        final CharSequence description = Build.FINGERPRINT;
 
         final Intent intent = new Intent(Intent.ACTION_SEND);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
