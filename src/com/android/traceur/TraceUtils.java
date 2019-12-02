@@ -17,6 +17,8 @@
 package com.android.traceur;
 
 import android.os.Build;
+import android.os.AsyncTask;
+import android.os.FileUtils;
 import android.util.Log;
 
 import java.io.File;
@@ -121,6 +123,20 @@ public class TraceUtils {
 
     public static File getOutputFile(String filename) {
         return new File(TraceUtils.TRACE_DIRECTORY, filename);
+    }
+
+    protected static void cleanupOlderFiles(final int minCount, final long minAge) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+                    FileUtils.deleteOlderFiles(new File(TRACE_DIRECTORY), minCount, minAge);
+                } catch (RuntimeException e) {
+                    Log.e(TAG, "Failed to delete older traces", e);
+                }
+                return null;
+            }
+        }.execute();
     }
 
 }
