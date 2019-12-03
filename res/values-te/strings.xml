@@ -8,14 +8,9 @@
     <string name="categories" msgid="2280163673538611008">"వర్గాలు"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"డిఫాల్ట్ వర్గాలను పునరుద్ధరించండి"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"డిఫాల్ట్ వర్గాలు పునరుద్ధరించబడ్డాయి"</string>
-    <string name="default_categories" msgid="2117679794687799407">"డిఫాల్ట్"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="other">%d ఎంచుకోబడ్డాయి</item>
-      <item quantity="one">%d ఎంచుకోబడింది</item>
-    </plurals>
     <string name="applications" msgid="521776761270770549">"అప్లికేషన్‌లు"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"డీబగ్ చేయగల అప్లికేషన్‌లు అందుబాటులో లేవు"</string>
-    <string name="buffer_size" msgid="3944311026715111454">"ఒక్కో CPUకు బఫర్ పరిమాణం"</string>
+    <string name="buffer_size" msgid="3370134227980578569">"బఫర్ పరిమాణం"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"త్వరిత సెట్టింగ్‌ల టైల్‌ను చూపు"</string>
     <string name="saving_trace" msgid="1468692734770800541">"స్థితిగతిని సేవ్ చేస్తోంది"</string>
     <string name="trace_saved" msgid="5869970594780992309">"స్థితిగతి సేవ్ చేయబడింది"</string>
@@ -36,7 +31,7 @@
     <string name="dont_show_again" msgid="6662492041164390600">"మళ్లీ చూపవద్దు"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto (బీటా)ని ఉపయోగించండి"</string>
     <string name="long_traces" msgid="5110949471775966329">"ఎక్కువ నిడివి స్థితిగతి"</string>
-    <string name="long_traces_summary" msgid="419034282946761469">"పరికర నిల్వలో నిరంతరం సేవ్ చేయబడుతుంది"</string>
+    <string name="long_traces_summary" msgid="6878611738621557360">"అధిక నిడివి స్థితి గతులు పరికర నిల్వకు నిరంతరం సేవ్ చేయబడతాయి."</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"అత్యధిక స్థితి గతి నిడివి పరిమాణం"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"అత్యధిక నిడివి ఉన్న స్థితిగతి పరిణామం"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
@@ -50,9 +45,4 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 గంటలు"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 గంటలు"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 గంటలు"</string>
-    <string name="four_thousand_kb" msgid="5156346740862105703">"4096 KB"</string>
-    <string name="eight_thousand_kb" msgid="8815334985638334081">"8192 KB"</string>
-    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 KB"</string>
-    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 KB"</string>
-    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 KB"</string>
 </resources>
