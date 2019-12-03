@@ -26,6 +26,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
+import android.text.format.DateUtils;
 import android.util.Log;
 
 import java.io.File;
@@ -48,6 +49,9 @@ public class TraceService extends IntentService {
     private static int TRACE_NOTIFICATION = 1;
     private static int SAVING_TRACE_NOTIFICATION = 2;
     private static int FORCE_STOP_SAVING_TRACE_NOTIFICATION = 3;
+
+    private static final int MIN_KEEP_COUNT = 3;
+    private static final long MIN_KEEP_AGE = 4 * DateUtils.WEEK_IN_MILLIS;
 
     public static void startTracing(final Context context,
             Collection<String> tags, int bufferSizeKb, boolean apps,
@@ -181,6 +185,8 @@ public class TraceService extends IntentService {
         }
 
         stopForeground(Service.STOP_FOREGROUND_REMOVE);
+
+        TraceUtils.cleanupOlderFiles(MIN_KEEP_COUNT, MIN_KEEP_AGE);
     }
 
 }
