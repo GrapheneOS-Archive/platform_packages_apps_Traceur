@@ -25,6 +25,7 @@
     <string name="trace_is_being_recorded" msgid="5947378146009337469">"S\'està enregistrant una traça"</string>
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Toca per aturar l\'enregistrament de la traça"</string>
     <string name="clear_saved_traces" msgid="4809195654452260944">"Esborra les traces desades"</string>
+    <string name="clear_saved_traces_summary" msgid="6035923138201219577">"Les traces s\'esborren al cap d\'un mes"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Vols esborrar les traces desades?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Se suprimiran totes les traces de la carpeta /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Esborra"</string>
