@@ -27,7 +27,7 @@
     <string name="clear_saved_traces" msgid="4809195654452260944">"Сакталган дайындарды тазалоо"</string>
     <string name="clear_saved_traces_summary" msgid="6035923138201219577">"Жаздырылган аракеттер бир айдан кийин тазаланат"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Сакталган дайындар тазалансынбы?"</string>
-    <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces бөлүмүндөгү бардык дайындар жок кылынат"</string>
+    <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/data/local/traces бөлүмүндөгү бардык дайындар өчүрүлөт"</string>
     <string name="clear" msgid="5484761795406948056">"Тазалоо"</string>
     <string name="system_traces_storage_title" msgid="8294090839883366871">"Тутумдагы аракеттерди жаздыруу"</string>
     <string name="keywords" msgid="736547007949049535">"тутумга көз салуу, аракеттерди жаздыруу, иштин майнаптуулугу"</string>
