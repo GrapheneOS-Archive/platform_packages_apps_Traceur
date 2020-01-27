@@ -46,8 +46,9 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
     private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
 
-    private static final String POWER_TAG = "power";
     private static final String MEMORY_TAG = "memory";
+    private static final String POWER_TAG = "power";
+    private static final String SCHED_TAG = "sched";
 
     public String getName() {
         return NAME;
@@ -145,6 +146,13 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
 
         if (apps) {
             config.append("      atrace_apps: \"*\"\n");
+        }
+
+        // Request a dense encoding of the common sched events (sched_switch, sched_waking).
+        if (tags.contains(SCHED_TAG)) {
+            config.append("      compact_sched {\n");
+            config.append("        enabled: true\n");
+            config.append("      }\n");
         }
 
         // These parameters affect only the kernel trace buffer size and how
