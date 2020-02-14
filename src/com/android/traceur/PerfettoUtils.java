@@ -284,6 +284,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
         }
 
         outFile.setReadable(true, false); // (readable, ownerOnly)
+        outFile.setWritable(true, false); // (readable, ownerOnly)
         return true;
     }
 
