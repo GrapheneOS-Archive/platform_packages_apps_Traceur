@@ -115,6 +115,7 @@ public class AtraceUtils implements TraceUtils.TraceEngine {
 
             // Set the new file world readable to allow it to be adb pulled.
             outFile.setReadable(true, false); // (readable, ownerOnly)
+            outFile.setWritable(true, false); // (readable, ownerOnly)
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
