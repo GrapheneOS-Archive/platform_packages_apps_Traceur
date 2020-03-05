@@ -8,14 +8,13 @@
     <string name="categories" msgid="2280163673538611008">"Catégories"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Restaurer les catégories par défaut"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Catégories par défaut restaurées"</string>
-    <string name="default_categories" msgid="2117679794687799407">"Par défaut"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">%d élément sélectionné</item>
-      <item quantity="other">%d éléments sélectionnés</item>
-    </plurals>
+    <!-- no translation found for default_categories (2117679794687799407) -->
+    <skip />
+    <!-- no translation found for num_categories_selected (963928263524652497) -->
     <string name="applications" msgid="521776761270770549">"Applications"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Aucune application pouvant être déboguée n\'est disponible"</string>
-    <string name="buffer_size" msgid="3944311026715111454">"Taille de la mémoire tampon par processeur"</string>
+    <!-- no translation found for buffer_size (3944311026715111454) -->
+    <skip />
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Afficher la fenêtre de configuration rapide"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Enregistrement de la trace…"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Trace enregistrée"</string>
@@ -25,7 +24,6 @@
     <string name="trace_is_being_recorded" msgid="5947378146009337469">"L\'enregistrement de la trace est en cours"</string>
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Appuyez pour arrêter le traçage"</string>
     <string name="clear_saved_traces" msgid="4809195654452260944">"Effacer les traces enregistrées"</string>
-    <string name="clear_saved_traces_summary" msgid="6035923138201219577">"Les traces sont effacées au bout d\'un mois"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Effacer les traces enregistrées ?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Toutes les traces seront supprimées de /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Effacer"</string>
@@ -37,7 +35,8 @@
     <string name="dont_show_again" msgid="6662492041164390600">"Ne plus afficher"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Utiliser Perfetto (bêta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Traces allongées"</string>
-    <string name="long_traces_summary" msgid="419034282946761469">"Enregistré en continu dans l\'espace de stockage de cet appareil"</string>
+    <!-- no translation found for long_traces_summary (419034282946761469) -->
+    <skip />
     <string name="max_long_trace_size" msgid="1943788179787181241">"Taille maximale de la trace allongée"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Durée maximale des traces allongées"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 Mo"</string>
@@ -51,9 +50,14 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 heures"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 heures"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 heures"</string>
-    <string name="four_thousand_kb" msgid="5156346740862105703">"4 096 Ko"</string>
-    <string name="eight_thousand_kb" msgid="8815334985638334081">"8 192 Ko"</string>
-    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16 384 Ko"</string>
-    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32 768 Ko"</string>
-    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65 536 Ko"</string>
+    <!-- no translation found for four_thousand_kb (5156346740862105703) -->
+    <skip />
+    <!-- no translation found for eight_thousand_kb (8815334985638334081) -->
+    <skip />
+    <!-- no translation found for sixteen_thousand_kb (7342517169232459259) -->
+    <skip />
+    <!-- no translation found for thirtytwo_thousand_kb (654328198799196150) -->
+    <skip />
+    <!-- no translation found for sixtyfive_thousand_kb (8168144138598305306) -->
+    <skip />
 </resources>
