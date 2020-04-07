@@ -48,7 +48,6 @@ public class TraceService extends IntentService {
 
     private static int TRACE_NOTIFICATION = 1;
     private static int SAVING_TRACE_NOTIFICATION = 2;
-    private static int FORCE_STOP_SAVING_TRACE_NOTIFICATION = 3;
 
     private static final int MIN_KEEP_COUNT = 3;
     private static final long MIN_KEEP_AGE = 4 * DateUtils.WEEK_IN_MILLIS;
@@ -166,15 +165,7 @@ public class TraceService extends IntentService {
             notification.extend(new Notification.TvExtender());
         }
 
-        // We want to do the same thing regardless of whether the trace was
-        // stopped via the external signal or within Traceur. However, these
-        // two stopping mechanisms must use different notification IDs so that
-        // one doesn't accidentally remove or override notifications from the
-        // other.
-        int notificationId = forceStop
-                ? FORCE_STOP_SAVING_TRACE_NOTIFICATION : SAVING_TRACE_NOTIFICATION;
-
-        startForeground(notificationId, notification.build());
+        startForeground(SAVING_TRACE_NOTIFICATION, notification.build());
 
         notificationManager.cancel(TRACE_NOTIFICATION);
 
