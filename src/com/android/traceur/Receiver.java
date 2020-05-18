@@ -181,42 +181,44 @@ public class Receiver extends BroadcastReceiver {
      * preference to false to hide the tile. The user will need to re-enable the
      * preference if they decide to turn Developer Options back on again.
      */
-    private static void updateDeveloperOptionsWatcher(Context context) {
-        Uri settingUri = Settings.Global.getUriFor(
-            Settings.Global.DEVELOPMENT_SETTINGS_ENABLED);
+    static void updateDeveloperOptionsWatcher(Context context) {
+        if (mDeveloperOptionsObserver == null) {
+            Uri settingUri = Settings.Global.getUriFor(
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED);
 
-        ContentObserver developerOptionsObserver =
-            new ContentObserver(new Handler()) {
-                @Override
-                public void onChange(boolean selfChange) {
-                    super.onChange(selfChange);
+            mDeveloperOptionsObserver =
+                new ContentObserver(new Handler()) {
+                    @Override
+                    public void onChange(boolean selfChange) {
+                        super.onChange(selfChange);
 
-                    boolean developerOptionsEnabled = (1 ==
-                        Settings.Global.getInt(context.getContentResolver(),
-                            Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0));
+                        boolean developerOptionsEnabled = (1 ==
+                            Settings.Global.getInt(context.getContentResolver(),
+                                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED , 0));
 
-                    ComponentName name = new ComponentName(context,
-                        StorageProvider.class);
-                    context.getPackageManager().setComponentEnabledSetting(name,
-                       developerOptionsEnabled
-                            ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                            : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                        PackageManager.DONT_KILL_APP);
+                        ComponentName name = new ComponentName(context,
+                            StorageProvider.class);
+                        context.getPackageManager().setComponentEnabledSetting(name,
+                           developerOptionsEnabled
+                                ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                                : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                            PackageManager.DONT_KILL_APP);
 
-                    if (!developerOptionsEnabled) {
-                        SharedPreferences prefs =
-                            PreferenceManager.getDefaultSharedPreferences(context);
-                        prefs.edit().putBoolean(
-                            context.getString(R.string.pref_key_quick_setting), false)
-                            .commit();
-                        updateQuickSettings(context);
+                        if (!developerOptionsEnabled) {
+                            SharedPreferences prefs =
+                                PreferenceManager.getDefaultSharedPreferences(context);
+                            prefs.edit().putBoolean(
+                                context.getString(R.string.pref_key_quick_setting), false)
+                                .commit();
+                            updateQuickSettings(context);
+                        }
                     }
-                }
-            };
+                };
 
-        context.getContentResolver().registerContentObserver(settingUri,
-            false, developerOptionsObserver);
-        developerOptionsObserver.onChange(true);
+            context.getContentResolver().registerContentObserver(settingUri,
+                false, mDeveloperOptionsObserver);
+            mDeveloperOptionsObserver.onChange(true);
+        }
     }
 
     private static void postCategoryNotification(Context context, SharedPreferences prefs) {

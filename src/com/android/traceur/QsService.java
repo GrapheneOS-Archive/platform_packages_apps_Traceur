@@ -57,6 +57,7 @@ public class QsService extends TileService {
         getQsTile().setState(tracingOn ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         getQsTile().setLabel(titleString);
         getQsTile().updateTile();
+        Receiver.updateDeveloperOptionsWatcher(this);
     }
 
     /** When we click the tile, toggle tracing state.
