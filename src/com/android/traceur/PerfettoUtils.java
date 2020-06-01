@@ -16,7 +16,6 @@
 
 package com.android.traceur;
 
-import android.sysprop.TraceProperties;
 import android.system.Os;
 import android.util.Log;
 
@@ -60,16 +59,6 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
 
     public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps,
             boolean longTrace, int maxLongTraceSizeMb, int maxLongTraceDurationMinutes) {
-        // If setprop persist.traced.enable isn't set, the perfetto traced service
-        // is not enabled on this device. If the user wants to trace, we should enable
-        // this service. Since it's such a low-overhead service, we will leave it enabled
-        // subsequently.
-        boolean perfettoEnabled = TraceProperties.enable().orElse(false);
-        if (!perfettoEnabled) {
-            Log.e(TAG, "Starting the traced service to allow Perfetto to trace.");
-            TraceProperties.enable(true);
-        }
-
         if (isTracingOn()) {
             Log.e(TAG, "Attempting to start perfetto trace but trace is already in progress");
             return false;
@@ -289,15 +278,6 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     }
 
     public boolean isTracingOn() {
-        // If setprop persist.traced.enable isn't set, the perfetto traced service
-        // is not enabled on this device. When we start a trace for the first time,
-        // we'll enable it; if it's not enabled we know tracing is not on.
-        // Without this property set we can't query perfetto for an existing trace.
-        boolean perfettoEnabled = TraceProperties.enable().orElse(false);
-        if (!perfettoEnabled) {
-            return false;
-        }
-
         String cmd = "perfetto --is_detached=" + PERFETTO_TAG;
 
         try {
