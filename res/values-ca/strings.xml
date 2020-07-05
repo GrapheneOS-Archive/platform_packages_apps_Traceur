@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="system_tracing" msgid="4719188511746319848">"Traça del sistema"</string>
+    <string name="system_tracing" msgid="4719188511746319848">"Traçabilitat del sistema"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Enregistra l\'activitat del sistema i l\'analitza més tard per millorar el rendiment"</string>
     <string name="record_trace" msgid="6416875085186661845">"Registra la traça"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Traça aplicacions que es puguin depurar"</string>
@@ -31,7 +31,7 @@
     <string name="system_traces_storage_title" msgid="8294090839883366871">"Traces del sistema"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, traça, rendiment"</string>
     <string name="share_trace" msgid="4528525067822044385">"Vols compartir la traça?"</string>
-    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Els fitxers de Traça del sistema poden incloure dades sensibles del sistema i de les aplicacions (com ara l\'ús de les aplicacions). Comparteix les traces del sistema només amb aplicacions i persones de confiança."</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Els fitxers de Traçabilitat del sistema poden incloure dades sensibles del sistema i de les aplicacions (com ara l\'ús de les aplicacions). Comparteix les traces del sistema només amb aplicacions i persones de confiança."</string>
     <string name="share" msgid="8443979083706282338">"Comparteix"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"No ho tornis a mostrar"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Utilitza Perfetto (versió beta)"</string>
