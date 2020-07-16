@@ -106,7 +106,7 @@ public class TraceurAppTests {
 
         UiScrollable mainScreen = new UiScrollable(new UiSelector().scrollable(true));
         try {
-            mainScreen.scrollToEnd(2);
+            mainScreen.scrollToEnd(4);
         } catch (UiObjectNotFoundException e) {
           // if the screen is not scrollable, all elements should be visible already
         }
