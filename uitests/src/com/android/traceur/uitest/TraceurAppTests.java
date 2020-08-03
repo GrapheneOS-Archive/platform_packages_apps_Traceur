@@ -17,6 +17,7 @@
 package com.android.traceur.uitest;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import android.content.Context;
 import android.content.Intent;
@@ -88,47 +89,75 @@ public class TraceurAppTests {
     @Presubmit
     @Test
     public void testElementsOnMainScreen() throws Exception {
-        assertNotNull("Record trace switch not found.",
-                mDevice.wait(Until.findObject(By.text("Record trace")),
-                TIMEOUT));
-        assertNotNull("Applications element not found.",
-                mDevice.wait(Until.findObject(By.text("Trace debuggable applications")),
-                TIMEOUT));
-        assertNotNull("Categories element not found.",
-                mDevice.wait(Until.findObject(By.text("Categories")),
-                TIMEOUT));
-        assertNotNull("Restore default categories element not found.",
-                mDevice.wait(Until.findObject(By.text("Restore default categories")),
-                TIMEOUT));
-        assertNotNull("Per-CPU buffer size element not found.",
-                mDevice.wait(Until.findObject(By.text("Per-CPU buffer size")),
-                TIMEOUT));
+        UiScrollable scrollableMainScreen = new UiScrollable(new UiSelector().scrollable(true));
 
-        UiScrollable mainScreen = new UiScrollable(new UiSelector().scrollable(true));
-        try {
-            mainScreen.scrollToEnd(4);
-        } catch (UiObjectNotFoundException e) {
-          // if the screen is not scrollable, all elements should be visible already
+        if (scrollableMainScreen.exists()) {
+            scrollableMainScreen.setAsVerticalList();
+            scrollableMainScreen.setMaxSearchSwipes(10);
+
+            boolean recordFound = scrollableMainScreen.scrollTextIntoView("Record trace");
+            assertTrue("Record trace switch not found.", recordFound);
+
+            boolean applicationsFound =
+                    scrollableMainScreen.scrollTextIntoView("Trace debuggable applications");
+            assertTrue("Applications element not found.", applicationsFound);
+
+            boolean categoriesFound = scrollableMainScreen.scrollTextIntoView("Categories");
+            assertTrue("Categories element not found.", categoriesFound);
+
+            boolean restoreFound = scrollableMainScreen.scrollTextIntoView("Restore default categories");
+            assertTrue("Restore default categories element not found.", restoreFound);
+
+            boolean bufferSizeFound = scrollableMainScreen.scrollTextIntoView("Per-CPU buffer size");
+            assertTrue("Per-CPU buffer size element not found.", bufferSizeFound);
+
+            boolean clearFound = scrollableMainScreen.scrollTextIntoView("Clear saved traces");
+            assertTrue("Clear saved traces element not found.", clearFound);
+
+            boolean longTraceFound = scrollableMainScreen.scrollTextIntoView("Long traces");
+            assertTrue("Long traces element not found.", longTraceFound);
+
+            boolean maxTraceSizeFound = scrollableMainScreen.scrollTextIntoView("Maximum long trace size");
+            assertTrue("Maximum long trace size element not found.", maxTraceSizeFound);
+
+            boolean maxTraceDurationFound =
+                    scrollableMainScreen.scrollTextIntoView("Maximum long trace duration");
+            assertTrue("Maximum long trace duration element not found.", maxTraceDurationFound);
+
+            boolean quickSettingsFound = scrollableMainScreen.scrollTextIntoView("Show Quick Settings tile");
+            assertTrue("Show Quick Settings tile switch not found.", quickSettingsFound);
+        } else {
+            assertNotNull("Record trace switch not found.",
+                    mDevice.wait(Until.findObject(By.text("Record trace")),
+                    TIMEOUT));
+            assertNotNull("Applications element not found.",
+                    mDevice.wait(Until.findObject(By.text("Trace debuggable applications")),
+                    TIMEOUT));
+            assertNotNull("Categories element not found.",
+                    mDevice.wait(Until.findObject(By.text("Categories")),
+                    TIMEOUT));
+            assertNotNull("Restore default categories element not found.",
+                    mDevice.wait(Until.findObject(By.text("Restore default categories")),
+                    TIMEOUT));
+            assertNotNull("Per-CPU buffer size element not found.",
+                    mDevice.wait(Until.findObject(By.text("Per-CPU buffer size")),
+                    TIMEOUT));
+            assertNotNull("Clear saved traces element not found.",
+                    mDevice.wait(Until.findObject(By.text("Clear saved traces")),
+                    TIMEOUT));
+            assertNotNull("Long traces element not found.",
+                    mDevice.wait(Until.findObject(By.text("Long traces")),
+                    TIMEOUT));
+            assertNotNull("Maximum long trace size element not found.",
+                    mDevice.wait(Until.findObject(By.text("Maximum long trace size")),
+                    TIMEOUT));
+            assertNotNull("Maximum long trace duration element not found.",
+                    mDevice.wait(Until.findObject(By.text("Maximum long trace duration")),
+                    TIMEOUT));
+            assertNotNull("Show Quick Settings tile switch not found.",
+                    mDevice.wait(Until.findObject(By.text("Show Quick Settings tile")),
+                    TIMEOUT));
         }
-
-        // Remove post-scroll cehcks until we validate cuttlefish behavior.
-        /*
-        assertNotNull("Clear saved traces element not found.",
-                mDevice.wait(Until.findObject(By.text("Clear saved traces")),
-                TIMEOUT));
-        assertNotNull("Long traces element not found.",
-                mDevice.wait(Until.findObject(By.text("Long traces")),
-                TIMEOUT));
-        assertNotNull("Maximum long trace size element not found.",
-                mDevice.wait(Until.findObject(By.text("Maximum long trace size")),
-                TIMEOUT));
-        assertNotNull("Maximum long trace duration element not found.",
-                mDevice.wait(Until.findObject(By.text("Maximum long trace duration")),
-                TIMEOUT));
-        assertNotNull("Show Quick Settings tile switch not found.",
-                mDevice.wait(Until.findObject(By.text("Show Quick Settings tile")),
-                TIMEOUT));
-        */
     }
 
     /*
