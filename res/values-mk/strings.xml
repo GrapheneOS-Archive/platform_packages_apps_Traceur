@@ -8,13 +8,14 @@
     <string name="categories" msgid="2280163673538611008">"Категории"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Врати ги стандардните категории"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Вратени се стандардните категории"</string>
-    <!-- no translation found for default_categories (2117679794687799407) -->
-    <skip />
-    <!-- no translation found for num_categories_selected (963928263524652497) -->
+    <string name="default_categories" msgid="2117679794687799407">"Стандардни"</string>
+    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
+      <item quantity="one">Избрани се %d</item>
+      <item quantity="other">Избрани се %d</item>
+    </plurals>
     <string name="applications" msgid="521776761270770549">"Апликации"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Нема апликации со грешки за отстранување"</string>
-    <!-- no translation found for buffer_size (3944311026715111454) -->
-    <skip />
+    <string name="buffer_size" msgid="3944311026715111454">"Големина на привремената меморија по CPU"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Прикажи плочка Брзи поставки"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Зачувување на трагата"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Трагата е зачувана"</string>
@@ -23,10 +24,11 @@
     <string name="tracing_categories_unavailable" msgid="5609076391417077752">"Некои категории на траги се недостапни:"</string>
     <string name="trace_is_being_recorded" msgid="5947378146009337469">"Запишување трага"</string>
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Допрете за да го запрете следењето"</string>
-    <string name="clear_saved_traces" msgid="4809195654452260944">"Исчисти ги зачуваните траги"</string>
+    <string name="clear_saved_traces" msgid="4809195654452260944">"Избриши ги зачуваните траги"</string>
+    <string name="clear_saved_traces_summary" msgid="6035923138201219577">"Трагите се бришат по еден месец"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Да се исчистат зачуваните траги?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Ќе се избришат сите траги од /data/local/traces"</string>
-    <string name="clear" msgid="5484761795406948056">"Исчисти"</string>
+    <string name="clear" msgid="5484761795406948056">"Избриши"</string>
     <string name="system_traces_storage_title" msgid="8294090839883366871">"Системски траги"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, следење, изведба"</string>
     <string name="share_trace" msgid="4528525067822044385">"Дали да се сподели трага?"</string>
@@ -35,8 +37,7 @@
     <string name="dont_show_again" msgid="6662492041164390600">"Не прикажувај повторно"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Користете Perfetto (Бета)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Долги траги"</string>
-    <!-- no translation found for long_traces_summary (419034282946761469) -->
-    <skip />
+    <string name="long_traces_summary" msgid="419034282946761469">"Постојано зачувување во капацитетот на уредот"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Максимална големина на долга трага"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Максимално времетраење на долга трага"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 мб"</string>
@@ -50,14 +51,9 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 часа"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 часа"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 часа"</string>
-    <!-- no translation found for four_thousand_kb (5156346740862105703) -->
-    <skip />
-    <!-- no translation found for eight_thousand_kb (8815334985638334081) -->
-    <skip />
-    <!-- no translation found for sixteen_thousand_kb (7342517169232459259) -->
-    <skip />
-    <!-- no translation found for thirtytwo_thousand_kb (654328198799196150) -->
-    <skip />
-    <!-- no translation found for sixtyfive_thousand_kb (8168144138598305306) -->
-    <skip />
+    <string name="four_thousand_kb" msgid="5156346740862105703">"4.096 KB"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"8.192 KB"</string>
+    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16.384 KB"</string>
+    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32.768 KB"</string>
+    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65.536 KB"</string>
 </resources>
