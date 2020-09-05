@@ -8,9 +8,16 @@
     <string name="categories" msgid="2280163673538611008">"Kategorije"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Obnovi privzete kategorije"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Privzete kategorije so obnovljene"</string>
+    <string name="default_categories" msgid="2117679794687799407">"Privzeto"</string>
+    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
+      <item quantity="one">%d izbrana</item>
+      <item quantity="two">%d izbrani</item>
+      <item quantity="few">%d izbrane</item>
+      <item quantity="other">%d izbranih</item>
+    </plurals>
     <string name="applications" msgid="521776761270770549">"Aplikacije"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Na voljo ni nobenih aplikacij, v katerih je mogoče odpravljati napake"</string>
-    <string name="buffer_size" msgid="3370134227980578569">"Velikost medpomnilnika"</string>
+    <string name="buffer_size" msgid="3944311026715111454">"Velikost medpomnilnika za posamezno CPE"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Prikaz ploščice s hitrimi nastavitvami"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Shranjevanje sledi"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Sled je shranjena"</string>
@@ -20,6 +27,7 @@
     <string name="trace_is_being_recorded" msgid="5947378146009337469">"Sled se beleži"</string>
     <string name="tap_to_stop_tracing" msgid="6533282719573871806">"Dotaknite se, da ustavite sledenje"</string>
     <string name="clear_saved_traces" msgid="4809195654452260944">"Izbriši shranjene sledi"</string>
+    <string name="clear_saved_traces_summary" msgid="6035923138201219577">"Sledi so izbrisane po enem mesecu"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Želite izbrisati shranjene sledi?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Vse sledi v imeniku /data/local/traces bodo izbrisane"</string>
     <string name="clear" msgid="5484761795406948056">"Izbriši"</string>
@@ -31,7 +39,7 @@
     <string name="dont_show_again" msgid="6662492041164390600">"Tega ne prikaži več"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Uporabi Perfetto (beta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Dolge sledi"</string>
-    <string name="long_traces_summary" msgid="6878611738621557360">"Dolge sledi se stalno shranjujejo v prostor za shranjevanje v napravi."</string>
+    <string name="long_traces_summary" msgid="419034282946761469">"Neprekinjeno shranjevanje v shrambo naprave"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Največja velikost dolge sledi"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Najdaljše trajanje dolge sledi"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
@@ -45,4 +53,9 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 ur"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 ur"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 ur"</string>
+    <string name="four_thousand_kb" msgid="5156346740862105703">"4096 KB"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"8192 KB"</string>
+    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 KB"</string>
+    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 KB"</string>
+    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 KB"</string>
 </resources>
