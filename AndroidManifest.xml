@@ -23,6 +23,8 @@
     <uses-sdk android:minSdkVersion="26"
          android:targetSdkVersion="29"/>
 
+    <uses-permission android:name="android.permission.DUMP"/>
+
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <!-- Used for adding the Quick Settings tile to the status bar. -->
@@ -95,6 +97,7 @@
              android:exported="true">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.android.internal.intent.action.BUGREPORT_STARTED"/>
             </intent-filter>
         </receiver>
 
