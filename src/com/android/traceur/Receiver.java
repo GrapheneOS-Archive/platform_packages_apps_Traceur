@@ -48,6 +48,8 @@ public class Receiver extends BroadcastReceiver {
 
     public static final String STOP_ACTION = "com.android.traceur.STOP";
     public static final String OPEN_ACTION = "com.android.traceur.OPEN";
+    public static final String BUGREPORT_STARTED =
+            "com.android.internal.intent.action.BUGREPORT_STARTED";
 
     public static final String NOTIFICATION_CHANNEL_TRACING = "trace-is-being-recorded";
     public static final String NOTIFICATION_CHANNEL_OTHER = "system-tracing";
@@ -87,6 +89,12 @@ public class Receiver extends BroadcastReceiver {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             context.startActivity(new Intent(context, MainActivity.class)
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        } else if (BUGREPORT_STARTED.equals(intent.getAction())) {
+            if (prefs.getBoolean(context.getString(R.string.pref_key_stop_on_bugreport), false)) {
+                Log.d(TAG, "Bugreport started, ending trace.");
+                prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).commit();
+                updateTracing(context);
+            }
         }
     }
 
@@ -96,6 +104,7 @@ public class Receiver extends BroadcastReceiver {
     public static void updateTracing(Context context) {
         updateTracing(context, false);
     }
+
     public static void updateTracing(Context context, boolean assumeTracingIsOff) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean prefsTracingOn =

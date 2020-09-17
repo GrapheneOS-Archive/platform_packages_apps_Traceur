@@ -129,5 +129,7 @@
     <!-- Choice for the user to select a maximum trace buffer size. -->
     <string name="sixtyfive_thousand_kb">65536 KB</string>
 
-
+    <!-- When enabled, causes Traceur to end any active tracing sessions when a bugreport is started. -->
+    <string name="stop_on_bugreport">Stop tracing for bugreports</string>
+    <string name="stop_on_bugreport_summary">Ends active trace sessions when a bugreport is started.</string>
 </resources>
