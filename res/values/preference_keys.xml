@@ -9,4 +9,5 @@
     <string name="pref_key_max_long_trace_size">max_long_trace_size</string>
     <string name="pref_key_max_long_trace_duration">max_long_trace_duration</string>
     <string name="pref_key_quick_setting">quick_setting_enabled</string>
+    <string name="pref_key_stop_on_bugreport">stop_on_bugreport_enabled</string>
 </resources>
