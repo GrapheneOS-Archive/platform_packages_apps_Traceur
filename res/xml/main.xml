@@ -41,6 +41,10 @@
         android:summary="@string/clear_saved_traces_summary"
         android:persistent="false"
         android:title="@string/clear_saved_traces" />
+    <androidx.preference.SwitchPreference
+        android:key="@string/pref_key_stop_on_bugreport"
+        android:summary="@string/stop_on_bugreport_summary"
+        android:title="@string/stop_on_bugreport"/>
     <androidx.preference.PreferenceCategory
         android:key="long_trace_category"
         android:orderingFromXml="true" >
