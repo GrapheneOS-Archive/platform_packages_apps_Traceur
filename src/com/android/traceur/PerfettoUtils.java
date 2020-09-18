@@ -45,6 +45,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
     private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
 
+    private static final String GFX_TAG = "gfx";
     private static final String MEMORY_TAG = "memory";
     private static final String POWER_TAG = "power";
     private static final String SCHED_TAG = "sched";
@@ -108,7 +109,8 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
         config.append("incremental_state_config {\n")
             .append("  clear_period_ms: 15000\n")
             .append("} \n")
-            // This is target_buffer: 0, which is used for ftrace.
+            // This is target_buffer: 0, which is used for ftrace and the ftrace-derived
+            // android.gpu.memory.
             .append("buffers {\n")
             .append("  size_kb: " + bufferSizeKb * numCpus + "\n")
             .append("  fill_policy: RING_BUFFER\n")
@@ -152,6 +154,16 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
             .append("  }\n")
             .append("}\n")
             .append(" \n");
+
+        // Captures initial counter values, updates are captured in ftrace.
+        if (tags.contains(MEMORY_TAG) || tags.contains(GFX_TAG)) {
+             config.append("data_sources: {\n")
+                .append("  config { \n")
+                .append("    name: \"android.gpu.memory\"\n")
+                .append("    target_buffer: 0\n")
+                .append("  }\n")
+                .append("}\n");
+        }
 
         // For process association. If the memory tag is enabled,
         // poll periodically instead of just once at the beginning.
