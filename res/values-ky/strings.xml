@@ -34,7 +34,7 @@
     <string name="share_trace" msgid="4528525067822044385">"Тутумга көз салуу аракеттери бөлүшүлсүнбү?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Тутумга көз салуу файлдары тутумдагы жана колдонмодогу купуя дайын-даректерди (мисалы, колдонмонун пайдаланылышы) камтышы мүмкүн. Тутумга көз салуудан алынган маалыматты ишенимдүү байланыштар жана колдонмолор менен гана бөлүшүңүз."</string>
     <string name="share" msgid="8443979083706282338">"Бөлүшүү"</string>
-    <string name="dont_show_again" msgid="6662492041164390600">"Экинчи көрүнбөсүн"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"Экинчи көрсөтүлбөсүн"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto\'ну колдонуу (бета сынамык версиясы)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Узун аракеттер"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Түзмөктүн сактагычына үзгүлтүксүз сактоо"</string>
