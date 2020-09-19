@@ -8,7 +8,7 @@
     <string name="categories" msgid="2280163673538611008">"Categorías"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Restaurar categorías predeterminadas"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Se han restaurado las categorías predeterminadas"</string>
-    <string name="default_categories" msgid="2117679794687799407">"Predeterm."</string>
+    <string name="default_categories" msgid="2117679794687799407">"Predeterminado"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
       <item quantity="other">Seleccionados: %d</item>
       <item quantity="one">Seleccionados: %d</item>
@@ -56,4 +56,8 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 kB"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 kB"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 kB"</string>
+    <!-- no translation found for stop_on_bugreport (8777111230215169042) -->
+    <skip />
+    <!-- no translation found for stop_on_bugreport_summary (6176666916050063364) -->
+    <skip />
 </resources>
