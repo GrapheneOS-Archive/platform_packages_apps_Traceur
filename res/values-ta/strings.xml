@@ -56,8 +56,6 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 கி.பை."</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 கி.பை."</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 கி.பை."</string>
-    <!-- no translation found for stop_on_bugreport (8777111230215169042) -->
-    <skip />
-    <!-- no translation found for stop_on_bugreport_summary (6176666916050063364) -->
-    <skip />
+    <string name="stop_on_bugreport" msgid="8777111230215169042">"பிழை அறிக்கையிடுதல் தொடங்கியதும் டிரேஸ் செய்வதை நிறுத்து"</string>
+    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"பிழை அறிக்கையிடுதல் தொடங்கியதும் தற்போது செயல்பட்டுக் கொண்டிருக்கும் டிரேஸிங் அமர்வுகள் நிறுத்தப்படும்."</string>
 </resources>
