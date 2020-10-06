@@ -23,9 +23,14 @@
     <uses-sdk android:minSdkVersion="26"
          android:targetSdkVersion="29"/>
 
+    <!-- Used for receiving BUGREPORT_STARTED intents. -->
     <uses-permission android:name="android.permission.DUMP"/>
 
+    <!-- Used to initialize tracing on boot. -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!-- Used to prevent non-system windows from displaying over Traceur. -->
+    <uses-permission android:name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"/>
 
     <!-- Used for adding the Quick Settings tile to the status bar. -->
     <uses-permission android:name="android.permission.STATUS_BAR"/>
