@@ -56,4 +56,6 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 KB"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 KB"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 KB"</string>
+    <string name="stop_on_bugreport" msgid="8777111230215169042">"బగ్‌రిపోర్ట్‌ల కోసం ట్రేస్ చేయడం ఆపివేయండి"</string>
+    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"బగ్‌రిపోర్ట్ ప్రారంభమైనప్పుడు యాక్టివ్ ట్రేస్ సెషన్‌లను ముగిస్తుంది."</string>
 </resources>
