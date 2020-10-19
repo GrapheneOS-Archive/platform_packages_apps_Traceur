@@ -56,4 +56,6 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 КБ"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 КБ"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 КБ"</string>
+    <string name="stop_on_bugreport" msgid="8777111230215169042">"Алдааны тайланг хянахаа болих"</string>
+    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"Алдааны тайланг эхлүүлэх үед идэвхтэй хянах харилцан үйлдлийг дуусгадаг."</string>
 </resources>

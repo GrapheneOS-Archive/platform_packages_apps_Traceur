@@ -56,4 +56,6 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"१६३८४ के. बि."</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"३२७६८ के. बि."</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"६५५३६ के. बि."</string>
+    <string name="stop_on_bugreport" msgid="8777111230215169042">"बग रिपोर्ट ट्रेस गर्न छाड्नुहोस्"</string>
+    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"तपाईंले बग रिपोर्ट निकाल्ने प्रक्रिया सुरु गर्नुभयो भने बग रिपोर्ट ट्रेस गर्ने चालू सत्र अन्त्य हुन्छ।"</string>
 </resources>
