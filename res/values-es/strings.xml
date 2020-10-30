@@ -8,7 +8,7 @@
     <string name="categories" msgid="2280163673538611008">"Categorías"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Restaurar categorías predeterminadas"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Se han restaurado las categorías predeterminadas"</string>
-    <string name="default_categories" msgid="2117679794687799407">"Predeterm."</string>
+    <string name="default_categories" msgid="2117679794687799407">"Predeterminado"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
       <item quantity="other">Seleccionados: %d</item>
       <item quantity="one">Seleccionados: %d</item>
@@ -29,7 +29,7 @@
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"¿Borrar rastros guardados?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Se eliminarán todos los rastros de /data/local/traces"</string>
     <string name="clear" msgid="5484761795406948056">"Borrar"</string>
-    <string name="system_traces_storage_title" msgid="8294090839883366871">"Seguimiento del sistema"</string>
+    <string name="system_traces_storage_title" msgid="8294090839883366871">"Trazas del sistema"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, traza, rendimiento"</string>
     <string name="share_trace" msgid="4528525067822044385">"¿Quieres compartir la traza?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Es posible que los archivos de Trazado del sistema incluyan datos sensibles del sistema y de aplicaciones (como (como información sobre el uso de las aplicaciones). Comparte las trazas del sistema únicamente con usuarios y aplicaciones en los que confíes."</string>
