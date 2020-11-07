@@ -56,6 +56,4 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16 384 Kt"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32 768 Kt"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65 536 Kt"</string>
-    <string name="stop_on_bugreport" msgid="8777111230215169042">"Lopeta jäljitys virheraporttien aikana"</string>
-    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"Lopettaa aktiiviset jäljitysistunnot, kun virheraportti aloitetaan."</string>
 </resources>
