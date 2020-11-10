@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="system_tracing" msgid="4719188511746319848">"سسٹم ٹریس کیا جا رہا ہے"</string>
+    <string name="system_tracing" msgid="4719188511746319848">"سسٹم ٹریسنگ"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"کارکردگی کو بہتر بنانے کیلئے سسٹم کی سرگرمی ریکارڈ کر کے بعد میں اس کا تجزیہ کریں"</string>
     <string name="record_trace" msgid="6416875085186661845">"ٹریس ریکارڈ کریں"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"ڈیبگ کے لائق ایپلیکیشنز ٹریس کریں"</string>
@@ -56,4 +56,6 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"‎16384 KB"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"‎32768 KB"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"‎65536 KB"</string>
+    <string name="stop_on_bugreport" msgid="8777111230215169042">"بگ رپورٹس کے لیے ٹریس کرنا روکیں"</string>
+    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"بگ رپورٹس شروع ہونے پر فعال ٹریس سیشنز ختم ہو جاتا ہے۔"</string>
 </resources>

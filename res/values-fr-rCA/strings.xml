@@ -56,4 +56,6 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16 384 ko"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32 768 ko"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65 536 ko"</string>
+    <string name="stop_on_bugreport" msgid="8777111230215169042">"Arrêter le traçage pour les rapports de bogue"</string>
+    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"Met fin aux sessions de traçage actif lors du démarrage d\'un rapport de bogue."</string>
 </resources>

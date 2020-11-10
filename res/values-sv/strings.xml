@@ -56,4 +56,6 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 kB"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 KB"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 kB"</string>
+    <string name="stop_on_bugreport" msgid="8777111230215169042">"Stoppa spårning vid felrapporter"</string>
+    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"Avslutar aktiva spårningssessioner när felrapportering startas."</string>
 </resources>
