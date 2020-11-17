@@ -11,6 +11,7 @@
     <string name="default_categories" msgid="2117679794687799407">"Par défaut"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
       <item quantity="one">%d élément sélectionné</item>
+      <item quantity="many">%d selected</item>
       <item quantity="other">%d éléments sélectionnés</item>
     </plurals>
     <string name="applications" msgid="521776761270770549">"Applications"</string>
