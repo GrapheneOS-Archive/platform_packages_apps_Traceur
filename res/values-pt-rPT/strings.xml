@@ -13,7 +13,7 @@
       <item quantity="other">%d selecionadas</item>
       <item quantity="one">%d selecionada</item>
     </plurals>
-    <string name="applications" msgid="521776761270770549">"Aplicações"</string>
+    <string name="applications" msgid="521776761270770549">"Apps"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Não há aplicações disponíveis para depuração"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Tamanho da memória intermédia por CPU"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Mostrar o mosaico de Definições rápidas"</string>
