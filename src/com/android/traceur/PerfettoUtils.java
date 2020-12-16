@@ -59,7 +59,8 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     }
 
     public boolean traceStart(Collection<String> tags, int bufferSizeKb, boolean apps,
-            boolean longTrace, int maxLongTraceSizeMb, int maxLongTraceDurationMinutes) {
+            boolean attachToBugreport, boolean longTrace, int maxLongTraceSizeMb,
+            int maxLongTraceDurationMinutes) {
         if (isTracingOn()) {
             Log.e(TAG, "Attempting to start perfetto trace but trace is already in progress");
             return false;
@@ -82,11 +83,17 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
             // Ensure that we flush ftrace data every 30s even if cpus are idle.
             .append("flush_period_ms: 30000\n");
 
-            // If we have set one of the long trace parameters, we must also
-            // tell Perfetto to notify Traceur when the long trace is done.
-            if (longTrace) {
-                config.append("notify_traceur: true\n");
+            // If the user has flagged that in-progress trace sessions should be grabbed
+            // during bugreports, and BetterBug is present.
+            if (attachToBugreport) {
+                config.append("bugreport_score: 500\n");
+            }
 
+            // Indicates that perfetto should notify Traceur if the tracing session's status
+            // changes.
+            config.append("notify_traceur: true\n");
+
+            if (longTrace) {
                 if (maxLongTraceSizeMb != 0) {
                     config.append("max_file_size_bytes: "
                         + (maxLongTraceSizeMb * MEGABYTES_TO_BYTES) + "\n");
