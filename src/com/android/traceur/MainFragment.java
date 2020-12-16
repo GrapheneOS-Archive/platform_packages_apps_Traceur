@@ -60,6 +60,9 @@ public class MainFragment extends PreferenceFragment {
 
     public static final String ACTION_REFRESH_TAGS = "com.android.traceur.REFRESH_TAGS";
 
+    private static final String BETTERBUG_PACKAGE_NAME =
+            "com.google.android.apps.internal.betterbug";
+
     private SwitchPreference mTracingOn;
 
     private AlertDialog mAlertDialog;
@@ -166,6 +169,21 @@ public class MainFragment extends PreferenceFragment {
                     }
                 });
 
+        // Unset stop_on_bugreport to make it clear that it and attach_to_bugreport are mutually
+        // exclusive.
+        findPreference(getString(R.string.pref_key_attach_to_bug_report))
+            .setOnPreferenceClickListener(
+                new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick(Preference preference) {
+                        mPrefs.edit().putBoolean(
+                                getString(R.string.pref_key_stop_on_bugreport),
+                                false).commit();
+                        refreshUi();
+                        return true;
+                    }
+                });
+
         refreshUi();
 
         mRefreshReceiver = new BroadcastReceiver() {
@@ -232,6 +250,10 @@ public class MainFragment extends PreferenceFragment {
         mTracingOn.setChecked(mTracingOn.getPreferenceManager().getSharedPreferences().getBoolean(
                 mTracingOn.getKey(), false));
 
+        SwitchPreference stopOnReport =
+                (SwitchPreference) findPreference(getString(R.string.pref_key_stop_on_bugreport));
+        stopOnReport.setChecked(mPrefs.getBoolean(stopOnReport.getKey(), false));
+
         // Update category list to match the categories available on the system.
         Set<Entry<String, String>> availableTags = TraceUtils.listCategories().entrySet();
         ArrayList<String> entries = new ArrayList<String>(availableTags.size());
@@ -278,6 +300,18 @@ public class MainFragment extends PreferenceFragment {
             if (longTraceCategory != null) {
                 getPreferenceScreen().removePreference(longTraceCategory);
             }
+        }
+
+        // Check if BetterBug is installed to see if Traceur should display or disable
+        // the attach trace to bugreport toggle.
+        try {
+            context.getPackageManager().getPackageInfo(BETTERBUG_PACKAGE_NAME,
+                PackageManager.MATCH_SYSTEM_ONLY);
+            findPreference(getString(R.string.pref_key_attach_to_bug_report)).setVisible(true);
+        } catch (PackageManager.NameNotFoundException e) {
+            mPrefs.edit().putBoolean(
+                    getString(R.string.pref_key_attach_to_bug_report), false).commit();
+            findPreference(getString(R.string.pref_key_attach_to_bug_report)).setVisible(false);
         }
     }
 }
