@@ -122,6 +122,7 @@ public class TraceService extends IntentService {
                     PendingIntent.getBroadcast(context, 0, stopIntent, 0))
                 .setOngoing(true)
                 .setLocalOnly(true)
+                .setShowForegroundImmediately(true)
                 .setColor(getColor(
                     com.android.internal.R.color.system_notification_accent_color));
 
@@ -158,6 +159,7 @@ public class TraceService extends IntentService {
                 .setTicker(getString(R.string.saving_trace))
                 .setLocalOnly(true)
                 .setProgress(1, 0, true)
+                .setShowForegroundImmediately(true)
                 .setColor(getColor(
                     com.android.internal.R.color.system_notification_accent_color));
 
