@@ -119,7 +119,7 @@ public class TraceService extends IntentService {
                 .setTicker(title)
                 .setContentText(msg)
                 .setContentIntent(
-                    PendingIntent.getBroadcast(context, 0, stopIntent, 0))
+                    PendingIntent.getBroadcast(context, 0, stopIntent, PendingIntent.FLAG_IMMUTABLE))
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setColor(getColor(
