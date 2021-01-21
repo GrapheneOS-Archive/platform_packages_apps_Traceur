@@ -243,7 +243,8 @@ public class Receiver extends BroadcastReceiver {
                 .setContentText(msg)
                 .setContentIntent(PendingIntent.getActivity(
                         context, 0, sendIntent, PendingIntent.FLAG_ONE_SHOT
-                                | PendingIntent.FLAG_CANCEL_CURRENT))
+                                | PendingIntent.FLAG_CANCEL_CURRENT
+                                | PendingIntent.FLAG_IMMUTABLE))
                 .setAutoCancel(true)
                 .setLocalOnly(true)
                 .setColor(context.getColor(
