@@ -187,6 +187,6 @@ public class TraceurAppTests {
         // The buttons on dialogs sometimes have their capitalization manipulated by themes.
         mDevice.findObject(By.text(Pattern.compile("share", Pattern.CASE_INSENSITIVE))).click();
 
-        mDevice.wait(Until.hasObject(By.text("Share with")), TIMEOUT);
+        mDevice.wait(Until.hasObject(By.text("Just once")), TIMEOUT);
     }
 }
