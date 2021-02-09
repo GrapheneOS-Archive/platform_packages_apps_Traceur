@@ -35,7 +35,7 @@
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"Системийн мөрдлөгийн файлд систем болон аппын мэдрэг өгөгдлийг (апп ашиглалт зэрэг) агуулж болзошгүй. Та системийн ул мөрийг зөвхөн итгэдэг хүмүүс болон аппуудтайгаа хуваалцана уу."</string>
     <string name="share" msgid="8443979083706282338">"Хуваалцах"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Дахиж бүү харуул"</string>
-    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto-г ашиглах (бэта)"</string>
+    <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto-г ашиглах (бета)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Урт ул мөр"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Төхөөрөмжийн хадгалах санд тасралтгүй хадгалсан"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Хамгийн урт ул мөрийн хэмжээ"</string>
