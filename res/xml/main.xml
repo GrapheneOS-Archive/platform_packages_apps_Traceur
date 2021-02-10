@@ -35,7 +35,7 @@
         android:title="@string/buffer_size"
         android:entries="@array/buffer_size_names"
         android:entryValues="@array/buffer_size_values"
-        android:defaultValue="@string/default_buffer_size"/>
+        android:defaultValue="@string/default_buffer_size" />
     <Preference
         android:key="clear_saved_traces"
         android:summary="@string/clear_saved_traces_summary"
@@ -44,7 +44,13 @@
     <androidx.preference.SwitchPreference
         android:key="@string/pref_key_stop_on_bugreport"
         android:summary="@string/stop_on_bugreport_summary"
-        android:title="@string/stop_on_bugreport"/>
+        android:title="@string/stop_on_bugreport"
+        android:dependency="@string/pref_key_attach_to_bug_report" />
+    <androidx.preference.SwitchPreference
+        android:key="@string/pref_key_attach_to_bug_report"
+        android:summary="@string/attach_to_bug_report_summary"
+        android:title="@string/attach_to_bug_report"
+        android:disableDependentsState="true" />
     <androidx.preference.PreferenceCategory
         android:key="long_trace_category"
         android:orderingFromXml="true" >
@@ -59,14 +65,14 @@
             android:dependency="@string/pref_key_long_traces"
             android:entries="@array/long_trace_size_names"
             android:entryValues="@array/long_trace_size_values"
-            android:defaultValue="@string/default_long_trace_size"/>
+            android:defaultValue="@string/default_long_trace_size" />
         <androidx.preference.ListPreference
             android:key="@string/pref_key_max_long_trace_duration"
             android:title="@string/max_long_trace_duration"
             android:dependency="@string/pref_key_long_traces"
             android:entries="@array/long_trace_duration_names"
             android:entryValues="@array/long_trace_duration_values"
-            android:defaultValue="@string/default_long_trace_duration"/>
+            android:defaultValue="@string/default_long_trace_duration" />
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory
         android:orderingFromXml="true" >

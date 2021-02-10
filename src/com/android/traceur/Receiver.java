@@ -68,6 +68,9 @@ public class Receiver extends BroadcastReceiver {
 
     private static final String TAG = "Traceur";
 
+    private static final String BETTERBUG_PACKAGE_NAME =
+            "com.google.android.apps.internal.betterbug";
+
     private static Set<String> mDefaultTagList = null;
     private static ContentObserver mDeveloperOptionsObserver;
 
@@ -76,21 +79,27 @@ public class Receiver extends BroadcastReceiver {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
+            Log.i(TAG, "Received BOOT_COMPLETE");
             createNotificationChannels(context);
             updateDeveloperOptionsWatcher(context);
-
             // We know that Perfetto won't be tracing already at boot, so pass the
             // tracingIsOff argument to avoid the Perfetto check.
             updateTracing(context, /* assumeTracingIsOff= */ true);
         } else if (STOP_ACTION.equals(intent.getAction())) {
-            prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).commit();
+            prefs.edit().putBoolean(
+                    context.getString(R.string.pref_key_tracing_on), false).commit();
             updateTracing(context);
         } else if (OPEN_ACTION.equals(intent.getAction())) {
             context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             context.startActivity(new Intent(context, MainActivity.class)
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         } else if (BUGREPORT_STARTED.equals(intent.getAction())) {
-            if (prefs.getBoolean(context.getString(R.string.pref_key_stop_on_bugreport), false)) {
+            // If stop_on_bugreport is set and attach_to_bug_report is not, stop tracing.
+            // Otherwise, if attach_to_bug_report is set perfetto will end the session,
+            // and we should not take action on the Traceur side.
+            if (prefs.getBoolean(context.getString(R.string.pref_key_stop_on_bugreport), false) &&
+                !prefs.getBoolean(context.getString(
+                        R.string.pref_key_attach_to_bug_report), false)) {
                 Log.d(TAG, "Bugreport started, ending trace.");
                 prefs.edit().putBoolean(context.getString(R.string.pref_key_tracing_on), false).commit();
                 updateTracing(context);
