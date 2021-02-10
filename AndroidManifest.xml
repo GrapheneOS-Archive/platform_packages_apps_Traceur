@@ -23,6 +23,9 @@
     <uses-sdk android:minSdkVersion="26"
          android:targetSdkVersion="31"/>
 
+    <!--- Used to query for Betterbug. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+
     <!-- Used to trigger the trace start/stop service. -->
     <uses-permission android:name="android.permission.START_FOREGROUND_SERVICE_FROM_BACKGROUND"/>
 
