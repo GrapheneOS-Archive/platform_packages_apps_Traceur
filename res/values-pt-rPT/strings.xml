@@ -13,7 +13,7 @@
       <item quantity="other">%d selecionadas</item>
       <item quantity="one">%d selecionada</item>
     </plurals>
-    <string name="applications" msgid="521776761270770549">"Apps"</string>
+    <string name="applications" msgid="521776761270770549">"Aplicações"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Não há aplicações disponíveis para depuração"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Tamanho da memória intermédia por CPU"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"Mostrar o mosaico de Definições rápidas"</string>
@@ -56,6 +56,4 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16 384 kB"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 kB"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65 536 kB"</string>
-    <string name="stop_on_bugreport" msgid="8777111230215169042">"Parar de rastrear para a criação de relatórios de erros"</string>
-    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"Termina as sessões de rastreio ativas quando é iniciado um relatório de erro."</string>
 </resources>

@@ -56,6 +56,4 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16 384 Ko"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32 768 Ko"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65 536 Ko"</string>
-    <string name="stop_on_bugreport" msgid="8777111230215169042">"Arrêter le suivi en cas de rapport de bug"</string>
-    <string name="stop_on_bugreport_summary" msgid="6176666916050063364">"Met fin aux sessions de traçage actives lorsqu\'un rapport de bug est lancé."</string>
 </resources>
