@@ -7,7 +7,6 @@ android_app {
     platform_apis: true,
     certificate: "shared",
     privileged: true,
-    required: ["notify_traceur.sh"],
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
@@ -22,13 +21,7 @@ android_app {
     ],
     resource_dirs: ["res"],
     srcs: ["src/**/*.java"],
-    init_rc: ["traceur.rc"],
     defaults: [
         "SettingsLibDefaults",
     ],
-}
-
-sh_binary {
-    name: "notify_traceur.sh",
-    src: "notify_traceur.sh",
 }
