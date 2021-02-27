@@ -62,5 +62,5 @@
     <string name="stop_on_bugreport" msgid="2045328149107284734">"Lopeta jäljitys virheraporttien aikana"</string>
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Lopettaa aktiiviset jäljitystallenteet, kun virheraportti luodaan"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Liitä jäljitys virheraportteihin"</string>
-    <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Lähetä automaattisesti keskeneräisiä jäljityksiä BetterBugille virheraportin keräyksen yhteydessä"</string>
+    <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Lähetä keskeneräiset jäljitykset BetterBugille automaattisesti virheraportin keräyksen yhteydessä"</string>
 </resources>
