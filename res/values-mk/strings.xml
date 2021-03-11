@@ -40,11 +40,11 @@
     <string name="long_traces_summary" msgid="419034282946761469">"Постојано зачувување во капацитетот на уредот"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Максимална големина на долга трага"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Максимално времетраење на долга трага"</string>
-    <string name="two_hundred_mb" msgid="4950018549725084512">"200 мб"</string>
-    <string name="one_gb" msgid="590396985168692037">"1 гб"</string>
-    <string name="five_gb" msgid="7883941043220621649">"5 гб"</string>
-    <string name="ten_gb" msgid="4150452462544299276">"10 гб"</string>
-    <string name="twenty_gb" msgid="5717308686812140465">"20 гб"</string>
+    <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
+    <string name="one_gb" msgid="590396985168692037">"1 GB"</string>
+    <string name="five_gb" msgid="7883941043220621649">"5 GB"</string>
+    <string name="ten_gb" msgid="4150452462544299276">"10 GB"</string>
+    <string name="twenty_gb" msgid="5717308686812140465">"20 GB"</string>
     <string name="ten_minutes" msgid="7039181194343961324">"10 минути"</string>
     <string name="thirty_minutes" msgid="2575810799813531395">"30 минути"</string>
     <string name="one_hour" msgid="5219232935307966891">"1 час"</string>
