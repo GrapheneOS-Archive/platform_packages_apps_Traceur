@@ -16,7 +16,7 @@
     <string name="applications" msgid="521776761270770549">"Applications"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Aucune application pouvant être déboguée n\'est disponible"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Taille de la mémoire tampon par processeur"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Afficher la fenêtre de configuration rapide"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Afficher le bloc Réglages rapides"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Enregistrement de la trace…"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Trace enregistrée"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Appuyez pour partager votre trace"</string>
