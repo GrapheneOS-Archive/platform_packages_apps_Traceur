@@ -143,4 +143,7 @@
     <!-- When enabled, the tracing service can take the in-progress tracing session and attach it to a bug report. -->
     <string name="attach_to_bug_report">Attach traces to bug reports</string>
     <string name="attach_to_bug_report_summary">Automatically send in-progress traces to BetterBug when a bug report is collected</string>
+
+    <!-- On click, takes the user to the directory containing on-device trace files. -->
+    <string name="link_to_traces">View trace files</string>
 </resources>
