@@ -18,6 +18,7 @@ package com.android.traceur;
 
 import android.annotation.Nullable;
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -27,6 +28,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.preference.MultiSelectListPreference;
@@ -62,6 +64,9 @@ public class MainFragment extends PreferenceFragment {
 
     private static final String BETTERBUG_PACKAGE_NAME =
             "com.google.android.apps.internal.betterbug";
+
+    private static final String ROOT_MIME_TYPE = "vnd.android.document/root";
+    private static final String STORAGE_URI = "content://com.android.traceur.documents/root";
 
     private SwitchPreference mTracingOn;
 
@@ -184,6 +189,21 @@ public class MainFragment extends PreferenceFragment {
                     }
                 });
 
+        findPreference("trace_link_button")
+            .setOnPreferenceClickListener(
+                new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick(Preference preference) {
+                        Intent intent = buildTraceFileViewIntent();
+                        try {
+                            startActivity(intent);
+                        } catch (ActivityNotFoundException e) {
+                            return false;
+                        }
+                        return true;
+                    }
+                });
+
         refreshUi();
 
         mRefreshReceiver = new BroadcastReceiver() {
@@ -233,6 +253,12 @@ public class MainFragment extends PreferenceFragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         HelpUtils.prepareHelpMenuItem(getActivity(), menu, R.string.help_url,
             this.getClass().getName());
+    }
+
+    private Intent buildTraceFileViewIntent() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.parse(STORAGE_URI), ROOT_MIME_TYPE);
+        return intent;
     }
 
     private void refreshUi() {
@@ -312,6 +338,14 @@ public class MainFragment extends PreferenceFragment {
             mPrefs.edit().putBoolean(
                     getString(R.string.pref_key_attach_to_bug_report), false).commit();
             findPreference(getString(R.string.pref_key_attach_to_bug_report)).setVisible(false);
+        }
+
+        // Check if an activity exists to handle the trace_link_button intent. If not, hide the UI
+        // element
+        PackageManager packageManager = context.getPackageManager();
+        Intent intent = buildTraceFileViewIntent();
+        if (intent.resolveActivity(packageManager) == null) {
+            findPreference("trace_link_button").setVisible(false);
         }
     }
 }
