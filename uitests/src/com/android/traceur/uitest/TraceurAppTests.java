@@ -172,6 +172,7 @@ public class TraceurAppTests {
 
         mDevice.findObject(By.text("Record trace")).click();
         mDevice.wait(Until.hasObject(By.text("Trace is being recorded")), TIMEOUT);
+        mDevice.wait(Until.gone(By.text("Trace is being recorded")), TIMEOUT);
         mDevice.findObject(By.text("Record trace")).click();
 
         // Wait for the popover notification to appear and then disappear,
