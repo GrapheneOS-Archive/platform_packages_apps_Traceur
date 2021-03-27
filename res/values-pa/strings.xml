@@ -8,7 +8,7 @@
     <string name="categories" msgid="2280163673538611008">"ਸ਼੍ਰੇਣੀਆਂ"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸ਼੍ਰੇਣੀਆਂ ਮੁੜ-ਬਹਾਲ ਕਰੋ"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸ਼੍ਰੇਣੀਆਂ ਮੁੜ-ਬਹਾਲ ਕੀਤੀਆਂ ਗਈਆਂ"</string>
-    <string name="default_categories" msgid="2117679794687799407">"ਪੂਰਵ-ਨਿਰਧਾਰਤ"</string>
+    <string name="default_categories" msgid="2117679794687799407">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
       <item quantity="one">%d ਚੁਣੀ ਗਈ</item>
       <item quantity="other">%d ਚੁਣੀਆਂ ਗਈਆਂ</item>
