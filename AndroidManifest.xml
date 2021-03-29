@@ -27,7 +27,7 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
 
     <!-- Used to trigger the trace start/stop service. -->
-    <uses-permission android:name="android.permission.START_FOREGROUND_SERVICE_FROM_BACKGROUND"/>
+    <uses-permission android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
 
     <!-- Used for receiving BUGREPORT_STARTED intents. -->
     <uses-permission android:name="android.permission.DUMP"/>
