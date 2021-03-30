@@ -36,7 +36,7 @@
     <string name="share_trace" msgid="4528525067822044385">"לשתף את נתוני המעקב?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"קבצים של נתוני המעקב מהמערכת עשויים לכלול נתונים רגישים של המערכת ושל האפליקציה (למשל, נתוני שימוש באפליקציה). יש לשתף את נתוני המעקב של המערכת רק עם אנשים ואפליקציות שיש לך אמון בהם."</string>
     <string name="share" msgid="8443979083706282338">"שיתוף"</string>
-    <string name="dont_show_again" msgid="6662492041164390600">"אל תציג שוב"</string>
+    <string name="dont_show_again" msgid="6662492041164390600">"אני לא רוצה לראות זאת שוב"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"‏שימוש ב-Perfetto (בטא)"</string>
     <string name="long_traces" msgid="5110949471775966329">"מעקבים ארוכים"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"נשמר באופן מתמשך באחסון המכשיר"</string>
@@ -45,7 +45,7 @@
     <string name="two_hundred_mb" msgid="4950018549725084512">"‎200 GB"</string>
     <string name="one_gb" msgid="590396985168692037">"‎1 GB"</string>
     <string name="five_gb" msgid="7883941043220621649">"‎5 GB"</string>
-    <string name="ten_gb" msgid="4150452462544299276">"‎10 GB"</string>
+    <string name="ten_gb" msgid="4150452462544299276">"‎10GB"</string>
     <string name="twenty_gb" msgid="5717308686812140465">"‎20 GB"</string>
     <string name="ten_minutes" msgid="7039181194343961324">"10 דקות"</string>
     <string name="thirty_minutes" msgid="2575810799813531395">"30 דקות"</string>
@@ -54,7 +54,7 @@
     <string name="twelve_hours" msgid="4647143276394563496">"12 שעות"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 שעות"</string>
     <string name="four_thousand_kb" msgid="5156346740862105703">"‎4096 KB"</string>
-    <string name="eight_thousand_kb" msgid="8815334985638334081">"‎8192 KB"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"‎8192KB"</string>
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"‎16384 KB"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"‎32768 KB‎"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"‎65536 KB"</string>

@@ -30,7 +30,7 @@
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"તમામ ટ્રેસને /ડેટા/સ્થાનિક/ટ્રેસમાંથી ડિલીટ કરવામાં આવશે"</string>
     <string name="clear" msgid="5484761795406948056">"સાફ કરો"</string>
     <string name="system_traces_storage_title" msgid="8294090839883366871">"સિસ્ટમ ટ્રેસ"</string>
-    <string name="keywords" msgid="736547007949049535">"systrace, ટ્રેસ, પ્રદર્શન"</string>
+    <string name="keywords" msgid="736547007949049535">"systrace, ટ્રેસ, કાર્યપ્રદર્શન"</string>
     <string name="share_trace" msgid="4528525067822044385">"ટ્રેસ શેર કરીએ?"</string>
     <string name="system_trace_sensitive_data" msgid="3069389866696009549">"સિસ્ટમ ટ્રેસ કરવાની ફાઇલોમાં સંવેદનશીલ સિસ્ટમ અને ઍપ ડેટા (જેમ કે ઍપ વપરાશ) શામેલ હોઈ શકે છે. તમે વિશ્વાસ કરો છો માત્ર તે લોકો અને ઍપ સાથે જ સિસ્ટમ ટ્રેસ શેર કરો."</string>
     <string name="share" msgid="8443979083706282338">"શેર કરો"</string>
