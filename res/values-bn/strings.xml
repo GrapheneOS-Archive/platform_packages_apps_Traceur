@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"সমস্যার রিপোর্ট শুরু হলে, চালু থাকা ট্রেস রেকর্ডিং বন্ধ হয়ে যায়"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ট্রেসকে সমস্যার রিপোর্টে অ্যাটাচ করুন"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"কোনও সমস্যার রিপোর্ট পাওয়া গেলে, চলছে এমন ট্রেস সম্পর্কিত তথ্য অটোমেটিক BetterBug-কে পাঠান"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ট্রেস ফাইল দেখুন"</string>
 </resources>

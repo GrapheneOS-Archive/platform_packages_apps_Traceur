@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Përfundo regjistrimet aktive të gjurmimit kur fillon një raport defekti në kod"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Bashkëngjit gjurmimet në raportet e defekteve në kod"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Dërgo automatikisht gjurmimet në vazhdim te BetterBug kur merret një raport defekti në kod"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Shiko skedarët e gjurmimit"</string>
 </resources>

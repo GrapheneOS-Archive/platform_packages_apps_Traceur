@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Baq hesabatı başladıldıqda aktiv izləmə yazmalarını bitirir"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Baq hesabatlarına fəaliyyət izləri əlavə edin"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Baq hesabatı əldə edildikdə, davam edən fəaliyyət izlərini avtomatik olaraq BetterBug\'a göndərin"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Fəaliyyət izi fayllarına baxın"</string>
 </resources>

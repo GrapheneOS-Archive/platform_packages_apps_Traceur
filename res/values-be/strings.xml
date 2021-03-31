@@ -65,4 +65,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Калі пачынаецца стварэнне справаздач пра памылкі, завяршаецца запіс актыўных трасіровак"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Далучаць трасіроўкі да справаздач пра памылкі"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Пры складанні справаздачы пра памылкі аўтаматычна адпраўляць у BetterBug даныя бягучай трасіроўкі"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Праглядзець файлы трасіроўкі"</string>
 </resources>

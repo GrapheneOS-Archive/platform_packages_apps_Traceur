@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"ഒരു ബഗ് റിപ്പോർട്ട് ആരംഭിക്കുമ്പോൾ, സജീവമായ അടയാളപ്പെടുത്തൽ റെക്കോർഡിംഗുകൾ അവസാനിപ്പിക്കുന്നു"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ബഗ് റിപ്പോർട്ടുകൾക്ക് അടയാളങ്ങൾ അറ്റാച്ച് ചെയ്യുക"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"ബഗ് റിപ്പോർട്ട് ശേഖരിച്ചാൽ, പുരോഗതിയിലുള്ള അടയാളങ്ങൾ, BetterBug-ലേക്ക് സ്വയമേവ അയയ്‌ക്കുക"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"അടയാള ഫയലുകൾ കാണുക"</string>
 </resources>

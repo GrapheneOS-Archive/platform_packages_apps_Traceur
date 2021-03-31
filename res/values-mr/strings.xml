@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"बगरिपोर्ट सुरू झाल्यावर अ‍ॅक्टिव्ह असलेली ट्रेस ठेवण्याची रेकॉर्डिंग बंद करते."</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"बग रिपोर्टना ट्रेस अटॅच करा"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"बग रिपोर्ट संग्रहित केल्यावर प्रगतीपथावर असलेले माग BetterBug ला आपोआप पाठवा"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"माग ठेवलेल्या फाइल पाहा"</string>
 </resources>

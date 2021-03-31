@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Avslutar aktiv spårning när felrapportering startas"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Bifoga spår i felrapporter"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Skicka automatiskt spår från pågående session till BetterBug när en felrapport samlas in"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Visa spårningsfiler"</string>
 </resources>

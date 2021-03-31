@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"启动错误报告时结束进行中的跟踪记录"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"将跟踪记录附加到错误报告"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"收集错误报告后，自动将处理中的跟踪记录发送到 BetterBug"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"查看跟踪文件"</string>
 </resources>

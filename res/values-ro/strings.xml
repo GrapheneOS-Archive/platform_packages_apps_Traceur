@@ -64,4 +64,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Încheie înregistrările de urme active când este inițiat un raport de eroare"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Atașați urme la rapoartele de eroare"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Activați trimiterea automată a urmelor în desfășurare la BetterBug când se execută un raport de eroare"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Vedeți fișierele de urmărire"</string>
 </resources>

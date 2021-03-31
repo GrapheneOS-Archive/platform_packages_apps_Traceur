@@ -64,4 +64,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Зауставља активне снимке праћења кад се започне извештај о грешкама"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Приложи праћења извештајима о грешкама"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Аутоматски шаљи праћења у току на BetterBug по добијању извештаја о грешци"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Прикажи фајлове са праћењима"</string>
 </resources>

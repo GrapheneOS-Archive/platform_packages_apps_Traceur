@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Met fin aux enregistrements de traçage actif lors du démarrage d\'un rapport de bogue"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Joindre des traces aux rapports de bogue"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Envoyer automatiquement des traces de progression à BetterBug lorsqu\'un rapport de bogue est reçu"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Afficher les fichiers de suivi"</string>
 </resources>

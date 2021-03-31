@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Hibajelentés elindítása után az aktív nyomrögzítések befejeződnek."</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Nyomok csatolása a hibajelentéshez"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Folyamatban lévő nyomok automatikus küldése a BetterBugnak hibajelentés begyűjtésekor"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Nyomkövetési fájlok megjelenítése"</string>
 </resources>

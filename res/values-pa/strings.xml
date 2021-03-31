@@ -8,7 +8,7 @@
     <string name="categories" msgid="2280163673538611008">"ਸ਼੍ਰੇਣੀਆਂ"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸ਼੍ਰੇਣੀਆਂ ਮੁੜ-ਬਹਾਲ ਕਰੋ"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸ਼੍ਰੇਣੀਆਂ ਮੁੜ-ਬਹਾਲ ਕੀਤੀਆਂ ਗਈਆਂ"</string>
-    <string name="default_categories" msgid="2117679794687799407">"ਪੂਰਵ-ਨਿਰਧਾਰਤ"</string>
+    <string name="default_categories" msgid="2117679794687799407">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
       <item quantity="one">%d ਚੁਣੀ ਗਈ</item>
       <item quantity="other">%d ਚੁਣੀਆਂ ਗਈਆਂ</item>
@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"ਬੱਗ ਰਿਪੋਰਟ ਚਾਲੂ ਹੋਣ \'ਤੇ ਕਿਰਿਆਸ਼ੀਲ ਟ੍ਰੇਸ ਰਿਕਾਰਡਿੰਗਾਂ ਬੰਦ ਹੁੰਦੀਆਂ ਹਨ"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ਟ੍ਰੇਸਾਂ ਨੂੰ ਬੱਗ ਰਿਪੋਰਟਾਂ ਵਿੱਚ ਨੱਥੀ ਕਰੋ"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"ਬੱਗ ਰਿਪੋਰਟ ਇਕੱਤਰ ਹੋ ਜਾਣ \'ਤੇ ਜਾਰੀ ਟ੍ਰੇਸਾਂ ਨੂੰ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ BetterBug ਨੂੰ ਭੇਜੋ"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ਟ੍ਰੇਸ ਫ਼ਾਈਲਾਂ ਦੇਖੋ"</string>
 </resources>

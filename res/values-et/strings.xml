@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Lõpetab aktiivsete jälgede salvestamise, kui alustatakse veaaruannet"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Jälgede manustamine veaaruannetesse"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Aktiivsed jäljed saadetakse veaaruande kogumisel automaatselt laiendusele BetterBug"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Kuva jäljefailid"</string>
 </resources>

@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"バグレポートを開始したら、有効なトレースの記録を終了します"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"トレースをバグレポートに添付する"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"バグレポートの収集時に、処理中のトレースを BetterBug に自動的に送信します"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"トレース ファイルを表示"</string>
 </resources>

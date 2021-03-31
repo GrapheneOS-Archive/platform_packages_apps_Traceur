@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Прекратява активните сесии за трасиране при стартиране на сигнал за програмна грешка"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Прикачване на трасирания към сигналите за програмни грешки"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Автоматично изпращане до BetterBug на трасирания в ход при създаването на сигнал за програмна грешка"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Преглед на файловете за трасиране"</string>
 </resources>

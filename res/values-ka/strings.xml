@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"დაასრულებს კვალის მიდევნების აქტიურ ჩაწერებს, როდესაც სისტემის ხარვეზის ანგარიშის წარმოება დაიწყება"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"კვალის სისტემის ხარვეზის ანგარიშებზე დართვა"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"შესრულების პროცესში მყოფი კვალი ავტომატურად ეგზავნება BetterBug-ს სისტემის ხარვეზის ანგარიშის მიღებისას"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ტრასირების ფაილების ნახვა"</string>
 </resources>

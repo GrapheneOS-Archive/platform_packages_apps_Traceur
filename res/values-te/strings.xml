@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"బగ్‌రిపోర్ట్ ప్రారంభమైనప్పుడు యాక్టివ్ ట్రేస్ రికార్డింగ్‌లు ముగుస్తాయి"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"బగ్ రిపోర్ట్‌లకు ట్రేస్‌లను అటాచ్ చేయండి"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"బగ్ రిపోర్ట్ సేకరించినప్పుడు ప్రోగెస్‌లో ఉన్న ట్రేస్‌లను ఆటోమేటిక్‌గా BetterBugకు పంపండి"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ట్రేస్ ఫైల్‌లను చూడండి"</string>
 </resources>

@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Finalitza les gravacions actives de traces quan s\'inicia un informe d\'errors"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Adjunta traces als informes d\'errors"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Envia automàticament traces en curs a BetterBug quan es reculli un informe d\'errors"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Mostra els fitxers de seguiment"</string>
 </resources>

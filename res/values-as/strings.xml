@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"এটা বাগ ৰিপ’ৰ্ট আৰম্ভ কৰিলে সক্ৰিয় ট্ৰে’চৰ ৰেকৰ্ডিংসমূহৰ অন্ত পেলায়"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"বাগ ৰিপ’টত ট্ৰে’চ সংলগ্ন কৰক"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"যেতিয়া এটা বাগ ৰিপ’ৰ্ট সংগ্ৰহ কৰা হয়, চলি থকা ট্ৰে’চ BetterBugলৈ স্বয়ংক্ৰিয়ভাৱে পঠিয়াওক"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ট্ৰেচ ফাইল চাওক"</string>
 </resources>

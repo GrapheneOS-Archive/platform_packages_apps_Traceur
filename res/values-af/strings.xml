@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Beëindig aktiewe spooropnames wanneer \'n foutverslag begin word"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Heg spore aan foutverslae"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Stuur spore wat besig is outomaties na BetterBug toe wanneer \'n foutverslag opgehaal word"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Bekyk spoorlêers"</string>
 </resources>

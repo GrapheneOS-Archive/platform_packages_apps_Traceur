@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Hata raporu başlatıldığında etkin izleme kayıtlarını sonlandırır"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Hata raporlarına izleri ekle"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Hata raporu alındığında devam etmekte olan izleri otomatik olarak BetterBug\'a gönder"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"İzleme dosyalarını göster"</string>
 </resources>

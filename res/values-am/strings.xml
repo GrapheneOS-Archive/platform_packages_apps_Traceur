@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"የሳንካ ሪፖርለት ሲጀመር ንቁ ቀረጻዎችን መከታተያን ያጠናቅቃል"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"በሳንካ ሪፖርቶች ላይ መከታተያዎችን አባሪ አድርግ"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"የሳንካ ሪፖርት በሚሰበሰብበት ጊዜ በሂደት ላይ ያሉ መከታተያን በራስ-ሰር ወደ BetterBug ይላኩ"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"የመከታተያ ፋይሎችን አሳይ"</string>
 </resources>

@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"ಬಗ್ ವರದಿಮಾಡುವಿಕೆ ಪ್ರಾರಂಭವಾದಾಗ ಸಕ್ರಿಯವಾಗಿರುವ ಟ್ರೇಸ್ ರೆಕಾರ್ಡಿಂಗ್‌ಗಳನ್ನು ಕೊನೆಗೊಳಿಸುತ್ತದೆ"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ಬಗ್ ವರದಿಗಳಿಗೆ ಟ್ರೇಸ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"ಬಗ್ ವರದಿಯೊಂದನ್ನು ಸಂಗ್ರಹಿಸಿದಾಗ BetterBug ಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪ್ರಗತಿಯಲ್ಲಿರುವ ಟ್ರೇಸ್‌ಗಳನ್ನು ಕಳುಹಿಸಿ"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ಟ್ರೇಸ್ ಫೈಲ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ"</string>
 </resources>

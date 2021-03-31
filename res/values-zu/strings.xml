@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Iqeda ukurekhodwa kokulandelela okusebenzayo uma kuqaliswe umbiko wesiphazamisi"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Namathisela ukulandelelwa kwimibiko yeziphazamisi"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Thumela ngokuzenzekelayo ukulandelelwa okuqhubekayo ku-BetterBug lapho kuqoqwe umbiko wesiphazamisi"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Buka amafayela wokulandelela"</string>
 </resources>

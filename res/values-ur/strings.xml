@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"بگ رپورٹس شروع ہونے پر فعال ٹریس ریکارڈنگز ختم ہو جاتی ہیں"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"بگ رپورٹس پر ٹریسز منسلک کریں"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"‏بگ رپورٹ جمع ہونے پر خود کار طریقے سے پیشرفت کے ٹریسز کو BetterBug میں بھیج دیا جاتا ہے"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ٹریس فائلز دیکھیں"</string>
 </resources>

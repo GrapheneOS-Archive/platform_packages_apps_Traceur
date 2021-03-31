@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Husimamisha vipindi vinavyoendelea vya ufuatiliaji ripoti ya hitilafu inapoanzishwa"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Ambatisha historia ya shughuli kwenye ripoti za hitilafu"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Tuma kiotomatiki historia ya shughuli zinazoendelea kwa BetterBug ripoti ya hitilafu inapokusanywa"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Angalia faili za historia ya shughuli"</string>
 </resources>
