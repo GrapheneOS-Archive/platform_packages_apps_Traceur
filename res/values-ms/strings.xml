@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Menamatkan rakaman penyurihan aktif apabila laporan pepijat dimulakan"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Lampirkan surih pada laporan pepijat"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Surihan dalam proses dihantar kepada BetterBug secara automatik apabila laporan pepijat dikumpulkan"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Lihat fail penjejak"</string>
 </resources>

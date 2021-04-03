@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Ավարտում է հետագծման ակտիվ գրանցումները, երբ մեկնարկում է վրիպակի մասին զեկույցը։"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Կցեք հետագծման ֆայլերը վրիպակի մասին զեկույցներին"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Վրիպակի մասին զեկույցի հավաքման ժամանակ հետագծման ֆայլերը, որոնց մշակումը դեռ չի ավարտվել, ավտոմատ ուղարկել BetterBug-ին"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Դիտել հետագծման ֆայլերի ցանկը"</string>
 </resources>

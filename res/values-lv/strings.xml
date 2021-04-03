@@ -64,4 +64,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Kad tiek sākta kļūdas pārskata izveide, tiek apturēti aktīvie izsekošanas ieraksti."</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Pievienot izsekošanas datus kļūdu pārskatiem"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Automātiski sūtīt pašreizējos izsekošanas datus rīkam BetterBug kopā ar kļūdas pārskatu"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Skatīt izsekošanas failus"</string>
 </resources>

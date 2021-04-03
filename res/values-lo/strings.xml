@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"ສິ້ນສຸດການບັນທຶກການຕິດຕາມທີ່ເຄື່ອນໄຫວຢູ່ເມື່ອເລີ່ມລາຍງານຂໍ້ຜິດພາດ"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ແນບການຕິດຕາມເພື່ອລາຍງານຂໍ້ຜິດພາດ"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"ສົ່ງການຕິດຕາມທີ່ດຳເນີນຢູ່ໄປໃຫ້ BetterBug ອັດຕະໂນມັດໃນເວລາເກັບກຳລາຍງານຂໍ້ຜິດພາດ"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ເບິ່ງໄຟລ໌ການຕິດຕາມ"</string>
 </resources>

@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Kết thúc quá trình ghi dấu vết đang hoạt động khi bắt đầu báo cáo lỗi"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Đính kèm dấu vết vào báo cáo lỗi"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Tự động gửi các dấu vết đang xử lý đến BetterBug khi thu thập được báo cáo lỗi"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Xem các tệp theo dõi"</string>
 </resources>

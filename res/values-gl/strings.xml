@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Remata os rexistros de rastro activos cando se inicia un informe de erros"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Anexar rastros aos informes de erros"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Enviar automaticamente rastros en curso a BetterBug cando se recompile un informe de erros"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Ver ficheiros de rastro"</string>
 </resources>

@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"បញ្ចប់​ការថតដានដែលកំពុងដំណើរការ នៅពេល​ចាប់ផ្ដើម​របាយការណ៍​អំពីបញ្ហា​"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ភ្ជាប់ដានទៅក្នុងរបាយការណ៍អំពីបញ្ហា"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"បញ្ជូនដានដែលកំពុងដំណើរការដោយស្វ័យប្រវត្តិទៅ BetterBug នៅពេលប្រមូលរបាយការណ៍អំពីបញ្ហា"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"មើលឯកសារដាន"</string>
 </resources>

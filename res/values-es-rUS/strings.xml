@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Finaliza las grabaciones activas de registros cuando se inicia un informe de errores"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Adjuntar registros a informes de errores"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Envía automáticamente a BetterBug los registros en curso cuando se recopila un informe de errores"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Ver archivos de registro"</string>
 </resources>

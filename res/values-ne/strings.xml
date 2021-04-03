@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"तपाईंले बग रिपोर्ट निकाल्ने प्रक्रिया सुरु गर्नुभयो भने बग रिपोर्ट ट्रेस गर्न चालू रेकर्डिङ अन्त्य गरिन्छ"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"बग रिपोर्टहरूमा ट्रेस एट्याच गर्नुहोस्"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"बग रिपोर्ट सङ्कलन गरिएपछि प्रक्रियामा रहेका ट्रेसहरू स्वतः BetterBug मा पठाउनुहोस्"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ट्रेस फाइलहरू हेर्नुहोस्"</string>
 </resources>

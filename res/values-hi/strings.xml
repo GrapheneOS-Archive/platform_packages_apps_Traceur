@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"गड़बड़ी की रिपोर्ट के शुरू होने पर, पहले से चल रहे ट्रेस सेशन को बंद कर देता है"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ट्रेस (फ़ोन में हुई गतिविधि की रिकॉर्डिंग) को गड़बड़ी की रिपोर्ट में अटैच करें"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"गड़बड़ी की रिपोर्ट मिलने पर, BetterBug को पहले से चल रहे ट्रेस सेशन की जानकारी अपने-आप भेज दी जाती है"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ट्रेस फ़ाइलें देखें"</string>
 </resources>

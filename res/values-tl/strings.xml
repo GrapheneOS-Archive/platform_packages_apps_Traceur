@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Wawakasan ang mga aktibong pag-record ng trace kapag nagsimula ng ulat ng bug"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Mag-attach ng mga trace sa mga ulat ng bug"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Awtomatikong magpadala ng mga kasalukuyang isinasagawang trace sa BetterBug kapag nangolekta ng ulat ng bug"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Tingnan ang mga trace file"</string>
 </resources>

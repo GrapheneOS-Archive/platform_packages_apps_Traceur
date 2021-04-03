@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"ଏକ ବଗରିପୋର୍ଟ ଆରମ୍ଭ ହେଲେ ସକ୍ରିୟ ଟ୍ରେସ୍ ରେକର୍ଡିଂ ସମାପ୍ତ ହୁଏ"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"ବଗ୍ ରିପୋର୍ଟଗୁଡ଼ିକ ସହିତ ଟ୍ରେସ୍ ଆଟାଚ୍ କରନ୍ତୁ"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"ଯେତେବେଳେ ଏକ ବଗ୍ ରିପୋର୍ଟ ସଂଗ୍ରହ କରାଯାଏ ସେତେବେଳେ ସ୍ୱଚାଳିତ ଭାବେ BetterBugକୁ ପ୍ରକ୍ରିୟାରତ-ଅଛି ଟ୍ରେସ୍ ପଠାଯାଏ"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"ଟ୍ରେସ୍ ଫାଇଲଗୁଡ଼ିକୁ ଦେଖନ୍ତୁ"</string>
 </resources>

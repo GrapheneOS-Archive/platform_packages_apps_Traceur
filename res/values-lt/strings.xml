@@ -65,4 +65,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Užbaigiami aktyvūs pėdsakų registravimo seansai, kai pradedamas generuoti pranešimas apie riktą"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Pridėti pėdsakų prie pranešimų apie riktus"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Automatiškai siųsti vykdomos veiklos pėdsakus į sistemą „BetterBug“, kai gaunamas pranešimas apie riktą"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Žr. pėdsakų failus"</string>
 </resources>

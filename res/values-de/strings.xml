@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Aktive Tracing-Aufnahmen werden beendet, wenn ein Fehlerbericht gestartet wird"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Traces an Fehlerberichte anhängen"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Sendet automatisch laufende Traces an BetterBug, wenn ein Fehlerbericht abgerufen wird"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Trace-Dateien ansehen"</string>
 </resources>

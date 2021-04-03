@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Τερματίζει τις εγγραφές ενεργών ιχνών κατά την έναρξη μιας αναφοράς σφάλματος"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Επισύναψη ιχνών στις αναφορές σφαλμάτων"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Αυτόματη αποστολή ιχνών που βρίσκονται σε εξέλιξη στο BetterBug κατά τη συλλογή μιας αναφοράς σφάλματος"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Προβολή αρχείων ιχνηλάτησης"</string>
 </resources>

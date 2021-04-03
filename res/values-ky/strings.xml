@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Мүчүлүштүк тууралуу кабарлоо башталганда, аракеттерди жаздыруу токтотулат"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Мүчүлүштүк тууралуу кабарларга жаздырылган аракеттерди тиркөө"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Мүчүлүштүк тууралуу кабар чогултулганда, жаздырылган аракеттерди BetterBug кызматына автоматтык түрдө жөнөтүү"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Аракеттерди жаздыруу файлдарын көрүү"</string>
 </resources>

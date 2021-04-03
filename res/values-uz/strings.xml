@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Xatoliklar hisobotini yuborish boshlanganda faol trassirovka yozuvlari toʻxtatiladi."</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Trassirovka axborotini xatolar haqidagi hisobotlarga kiritish"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Xatolik haqidagi axborot jamlansa, BetterBug xizmatiga amaldagi trassirovka axboroti avtomatik yuborilsin"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Trassirovka fayllarini ochish"</string>
 </resources>

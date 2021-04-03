@@ -63,4 +63,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Met fin aux sessions de traçage actives lorsqu\'un rapport de bug est lancé"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Joindre les traces aux rapports de bug"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Envoyer automatiquement les traces en cours à BetterBug quand un rapport de bug est collecté"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Afficher les fichiers de suivi"</string>
 </resources>

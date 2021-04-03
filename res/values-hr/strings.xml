@@ -64,4 +64,5 @@
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Zaustavlja aktivna bilježenja praćenja kad se pokrene izrada izvješća o programskim pogreškama"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Priložite praćenja izvješćima o programskoj pogrešci"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Automatski pošaljite BetterBugu praćenja u tijeku kad se prikupi izvješće o programskoj pogrešci"</string>
+    <string name="link_to_traces" msgid="6569969595898995517">"Pregledajte datoteke praćenja"</string>
 </resources>
