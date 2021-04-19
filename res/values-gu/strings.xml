@@ -5,7 +5,7 @@
     <string name="record_system_activity" msgid="4339462312915377825">"સિસ્ટમ પ્રવૃત્તિને રેકોર્ડ કરો અને કાર્યપ્રદર્શનને બહેતર બનાવવા માટે થોડા સમય પછી તેનું વિશ્લેષણ કરો"</string>
     <string name="record_trace" msgid="6416875085186661845">"ટ્રેસને રેકોર્ડ કરો"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"ડિબગ કરી શકાય તેવી ઍપ્લિકેશનોને ટ્રેસ કરો"</string>
-    <string name="categories" msgid="2280163673538611008">"કૅટેગરીઓ"</string>
+    <string name="categories" msgid="2280163673538611008">"કૅટેગરી"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ડિફૉલ્ટ કૅટેગરીઓની પુનઃસ્થાપના કરો"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"ડિફૉલ્ટ કૅટેગરીઓની પુનઃસ્થાપના કરી"</string>
     <string name="default_categories" msgid="2117679794687799407">"ડિફૉલ્ટ"</string>
