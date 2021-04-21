@@ -2,7 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"Rastreamento do sistema"</string>
-    <string name="record_system_activity" msgid="4339462312915377825">"Grave as atividades do sistema e analise-as mais tarde para melhorar o desempenho"</string>
+    <string name="record_system_activity" msgid="4339462312915377825">"Gravar as atividades do sistema e analisá-las mais tarde para melhorar o desempenho"</string>
     <string name="record_trace" msgid="6416875085186661845">"Registrar rastros"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Rastrear aplicativos depuráveis"</string>
     <string name="categories" msgid="2280163673538611008">"Categorias"</string>
