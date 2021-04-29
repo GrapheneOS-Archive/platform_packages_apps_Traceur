@@ -218,6 +218,14 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
                 .append("}\n");
         }
 
+        if (tags.contains(GFX_TAG)) {
+          config.append("data_sources: {\n")
+              .append("  config { \n")
+              .append("    name: \"android.surfaceflinger.frametimeline\"\n")
+              .append("  }\n")
+              .append("}\n");
+        }
+
         String configString = config.toString();
 
         // If the here-doc ends early, within the config string, exit immediately.
