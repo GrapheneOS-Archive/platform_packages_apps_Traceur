@@ -30,7 +30,8 @@
     </style>
 
     <style name="Theme.Settings" parent="@android:style/Theme.DeviceDefault.Settings" >
-      <item name="preferenceTheme">@style/PreferenceTheme</item>
+      <item name="preferenceFragmentStyle">@style/SettingsPreferenceFragmentStyle</item>
+      <item name="dialogPreferenceStyle">@style/MultiSelectDialogStyle</item>
     </style>
 
     <style name="TvTheme" parent="@style/Theme.Leanback">
