@@ -124,7 +124,7 @@ public class TraceService extends IntentService {
         String msg = context.getString(R.string.tap_to_stop_tracing);
 
         boolean attachToBugreport =
-                prefs.getBoolean(context.getString(R.string.pref_key_attach_to_bug_report), false);
+                prefs.getBoolean(context.getString(R.string.pref_key_attach_to_bugreport), true);
 
         Notification.Builder notification =
             new Notification.Builder(context, Receiver.NOTIFICATION_CHANNEL_TRACING)
