@@ -320,6 +320,8 @@ public class MainFragment extends PreferenceFragment {
                     PackageManager.MATCH_SYSTEM_ONLY);
             findPreference(getString(R.string.pref_key_attach_to_bugreport)).setVisible(true);
             findPreference(getString(R.string.pref_key_stop_on_bugreport)).setVisible(false);
+            // TODO(b/188898919): Update summary with a warning that long traces are not
+            // automatically attached to bug reports.
         } catch (PackageManager.NameNotFoundException e) {
             // attach_to_bugreport must be disabled here because it's true by default.
             mPrefs.edit().putBoolean(
