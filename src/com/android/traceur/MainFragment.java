@@ -174,21 +174,6 @@ public class MainFragment extends PreferenceFragment {
                     }
                 });
 
-        // Unset stop_on_bugreport to make it clear that it and attach_to_bugreport are mutually
-        // exclusive.
-        findPreference(getString(R.string.pref_key_attach_to_bug_report))
-            .setOnPreferenceClickListener(
-                new Preference.OnPreferenceClickListener() {
-                    @Override
-                    public boolean onPreferenceClick(Preference preference) {
-                        mPrefs.edit().putBoolean(
-                                getString(R.string.pref_key_stop_on_bugreport),
-                                false).commit();
-                        refreshUi();
-                        return true;
-                    }
-                });
-
         findPreference("trace_link_button")
             .setOnPreferenceClickListener(
                 new Preference.OnPreferenceClickListener() {
@@ -328,16 +313,19 @@ public class MainFragment extends PreferenceFragment {
             }
         }
 
-        // Check if BetterBug is installed to see if Traceur should display or disable
-        // the attach trace to bugreport toggle.
+        // Check if BetterBug is installed to see if Traceur should display either the toggle for
+        // 'attach_to_bugreport' or 'stop_on_bugreport'.
         try {
             context.getPackageManager().getPackageInfo(BETTERBUG_PACKAGE_NAME,
-                PackageManager.MATCH_SYSTEM_ONLY);
-            findPreference(getString(R.string.pref_key_attach_to_bug_report)).setVisible(true);
+                    PackageManager.MATCH_SYSTEM_ONLY);
+            findPreference(getString(R.string.pref_key_attach_to_bugreport)).setVisible(true);
+            findPreference(getString(R.string.pref_key_stop_on_bugreport)).setVisible(false);
         } catch (PackageManager.NameNotFoundException e) {
+            // attach_to_bugreport must be disabled here because it's true by default.
             mPrefs.edit().putBoolean(
-                    getString(R.string.pref_key_attach_to_bug_report), false).commit();
-            findPreference(getString(R.string.pref_key_attach_to_bug_report)).setVisible(false);
+                    getString(R.string.pref_key_attach_to_bugreport), false).commit();
+            findPreference(getString(R.string.pref_key_attach_to_bugreport)).setVisible(false);
+            findPreference(getString(R.string.pref_key_stop_on_bugreport)).setVisible(true);
         }
 
         // Check if an activity exists to handle the trace_link_button intent. If not, hide the UI

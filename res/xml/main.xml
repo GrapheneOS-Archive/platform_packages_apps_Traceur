@@ -73,13 +73,12 @@
         <androidx.preference.SwitchPreference
             android:key="@string/pref_key_stop_on_bugreport"
             android:summary="@string/stop_on_bugreport_summary"
-            android:title="@string/stop_on_bugreport"
-            android:dependency="@string/pref_key_attach_to_bug_report" />
+            android:title="@string/stop_on_bugreport" />
         <androidx.preference.SwitchPreference
-            android:key="@string/pref_key_attach_to_bug_report"
+            android:key="@string/pref_key_attach_to_bugreport"
             android:summary="@string/attach_to_bug_report_summary"
             android:title="@string/attach_to_bug_report"
-            android:disableDependentsState="true" />
+            android:defaultValue="true" />
         <androidx.preference.SwitchPreference
             android:key="@string/pref_key_quick_setting"
             android:title="@string/show_quick_settings_tile"
