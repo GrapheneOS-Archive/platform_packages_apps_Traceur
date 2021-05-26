@@ -58,7 +58,7 @@
         <activity android:name=".MainActivity"
              android:description="@string/record_system_activity"
              android:label="@string/system_tracing"
-             android:theme="@style/Theme.Settings"
+             android:theme="@style/Theme.SubSettingsBase"
              android:launchMode="singleTask"
              android:exported="true">
             <intent-filter>
