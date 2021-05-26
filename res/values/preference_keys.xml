@@ -10,5 +10,5 @@
     <string name="pref_key_max_long_trace_duration">max_long_trace_duration</string>
     <string name="pref_key_quick_setting">quick_setting_enabled</string>
     <string name="pref_key_stop_on_bugreport">stop_on_bugreport_enabled</string>
-    <string name="pref_key_attach_to_bug_report">attach_to_bug_report</string>
+    <string name="pref_key_attach_to_bugreport">attach_to_bugreport</string>
 </resources>
