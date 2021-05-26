@@ -100,6 +100,7 @@
 
     <string name="long_traces">Long traces</string>
     <string name="long_traces_summary">Saved continuously to device storage</string>
+    <string name="long_traces_summary_betterbug">Saved continuously to device storage (will not be automatically attached to bug reports)</string>
     <string name="max_long_trace_size">Maximum long trace size</string>
     <string name="max_long_trace_duration">Maximum long trace duration</string>
 

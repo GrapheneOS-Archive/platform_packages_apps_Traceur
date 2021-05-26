@@ -320,12 +320,18 @@ public class MainFragment extends PreferenceFragment {
                     PackageManager.MATCH_SYSTEM_ONLY);
             findPreference(getString(R.string.pref_key_attach_to_bugreport)).setVisible(true);
             findPreference(getString(R.string.pref_key_stop_on_bugreport)).setVisible(false);
+            // Changes the long traces summary to add that they cannot be attached to bugreports.
+            findPreference(getString(R.string.pref_key_long_traces))
+                    .setSummary(getString(R.string.long_traces_summary_betterbug));
         } catch (PackageManager.NameNotFoundException e) {
             // attach_to_bugreport must be disabled here because it's true by default.
             mPrefs.edit().putBoolean(
                     getString(R.string.pref_key_attach_to_bugreport), false).commit();
             findPreference(getString(R.string.pref_key_attach_to_bugreport)).setVisible(false);
             findPreference(getString(R.string.pref_key_stop_on_bugreport)).setVisible(true);
+            // Sets long traces summary to the default in case Betterbug was removed.
+            findPreference(getString(R.string.pref_key_long_traces))
+                    .setSummary(getString(R.string.long_traces_summary));
         }
 
         // Check if an activity exists to handle the trace_link_button intent. If not, hide the UI
