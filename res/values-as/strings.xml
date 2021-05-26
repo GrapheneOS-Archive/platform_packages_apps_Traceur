@@ -41,6 +41,8 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto (বিটা) ব্যৱহাৰ কৰক"</string>
     <string name="long_traces" msgid="5110949471775966329">"দীঘল ট্ৰে\'চ"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"ডিভাইচ ষ্ট’ৰেজত নিয়মীয়াকৈ ছেভ কৰা হৈছে"</string>
+    <!-- no translation found for long_traces_summary_betterbug (445546400875135624) -->
+    <skip />
     <string name="max_long_trace_size" msgid="1943788179787181241">"সকলোতকৈ দীঘল ট্ৰে\'চৰ আকাৰ"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"সর্বাধিক দীঘল ট্ৰে\'চৰ সময়"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"২০০ এম. বি."</string>

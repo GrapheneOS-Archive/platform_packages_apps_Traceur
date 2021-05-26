@@ -41,6 +41,8 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto ഉപയോഗിക്കുക (ബീറ്റ)"</string>
     <string name="long_traces" msgid="5110949471775966329">"ദൈർഘ്യമുള്ള ട്രെയ്‌സുകൾ"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"ഉപകരണ സ്‌റ്റോറേജിലേക്ക് തുടർച്ചയായി സംരക്ഷിക്കുന്നു"</string>
+    <!-- no translation found for long_traces_summary_betterbug (445546400875135624) -->
+    <skip />
     <string name="max_long_trace_size" msgid="1943788179787181241">"പരമാവധി ദൈർഘ്യമുള്ള ട്രെയ്‌സിൻ്റെ വലുപ്പം"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"പരമാവധി ദൈർഘ്യമുള്ള ട്രെയ്‌സിൻ്റെ സമയ ദൈർഘ്യം"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
