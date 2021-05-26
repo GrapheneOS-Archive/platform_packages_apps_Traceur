@@ -52,6 +52,7 @@
             android:key="@string/pref_key_long_traces"
             android:title="@string/long_traces"
             android:summary="@string/long_traces_summary"
+            android:disableDependentsState="true"
             android:defaultValue="false" />
         <androidx.preference.ListPreference
             android:key="@string/pref_key_max_long_trace_size"
@@ -78,6 +79,7 @@
             android:key="@string/pref_key_attach_to_bugreport"
             android:summary="@string/attach_to_bug_report_summary"
             android:title="@string/attach_to_bug_report"
+            android:dependency="@string/pref_key_long_traces"
             android:defaultValue="true" />
         <androidx.preference.SwitchPreference
             android:key="@string/pref_key_quick_setting"
