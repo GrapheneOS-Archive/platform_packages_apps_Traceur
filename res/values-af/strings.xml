@@ -41,6 +41,8 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Gebruik Perfetto (beta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Lang spore"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Deurlopend in toestelberging gestoor"</string>
+    <!-- no translation found for long_traces_summary_betterbug (445546400875135624) -->
+    <skip />
     <string name="max_long_trace_size" msgid="1943788179787181241">"Maksimum langspoorgrootte"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Maksimum langspoortydsduur"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
