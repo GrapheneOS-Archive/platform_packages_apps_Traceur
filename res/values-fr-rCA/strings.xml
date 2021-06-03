@@ -41,8 +41,7 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Utiliser Perfetto (version bêta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Traces longues"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Enregistrement continuel vers l\'espace de stockage de l\'appareil"</string>
-    <!-- no translation found for long_traces_summary_betterbug (445546400875135624) -->
-    <skip />
+    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"Enregistrement continu dans l\'espace de stockage de l\'appareil (sans ajout automatique aux rapports de bogue)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Taille maximale pour la trace longue"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Durée maximale des traces longues"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 Mo"</string>
