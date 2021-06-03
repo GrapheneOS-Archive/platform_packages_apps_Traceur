@@ -41,8 +41,7 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto (ਬੀਟਾ) ਵਰਤੋ"</string>
     <string name="long_traces" msgid="5110949471775966329">"ਲੰਮੀਆਂ ਟ੍ਰੇਸਾਂ"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"ਡੀਵਾਈਸ ਸਟੋਰੇਜ ਵਿੱਚ ਲਗਾਤਾਰ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ"</string>
-    <!-- no translation found for long_traces_summary_betterbug (445546400875135624) -->
-    <skip />
+    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"ਡੀਵਾਈਸ ਸਟੋਰੇਜ ਵਿੱਚ ਲਗਾਤਾਰ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ (ਬੱਗ ਰਿਪੋਰਟਾਂ ਨਾਲ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਨੱਥੀ ਨਹੀਂ ਹੋਵੇਗਾ)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"ਸਭ ਤੋਂ ਲੰਮੀ ਟ੍ਰੇਸ ਦਾ ਆਕਾਰ"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"ਸਭ ਤੋਂ ਲੰਮੀ ਟ੍ਰੇਸ ਮਿਆਦ"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
