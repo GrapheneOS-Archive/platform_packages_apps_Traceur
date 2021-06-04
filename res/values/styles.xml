@@ -15,7 +15,7 @@
 -->
 
 <resources>
-    <style name="MultiSelectDialogStyle" parent="@style/Preference.Material">
+    <style name="MultiSelectDialogStyle">
         <item name="negativeButtonText">@android:string/cancel</item>
         <item name="positiveButtonText">@android:string/ok</item>
     </style>

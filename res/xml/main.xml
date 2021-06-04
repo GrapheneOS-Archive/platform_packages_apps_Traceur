@@ -25,7 +25,8 @@
         android:defaultValue="true" />
     <androidx.preference.MultiSelectListPreference
         android:key="@string/pref_key_tags"
-        android:title="@string/categories" />
+        android:title="@string/categories"
+        style="@style/MultiSelectDialogStyle" />
     <Preference
         android:key="restore_default_tags"
         android:persistent="false"
