@@ -42,6 +42,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final String PERFETTO_TAG = "traceur";
     private static final String MARKER = "PERFETTO_ARGUMENTS";
     private static final int STARTUP_TIMEOUT_MS = 10000;
+    private static final int EXEC_TIMEOUT_MS = 5000;
     private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
     private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
 
@@ -244,17 +245,14 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
         try {
             Process process = TraceUtils.exec(cmd, TEMP_DIR);
 
-            // If we time out, ensure that the perfetto process is destroyed.
-            if (!process.waitFor(STARTUP_TIMEOUT_MS, TimeUnit.MILLISECONDS)) {
-                Log.e(TAG, "perfetto traceStart has timed out after "
-                    + STARTUP_TIMEOUT_MS + " ms.");
-                process.destroyForcibly();
-                return false;
-            }
-
-            if (process.exitValue() != 0) {
-                Log.e(TAG, "perfetto traceStart failed with: "
-                    + process.exitValue());
+            // Waits for the process to terminate before checking its exit value.
+            if (process.waitFor(EXEC_TIMEOUT_MS, TimeUnit.MILLISECONDS)) {
+                if (process.exitValue() != 0) {
+                    Log.e(TAG, "perfetto traceStart failed with: " + process.exitValue());
+                    return false;
+                }
+            } else {
+                Log.e(TAG, "perfetto traceStart command never terminated.");
                 return false;
             }
         } catch (Exception e) {
@@ -275,8 +273,14 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
         String cmd = "perfetto --stop --attach=" + PERFETTO_TAG;
         try {
             Process process = TraceUtils.exec(cmd);
-            if (process.waitFor() != 0) {
-                Log.e(TAG, "perfetto traceStop failed with: " + process.exitValue());
+
+            // Waits for the process to terminate before checking its exit value.
+            if (process.waitFor(EXEC_TIMEOUT_MS, TimeUnit.MILLISECONDS)) {
+                if (process.exitValue() != 0) {
+                    Log.e(TAG, "perfetto traceStop failed with: " + process.exitValue());
+                }
+            } else {
+                Log.e(TAG, "perfetto traceStop command never terminated.");
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -285,6 +289,12 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
 
     public boolean traceDump(File outFile) {
         traceStop();
+
+        // Short-circuit if a trace was not stopped.
+        if (isTracingOn()) {
+            Log.e(TAG, "Trace was not stopped successfully, aborting trace dump.");
+            return false;
+        }
 
         // Short-circuit if the file we're trying to dump to doesn't exist.
         if (!Files.exists(Paths.get(TEMP_TRACE_LOCATION))) {
