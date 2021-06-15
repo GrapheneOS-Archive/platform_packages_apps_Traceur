@@ -35,6 +35,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Collection;
+import java.util.concurrent.TimeUnit;
 import java.util.TreeMap;
 
 /**
@@ -52,6 +53,7 @@ public class TraceUtils {
     private static TraceEngine mTraceEngine = new PerfettoUtils();
 
     private static final Runtime RUNTIME = Runtime.getRuntime();
+    private static final int PROCESS_TIMEOUT_MS = 30000; // 30 seconds
 
     public interface TraceEngine {
         public String getName();
@@ -125,6 +127,16 @@ public class TraceUtils {
         new Logger("traceService:stderr", process.getErrorStream());
         if (logOutput) {
             new Logger("traceService:stdout", process.getInputStream());
+        }
+        try {
+            // Destroy the process in the case of a timeout.
+            if (!process.waitFor(PROCESS_TIMEOUT_MS, TimeUnit.MILLISECONDS)) {
+                Log.e(TAG, "Command '" + cmd + "' has timed out after "
+                      + PROCESS_TIMEOUT_MS + " ms.");
+                process.destroyForcibly();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
         return process;
