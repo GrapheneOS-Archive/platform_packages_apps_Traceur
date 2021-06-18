@@ -189,6 +189,24 @@ public class MainFragment extends PreferenceFragment {
                     }
                 });
 
+        // This disables "Attach to bugreports" when long traces are enabled. This cannot be done in
+        // main.xml because there are some other settings there that are enabled with long traces.
+        SwitchPreference attachToBugreport = findPreference(
+            getString(R.string.pref_key_attach_to_bugreport));
+        findPreference(getString(R.string.pref_key_long_traces))
+            .setOnPreferenceClickListener(
+                new Preference.OnPreferenceClickListener() {
+                    @Override
+                    public boolean onPreferenceClick(Preference preference) {
+                        if (((SwitchPreference) preference).isChecked()) {
+                            attachToBugreport.setEnabled(false);
+                        } else {
+                            attachToBugreport.setEnabled(true);
+                        }
+                        return true;
+                    }
+                });
+
         refreshUi();
 
         mRefreshReceiver = new BroadcastReceiver() {
