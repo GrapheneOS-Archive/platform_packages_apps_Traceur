@@ -41,6 +41,7 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto-ს გამოყენება (ბეტა)"</string>
     <string name="long_traces" msgid="5110949471775966329">"გრძელი ტრასირებები"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"განუწყვეტლივ ინახება მოწყობილობის მეხსიერებაში"</string>
+    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"უწყვეტად ინახება მოწყობილობის მეხსიერებაში (ავტომატურად არ დაერთვის სისტემის ხარვეზის ანგარიშებს)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"გრძელი ტრასირების მაქსიმალური ზომა"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"გრძელი ტრასირების მაქსიმალური ხანგრძლივობა"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 მბაიტი"</string>
