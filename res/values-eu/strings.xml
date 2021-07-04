@@ -8,7 +8,7 @@
     <string name="categories" msgid="2280163673538611008">"Kategoriak"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Leheneratu kategoria lehenetsiak"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Leheneratu dira kategoria lehenetsiak"</string>
-    <string name="default_categories" msgid="2117679794687799407">"Balio lehenetsia"</string>
+    <string name="default_categories" msgid="2117679794687799407">"Lehenetsia"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
       <item quantity="other">%d hautatu da</item>
       <item quantity="one">%d hautatu da</item>
@@ -41,6 +41,7 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Erabili Perfetto (beta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Arrasto luzeak"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Gailuaren memorian etengabe gordetzen da"</string>
+    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"Etengabe gordetzen da gailuaren memorian (ez da erantsiko automatikoki akatsen txostenetan)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Arrasto luzearen gehieneko tamaina"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Arrasto luzearen gehieneko iraupena"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>

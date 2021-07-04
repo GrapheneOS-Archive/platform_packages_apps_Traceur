@@ -41,6 +41,7 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Utiliser Perfetto (bêta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Traces allongées"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Enregistré en continu dans l\'espace de stockage de cet appareil"</string>
+    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"Enregistrement continu sur l\'espace de stockage de l\'appareil (pas d\'ajout automatique aux rapports de bug)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Taille maximale de la trace allongée"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Durée maximale des traces allongées"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 Mo"</string>

@@ -41,6 +41,7 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto භාවිතා කරන්න (බීටා)"</string>
     <string name="long_traces" msgid="5110949471775966329">"දීර්ඝ හඹා යෑම්"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"දිගටම උපාංග ආචයනයට සුරකිනු ලැබේ"</string>
+    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"උපාංග ගබඩාවට අඛණ්ඩව සුරකින ලදි (දෝෂ වාර්තාවලට ස්වයංක්‍රියව අමුණනු නොලැබේ)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"උපරිම දීර්ඝ හඹා යෑම් ප්‍රමාණය"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"උපරිම දීර්ඝ හඹා යෑම් කාලය"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
