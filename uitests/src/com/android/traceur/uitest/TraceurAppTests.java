@@ -44,7 +44,7 @@ import java.util.regex.Pattern;
 public class TraceurAppTests {
 
     private static final String TRACEUR_PACKAGE = "com.android.traceur";
-    private static final int TIMEOUT = 20000;   // milliseconds
+    private static final int TIMEOUT = 5000;   // milliseconds
 
     private UiDevice mDevice;
 
