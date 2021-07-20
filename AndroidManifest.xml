@@ -54,7 +54,8 @@
 
     <application android:label="@string/system_tracing"
          android:banner="@drawable/banner"
-         android:icon="@drawable/ic_launcher_settings">
+         android:icon="@drawable/ic_launcher_settings"
+         android:backupAgent="com.android.traceur.TraceurBackupAgent">
 
         <activity android:name=".MainActivity"
              android:description="@string/record_system_activity"
