@@ -29,9 +29,14 @@
     <!-- Used to trigger the trace start/stop service. -->
     <uses-permission android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
 
+    <!-- Used for receiving BUGREPORT_STARTED intents. -->
     <uses-permission android:name="android.permission.DUMP"/>
 
+    <!-- Used to initialize tracing on boot. -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!-- Used to prevent non-system windows from displaying over Traceur. -->
+    <uses-permission android:name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"/>
 
     <!-- Used for adding the Quick Settings tile to the status bar. -->
     <uses-permission android:name="android.permission.STATUS_BAR"/>
@@ -55,7 +60,7 @@
         <activity android:name=".MainActivity"
              android:description="@string/record_system_activity"
              android:label="@string/system_tracing"
-             android:theme="@style/Theme.Settings"
+             android:theme="@style/Theme.SubSettingsBase"
              android:launchMode="singleTask"
              android:exported="true">
             <intent-filter>

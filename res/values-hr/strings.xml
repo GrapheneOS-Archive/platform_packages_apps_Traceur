@@ -42,7 +42,6 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Upotrijebite Perfetto (beta)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Duga praćenja"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Sprema se kontinuirano u pohranu uređaja"</string>
-    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"Kontinuirano se sprema u pohranu uređaja (neće se automatski priložiti izvješćima o programskim pogreškama)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Maksimalna veličina dugog praćenja"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Maksimalno trajanje dugog praćenja"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>

@@ -136,6 +136,7 @@ public class TraceService extends IntentService {
                     PendingIntent.getBroadcast(context, 0, stopIntent, PendingIntent.FLAG_IMMUTABLE))
                 .setOngoing(true)
                 .setLocalOnly(true)
+                .setForegroundServiceBehavior(Notification.FOREGROUND_SERVICE_IMMEDIATE)
                 .setColor(getColor(
                     com.android.internal.R.color.system_notification_accent_color));
 
@@ -218,6 +219,7 @@ public class TraceService extends IntentService {
                 new Notification.Builder(this, Receiver.NOTIFICATION_CHANNEL_OTHER)
                     .setSmallIcon(R.drawable.bugfood_icon)
                     .setLocalOnly(true)
+                    .setForegroundServiceBehavior(Notification.FOREGROUND_SERVICE_IMMEDIATE)
                     .setColor(context.getColor(
                             com.android.internal.R.color.system_notification_accent_color));
 

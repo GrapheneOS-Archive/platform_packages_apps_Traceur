@@ -41,7 +41,6 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"ប្រើ Perfetto (បេតា)"</string>
     <string name="long_traces" msgid="5110949471775966329">"ដានវែង"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"បាន​រក្សាទុក​ជាបន្តបន្ទាប់​ទៅក្នុងទំហំផ្ទុក​ឧបករណ៍"</string>
-    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"ត្រូវបាន​រក្សាទុក​ជាបន្តបន្ទាប់​នៅក្នុង​ទំហំផ្ទុក​ឧបករណ៍ (នឹងមិនភ្ជាប់​ជាមួយ​របាយការណ៍អំពីបញ្ហា​ដោយស្វ័យប្រវត្តិ​ទេ)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"ទំហំ​ដានវែង​បំផុត"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"រយៈពេល​ដានវែង​បំផុត"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
