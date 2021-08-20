@@ -50,6 +50,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final String MEMORY_TAG = "memory";
     private static final String POWER_TAG = "power";
     private static final String SCHED_TAG = "sched";
+    private static final String WEBVIEW_TAG = "webview";
 
     public String getName() {
         return NAME;
@@ -226,6 +227,30 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
               .append("    name: \"android.surfaceflinger.frametimeline\"\n")
               .append("  }\n")
               .append("}\n");
+        }
+
+        // Also enable Chrome events when the WebView tag is enabled.
+        if (tags.contains(WEBVIEW_TAG)) {
+            String chromeTraceConfig =  "{" +
+                "\\\"record_mode\\\":\\\"record-continuously\\\"," +
+                "\\\"included_categories\\\":[\\\"*\\\"]" +
+                "}";
+            config.append("data_sources: {\n")
+                .append("  config {\n")
+                .append("    name: \"org.chromium.trace_event\"\n")
+                .append("    chrome_config {\n")
+                .append("      trace_config: \"" + chromeTraceConfig + "\"\n")
+                .append("    }\n")
+                .append("  }\n")
+                .append("}\n")
+                .append("data_sources: {\n")
+                .append("  config {\n")
+                .append("    name: \"org.chromium.trace_metadata\"\n")
+                .append("      chrome_config {\n")
+                .append("        trace_config: \"" + chromeTraceConfig + "\"\n")
+                .append("      }\n")
+                .append("  }\n")
+                .append("}\n");
         }
 
         String configString = config.toString();
