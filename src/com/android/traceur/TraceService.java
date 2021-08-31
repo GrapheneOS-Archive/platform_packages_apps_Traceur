@@ -186,12 +186,14 @@ public class TraceService extends IntentService {
             Notification.Builder notificationAttached = getBaseTraceurNotification()
                 .setContentTitle(getString(R.string.attached_to_report))
                 .setTicker(getString(R.string.attached_to_report))
-                .setContentText(getString(R.string.attached_to_report_summary))
                 .setAutoCancel(true);
 
             Intent openIntent =
                     getPackageManager().getLaunchIntentForPackage(BETTERBUG_PACKAGE_NAME);
             if (openIntent != null) {
+                // Add "Tap to open BetterBug" to notification only if intent is non-null.
+                notificationAttached.setContentText(getString(
+                        R.string.attached_to_report_summary));
                 notificationAttached.setContentIntent(PendingIntent.getActivity(
                         context, 0, openIntent, PendingIntent.FLAG_ONE_SHOT
                                 | PendingIntent.FLAG_CANCEL_CURRENT
