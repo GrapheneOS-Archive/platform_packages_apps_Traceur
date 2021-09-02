@@ -16,7 +16,7 @@
     <string name="applications" msgid="521776761270770549">"Аппууд"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Дебаг хийх боломжтой аппууд алга"</string>
     <string name="buffer_size" msgid="3944311026715111454">"CPU тутмын буферын хэмжээ"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Түргэн тохиргооны хэсгийг харуулах"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Шуурхай тохиргооны хэсгийг харуулах"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Мөрийг хадгалж байна"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Мөрийг хадгалсан"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Мөрийг хуваалцахын тулд товшино уу"</string>
