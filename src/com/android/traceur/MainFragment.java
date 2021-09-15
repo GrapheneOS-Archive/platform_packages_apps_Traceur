@@ -28,6 +28,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.icu.text.MessageFormat;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -50,8 +51,11 @@ import com.android.settingslib.HelpUtils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
@@ -305,10 +309,14 @@ public class MainFragment extends PreferenceFragment {
 
         // Update subtitles on this screen.
         Set<String> categories = mTags.getValues();
+        MessageFormat msgFormat = new MessageFormat(
+                getResources().getString(R.string.num_categories_selected),
+                Locale.getDefault());
+        Map<String, Object> arguments = new HashMap<>();
+        arguments.put("count", categories.size());
         mTags.setSummary(Receiver.getDefaultTagList().equals(categories)
                          ? context.getString(R.string.default_categories)
-                         : context.getResources().getQuantityString(R.plurals.num_categories_selected,
-                              categories.size(), categories.size()));
+                         : msgFormat.format(arguments));
 
         ListPreference bufferSize = (ListPreference)findPreference(
                 context.getString(R.string.pref_key_buffer_size));
