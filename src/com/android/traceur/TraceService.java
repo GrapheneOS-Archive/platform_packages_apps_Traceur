@@ -201,6 +201,18 @@ public class TraceService extends IntentService {
                                 | PendingIntent.FLAG_IMMUTABLE));
             }
 
+            // Adds an action button to the notification for starting a new trace.
+            Intent restartIntent = new Intent(context, InternalReceiver.class);
+            restartIntent.setAction(InternalReceiver.START_ACTION);
+            PendingIntent restartPendingIntent = PendingIntent.getBroadcast(context, 0,
+                    restartIntent, PendingIntent.FLAG_ONE_SHOT
+                            | PendingIntent.FLAG_CANCEL_CURRENT
+                            | PendingIntent.FLAG_IMMUTABLE);
+            Notification.Action action = new Notification.Action.Builder(
+                    R.drawable.bugfood_icon, context.getString(R.string.start_new_trace),
+                    restartPendingIntent).build();
+            notificationAttached.addAction(action);
+
             NotificationManager.from(context).notify(0, notificationAttached.build());
         } else {
             File file = TraceUtils.getOutputFile(outputFilename);
