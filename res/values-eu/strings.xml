@@ -51,9 +51,9 @@
     <string name="eight_hours" msgid="3207620892104451552">"8 ordu"</string>
     <string name="twelve_hours" msgid="4647143276394563496">"12 ordu"</string>
     <string name="twentyfour_hours" msgid="2789663313550030791">"24 ordu"</string>
-    <string name="four_thousand_kb" msgid="5156346740862105703">"4.096 KB"</string>
-    <string name="eight_thousand_kb" msgid="8815334985638334081">"8.192 KB"</string>
-    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16.384 KB"</string>
-    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32.768 KB"</string>
-    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65.536 KB"</string>
+    <string name="four_thousand_kb" msgid="5156346740862105703">"4.096 kB"</string>
+    <string name="eight_thousand_kb" msgid="8815334985638334081">"8.192 kB"</string>
+    <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16.384 kB"</string>
+    <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32.768 kB"</string>
+    <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65.536 kB"</string>
 </resources>
