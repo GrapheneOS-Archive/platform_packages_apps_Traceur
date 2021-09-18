@@ -4,15 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"ການຕິດຕາມລະບົບ"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"ບັນທຶກການເຄື່ອນໄຫວລະບົບ ແລະ ວິເຄາະມັນໃນພາຍຫຼັງເພື່ອປັບປຸງປະສິດທິພາບ"</string>
     <string name="record_trace" msgid="6416875085186661845">"ບັນທຶກການຕິດຕາມ"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"ຕິດຕາມແອັບພລິເຄຊັນທີ່ດີບັກໄດ້."</string>
     <string name="categories" msgid="2280163673538611008">"ໝວດໝູ່"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ກູ້ໝວດໝູ່ເລີ່ມຕົ້ນຄືນມາ"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"ກູ້ໝວດໝູ່ເລີ່ມຕົ້ນຄືນມາແລ້ວ"</string>
     <string name="default_categories" msgid="2117679794687799407">"ຄ່າເລີ່ມຕົ້ນ"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="other">ເລືອກ %d ແລ້ວ</item>
-      <item quantity="one">ເລືອກ %d ແລ້ວ</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{ເລືອກ # ລາຍການແລ້ວ}other{ເລືອກ # ລາຍການແລ້ວ}}"</string>
     <string name="applications" msgid="521776761270770549">"ແອັບພລິເຄຊັນ"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"ບໍ່ມີແອັບພລິເຄຊັນທີ່ດີບັກໄດ້."</string>
     <string name="buffer_size" msgid="3944311026715111454">"ຂະໜາດບັບເຟີຕໍ່ CPU"</string>

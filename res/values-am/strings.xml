@@ -4,15 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"የስርዓት መከታተያ"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"የሥርዓት እንቅስቃሴን ይመዝግቡ እና አፈጻጸምን ለማሻሻል በኋላ ላይ ይተንትኑት"</string>
     <string name="record_trace" msgid="6416875085186661845">"መከታተያን ቅረጽ"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"ሊታረሙ የሚችሉ መተግበሪያዎችን ዱካ ይከታተሉ"</string>
     <string name="categories" msgid="2280163673538611008">"ምድቦች"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ነባሪ ምድቦችን እንደነበሩ መልስ"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"ነባሪ ምድቦች እንደነበሩ ተመልሰዋል"</string>
     <string name="default_categories" msgid="2117679794687799407">"ነባሪ"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">%d ተመርጠዋል</item>
-      <item quantity="other">%d ተመርጠዋል</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# ተመርጧል}one{# ተመርጧል}other{# ተመርጠዋል}}"</string>
     <string name="applications" msgid="521776761270770549">"መተግበሪያዎች"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"ምንም ሊታረሙ የሚችሉ መተግበሪያዎች አይገኙም"</string>
     <string name="buffer_size" msgid="3944311026715111454">"በ-CPU ቋት መጠን"</string>

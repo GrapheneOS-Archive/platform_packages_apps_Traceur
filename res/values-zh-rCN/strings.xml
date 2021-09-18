@@ -4,15 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"系统跟踪"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"记录系统活动并在稍后分析以提升性能"</string>
     <string name="record_trace" msgid="6416875085186661845">"录制跟踪记录"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"跟踪可调试的应用"</string>
     <string name="categories" msgid="2280163673538611008">"类别"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"恢复默认类别"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"已恢复默认类别"</string>
     <string name="default_categories" msgid="2117679794687799407">"默认"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="other">已选择 %d 个类别</item>
-      <item quantity="one">已选择 %d 个类别</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{已选择 # 种}other{已选择 # 种}}"</string>
     <string name="applications" msgid="521776761270770549">"应用"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"没有可调试的应用"</string>
     <string name="buffer_size" msgid="3944311026715111454">"每个 CPU 的缓冲区空间"</string>

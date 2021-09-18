@@ -4,16 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"Praćenje sistema"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Bilježite i kasnije analizirajte aktivnosti sistema radi poboljšanja performansi"</string>
     <string name="record_trace" msgid="6416875085186661845">"Snimi praćenje"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Pratite aplikacije u načinu rada za otklanjanje grešaka"</string>
     <string name="categories" msgid="2280163673538611008">"Kategorije"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Vrati zadane kategorije"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Zadane kategorije su vraćene"</string>
     <string name="default_categories" msgid="2117679794687799407">"Zadano"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">Odabrana je %d</item>
-      <item quantity="few">Odabrane su %d</item>
-      <item quantity="other">Odabrano je %d</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# odabrana}one{# odabrana}few{# odabrene}other{# odabranih}}"</string>
     <string name="applications" msgid="521776761270770549">"Aplikacije"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Nema dostupnih aplikacija u načinu rada za otklanjanje grešaka"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Veličina međumemorije po procesnoj jedinici"</string>

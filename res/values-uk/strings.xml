@@ -4,17 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"Трасування системи"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Записуйте активність системи й аналізуйте її пізніше, щоб покращити продуктивність"</string>
     <string name="record_trace" msgid="6416875085186661845">"Записувати трасування"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Трасувати додатки для налагодження"</string>
     <string name="categories" msgid="2280163673538611008">"Категорії"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Відновити категорії за умовчанням"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Категорії за умовчанням відновлено"</string>
     <string name="default_categories" msgid="2117679794687799407">"За умовчанням"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">Вибрано: %d</item>
-      <item quantity="few">Вибрано: %d</item>
-      <item quantity="many">Вибрано: %d</item>
-      <item quantity="other">Вибрано: %d</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{Вибрано #}one{Вибрано #}few{Вибрано #}many{Вибрано #}other{Вибрано #}}"</string>
     <string name="applications" msgid="521776761270770549">"Додатки"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Немає додатків для налагодження"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Розмір буфера на ЦП"</string>

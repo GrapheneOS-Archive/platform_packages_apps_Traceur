@@ -4,17 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"Trasovanie systému"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Vytváranie záznamov systémovej aktivity a ich neskoršia analýza s cieľom zvýšenia výkonu"</string>
     <string name="record_trace" msgid="6416875085186661845">"Zaznamenať stopu"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Sledovať aplikácie na ladenie"</string>
     <string name="categories" msgid="2280163673538611008">"Kategórie"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Obnoviť predvolené kategórie"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Boli obnovené predvolené kategórie"</string>
     <string name="default_categories" msgid="2117679794687799407">"Predvolené"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="few">%d vybrané kategórie</item>
-      <item quantity="many">%d selected</item>
-      <item quantity="other">%d vybraných kategórií</item>
-      <item quantity="one">%d vybraná kategória</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# vybraná kategória}few{# vybrané kategórie}many{# selected}other{# vybraných kategórií}}"</string>
     <string name="applications" msgid="521776761270770549">"Aplikácie"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Nie sú k dispozícii žiadne aplikácie na ladenie"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Veľkosť vyrovnávacej pamäte jednotlivých procesorov"</string>

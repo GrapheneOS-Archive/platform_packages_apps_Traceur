@@ -4,15 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"Pag-trace ng System"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Itala ang aktibidad ng system at suriin ito sa ibang pagkakataon para mapahusay ang performance"</string>
     <string name="record_trace" msgid="6416875085186661845">"Mag-record ng trace"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Mag-trace ng mga nade-debug na application"</string>
     <string name="categories" msgid="2280163673538611008">"Mga Kategorya"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"I-restore ang mga default na kategorya"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Na-restore ang mga default na kategorya"</string>
     <string name="default_categories" msgid="2117679794687799407">"Default"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">%d ang napili</item>
-      <item quantity="other">%d ang napili</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# ang pinili}one{# ang pinili}other{# ang pinili}}"</string>
     <string name="applications" msgid="521776761270770549">"Mga Application"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Walang available na nade-debug na application"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Laki ng buffer ng Per-CPU"</string>

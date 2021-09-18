@@ -4,15 +4,14 @@
     <string name="system_tracing" msgid="4719188511746319848">"ସିଷ୍ଟମ୍ ଟ୍ରେସିଙ୍ଗ"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"ଏହା ସିଷ୍ଟମ୍‌ର କାର୍ଯ୍ୟକଳାପକୁ ରେକର୍ଡ କରିଥାଏ ଏବଂ କାର୍ଯ୍ୟଦକ୍ଷତାକୁ ଉନ୍ନତ କରିବା ପାଇଁ ପରେ ଏହାକୁ ବିଶ୍ଳେଷଣ କରିଥାଏ"</string>
     <string name="record_trace" msgid="6416875085186661845">"ଟ୍ରେସ୍‌କୁ ରେକର୍ଡ କରନ୍ତୁ"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"ଡିବଗ୍‌ଯୋଗ୍ୟ ଆପ୍‌ଗୁଡ଼ିକୁ ଟ୍ରେସ୍ କରନ୍ତୁ"</string>
     <string name="categories" msgid="2280163673538611008">"ବର୍ଗ"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ଡିଫଲ୍ଟ ବର୍ଗଗୁଡ଼ିକୁ ରିଷ୍ଟୋର୍ କରନ୍ତୁ"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"ଡିଫଲ୍ଟ ବର୍ଗଗୁଡ଼ିକ ରିଷ୍ଟୋର୍ ହୋଇଛି"</string>
     <string name="default_categories" msgid="2117679794687799407">"ଡିଫଲ୍ଟ"</string>
-    <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="other">%d ଚୟନ କରିଛନ୍ତି</item>
-      <item quantity="one">%d ଚୟନ କରିଛନ୍ତି</item>
-    </plurals>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{#ଟି ବର୍ଗ ଚୟନ କରାଯାଇଛି}other{#ଟି ବର୍ଗ ଚୟନ କରାଯାଇଛି}}"</string>
     <string name="applications" msgid="521776761270770549">"ଆପ୍ଲିକେଶନ୍‌"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"କୌଣସି ଡିବଗ୍‌ଯୋଗ୍ୟ ଆପ୍‌ ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="buffer_size" msgid="3944311026715111454">"ପ୍ରତି CPU ପିଛା ବଫର୍‍ର ଆକାର"</string>
