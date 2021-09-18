@@ -4,6 +4,8 @@
     <string name="system_tracing" msgid="4719188511746319848">"Трасіроўка сістэмы"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Адсочванне і аналіз працоўных працэсаў з мэтай павышэння прадукцыйнасці сістэмы"</string>
     <string name="record_trace" msgid="6416875085186661845">"Запісаць трасіроўку"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Трасіраваць праграмы з магчымасцю адладкi"</string>
     <string name="categories" msgid="2280163673538611008">"Катэгорыі"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Аднавіць стандартныя катэгорыі"</string>

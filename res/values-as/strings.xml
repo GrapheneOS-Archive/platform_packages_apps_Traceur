@@ -4,6 +4,8 @@
     <string name="system_tracing" msgid="4719188511746319848">"ছিষ্টেম ট্ৰে\'চ কৰা কাৰ্য"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"ছিষ্টেমৰ কাৰ্যকলাপ ৰেকৰ্ড কৰক আৰু ইয়াৰ প্ৰদৰ্শন আৰু উন্নত কৰিবলৈ পিছত ইয়াৰ বিশ্লেষণ কৰক"</string>
     <string name="record_trace" msgid="6416875085186661845">"ট্ৰে\'চ ৰেকৰ্ড কৰক"</string>
+    <!-- no translation found for start_new_trace (8177130420802170353) -->
+    <skip />
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"ডিবাগ কৰিবলগীয়া এপ্লিকেশ্বনসমূহ ট্ৰে\'চ কৰক"</string>
     <string name="categories" msgid="2280163673538611008">"শ্ৰেণী"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"ডিফ\'ল্ট শ্ৰেণীবোৰ পুনঃস্থাপন কৰক"</string>
