@@ -4,15 +4,13 @@
     <string name="system_tracing" msgid="4719188511746319848">"Traçage du système"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Cette application enregistre l\'activité du système afin de l\'analyser plus tard et d\'améliorer les performances"</string>
     <string name="record_trace" msgid="6416875085186661845">"Enregistrer la trace"</string>
-    <!-- no translation found for start_new_trace (8177130420802170353) -->
-    <skip />
+    <string name="start_new_trace" msgid="8177130420802170353">"Commencer une nouvelle trace"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Enregistrer les traces d\'applications débogables"</string>
     <string name="categories" msgid="2280163673538611008">"Catégories"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Restaurer les catégories par défaut"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Les catégories par défaut ont été restaurées"</string>
     <string name="default_categories" msgid="2117679794687799407">"Par défaut"</string>
-    <!-- no translation found for num_categories_selected (5772630335027553995) -->
-    <skip />
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# sélectionnée}one{# sélectionnée}other{# sélectionnées}}"</string>
     <string name="applications" msgid="521776761270770549">"Applications"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Il n\'y a pas d\'application déboguable"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Taille de la mémoire tampon par processeur"</string>

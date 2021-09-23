@@ -4,15 +4,13 @@
     <string name="system_tracing" msgid="4719188511746319848">"सिस्टम माग काढत आहे"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"सिस्टम ॲक्टिव्हिटी रेकॉर्ड करा आणि कामगिरी सुधारण्यासाठी त्यांचे नंतर विश्लेषण करा"</string>
     <string name="record_trace" msgid="6416875085186661845">"रेकॉर्डचा माग"</string>
-    <!-- no translation found for start_new_trace (8177130420802170353) -->
-    <skip />
+    <string name="start_new_trace" msgid="8177130420802170353">"नवीन ट्रेस सुरू करा"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"डीबग करण्यायोग्य ॲप्लिकेशन ट्रेस करा"</string>
     <string name="categories" msgid="2280163673538611008">"वर्गवार्‍या"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"डिफॉल्ट वर्गवार्‍या रिस्‍‍‍‍‍टोअर करा"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"डिफॉल्ट वर्गवार्‍या रिस्‍‍‍‍‍टोअर केल्या"</string>
     <string name="default_categories" msgid="2117679794687799407">"डीफॉल्ट"</string>
-    <!-- no translation found for num_categories_selected (5772630335027553995) -->
-    <skip />
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# निवडली}other{# निवडल्या}}"</string>
     <string name="applications" msgid="521776761270770549">"ॲप्लिकेशन"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"डीबग करण्यायोग्य ॲप्लिकेशन उपलब्ध नाहीत"</string>
     <string name="buffer_size" msgid="3944311026715111454">"प्रति सीपीयू बफर आकार"</string>

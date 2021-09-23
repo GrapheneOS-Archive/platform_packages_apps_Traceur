@@ -4,15 +4,13 @@
     <string name="system_tracing" msgid="4719188511746319848">"Seguimento do sistema"</string>
     <string name="record_system_activity" msgid="4339462312915377825">"Rexistra a actividade do sistema e analízaa máis tarde para mellorar o rendemento"</string>
     <string name="record_trace" msgid="6416875085186661845">"Rexistrar rastro"</string>
-    <!-- no translation found for start_new_trace (8177130420802170353) -->
-    <skip />
+    <string name="start_new_trace" msgid="8177130420802170353">"Iniciar novo rastro"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Gardar rastros de aplicacións que se poidan depurar"</string>
     <string name="categories" msgid="2280163673538611008">"Categorías"</string>
     <string name="restore_default_categories" msgid="5090536794637169521">"Restaurar categorías predeterminadas"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Restauráronse as categorías predeterminadas"</string>
     <string name="default_categories" msgid="2117679794687799407">"Categorías predeterminadas"</string>
-    <!-- no translation found for num_categories_selected (5772630335027553995) -->
-    <skip />
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# seleccionada}other{# seleccionadas}}"</string>
     <string name="applications" msgid="521776761270770549">"Aplicacións"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Non hai ningunha aplicación que se poida depurar dispoñible"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Tamaño do búfer por CPU"</string>
