@@ -16,7 +16,7 @@
     <string name="applications" msgid="521776761270770549">"এপ্লিকেশ্বনসমূহ"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"ডিবাগ কৰিবলগীয়া কোনো এপ্লিকেশ্বন নাই"</string>
     <string name="buffer_size" msgid="3944311026715111454">"প্ৰতি CPUৰ বাবে বাফাৰৰ আকাৰ"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"দ্ৰুত ছেটিংসমূহৰ টাইল দেখুৱাওক"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"দ্ৰুত ছেটিঙৰ টাইল দেখুৱাওক"</string>
     <string name="saving_trace" msgid="1468692734770800541">"ট্ৰে\'চ ছেভ কৰি থকা হৈছে"</string>
     <string name="trace_saved" msgid="5869970594780992309">"ট্ৰে\'চ ছেভ কৰা হ’ল"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"আপোনাৰ ট্ৰে\'চ শ্বেয়াৰ কৰিবলৈ টিপক"</string>
