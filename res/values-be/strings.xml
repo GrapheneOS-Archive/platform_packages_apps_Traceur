@@ -18,7 +18,7 @@
     <string name="applications" msgid="521776761270770549">"Праграмы"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Няма даступных праграм з магчымасцю адладкi"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Памер буфера ў ЦП"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Паказваць плітку Хуткіх налад"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Паказваць плітку хуткіх налад"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Трасіроўка захоўваецца"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Трасіроўка захавана"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Націсніце, каб абагуліць трасіроўку"</string>
