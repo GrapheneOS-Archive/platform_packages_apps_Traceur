@@ -41,7 +41,6 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfettoનો ઉપયોગ કરો (બીટા)"</string>
     <string name="long_traces" msgid="5110949471775966329">"લાંબા ટ્રેસ"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"સતત ડિવાઇસના સ્ટોરેજમાં સાચવવામાં આવ્યાં"</string>
-    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"ડિવાઇસના સ્ટોરેજમાં સતત સચવાય છે (બગ રિપોર્ટ સાથે ઑટોમૅટિક રીતે જોડવામાં નહીં આવે)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"ટ્રેસ કરવા માટેનું મહત્તમ લાંબુ કદ"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"ટ્રેસ કરવાની મહત્તમ લાંબી અવધિ"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>

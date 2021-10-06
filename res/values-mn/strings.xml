@@ -41,7 +41,6 @@
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Perfetto-г ашиглах (бета)"</string>
     <string name="long_traces" msgid="5110949471775966329">"Урт ул мөр"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"Төхөөрөмжийн хадгалах санд тасралтгүй хадгалсан"</string>
-    <string name="long_traces_summary_betterbug" msgid="445546400875135624">"Төхөөрөмжийн хадгалах санд тогтмол хадгалсан (алдааны мэдээнд автоматаар хавсаргахгүй)"</string>
     <string name="max_long_trace_size" msgid="1943788179787181241">"Хамгийн урт ул мөрийн хэмжээ"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"Хамгийн урт ул мөрийн үргэлжлэх хугацаа"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 МБ"</string>
