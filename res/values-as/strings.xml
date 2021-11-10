@@ -28,7 +28,7 @@
     <string name="clear_saved_traces" msgid="4809195654452260944">"ছেভ কৰা ট্ৰে\'চসমূহ মচক"</string>
     <string name="clear_saved_traces_summary" msgid="6035923138201219577">"এমাহৰ পাছত ট্ৰে’চসমূহ মচি পেলোৱা হয়"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"ছেভ কৰা ট্ৰে\'চসমূহ মচেনে?"</string>
-    <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/ডেটা/স্থানীয়/ট্ৰে\'চসমূহ-ৰ পৰা সকলো ট্ৰে\'চ মচা হ\'ব"</string>
+    <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"/ডেটা/স্থানীয়/ট্ৰে\'চসমূহ-ৰ পৰা আটাইবোৰ ট্ৰে\'চ মচা হ\'ব"</string>
     <string name="clear" msgid="5484761795406948056">"মচক"</string>
     <string name="system_traces_storage_title" msgid="8294090839883366871">"ছিষ্টেম ট্ৰেচ"</string>
     <string name="keywords" msgid="736547007949049535">"ছিষ্ট্ৰেচ, ট্ৰেচ, প্ৰদৰ্শন"</string>
