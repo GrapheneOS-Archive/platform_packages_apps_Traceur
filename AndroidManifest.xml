@@ -44,6 +44,9 @@
     <!-- Used for brief periods where the trace service is foregrounded. -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
+    <!-- Used to post file-sending notification. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <!-- Declare Android TV support. -->
     <uses-feature android:name="android.software.leanback"
          android:required="false"/>
