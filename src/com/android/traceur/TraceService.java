@@ -27,7 +27,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.text.format.DateUtils;
+import android.util.EventLog;
 import android.util.Log;
 
 import java.io.File;
@@ -37,10 +39,10 @@ import java.util.Collection;
 public class TraceService extends IntentService {
     /* Indicates Perfetto has stopped tracing due to either the supplied long trace limitations
      * or limited storage capacity. */
-    private static String INTENT_ACTION_NOTIFY_SESSION_STOPPED =
+    static String INTENT_ACTION_NOTIFY_SESSION_STOPPED =
             "com.android.traceur.NOTIFY_SESSION_STOPPED";
     /* Indicates a Traceur-associated tracing session has been attached to a bug report */
-    private static String INTENT_ACTION_NOTIFY_SESSION_STOLEN =
+    static String INTENT_ACTION_NOTIFY_SESSION_STOLEN =
             "com.android.traceur.NOTIFY_SESSION_STOLEN";
     private static String INTENT_ACTION_STOP_TRACING = "com.android.traceur.STOP_TRACING";
     private static String INTENT_ACTION_START_TRACING = "com.android.traceur.START_TRACING";
@@ -80,6 +82,20 @@ public class TraceService extends IntentService {
         context.startForegroundService(intent);
     }
 
+    // Silently stops a trace without saving it. This is intended to be called when tracing is no
+    // longer allowed, i.e. if developer options are turned off while tracing. The usual method of
+    // stopping a trace via intent, stopTracing(), will not work because intents cannot be received
+    // when developer options are disabled.
+    static void stopTracingWithoutSaving(final Context context) {
+        NotificationManager notificationManager =
+            context.getSystemService(NotificationManager.class);
+        notificationManager.cancel(TRACE_NOTIFICATION);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        prefs.edit().putBoolean(context.getString(
+            R.string.pref_key_tracing_on), false).commit();
+        TraceUtils.traceStop();
+    }
+
     public TraceService() {
         this("TraceService");
     }
@@ -92,6 +108,15 @@ public class TraceService extends IntentService {
     @Override
     public void onHandleIntent(Intent intent) {
         Context context = getApplicationContext();
+        // Checks that developer options are enabled before continuing.
+        boolean developerOptionsEnabled =
+                Settings.Global.getInt(context.getContentResolver(),
+                        Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
+        if (!developerOptionsEnabled) {
+            // Refer to b/204992293.
+            EventLog.writeEvent(0x534e4554, "204992293", -1, "");
+            return;
+        }
 
         if (intent.getAction().equals(INTENT_ACTION_START_TRACING)) {
             startTracingInternal(intent.getStringArrayListExtra(INTENT_EXTRA_TAGS),
