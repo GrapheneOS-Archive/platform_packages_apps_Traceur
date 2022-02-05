@@ -46,6 +46,7 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
     private static final long MEGABYTES_TO_BYTES = 1024L * 1024L;
     private static final long MINUTES_TO_MILLISECONDS = 60L * 1000L;
 
+    private static final String CAMERA_TAG = "camera";
     private static final String GFX_TAG = "gfx";
     private static final String MEMORY_TAG = "memory";
     private static final String POWER_TAG = "power";
@@ -225,6 +226,15 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
           config.append("data_sources: {\n")
               .append("  config { \n")
               .append("    name: \"android.surfaceflinger.frametimeline\"\n")
+              .append("  }\n")
+              .append("}\n");
+        }
+
+        if (tags.contains(CAMERA_TAG)) {
+          config.append("data_sources: {\n")
+              .append("  config { \n")
+              .append("    name: \"android.hardware.camera\"\n")
+              .append("    target_buffer: 1\n")
               .append("  }\n")
               .append("}\n");
         }
