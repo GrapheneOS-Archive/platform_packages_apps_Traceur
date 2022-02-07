@@ -35,6 +35,7 @@ import androidx.test.runner.AndroidJUnit4;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -88,6 +89,7 @@ public class TraceurAppTests {
 
     @Presubmit
     @Test
+    @Ignore("b/209476712")
     public void testElementsOnMainScreen() throws Exception {
         UiScrollable scrollableMainScreen = new UiScrollable(new UiSelector().scrollable(true));
 
@@ -167,6 +169,7 @@ public class TraceurAppTests {
      */
     @Presubmit
     @Test
+    @Ignore("b/209476712")
     public void testSuccessfulTracing() throws Exception {
         mDevice.wait(Until.findObject(By.text("Record trace")), TIMEOUT);
 
