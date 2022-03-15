@@ -17,7 +17,7 @@
     <string name="applications" msgid="521776761270770549">"ଆପ୍ଲିକେଶନ୍‌"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"କୌଣସି ଡିବଗ୍‌ଯୋଗ୍ୟ ଆପ୍‌ ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="buffer_size" msgid="3944311026715111454">"ପ୍ରତି CPU ପିଛା ବଫର୍‍ର ଆକାର"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"କ୍ଵିକ୍ ସେଟିଙ୍ଗ ଟାଇଲ୍‌ ଦେଖାନ୍ତୁ"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"କ୍ଵିକ୍ ସେଟିଂସ ଟାଇଲ ଦେଖାନ୍ତୁ"</string>
     <string name="saving_trace" msgid="1468692734770800541">"ଟ୍ରେସ୍‌କୁ ସେଭ୍ କରନ୍ତୁ"</string>
     <string name="trace_saved" msgid="5869970594780992309">"ଟ୍ରେସ୍ ସେଭ୍ ହୋଇଛି"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"ଆପଣଙ୍କ ଟ୍ରେସ୍‌କୁ ସେୟାର୍ କରିବା ପାଇଁ ଟାପ୍ କରନ୍ତୁ"</string>

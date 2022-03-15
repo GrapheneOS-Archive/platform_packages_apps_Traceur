@@ -11,8 +11,8 @@
     <string name="default_categories_restored" msgid="6861683793680564181">"Categorias predefinidas restauradas"</string>
     <string name="default_categories" msgid="2117679794687799407">"Predefinição"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">%d selecionada</item>
       <item quantity="other">%d selecionadas</item>
+      <item quantity="one">%d selecionada</item>
     </plurals>
     <string name="applications" msgid="521776761270770549">"Apps"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Não há aplicações disponíveis para depuração"</string>

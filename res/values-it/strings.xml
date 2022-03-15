@@ -11,8 +11,8 @@
     <string name="default_categories_restored" msgid="6861683793680564181">"Categorie predefinite ripristinate"</string>
     <string name="default_categories" msgid="2117679794687799407">"Predefinite"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="one">%d selected</item>
       <item quantity="other">%d selezionate</item>
+      <item quantity="one">%d selezionata</item>
     </plurals>
     <string name="applications" msgid="521776761270770549">"App"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Nessuna app disponibile di cui è possibile eseguire il debug"</string>
