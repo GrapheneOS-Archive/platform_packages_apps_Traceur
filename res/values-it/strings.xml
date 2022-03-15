@@ -10,7 +10,7 @@
     <string name="restore_default_categories" msgid="5090536794637169521">"Ripristina categorie predefinite"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"Categorie predefinite ripristinate"</string>
     <string name="default_categories" msgid="2117679794687799407">"Predefinite"</string>
-    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# selezionato}one{# selected}other{# selezionati}}"</string>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# selezionato}other{# selezionati}}"</string>
     <string name="applications" msgid="521776761270770549">"App"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"Nessuna app disponibile di cui è possibile eseguire il debug"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Dimensione del buffer per CPU"</string>
