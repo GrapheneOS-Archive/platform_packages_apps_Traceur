@@ -25,7 +25,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
+import java.util.List;
+import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
+
+import perfetto.protos.DataSourceDescriptorOuterClass.DataSourceDescriptor;
+import perfetto.protos.FtraceDescriptorOuterClass.FtraceDescriptor.AtraceCategory;
+import perfetto.protos.TracingServiceStateOuterClass.TracingServiceState;
+import perfetto.protos.TracingServiceStateOuterClass.TracingServiceState.DataSource;
 
 /**
  * Utility functions for calling Perfetto
@@ -367,6 +374,42 @@ public class PerfettoUtils implements TraceUtils.TraceEngine {
             } else {
                 throw new RuntimeException("Perfetto error: " + result);
             }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static TreeMap<String,String> perfettoListCategories() {
+        String cmd = "perfetto --query-raw";
+
+        Log.v(TAG, "Listing tags: " + cmd);
+        try {
+            Process perfetto = TraceUtils.exec(cmd, null, false);
+
+            TracingServiceState serviceState =
+                    TracingServiceState.parseFrom(perfetto.getInputStream());
+
+            if (perfetto.waitFor() != 0) {
+                Log.e(TAG, "perfettoListCategories failed with: " + perfetto.exitValue());
+            }
+
+            List<AtraceCategory> categories = null;
+
+            for (DataSource dataSource : serviceState.getDataSourcesList()) {
+                DataSourceDescriptor dataSrcDescriptor = dataSource.getDsDescriptor();
+                if (dataSrcDescriptor.getName().equals("linux.ftrace")){
+                    categories = dataSrcDescriptor.getFtraceDescriptor().getAtraceCategoriesList();
+                    break;
+                }
+            }
+
+            TreeMap<String,String> result = new TreeMap<>();
+            if (categories != null) {
+                for (AtraceCategory category : categories) {
+                    result.put(category.getName(), category.getDescription());
+                }
+            }
+            return result;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
