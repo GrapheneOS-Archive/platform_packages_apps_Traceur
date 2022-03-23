@@ -60,7 +60,7 @@
     <string name="sixteen_thousand_kb" msgid="7342517169232459259">"16384 ԿԲ"</string>
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 ԿԲ"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 ԿԲ"</string>
-    <string name="stop_on_bugreport" msgid="2045328149107284734">"Դադարեցնել վրիպակների մասին զեկույցների հետագծումը"</string>
+    <string name="stop_on_bugreport" msgid="2045328149107284734">"Կանգնեցնել վրիպակների մասին զեկույցների հետագծումը"</string>
     <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Ավարտում է հետագծման ակտիվ գրանցումները, երբ մեկնարկում է վրիպակի մասին զեկույցը։"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Կցեք հետագծման ֆայլերը վրիպակի մասին զեկույցներին"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Վրիպակի մասին զեկույցի հավաքման ժամանակ հետագծման ֆայլերը, որոնց մշակումը դեռ չի ավարտվել, ավտոմատ ուղարկել BetterBug-ին"</string>
