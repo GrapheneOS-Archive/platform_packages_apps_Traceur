@@ -128,17 +128,24 @@ public class TraceUtils {
         if (logOutput) {
             new Logger("traceService:stdout", process.getInputStream());
         }
+
+        return process;
+    }
+
+    // Returns the Process if the command terminated on time and null if not.
+    public static Process execWithTimeout(String cmd, String tmpdir, long timeout)
+            throws IOException {
+        Process process = exec(cmd, tmpdir, true);
         try {
-            // Destroy the process in the case of a timeout.
-            if (!process.waitFor(PROCESS_TIMEOUT_MS, TimeUnit.MILLISECONDS)) {
-                Log.e(TAG, "Command '" + cmd + "' has timed out after "
-                      + PROCESS_TIMEOUT_MS + " ms.");
+            if (!process.waitFor(timeout, TimeUnit.MILLISECONDS)) {
+                Log.e(TAG, "Command '" + cmd + "' has timed out after " + timeout + " ms.");
                 process.destroyForcibly();
+                // Return null to signal a timeout and that the Process was destroyed.
+                return null;
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
         return process;
     }
 
