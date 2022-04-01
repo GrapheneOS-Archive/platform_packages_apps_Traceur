@@ -27,9 +27,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -223,7 +220,7 @@ public class TraceUtils {
     }
 
     /**
-     * Streams data from an InputStream to an OutputStream
+     * Redirects an InputStream to logcat.
      */
     private static class Logger {
 
@@ -231,7 +228,6 @@ public class TraceUtils {
             new Thread(tag) {
                 @Override
                 public void run() {
-                    int read;
                     String line;
                     BufferedReader r = new BufferedReader(new InputStreamReader(in));
                     try {
