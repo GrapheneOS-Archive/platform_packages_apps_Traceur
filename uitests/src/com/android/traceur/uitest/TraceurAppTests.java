@@ -23,6 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.RemoteException;
+import android.os.SystemClock;
 import android.platform.test.annotations.Presubmit;
 import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
@@ -40,6 +41,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.List;
 import java.util.regex.Pattern;
 
 @RunWith(AndroidJUnit4.class)
@@ -48,6 +50,7 @@ public class TraceurAppTests {
     private static final String TRACEUR_PACKAGE = "com.android.traceur";
     private static final int LAUNCH_TIMEOUT_MS = 10000;
     private static final int UI_TIMEOUT_MS = 7500;
+    private static final int SHORT_PAUSE_MS = 1000;
 
     private UiDevice mDevice;
 
@@ -77,9 +80,12 @@ public class TraceurAppTests {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);    // Clear out any previous instances
         context.startActivity(intent);
 
-        // Wait for the app to appear
+        // Wait for the app to appear.
         assertTrue(mDevice.wait(Until.hasObject(By.pkg(TRACEUR_PACKAGE).depth(0)),
                   LAUNCH_TIMEOUT_MS));
+        // Default trace categories are restored in case a previous test modified them and
+        // terminated early.
+        restoreDefaultCategories();
     }
 
     @After
@@ -90,6 +96,11 @@ public class TraceurAppTests {
         mDevice.pressHome();
     }
 
+    /**
+     * Verifies that the main page contains the correct UI elements.
+     * If the main page is scrollable, the test checks that all expected elements are found while
+     * scrolling. Otherwise, it checks that the expected elements are already on the page.
+     */
     @Presubmit
     @Test
     public void testElementsOnMainScreen() throws Exception {
@@ -164,10 +175,11 @@ public class TraceurAppTests {
         }
     }
 
-    /*
-     * In this test:
-     * Take a trace by toggling 'Record trace' in the UI
-     * Tap the notification once the trace is saved, and verify the share dialog appears.
+    /**
+     * Checks that a trace can be recorded and shared.
+     * This test records a trace by toggling 'Record trace' in the UI, taps on the share
+     * notification once the trace is saved, then (on non-AOSP) verifies that a share dialog
+     * appears.
      */
     @Presubmit
     @Test
@@ -226,4 +238,142 @@ public class TraceurAppTests {
             // Gmail is not installed, so the device is on an AOSP build.
         }
     }
+
+    /**
+     * Checks that trace categories are displayed after tapping on the 'Categories' button.
+     */
+    @Presubmit
+    @Test
+    public void testTraceCategoriesExist() {
+        openTraceCategories();
+        List<UiObject2> categories = getTraceCategories();
+        assertNotNull("List of categories not found.", categories);
+        assertTrue("No available trace categories.", categories.size() > 0);
+    }
+
+    /**
+     * Checks that the 'Categories' summary updates when trace categories are selected.
+     * This test checks that the summary for the 'Categories' button changes from 'Default' to 'N
+     * selected' when a trace category is clicked, then back to 'Default' when the same category is
+     * clicked again.
+     */
+    @Presubmit
+    @Test
+    public void testCorrectCategoriesSummary() {
+        UiObject2 summary = getCategoriesSummary();
+        assertTrue("Expected 'Default' summary not found on startup.",
+                summary.getText().contains("Default"));
+
+        openTraceCategories();
+        toggleFirstTraceCategory();
+
+        // The summary must be reset after each toggle because the reference will be stale.
+        summary = getCategoriesSummary();
+        assertTrue("Expected 'N selected' summary not found.",
+                summary.getText().contains("selected"));
+
+        openTraceCategories();
+        toggleFirstTraceCategory();
+
+        summary = getCategoriesSummary();
+        assertTrue("Expected 'Default' summary not found after changing categories.",
+                summary.getText().contains("Default"));
+    }
+
+    /**
+     * Checks that the 'Restore default categories' button resets the trace categories summary.
+     * This test changes the set of selected trace categories from the default, then checks that the
+     * 'Categories' summary resets to 'Default' when the restore button is clicked.
+     */
+    @Presubmit
+    @Test
+    public void testRestoreDefaultCategories() {
+        openTraceCategories();
+        toggleFirstTraceCategory();
+
+        UiObject2 summary = getCategoriesSummary();
+        assertTrue("Expected 'N selected' summary not found.",
+                summary.getText().contains("selected"));
+
+        restoreDefaultCategories();
+
+        // The summary must be reset after the toggle because the reference will be stale.
+        summary = getCategoriesSummary();
+        assertTrue("Expected 'Default' summary not found after restoring categories.",
+                summary.getText().contains("Default"));
+    }
+
+    /**
+     * Taps on the 'Categories' button.
+     */
+    private void openTraceCategories() {
+        UiObject2 categoriesButton = mDevice.wait(Until.findObject(
+                By.text("Categories")), UI_TIMEOUT_MS);
+        assertNotNull("Categories button not found.", categoriesButton);
+        categoriesButton.click();
+
+        mDevice.waitForIdle();
+    }
+
+    /**
+     * Taps on the 'Restore default categories' button.
+     */
+    private void restoreDefaultCategories() {
+        UiObject2 restoreButton = mDevice.wait(Until.findObject(
+                By.text("Restore default categories")), UI_TIMEOUT_MS);
+        assertNotNull("'Restore default categories' button not found.", restoreButton);
+        restoreButton.click();
+
+        mDevice.waitForIdle();
+        // This pause is necessary because the trace category restoration takes time to propagate to
+        // the main page.
+        SystemClock.sleep(SHORT_PAUSE_MS);
+    }
+
+    /**
+     * Returns the UiObject2 of the summary for 'Categories'.
+     * This must only be used on Traceur's main page.
+     */
+    private UiObject2 getCategoriesSummary() {
+        UiObject2 categoriesButton = mDevice.wait(Until.findObject(
+                By.text("Categories")), UI_TIMEOUT_MS);
+        assertNotNull("Categories button not found.", categoriesButton);
+        // The summary text is a sibling view of 'Categories' and can be found through their parent.
+        UiObject2 categoriesSummary = categoriesButton.getParent().wait(Until.findObject(
+                By.res("android:id/summary")), UI_TIMEOUT_MS);
+        assertNotNull("Categories summary not found.", categoriesSummary);
+        return categoriesSummary;
+    }
+
+    /**
+     * Returns the list of available trace categories.
+     * This must only be used after openTraceCategories() has been called.
+     */
+    private List<UiObject2> getTraceCategories() {
+        UiObject2 categoriesListView = mDevice.wait(Until.findObject(
+                By.res("android:id/select_dialog_listview")), UI_TIMEOUT_MS);
+        assertNotNull("List of categories not found.", categoriesListView);
+        return categoriesListView.getChildren();
+    }
+
+    /**
+     * Toggles the first checkbox in the list of trace categories.
+     * This must only be used after openTraceCategories() has been called.
+     */
+    private void toggleFirstTraceCategory() {
+        getTraceCategories().get(0).click();
+
+        mDevice.waitForIdle();
+
+        UiObject2 confirmButton = mDevice.wait(Until.findObject(
+                By.res("android:id/button1")), UI_TIMEOUT_MS);
+        assertNotNull("'OK' button not found under trace categories list.", confirmButton);
+        confirmButton.click();
+
+        mDevice.waitForIdle();
+        // This pause is necessary because the trace category selection takes time to propagate to
+        // the main page.
+        SystemClock.sleep(SHORT_PAUSE_MS);
+    }
+
 }
