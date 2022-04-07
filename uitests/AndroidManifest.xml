@@ -21,6 +21,11 @@
         <uses-library android:name="android.test.runner" />
     </application>
 
+    <!-- Used by TraceurAppTests to determine if a build is AOSP. -->
+    <queries>
+      <package android:name="com.google.android.gm" />
+    </queries>
+
     <instrumentation
             android:name="androidx.test.runner.AndroidJUnitRunner"
             android:targetPackage="com.android.traceur.uitest"
