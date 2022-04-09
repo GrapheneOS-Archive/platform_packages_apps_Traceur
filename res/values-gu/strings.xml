@@ -13,7 +13,7 @@
       <item quantity="one">%d પસંદ કરી</item>
       <item quantity="other">%d પસંદ કરી</item>
     </plurals>
-    <string name="applications" msgid="521776761270770549">"ઍપ્લિકેશનો"</string>
+    <string name="applications" msgid="521776761270770549">"ઍપ"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"ડિબગ કરી શકાય તેવી કોઈ ઍપ્લિકેશન ઉપલબ્ધ નથી"</string>
     <string name="buffer_size" msgid="3944311026715111454">"પ્રતિ-CPU બફરનું કદ"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"ઝડપી સેટિંગ ટાઇલ બતાવો"</string>
