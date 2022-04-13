@@ -2,7 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"सिस्टम ट्रेस करने की सुविधा"</string>
-    <string name="record_system_activity" msgid="4339462312915377825">"यह सिस्टम की गतिविधि रिकॉर्ड करता है और बाद में इसका विश्लेषण कर सिस्टम की परफ़ॉर्मेंस को बेहतर बनाता है"</string>
+    <string name="record_system_activity" msgid="4339462312915377825">"यह सिस्टम की गतिविधि रिकॉर्ड करता है और परफ़ॉर्मेंस बेहतर बनाने के लिए, बाद में इसका विश्लेषण करता है"</string>
     <string name="record_trace" msgid="6416875085186661845">"ट्रेस रिकॉर्ड करें"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"डीबग करने के लिए ऐप्लिकेशन ट्रेस करें"</string>
     <string name="categories" msgid="2280163673538611008">"ट्रेस श्रेणियां"</string>
