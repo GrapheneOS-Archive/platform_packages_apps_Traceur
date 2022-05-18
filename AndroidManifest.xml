@@ -21,7 +21,7 @@
      android:versionCode="2"
      android:versionName="1.0">
     <uses-sdk android:minSdkVersion="26"
-         android:targetSdkVersion="31"/>
+         android:targetSdkVersion="33"/>
 
     <!--- Used to query for Betterbug. -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
