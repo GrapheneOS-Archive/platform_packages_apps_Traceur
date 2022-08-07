@@ -10,7 +10,7 @@
     <string name="default_categories_restored" msgid="6861683793680564181">"שוחזרו הקטגוריות שמוגדרות כברירת המחדל"</string>
     <string name="default_categories" msgid="2117679794687799407">"ברירת מחדל"</string>
     <plurals name="num_categories_selected" formatted="false" msgid="963928263524652497">
-      <item quantity="two">%d selected</item>
+      <item quantity="two">‏נבחרו %d</item>
       <item quantity="many">‏נבחרו %d</item>
       <item quantity="other">‏נבחרו %d</item>
       <item quantity="one">‏נבחרה %d</item>
