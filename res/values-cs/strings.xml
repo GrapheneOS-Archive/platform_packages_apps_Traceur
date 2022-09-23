@@ -29,7 +29,7 @@
     <string name="clear_saved_traces_summary" msgid="6035923138201219577">"Záznamy aktivity jsou po měsíci vymazány"</string>
     <string name="clear_saved_traces_question" msgid="2184026613055303818">"Vymazat uložená trasování?"</string>
     <string name="all_traces_will_be_deleted" msgid="6646545462206955920">"Všechna trasování v umístění /data/local/traces budou smazána"</string>
-    <string name="clear" msgid="5484761795406948056">"Zrušit"</string>
+    <string name="clear" msgid="5484761795406948056">"Vymazat"</string>
     <string name="system_traces_storage_title" msgid="8294090839883366871">"Trasování systému"</string>
     <string name="keywords" msgid="736547007949049535">"systémové trasování, trasování, výkon"</string>
     <string name="share_trace" msgid="4528525067822044385">"Sdílet trasování?"</string>
