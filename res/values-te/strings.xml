@@ -13,7 +13,7 @@
     <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{# ఎంచుకోబడింది}other{# ఎంచుకోబడింది}}"</string>
     <string name="applications" msgid="521776761270770549">"అప్లికేషన్‌లు"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"డీబగ్ చేయగల అప్లికేషన్‌లు అందుబాటులో లేవు"</string>
-    <string name="buffer_size" msgid="3944311026715111454">"ఒక్కో CPUకు బఫర్ పరిమాణం"</string>
+    <string name="buffer_size" msgid="3944311026715111454">"ఒక్కో CPUకు బఫర్ సైజ్‌"</string>
     <string name="show_quick_settings_tile" msgid="4971147332635291585">"త్వరిత సెట్టింగ్‌ల టైల్‌ను చూపు"</string>
     <string name="saving_trace" msgid="1468692734770800541">"స్థితిగతిని సేవ్ చేస్తోంది"</string>
     <string name="trace_saved" msgid="5869970594780992309">"స్థితిగతి సేవ్ చేయబడింది"</string>
@@ -40,7 +40,7 @@
     <string name="long_traces" msgid="5110949471775966329">"ఎక్కువ నిడివి స్థితిగతి"</string>
     <string name="long_traces_summary" msgid="419034282946761469">"పరికర నిల్వలో నిరంతరం సేవ్ చేయబడుతుంది"</string>
     <string name="long_traces_summary_betterbug" msgid="445546400875135624">"పరికర స్టోరేజ్‌కు నిరంతరం సేవ్ చేయబడుతుంది (బగ్ రిపోర్ట్‌లకు ఆటోమేటిక్‌గా అటాచ్ చేయబడదు)"</string>
-    <string name="max_long_trace_size" msgid="1943788179787181241">"అత్యధిక స్థితి గతి నిడివి పరిమాణం"</string>
+    <string name="max_long_trace_size" msgid="1943788179787181241">"అత్యధిక స్థితి గతి నిడివి సైజ్‌"</string>
     <string name="max_long_trace_duration" msgid="8009837944364246785">"అత్యధిక నిడివి ఉన్న స్థితిగతి పరిణామం"</string>
     <string name="two_hundred_mb" msgid="4950018549725084512">"200 MB"</string>
     <string name="one_gb" msgid="590396985168692037">"1 GB"</string>
