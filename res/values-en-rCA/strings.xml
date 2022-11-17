@@ -2,7 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_tracing" msgid="4719188511746319848">"System Tracing"</string>
-    <string name="record_system_activity" msgid="4339462312915377825">"Record system activity and analyse it later to improve performance"</string>
+    <string name="record_system_activity" msgid="4339462312915377825">"Record system activity and analyze it later to improve performance"</string>
     <string name="record_trace" msgid="6416875085186661845">"Record trace"</string>
     <string name="start_new_trace" msgid="8177130420802170353">"Start new trace"</string>
     <string name="trace_debuggable_applications" msgid="7957069895298887899">"Trace debuggable applications"</string>
@@ -14,7 +14,7 @@
     <string name="applications" msgid="521776761270770549">"Applications"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"No debuggable applications are available"</string>
     <string name="buffer_size" msgid="3944311026715111454">"Per-CPU buffer size"</string>
-    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Show quick settings tile"</string>
+    <string name="show_quick_settings_tile" msgid="4971147332635291585">"Show Quick Settings tile"</string>
     <string name="saving_trace" msgid="1468692734770800541">"Saving trace"</string>
     <string name="trace_saved" msgid="5869970594780992309">"Trace saved"</string>
     <string name="tap_to_share" msgid="6766732404489536899">"Tap to share your trace"</string>
@@ -33,7 +33,7 @@
     <string name="system_traces_storage_title" msgid="8294090839883366871">"System traces"</string>
     <string name="keywords" msgid="736547007949049535">"systrace, trace, performance"</string>
     <string name="share_trace" msgid="4528525067822044385">"Share trace?"</string>
-    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"System tracing files may include sensitive system and app data (such as app usage). Only share system traces with people and apps that you trust."</string>
+    <string name="system_trace_sensitive_data" msgid="3069389866696009549">"System Tracing files may include sensitive system and app data (such as app usage). Only share system traces with people and apps you trust."</string>
     <string name="share" msgid="8443979083706282338">"Share"</string>
     <string name="dont_show_again" msgid="6662492041164390600">"Don\'t show again"</string>
     <string name="use_perfetto_beta" msgid="2725630143916520160">"Use Perfetto (beta)"</string>
@@ -59,7 +59,7 @@
     <string name="thirtytwo_thousand_kb" msgid="654328198799196150">"32768 KB"</string>
     <string name="sixtyfive_thousand_kb" msgid="8168144138598305306">"65536 KB"</string>
     <string name="stop_on_bugreport" msgid="2045328149107284734">"Stop tracing for bug reports"</string>
-    <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Ends active trace recordings when a bug report is started"</string>
+    <string name="stop_on_bugreport_summary" msgid="7844074306038850040">"Ends active trace recordings when a bugreport is started"</string>
     <string name="attach_to_bug_report" msgid="2953745117960948415">"Attach traces to bug reports"</string>
     <string name="attach_to_bug_report_summary" msgid="2225208904634565377">"Automatically send in-progress traces to BetterBug when a bug report is collected"</string>
     <string name="link_to_traces" msgid="6569969595898995517">"View trace files"</string>
