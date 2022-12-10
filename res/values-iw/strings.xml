@@ -10,7 +10,7 @@
     <string name="restore_default_categories" msgid="5090536794637169521">"שחזור קטגוריות המוגדרות כברירת מחדל"</string>
     <string name="default_categories_restored" msgid="6861683793680564181">"שוחזרו הקטגוריות שמוגדרות כברירת המחדל"</string>
     <string name="default_categories" msgid="2117679794687799407">"ברירת מחדל"</string>
-    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{נבחרה קטגוריה אחת}two{נבחרו # קטגוריות}many{נבחרו # קטגוריות}other{נבחרו # קטגוריות}}"</string>
+    <string name="num_categories_selected" msgid="5772630335027553995">"{count,plural, =1{נבחרה קטגוריה אחת}one{נבחרו # קטגוריות}two{נבחרו # קטגוריות}other{נבחרו # קטגוריות}}"</string>
     <string name="applications" msgid="521776761270770549">"אפליקציות"</string>
     <string name="no_debuggable_apps" msgid="4386209254520471208">"אין אפליקציות שניתן לנפות בהן באגים"</string>
     <string name="buffer_size" msgid="3944311026715111454">"‏שטח אחסון זמני לכל יחידת עיבוד מרכזית (CPU)"</string>
