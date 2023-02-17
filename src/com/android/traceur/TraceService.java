@@ -26,6 +26,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.UserManager;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.format.DateUtils;
@@ -108,13 +109,17 @@ public class TraceService extends IntentService {
     @Override
     public void onHandleIntent(Intent intent) {
         Context context = getApplicationContext();
-        // Checks that developer options are enabled before continuing.
+        // Checks that developer options are enabled and the user is an admin before continuing.
         boolean developerOptionsEnabled =
                 Settings.Global.getInt(context.getContentResolver(),
                         Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
         if (!developerOptionsEnabled) {
             // Refer to b/204992293.
             EventLog.writeEvent(0x534e4554, "204992293", -1, "");
+            return;
+        }
+        boolean isAdminUser = context.getSystemService(UserManager.class).isAdminUser();
+        if (!isAdminUser) {
             return;
         }
 
