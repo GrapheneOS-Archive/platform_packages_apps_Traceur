@@ -30,6 +30,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.MatrixCursor;
+import android.os.UserManager;
 import android.provider.SearchIndexablesProvider;
 import android.provider.Settings;
 
@@ -68,9 +69,11 @@ public class SearchProvider extends SearchIndexablesProvider {
         boolean developerOptionsIsEnabled =
             Settings.Global.getInt(getContext().getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
+        boolean isAdminUser = getContext().getSystemService(UserManager.class).isAdminUser();
 
-        // If developer options is not enabled, System Tracing shouldn't be searchable.
-        if (!developerOptionsIsEnabled) {
+        // System Tracing shouldn't be searchable if developer options are not enabled or if the
+        // user is not an admin.
+        if (!developerOptionsIsEnabled || !isAdminUser) {
             MatrixCursor cursor = new MatrixCursor(NON_INDEXABLES_KEYS_COLUMNS);
             Object[] row = new Object[] {getContext().getString(R.string.system_tracing)};
             cursor.addRow(row);
