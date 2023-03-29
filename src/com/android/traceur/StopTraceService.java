@@ -50,8 +50,11 @@ public class StopTraceService extends TraceService {
             EventLog.writeEvent(0x534e4554, "204992293", -1, "");
             return;
         }
-        boolean isAdminUser = context.getSystemService(UserManager.class).isAdminUser();
-        if (!isAdminUser) {
+        UserManager userManager = context.getSystemService(UserManager.class);
+        boolean isAdminUser = userManager.isAdminUser();
+        boolean debuggingDisallowed = userManager.hasUserRestriction(
+                UserManager.DISALLOW_DEBUGGING_FEATURES);
+        if (!isAdminUser || debuggingDisallowed) {
             return;
         }
         // Ensures that only intents that pertain to stopping a trace and need to be accessed from
