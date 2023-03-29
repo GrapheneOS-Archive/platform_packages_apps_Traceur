@@ -35,10 +35,14 @@ public class MainActivity extends CollapsingToolbarBaseActivity {
         boolean developerOptionsIsEnabled =
             Settings.Global.getInt(getApplicationContext().getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
-        boolean isAdminUser = getApplicationContext()
-                .getSystemService(UserManager.class).isAdminUser();
 
-        if (!developerOptionsIsEnabled || !isAdminUser) {
+        UserManager userManager = getApplicationContext()
+                .getSystemService(UserManager.class);
+        boolean isAdminUser = userManager.isAdminUser();
+        boolean debuggingDisallowed = userManager.hasUserRestriction(
+                UserManager.DISALLOW_DEBUGGING_FEATURES);
+
+        if (!developerOptionsIsEnabled || !isAdminUser || debuggingDisallowed) {
             finish();
         }
     }
